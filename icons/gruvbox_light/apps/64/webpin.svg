@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <filter id="4HVKiJvDItkwRqJmBJzNzUUnQlwgpQFv" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#4HVKiJvDItkwRqJmBJzNzUUnQlwgpQFv)">
+  <linearGradient id="_lgradient_1" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(244.648,0,0,228.338,5.676,11.952)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#4c5561"/>
+   <stop offset="100%" style="stop-color:#2e3842"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_1)" d="M 165.685 11.952 C 239.74 11.952 250.324 22.509 250.324 96.495 L 250.324 155.746 C 250.324 229.733 239.74 240.29 165.685 240.29 L 90.315 240.29 C 16.26 240.29 5.676 229.733 5.676 155.746 L 5.676 96.495 C 5.676 22.509 16.26 11.952 90.315 11.952 L 165.685 11.952 Z"/>
+ </g>
+ <g>
+  <defs>
+   <filter id="eYc6eN4KaFlfnHblkdaBWOEPtAKKtiHM" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="4.294"/>
+   </filter>
+  </defs>
+  <g opacity=".4" filter="url(#eYc6eN4KaFlfnHblkdaBWOEPtAKKtiHM)">
+   <path d="M 55.123 136.359 C 55.059 137.21 55 138.061 55 138.931 C 55 158.341 71.23 174.083 91.25 174.083 L 168.284 174.083 C 185.8 174.083 200 160.313 200 143.329 C 200 142.493 199.947 141.666 199.879 140.845 C 198.632 156.727 184.978 169.25 168.284 169.25 L 91.25 169.25 C 72.018 169.25 56.332 154.716 55.123 136.359 L 55.123 136.359 Z"/>
+  </g>
+  <linearGradient id="_lgradient_2" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(145,0,0,96.667,55,75)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#1fb6d1"/>
+   <stop offset="100%" style="stop-color:#00ffff"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_2)" d="M 127.5 75 C 108.732 75 92.748 86.142 85.869 101.912 C 68.398 104.43 55 118.872 55 136.514 C 55 155.929 71.23 171.667 91.25 171.667 L 168.284 171.667 C 185.8 171.667 200 157.897 200 140.907 C 200 125.122 187.757 112.183 171.962 110.428 C 167.844 90.272 149.492 75 127.5 75 L 127.5 75 Z"/>
+  <g opacity=".2">
+   <path fill="#ffffff" d="M 127.5 75 C 108.732 75 92.748 86.146 85.869 101.914 C 68.398 104.432 55 118.87 55 136.512 C 55 136.894 55.037 137.268 55.061 137.645 C 55.698 120.595 68.827 106.787 85.869 104.33 C 92.748 88.563 108.732 77.417 127.5 77.417 C 149.492 77.417 167.845 92.689 171.963 112.845 C 187.334 114.553 199.305 126.865 199.939 142.072 C 199.961 141.686 200 141.302 200 140.911 C 200 125.125 187.758 112.183 171.963 110.429 C 167.845 90.273 149.492 75 127.5 75 L 127.5 75 Z"/>
+  </g>
+  <g>
+   <defs>
+    <filter id="ctHZddpnOAbBbRi29u8TaUkrJh2DQ8Pg" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+     <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="4.294"/>
+    </filter>
+   </defs>
+   <g opacity=".4" filter="url(#ctHZddpnOAbBbRi29u8TaUkrJh2DQ8Pg)">
+    <path d="M 170.705 88.564 C 171.305 86.378 172.791 84.532 174.763 83.453 C 176.763 82.346 179.106 82.09 181.278 82.715 C 183.478 83.311 185.335 84.788 186.421 86.747 C 187.536 88.734 187.793 91.063 187.164 93.221 L 162.993 177.366 C 160.389 186.432 154.832 186.952 150.59 178.527 L 127.5 132.66 L 104.41 178.527 C 100.168 186.952 94.611 186.432 92.007 177.366 L 67.836 93.221 C 67.207 91.063 67.464 88.734 68.579 86.747 C 69.665 84.788 71.522 83.311 73.722 82.715 C 75.894 82.09 78.237 82.346 80.237 83.453 C 82.209 84.532 83.695 86.378 84.295 88.564 L 101.125 146.999 L 119.821 109.824 C 124.059 101.397 130.941 101.397 135.179 109.824 L 153.875 146.999 L 170.705 88.564 Z"/>
+   </g>
+   <linearGradient id="_lgradient_3" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(120,0,0,111.411,67.5,79.542)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" style="stop-color:#e0e5e7"/>
+    <stop offset="100%" style="stop-color:#c7ced2"/>
+   </linearGradient>
+   <path fill="url(#_lgradient_3)" d="M 170.705 85.725 C 171.305 83.538 172.791 81.693 174.763 80.614 C 176.763 79.506 179.106 79.251 181.278 79.875 C 183.478 80.472 185.335 81.948 186.421 83.907 C 187.536 85.895 187.793 88.223 187.164 90.381 L 162.993 174.526 C 160.389 183.592 154.832 184.113 150.59 175.687 L 127.5 129.82 L 104.41 175.687 C 100.168 184.113 94.611 183.592 92.007 174.526 L 67.836 90.381 C 67.207 88.223 67.464 85.895 68.579 83.907 C 69.665 81.948 71.522 80.472 73.722 79.875 C 75.894 79.251 78.237 79.506 80.237 80.614 C 82.209 81.693 83.695 83.538 84.295 85.725 L 101.125 144.159 L 119.821 106.984 C 124.059 98.557 130.941 98.557 135.179 106.984 L 153.875 144.159 L 170.705 85.725 Z"/>
+  </g>
+ </g>
+</svg>

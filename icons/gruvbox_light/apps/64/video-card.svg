@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <filter id="vqJ5FSJadfKhElx1vMXwFmA1YnjoNz9Y" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#vqJ5FSJadfKhElx1vMXwFmA1YnjoNz9Y)">
+  <linearGradient id="_lgradient_7" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(244.648309,0,0,228.338396,5.68,11.95)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#46a926"/>
+   <stop offset="100%" style="stop-color:#009a56"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_7)" d="M 165.688919 11.95 C 239.744626 11.95 250.328309 22.507198 250.328309 96.493859 L 250.328309 155.744653 C 250.328309 229.73091 239.744626 240.288396 165.688919 240.288396 L 106 240.288396 L 106 199 L 60.333082 199 Q 60.333333 223.666667 60.333082 239.336428 C 13.244709 235.509216 5.68 218.294844 5.68 155.744653 L 5.68 96.493859 C 5.68 22.507198 16.26369 11.95 90.319393 11.95 L 165.688919 11.95 Z"/>
+ </g>
+ <linearGradient id="_lgradient_8" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(24.109085,0,0,211.849405,5.68,20.626122)" gradientUnits="userSpaceOnUse">
+  <stop offset="0%" style="stop-color:#bdc3c7"/>
+  <stop offset="100%" style="stop-color:#aeafb3"/>
+ </linearGradient>
+ <path fill="url(#_lgradient_8)" d="M 29.789085 232.475527 C 9.656108 222.61229 5.68 201.093014 5.68 155.744653 L 5.68 96.493859 C 5.68 52.405357 9.438209 30.840303 28.165717 20.626122 L 29.789085 232.475527 L 29.789085 232.475527 Z"/>
+ <g>
+  <path fill="#fdc92b" d="M 121 198.92476 L 137.181818 198.92476 L 137.181818 240.288396 L 121 240.288396 L 121 198.92476 Z"/>
+  <path fill="#fdc92b" d="M 145.272727 198.92476 L 161.454545 198.92476 L 161.454545 240.288396 L 145.272727 240.288396 L 145.272727 198.92476 Z"/>
+  <path fill="#fdc92b" d="M 169.545455 198.92476 L 185.727273 198.92476 L 185.727273 240 C 181.346616 240.175358 175.962677 240.281491 169.545455 240.288396 L 169.545455 198.92476 Z"/>
+  <path fill="#fdc92b" d="M 193.818182 239.4375 L 193.818182 198.92476 L 210 198.92476 L 210 237.5 C 204.952169 238.357763 199.568229 239.013596 193.818182 239.4375 Z"/>
+ </g>
+ <g>
+  <path fill="#4e4e4e" d="M 115.000001 64.666667 L 166.999999 64.666667 C 176.566527 64.666667 184.333333 72.433473 184.333333 82.000001 L 184.333333 133.999999 C 184.333333 143.566527 176.566527 151.333333 166.999999 151.333333 L 115.000001 151.333333 C 105.433473 151.333333 97.666667 143.566527 97.666667 133.999999 L 97.666667 82.000001 C 97.666667 72.433473 105.433473 64.666667 115.000001 64.666667 Z"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="112.11" y="43" transform="matrix(1,0,0,1,0,0)"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="155.44" y="43" transform="matrix(1,0,0,1,0,0)"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="112.11" y="144.11" transform="matrix(1,0,0,1,0,0)"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="155.44" y="144.11" transform="matrix(1,0,0,1,0,0)"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="184.33" y="71.89" transform="matrix(0,1,-1,0,277.888889,-105.222222)"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="184.33" y="115.22" transform="matrix(0,1,-1,0,321.222222,-61.888889)"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="83.22" y="71.89" transform="matrix(0,1,-1,0,176.777778,-4.111111)"/>
+  <rect fill="#b7b7b7" width="14.444" height="28.889" x="83.22" y="115.22" transform="matrix(0,1,-1,0,220.111111,39.222222)"/>
+ </g>
+</svg>

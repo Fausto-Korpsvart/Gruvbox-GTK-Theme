@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256">
+ <defs>
+  <filter id="a" width="270.648" height="254.338" x="-7.32" y="2.95" filterUnits="userSpaceOnUse">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow"/>
+  </filter>
+ </defs>
+ <path fill="#bc1938" d="M165.685 11.947c74.055 0 84.639 10.557 84.639 84.544v59.251c0 73.986-10.584 84.543-84.639 84.543h-75.37c-74.055 0-84.639-10.557-84.639-84.543V96.491c0-73.987 10.584-84.544 84.639-84.544h75.37z" filter="url(#a)"/>
+ <path fill="#ffffff" opacity=".1" d="M87.22 11.83h81.549v228.338H87.22z"/>
+ <path fill="#ffffff" opacity=".1" d="M5.676 126.116v29.626c0 73.986 10.584 84.543 84.639 84.543h75.37c74.055 0 84.639-10.557 84.639-84.543v-29.626H5.676z"/>
+ <g opacity=".4">
+  <linearGradient id="b" x1=".517" x2=".517" y2="1">
+   <stop offset="0%" stop-color="#ffffff"/>
+   <stop offset="12.5%" stop-color="#ffffff" stop-opacity=".098"/>
+   <stop offset="92.5%" stop-opacity=".098"/>
+   <stop offset="100%" stop-opacity=".498"/>
+  </linearGradient>
+  <path fill="none" stroke="url(#b)" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.077" d="M165.685 11.947c74.055 0 84.639 10.557 84.639 84.544v59.251c0 73.986-10.584 84.543-84.639 84.543h-75.37c-74.055 0-84.639-10.557-84.639-84.543V96.491c0-73.987 10.584-84.544 84.639-84.544h75.37z" vector-effect="non-scaling-stroke"/>
+ </g>
+ <path fill="#fa9381" fill-rule="evenodd" d="M84.831 167.997H67V85.882h57.246v16.892H84.831v14.429h24.752v16.892H84.831v33.902zm78.361 1.408q-7.507 0-11.027-5.983v4.575h-17.009V90.926l17.009-7.625v29.092q4.106-5.748 11.966-5.748 10.792 0 17.831 8.564Q189 123.772 189 137.966q0 15.016-6.921 23.227-6.921 8.212-18.887 8.212zm-1.877-16.423q5.162 0 7.919-3.989 2.756-3.988 2.756-11.027 0-7.155-2.756-11.027-2.757-3.871-7.919-3.871-5.982 0-9.15 3.871v22.289q2.933 3.754 9.15 3.754z"/>
+</svg>

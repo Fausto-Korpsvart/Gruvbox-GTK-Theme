@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="256" height="256" viewBox="0 0 256 256">
+ <g clip-path="url(#clip0)">
+  <g filter="url(#filter0_d)">
+   <path fill="url(#paint0_linear)" d="M165.685 11.947C239.74 11.947 250.324 22.5042 250.324 96.4908V155.742C250.324 229.728 239.74 240.285 165.685 240.285H90.3152C16.2595 240.285 5.67586 229.728 5.67586 155.742V96.4908C5.67586 22.5042 16.2595 11.947 90.3152 11.947H165.685Z"/>
+  </g>
+  <g filter="url(#filter1_f)">
+   <path fill-opacity=".4" fill-rule="evenodd" d="M100.132 143.168H186.667V86.4637L162.329 63H94.3377L70 86.4637V177.972L94.3377 203H166.192L186.667 182.274V153.335H156.534V169.76L151.512 175.626H108.631L100.132 167.022V143.168ZM100.132 116.966H156.534V96.2402L148.422 88.419H107.859L100.132 98.1955V116.966Z" clip-rule="evenodd"/>
+  </g>
+  <path fill="url(#paint1_linear)" fill-rule="evenodd" d="M100.132 138.168H186.667V81.4637L162.329 58H94.3377L70 81.4637V172.972L94.3377 198H166.192L186.667 177.274V148.335H156.534V164.76L151.512 170.626H108.631L100.132 162.022V138.168ZM100.132 111.966H156.534V91.2402L148.422 83.419H107.859L100.132 93.1955V111.966Z" clip-rule="evenodd"/>
+ </g>
+ <defs>
+  <filter id="filter0_d" width="264.648" height="248.338" x="-4.32" y="5.95" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+   <feOffset dy="4"/>
+   <feGaussianBlur stdDeviation="5"/>
+   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+   <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow"/>
+   <feBlend in="SourceGraphic" in2="effect1_dropShadow" mode="normal" result="shape"/>
+  </filter>
+  <filter id="filter1_f" width="136.667" height="160" x="60" y="53" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+   <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape"/>
+   <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="5"/>
+  </filter>
+  <linearGradient id="paint0_linear" x1="5.676" x2="5.676" y1="11.947" y2="240.285" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#4C5561"/>
+   <stop offset="1" stop-color="#2E3842"/>
+  </linearGradient>
+  <linearGradient id="paint1_linear" x1="70" x2="70" y1="58" y2="198" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#3FD11F"/>
+   <stop offset="1" stop-color="#55FF00"/>
+  </linearGradient>
+  <clipPath id="clip0">
+   <rect fill="#fff" width="256" height="256"/>
+  </clipPath>
+ </defs>
+</svg>

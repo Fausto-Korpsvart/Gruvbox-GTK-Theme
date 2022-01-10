@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <filter id="PyDcDxNMb4ez1ZGzH6p34QJGHZpRUM4l" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#PyDcDxNMb4ez1ZGzH6p34QJGHZpRUM4l)">
+  <linearGradient id="_lgradient_277" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(244.648309,0,0,228.338396,5.68,11.95)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#4c5561"/>
+   <stop offset="100%" style="stop-color:#2e3842"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_277)" d="M 165.688919 11.95 C 239.744626 11.95 250.328309 22.507198 250.328309 96.493859 L 250.328309 155.744653 C 250.328309 229.73091 239.744626 240.288396 165.688919 240.288396 L 90.319393 240.288396 C 16.26369 240.288396 5.68 229.73091 5.68 155.744653 L 5.68 96.493859 C 5.68 22.507198 16.26369 11.95 90.319393 11.95 L 165.688919 11.95 Z"/>
+ </g>
+ <g>
+  <defs>
+   <filter id="QIiE5WZBdUYxGuvWEPjmWXkiLE0EWz5M" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="4.294"/>
+   </filter>
+  </defs>
+  <g opacity=".4" filter="url(#QIiE5WZBdUYxGuvWEPjmWXkiLE0EWz5M)">
+   <path d="M 105.299696 58.722222 L 78.055556 84.5 L 115.111111 84.5 L 115.111111 186.893664 L 128 200.5 L 140.888889 186.893664 L 140.888889 84.5 L 177.944444 84.5 L 150.700304 58.722222 L 105.299696 58.722222 Z M 79.666667 94.166667 L 79.666667 155.993056 L 96.444878 172.34961 L 114.444011 153.891058 L 105.444444 145.118056 L 105.444444 94.166667 L 79.666667 94.166667 Z M 150.555556 94.166667 L 150.555556 145.118056 L 141.555989 153.891058 L 159.555122 172.34961 L 176.333333 155.993056 L 176.333333 94.166667 L 150.555556 94.166667 Z"/>
+  </g>
+  <path fill="#c2c4c1" d="M 115.111111 74.833333 L 140.888889 74.833333 L 140.888889 183.67284 L 128 197.277778 L 115.111111 183.67284 L 115.111111 74.833333 Z"/>
+  <path fill="#c2c4c1" d="M 114.434444 150.684444 L 96.454444 169.115556 L 79.666667 152.778889 L 79.666667 90.944444 L 105.444444 90.944444 L 105.444444 141.887778 L 114.434444 150.684444 Z"/>
+  <path fill="#c2c4c1" d="M 150.555556 90.944444 L 176.333333 90.944444 L 176.333333 152.778889 L 159.545556 169.115556 L 141.565556 150.684444 L 150.555556 141.887778 L 150.555556 90.944444 Z"/>
+  <path fill="#c2c4c1" d="M 150.702022 55.5 L 177.944444 81.277778 L 78.055556 81.277778 L 105.297978 55.5 L 150.702022 55.5 Z"/>
+  <g opacity=".2">
+   <path fill="#ffffff" d="M 105.299696 55.5 L 78.055556 81.277778 L 81.460288 81.277778 L 105.299696 58.722222 L 150.700304 58.722222 L 174.539712 81.277778 L 177.944444 81.277778 L 150.700304 55.5 L 105.299696 55.5 Z M 79.666667 90.944444 L 79.666667 94.166667 L 105.444444 94.166667 L 105.444444 90.944444 L 79.666667 90.944444 Z M 150.555556 90.944444 L 150.555556 94.166667 L 176.333333 94.166667 L 176.333333 90.944444 L 150.555556 90.944444 Z M 105.444444 141.895833 L 105.444444 145.118056 L 112.8329 152.317708 L 114.444011 150.668836 L 105.444444 141.895833 Z M 150.555556 141.895833 L 141.555989 150.668836 L 143.1671 152.317708 L 150.555556 145.118056 L 150.555556 141.895833 Z"/>
+  </g>
+ </g>
+</svg>

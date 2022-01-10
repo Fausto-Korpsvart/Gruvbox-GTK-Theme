@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g style="fill:#d6d6d6" transform="matrix(0.17500238,0,0,0.17500238,-68.374535,-80.79471)">
+  <g style="fill:none" transform="matrix(2.2295318,0,0,2.2295318,-476.75918,-656.11502)">
+   <path d="m 389.57,524.29 c 13.01,0 15.772,14.973 21.511,15.02 5.739,0.042 5.484,-15.02 18.489,-15.02" style="stroke:#eff0f2"/>
+   <path d="m 389.57,523.31 c 13.01,0 15.772,-10.274 21.511,-10.316 5.739,-0.042 5.484,10.316 18.489,10.316" style="stroke:#eff0f2"/>
+  </g>
+  <path d="m 6.7659028,257.98498 c 17.1548972,0 20.7968502,-19.74327 28.3642582,-19.80527 7.567404,-0.0553 7.231166,19.80527 24.37947,19.80527" transform="matrix(1.6908413,0,0,1.6908413,380.35948,74.409627)" style="fill:none;stroke:#eff0f2;stroke-width:1.29749584"/>
+  <rect style="stroke:#eff0f2;stroke-width:2.25778627" width="89.17" height="2.23" x="391.83" y="511.71"/>
+  <rect style="stroke:#eff0f2;stroke-width:2.22953176" width="2.23" height="6.689" x="407.41" y="509.48"/>
+  <rect style="stroke:#eff0f2;stroke-width:2.22953176" width="2.23" height="6.689" x="438.62" y="509.48"/>
+  <rect style="stroke:#eff0f2;stroke-width:2.22953176" width="2.23" height="6.689" x="469.83" y="509.48"/>
+ </g>
+</svg>

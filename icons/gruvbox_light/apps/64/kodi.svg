@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256">
+ <g filter="url(#a)">
+  <linearGradient id="b" x1=".233" x2=".933" y1="-.071" y2=".924" gradientTransform="matrix(244.648 0 0 228.339 6.343 13.28)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" stop-color="#e8e8e8"/>
+   <stop offset="100%" stop-color="#f5f5f5"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M166.351 13.28c74.056 0 84.64 10.557 84.64 84.544v59.251c0 73.986-10.584 84.544-84.64 84.544H90.982c-74.056 0-84.639-10.558-84.639-84.544V97.824c0-73.987 10.583-84.544 84.639-84.544h75.369z"/>
+ </g>
+ <defs>
+  <filter id="a" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow"/>
+  </filter>
+ </defs>
+ <defs>
+  <filter id="c" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow"/>
+  </filter>
+ </defs>
+ <path fill="#2daaaa" fill-rule="evenodd" d="M200.5 129.206c-.467 1.523-1.493 2.638-2.59 3.736-7.355 7.359-14.688 14.741-22.027 22.115-2.644 2.657-5.471 2.649-8.125-.019-7.575-7.61-15.151-15.219-22.723-22.831-2.579-2.593-2.578-5.423.008-8.023 7.615-7.655 15.231-15.308 22.849-22.959 2.479-2.49 5.392-2.492 7.87-.003 7.385 7.415 14.759 14.841 22.156 22.241 1.099 1.099 2.119 2.219 2.582 3.743v2zM127.488 200.5c-1.51-.482-2.605-1.532-3.694-2.631-7.323-7.39-14.67-14.756-22.008-22.132-2.625-2.639-2.628-5.456-.009-8.089 7.596-7.631 15.191-15.262 22.788-22.891 2.526-2.535 5.419-2.545 7.931-.022 7.597 7.63 15.192 15.261 22.786 22.894 2.608 2.622 2.616 5.495.018 8.105-7.402 7.438-14.816 14.867-22.201 22.322-1.057 1.066-2.144 2.025-3.618 2.443h-1.993v.001zm-26.655-90.578c0-8.484.076-16.969-.048-25.452-.036-2.456.548-4.374 2.416-5.993 1.502-1.304 2.834-2.808 4.242-4.222 5.567-5.596 11.135-11.191 16.704-16.784 2.619-2.629 5.444-2.627 8.061.001 7.576 7.607 15.151 15.216 22.724 22.826 2.602 2.614 2.6 5.489-.001 8.104-8.958 9.003-17.919 18.006-26.879 27.008-7.912 7.951-15.823 15.902-23.737 23.852-1.466 1.472-2.764 1.13-3.297-.911-.165-.633-.178-1.317-.178-1.977-.011-8.817-.007-17.635-.007-26.452zm-18.116 18.384c0 7.786.012 15.573-.015 23.36-.003.739-.12 1.522-.384 2.209-.518 1.351-1.489 1.519-2.506.5-3.567-3.575-7.124-7.16-10.685-10.74-4.115-4.138-8.232-8.276-12.345-12.417-1.703-1.714-1.711-4.092-.014-5.813 7.575-7.692 15.151-15.383 22.731-23.071.502-.508.974-1.198 1.826-.875.814.308 1.135 1.046 1.251 1.863.072.507.129 1.021.13 1.532.008 7.817.005 15.635.005 23.452h.006z" filter="url(#c)"/>
+</svg>

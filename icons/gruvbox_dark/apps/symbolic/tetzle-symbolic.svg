@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <g>
+  <g opacity=".3">
+   <rect fill="#eff0f2" width="5.333" height="5.333" x="0" y=".05" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g opacity=".6">
+   <rect fill="#eff0f2" width="5.333" height="5.333" x="0" y="5.38" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g opacity=".4">
+   <rect fill="#eff0f2" width="5.333" height="5.333" x="5.33" y="5.38" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g opacity=".2">
+   <rect fill="#eff0f2" width="5.333" height="5.333" x="10.67" y="5.38" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g opacity=".7">
+   <rect fill="#eff0f2" width="5.333" height="5.333" x="0" y="10.72" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g opacity=".6">
+   <rect fill="#eff0f2" width="5.333" height="5.333" x="5.33" y="10.72" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g opacity=".6">
+   <rect fill="#eff0f2" width="5.333" height="5.333" x="10.67" y="10.72" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+ </g>
+</svg>

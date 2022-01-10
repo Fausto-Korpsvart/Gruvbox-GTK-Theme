@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g transform="matrix(0.9375,0,0,0.9375,-52,-284.5)">
+  <path d="m 56,304 v 0.5 7.5 h 8 v -8 z m 1,1 h 6 v 6 h -6 z" style="fill:#eff0f2"/>
+ </g>
+ <g transform="matrix(0.9375,0,0,0.9375,-52,-277)">
+  <path style="fill:#eff0f2" d="m 56,304 v 0.5 7.5 h 8 v -8 z m 1,1 v 6 h 6 -6 z"/>
+ </g>
+ <g transform="matrix(0.9375,0,0,0.9375,-44.5,-284.5)">
+  <path style="fill:#eff0f2" d="m 56,304 v 0.5 7.5 h 8 v -8 z m 7,7 v -6 6 h -6 z"/>
+ </g>
+ <g transform="matrix(0.9375,0,0,0.9375,-44.5,-277)">
+  <path d="m 56,304 v 0.5 7.5 h 8 v -8 z m 1,1 h 6 v 6 h -6 z" style="fill:#eff0f2"/>
+ </g>
+</svg>

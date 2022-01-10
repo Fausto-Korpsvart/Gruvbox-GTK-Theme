@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Gruvbox_Light
+Comment=Gruvbox Light theme for Gtk
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Gruvbox_Light
+MetacityTheme=Gruvbox_Light
+IconTheme=Gruvbox_Light
+CursorTheme=Gruvbox_Light
+ButtonLayout=close,minimize,maximize:menu

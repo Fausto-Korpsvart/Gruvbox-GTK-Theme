@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1" viewBox="0 0 16 16">
+ <g transform="translate(-8,176.00213)">
+  <path d="M 9.7382812,-175.00195 C 9.4921876,-174.98657 9,-174.86328 9,-174.125 L 9,-168 c 0,3.878 3.122,7 7,7 3.878,0 7,-3.122 7,-7 0,-3.878 -3.122,-7 -7,-7 l -6.125,0 c 0,0 -0.054687,-0.007 -0.1367188,-0.002 z M 10.5,-174 a 0.5,0.5 0 0 1 0.5,0.5 0.5,0.5 0 0 1 -0.5,0.5 0.5,0.5 0 0 1 -0.5,-0.5 0.5,0.5 0 0 1 0.5,-0.5 z m 5.5,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z" style="fill:#eff0f2"/>
+  <rect style="opacity:0.7;fill:#eff0f2" width="2" height="2" x="-15" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.8;fill:#eff0f2" width="2" height="2" x="-13" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.7;fill:#eff0f2" width="2" height="2" x="-13" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.6;fill:#eff0f2" width="2" height="2" x="-17" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.6;fill:#eff0f2" width="2" height="2" x="-15" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.6;fill:#eff0f2" width="2" height="2" x="-13" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:#eff0f2" width="2" height="2" x="-19" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:#eff0f2" width="2" height="2" x="-17" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:#eff0f2" width="2" height="2" x="-15" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:#eff0f2" width="2" height="2" x="-13" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:#eff0f2" width="2" height="2" x="-21" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:#eff0f2" width="2" height="2" x="-19" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:#eff0f2" width="2" height="2" x="-17" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:#eff0f2" width="2" height="2" x="-15" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:#eff0f2" width="2" height="2" x="-13" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:#eff0f2" width="2" height="2" x="-21" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:#eff0f2" width="2" height="2" x="-19" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:#eff0f2" width="2" height="2" x="-17" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:#eff0f2" width="2" height="2" x="-15" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.2;fill:#eff0f2" width="2" height="2" x="-21" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.2;fill:#eff0f2" width="2" height="2" x="-19" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.2;fill:#eff0f2" width="2" height="2" x="-17" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.1;fill:#eff0f2" width="2" height="2" x="-21" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.1;fill:#eff0f2" width="2" height="2" x="-19" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.05;fill:#eff0f2" width="2" height="2" x="-21" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+ </g>
+</svg>

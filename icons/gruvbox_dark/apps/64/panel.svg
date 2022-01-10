@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <filter id="4nzu2VFF8duxPXiLfu9MLLQ9Rf1VFVDK" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#4nzu2VFF8duxPXiLfu9MLLQ9Rf1VFVDK)">
+  <linearGradient id="_lgradient_42" x1=".187" x2=".19" y1=".005" y2=".871" gradientTransform="matrix(244.648,0,0,228.338,5.68,11.95)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#07b3ff"/>
+   <stop offset="100%" style="stop-color:#007de8"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_42)" d="M 165.689 11.95 C 239.745 11.95 250.328 22.507 250.328 96.494 L 250.328 155.745 C 250.328 229.731 239.745 240.288 165.689 240.288 L 90.319 240.288 C 16.264 240.288 5.68 229.731 5.68 155.745 L 5.68 96.494 C 5.68 22.507 16.264 11.95 90.319 11.95 L 165.689 11.95 L 165.689 11.95 L 165.689 11.95 Z"/>
+ </g>
+ <g opacity=".8">
+  <path fill="#171717" d="M 247.697 199 C 241.493 234.221 221.83 240.288 165.689 240.288 L 90.319 240.288 C 34.179 240.288 14.515 234.221 8.311 199 L 247.697 199 L 247.697 199 L 247.697 199 L 247.697 199 Z"/>
+ </g>
+ <g opacity=".8">
+  <path fill="#171717" d="M 118 173.384 L 128 188.384 L 138 173.384 L 118 173.384 L 118 173.384 Z"/>
+ </g>
+</svg>

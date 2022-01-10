@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <filter id="CUXOqXYxAz1upxKXOfcFWw6SUkcHsA6M" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#CUXOqXYxAz1upxKXOfcFWw6SUkcHsA6M)">
+  <linearGradient id="_lgradient_4" x1=".518" x2=".532" y1="-.194" y2="1.208" gradientTransform="matrix(244.648,0,0,228.338,5.682,11.95)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#4ce0c6"/>
+   <stop offset="100%" style="stop-color:#3b85b5"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_4)" d="M 165.691 11.95 C 239.746 11.95 250.33 22.507 250.33 96.494 L 250.33 155.745 C 250.33 229.731 239.746 240.288 165.691 240.288 L 90.321 240.288 C 16.265 240.288 5.682 229.731 5.682 155.745 L 5.682 96.494 C 5.682 22.507 16.265 11.95 90.321 11.95 L 165.691 11.95 Z"/>
+ </g>
+ <path fill="#ffffff" fill-rule="evenodd" d="M 174.106 138.247 L 165.91 138.247 L 169.326 117.755 L 178.207 117.755 C 182.988 117.755 186.403 119.804 186.403 123.903 C 185.72 135.515 180.255 137.564 174.106 138.247 L 174.106 138.247 Z M 104.433 148.493 L 115.361 93.164 L 128.341 93.164 L 125.608 107.508 L 137.903 107.508 C 148.832 108.192 152.931 113.657 151.565 120.487 L 146.782 148.493 L 133.121 148.493 L 137.903 123.219 C 138.586 119.803 138.586 117.755 133.806 117.755 L 123.559 117.755 L 117.41 148.493 L 104.433 148.493 L 104.433 148.493 L 104.433 148.493 Z M 183.67 107.507 L 158.397 107.507 L 147.468 162.836 L 160.446 162.836 L 163.179 148.492 L 175.474 148.492 C 187.086 149.175 200.065 139.612 200.065 123.218 C 200.065 113.657 194.599 108.191 183.67 107.507 L 183.67 107.507 L 183.67 107.507 Z M 82.575 138.247 L 74.378 138.247 L 77.794 117.755 L 86.674 117.755 C 91.456 117.755 94.871 119.804 94.871 123.903 C 94.187 135.515 88.723 137.564 82.575 138.247 L 82.575 138.247 L 82.575 138.247 Z M 92.139 107.507 L 66.864 107.507 L 55.935 162.836 L 68.914 162.836 L 71.646 148.492 L 83.941 148.492 C 95.554 149.175 108.532 139.612 108.532 123.218 C 108.532 113.657 103.066 108.191 92.139 107.507 L 92.139 107.507 L 92.139 107.507 Z"/>
+</svg>

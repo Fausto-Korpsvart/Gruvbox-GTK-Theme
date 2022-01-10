@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256">
+ <defs>
+  <clipPath id="a">
+   <path d="M0 0h256v256H0z"/>
+  </clipPath>
+ </defs>
+ <g clip-path="url(#a)">
+  <path fill="none" d="M0 0h256v256H0z"/>
+  <path fill="#ec407a" d="M53.705 21c-36.315 0-40.038 2.055-40.038 38.371v92.167h230V79.563c0-36.316-3.724-42.102-40.039-42.102h-89.336L97.864 21H53.705z"/>
+  <path fill="#f06292" d="M53.705 100.384c-36.317 0-40.038 3.73-40.038 40.045v54.524c0 36.316 3.721 40.047 40.038 40.047h149.923c36.317 0 40.039-3.731 40.039-40.047v-70.984c0-36.316-3.722-40.047-40.039-40.047h-83.431l-16.438 16.462H53.705z"/>
+  <linearGradient id="b" x2="0" y1=".5" y2="-.5" gradientTransform="matrix(230 0 0 151.078 13.667 83.922)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" stop-color="#ffffff" stop-opacity=".07"/>
+   <stop offset="67.282%" stop-color="#fcefe8" stop-opacity="0"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M53.705 100.384c-36.317 0-40.038 3.73-40.038 40.045v54.524c0 36.316 3.721 40.047 40.038 40.047h149.923c36.317 0 40.039-3.731 40.039-40.047v-70.984c0-36.316-3.722-40.047-40.039-40.047h-83.431l-16.438 16.462H53.705z"/>
+  <g opacity=".4">
+   <radialGradient id="c" cx=".5" cy=".5" r=".272" fx=".5" fy=".136" gradientTransform="matrix(230 0 0 60.62 13.667 21)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity=".204"/>
+   </radialGradient>
+   <path fill="url(#c)" d="M53.705 21c-36.315 0-40.038 2.055-40.038 38.371v2.059c0-36.316 3.723-38.373 40.038-38.373h44.159l16.428 16.461h89.336c36.315 0 40.039 5.786 40.039 42.102v-2.057c0-36.316-3.724-42.102-40.039-42.102h-89.336L97.864 21H53.705z"/>
+  </g>
+  <g opacity=".4">
+   <radialGradient id="d" cx=".5" cy=".5" r=".272" fx=".482" fy=".211" gradientTransform="matrix(230 0 0 58.565 13.667 83.922)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity=".204"/>
+   </radialGradient>
+   <path fill="url(#d)" d="M120.197 83.922l-16.438 16.462H53.705c-36.315 0-40.038 3.728-40.038 40.043v2.06c0-36.316 3.723-40.046 40.038-40.046h50.054l16.438-16.46h83.431c36.315 0 40.039 3.727 40.039 40.043v-2.057c0-36.316-3.724-40.045-40.039-40.045h-83.431z"/>
+  </g>
+  <path fill="#ffffff" opacity=".1" d="M243.667 167.096l-65.715 65.845h25.676c36.315 0 40.039-3.727 40.039-40.043v-25.802z"/>
+  <path opacity=".2" d="M13.667 192.898v2.057c0 36.316 3.723 40.045 40.038 40.045h149.923c36.315 0 40.039-3.729 40.039-40.045v-2.057c0 36.316-3.724 40.043-40.039 40.043H53.705c-36.315 0-40.038-3.727-40.038-40.043z"/>
+ </g>
+</svg>

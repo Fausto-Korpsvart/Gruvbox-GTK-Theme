@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <g>
+  <path fill="#579140" d="M 53.705 21 C 17.39 21 13.667 23.055 13.667 59.371 L 13.667 151.538 L 243.667 151.538 L 243.667 79.563 C 243.667 43.247 239.943 37.461 203.628 37.461 L 114.292 37.461 L 97.864 21 L 53.705 21 Z"/>
+  <defs>
+   <filter id="T4vAEXGsbCjV1ISEYmsIeiVlFGaR7nny" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+    <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="0" result="pf_100_offsetBlur"/>
+    <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+    <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+    <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+   </filter>
+  </defs>
+  <g filter="url(#T4vAEXGsbCjV1ISEYmsIeiVlFGaR7nny)">
+   <path fill="#ebebeb" d="M 40.767 56.667 L 216.9 56.667 C 222.658 56.667 227.333 61.342 227.333 67.1 L 227.333 150.567 C 227.333 156.325 222.658 161 216.9 161 L 40.767 161 C 35.008 161 30.333 156.325 30.333 150.567 L 30.333 67.1 C 30.333 61.342 35.008 56.667 40.767 56.667 Z"/>
+  </g>
+  <path fill="#7aaf65" d="M 53.705 100.384 C 17.388 100.384 13.667 104.114 13.667 140.429 L 13.667 194.953 C 13.667 231.269 17.388 235 53.705 235 L 203.628 235 C 239.945 235 243.667 231.269 243.667 194.953 L 243.667 123.969 C 243.667 87.653 239.945 83.922 203.628 83.922 L 120.197 83.922 L 103.759 100.384 L 53.705 100.384 Z"/>
+  <linearGradient id="_lgradient_7" x1="0" x2="0" y1=".5" y2="-.5" gradientTransform="matrix(230,0,0,151.078,13.667,83.922)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" stop-opacity=".07" style="stop-color:#fff"/>
+   <stop offset="67.282%" stop-opacity="0" style="stop-color:#fcefe8"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_7)" d="M 53.705 100.384 C 17.388 100.384 13.667 104.114 13.667 140.429 L 13.667 194.953 C 13.667 231.269 17.388 235 53.705 235 L 203.628 235 C 239.945 235 243.667 231.269 243.667 194.953 L 243.667 123.969 C 243.667 87.653 239.945 83.922 203.628 83.922 L 120.197 83.922 L 103.759 100.384 L 53.705 100.384 Z"/>
+  <g opacity=".4">
+   <radialGradient id="_rgradient_14" cx=".5" cy=".5" r=".272" fx=".5" fy=".136" gradientTransform="matrix(230,0,0,60.62,13.667,21)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" style="stop-color:#fff"/>
+    <stop offset="100%" stop-opacity=".204" style="stop-color:#fff"/>
+   </radialGradient>
+   <path fill="url(#_rgradient_14)" d="M 53.705 21 C 17.39 21 13.667 23.055 13.667 59.371 L 13.667 61.43 C 13.667 25.114 17.39 23.057 53.705 23.057 L 97.864 23.057 L 114.292 39.518 L 203.628 39.518 C 239.943 39.518 243.667 45.304 243.667 81.62 L 243.667 79.563 C 243.667 43.247 239.943 37.461 203.628 37.461 L 114.292 37.461 L 97.864 21 L 53.705 21 Z"/>
+  </g>
+  <g opacity=".4">
+   <radialGradient id="_rgradient_15" cx=".5" cy=".5" r=".272" fx=".482" fy=".211" gradientTransform="matrix(230,0,0,58.565,13.667,83.922)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" style="stop-color:#fff"/>
+    <stop offset="100%" stop-opacity=".204" style="stop-color:#fff"/>
+   </radialGradient>
+   <path fill="url(#_rgradient_15)" d="M 120.197 83.922 L 103.759 100.384 L 53.705 100.384 C 17.39 100.384 13.667 104.112 13.667 140.427 L 13.667 142.487 C 13.667 106.171 17.39 102.441 53.705 102.441 L 103.759 102.441 L 120.197 85.981 L 203.628 85.981 C 239.943 85.981 243.667 89.708 243.667 126.024 L 243.667 123.967 C 243.667 87.651 239.943 83.922 203.628 83.922 L 120.197 83.922 Z"/>
+  </g>
+  <g opacity=".1">
+   <path fill="#ffffff" d="M 243.667 167.096 L 177.952 232.941 L 203.628 232.941 C 239.943 232.941 243.667 229.214 243.667 192.898 L 243.667 167.096 Z"/>
+  </g>
+  <g opacity=".2">
+   <path d="M 13.667 192.898 L 13.667 194.955 C 13.667 231.271 17.39 235 53.705 235 L 203.628 235 C 239.943 235 243.667 231.271 243.667 194.955 L 243.667 192.898 C 243.667 229.214 239.943 232.941 203.628 232.941 L 53.705 232.941 C 17.39 232.941 13.667 229.214 13.667 192.898 Z"/>
+  </g>
+ </g>
+ <path fill="#d0e3c9" d="M 163 127.2 C 154.163 127.2 147 134.363 147 143.2 C 147 152.037 154.163 159.2 163 159.2 C 171.837 159.2 179 152.037 179 143.2 C 179 134.363 171.837 127.2 163 127.2 L 163 127.2 Z M 111 158.2 L 79 215.2 L 163 215.2 L 136 168.2 L 126 183.2 L 111 158.2 Z"/>
+</svg>

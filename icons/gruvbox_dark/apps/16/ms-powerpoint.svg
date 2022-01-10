@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+<defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#eff0f2; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#928374; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#928374; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+ <path d="M 8.6294511,0.14469283 C 5.9203842,0.62713756 3.2098512,1.2672226 0.50078356,1.7408094 c 0,4.1210245 -0.001763,8.2438128 0,12.3666006 C 3.1957135,14.579234 5.8920777,15.208736 8.5817084,15.7 H 9.3889891 V 0.14469283 Z M 4.5531826,5.0429045 C 5.0876619,5.0311458 5.6005297,5.1083592 6.01719,5.4853318 6.8153232,6.4538272 6.6042688,8.2351769 5.420952,8.8147847 5.0005916,9.0295704 4.5190564,9.0001745 4.0616526,8.9852806 4.0597859,9.7093202 4.0579193,10.433203 4.0597859,11.157282 3.6931214,11.125923 3.3248506,11.094573 2.9581861,11.06478 2.9413345,9.0870264 2.9374145,7.1988718 2.9598453,5.2211579 3.4813007,5.1560952 4.0187624,5.0541894 4.5532417,5.042823 Z M 4.4916046,6.11601 C 4.3457622,6.11233 4.1965484,6.12385 4.0597561,6.131688 c -0.0055,0.6222121 -0.00902,1.2423864 0.029783,1.8627565 0.3685062,-0.04429 0.846275,-0.00784 1.0573844,-0.3888092 C 5.3228281,7.2317197 5.3338817,6.7536256 5.1226261,6.3906455 4.9687095,6.1766437 4.7344839,6.1225554 4.4913959,6.1158923 Z" style="fill:url(#oomox)" class="ColorScheme-Text"/>
+ <path d="m 9.944806,2.3669019 v 1.8464516 c 0.260369,-0.056048 0.543239,-0.1610893 0.833047,-0.1783348 v 2.4986085 h 0.555547 1.927867 c -0.08823,0.7580211 -0.42615,1.537168 -1.094545,1.9333065 -0.655548,0.4407419 -1.488595,0.4464251 -2.221916,0.2187053 0.0018,0.3629407 -0.0018,1.0961907 0,1.459131 h 4.444101 v 0.555544 H 9.944806 v 1.111084 h 4.444101 v 0.555543 H 9.944806 v 1.666667 H 15.5 V 2.3671371 Z M 11.3334,3.6982598 c 1.181184,0.1222868 2.157852,1.1014038 2.286476,2.2796681 H 11.3334 Z" style="fill:url(#oomox)" class="ColorScheme-Text"/>
+</svg>
