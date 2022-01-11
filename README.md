@@ -36,11 +36,11 @@ So, this is my first attempt with GTK themes, which currently only works on the 
 
 #### More themes of the 'Code Editors Colours for GTK Themes' serie
 
-[**Gruvbox Shell Themes**](https://) <br>
-[**Gruvbox Icons Themes**](https://) <br>
-[**Tokyo Night Themes**](https://) <br>
-[**Tokyo Night Shell Themes**](https://) <br>
-[**Tokyo Night Icon Themes**](https://) <br>
+- [**Gruvbox Shell Themes**](https://www.pling.com/p/1681451/) <br>
+- [**Gruvbox Icons Themes**](https://www.pling.com/p/1681460/) <br>
+- [**Tokyo Night Themes**](https://www.pling.com/p/1681315/) <br>
+- [**Tokyo Night Shell Themes**](https://www.pling.com/p/1681470/) <br>
+- [**Tokyo Night Icon Themes**](https://www.pling.com/p/1681475/) <br>
 
 ---
 
