@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#eff0f2; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#928374; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#928374; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+ <path style="fill:url(#oomox)" class="ColorScheme-Text" d="M 0.061 0.001 C 0.061 0.125 0.073 1.609 0.81 2.348 C 0.81 2.41 0.248 2.148 0.003 2.27 C 0.003 3.256 0.926 4.059 0.926 4.059 C 0.926 4.059 0.311 3.881 0.003 3.944 C -0.06 4.251 0.873 6.154 2.349 6.154 L 2.464 6.154 L 2.464 6.654 C 2.459 6.693 2.459 6.731 2.464 6.769 L 2.464 9.423 C 2.45 9.454 2.406 9.538 2.406 9.538 C 2.406 9.538 2.092 14.206 0.061 14.268 C 0.183 15.253 1.055 15.999 3.271 15.999 L 12.731 15.999 C 14.947 15.999 15.82 15.314 15.943 14.268 C 13.911 14.206 13.597 9.538 13.597 9.538 C 13.597 9.538 13.554 9.454 13.539 9.423 L 13.539 6.154 L 13.655 6.154 C 15.13 6.154 16.065 4.308 15.942 4.001 C 15.697 3.878 15.077 4.059 15.077 4.059 C 15.077 4.059 16 3.256 16 2.27 C 15.755 2.148 15.192 2.41 15.192 2.348 C 15.93 1.609 15.943 0.124 15.943 0.001 C 15.943 0.001 14.158 0.054 14.097 3.194 C 14.097 4.967 13.714 5.378 13.443 5.443 C 12.796 2.669 8.513 1.641 8.001 0.617 C 7.432 1.583 3.199 2.662 2.56 5.443 C 2.289 5.378 1.907 4.967 1.907 3.194 C 1.844 0.054 0.061 0.001 0.061 0.001 Z M 8.001 2.271 C 8.309 2.455 8.67 2.64 9.04 2.886 C 10.823 3.809 12.308 4.801 12.308 6.154 L 12.308 6.769 C 12.308 7.077 12.303 7.351 12.289 7.635 C 11.243 7.207 9.842 6.827 7.944 6.827 C 6.047 6.827 4.697 7.149 3.714 7.577 C 3.701 7.308 3.695 7.039 3.695 6.769 C 3.699 6.731 3.699 6.692 3.695 6.654 L 3.695 6.154 C 3.695 4.739 5.175 3.813 7.021 2.828 C 7.391 2.583 7.694 2.393 8.001 2.27 L 8.001 2.271 Z M 7.944 8.058 C 9.941 8.058 11.292 8.483 12.174 8.923 C 11.866 11.192 11.083 12.588 10.29 13.441 C 9.78 13.989 9.256 14.323 8.828 14.518 C 8.566 14.64 8.287 14.724 8.001 14.768 C 7.963 14.768 7.603 14.722 7.175 14.537 C 6.622 14.294 6.125 13.941 5.713 13.499 C 4.915 12.653 4.132 11.238 3.829 8.904 C 4.685 8.473 5.988 8.058 7.944 8.058 Z M 4.925 8.923 C 4.925 9.538 5.413 10.461 6.214 10.461 C 6.951 10.461 7.328 9.841 7.328 9.596 L 4.925 8.923 Z M 11.078 8.923 L 8.675 9.596 C 8.675 9.841 9.052 10.461 9.789 10.461 C 10.59 10.461 11.078 9.538 11.078 8.923 Z"/>
+</svg>

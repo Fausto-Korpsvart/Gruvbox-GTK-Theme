@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256">
+ <defs>
+  <clipPath id="a">
+   <path fill="#ffffff" d="M0 0h256v256H0z"/>
+  </clipPath>
+ </defs>
+ <g clip-path="url(#a)">
+  <path fill="#76c22b" d="M165.685 11.947c74.055 0 84.639 10.557 84.639 84.544v59.251c0 73.986-10.584 84.543-84.639 84.543h-75.37c-74.055 0-84.639-10.557-84.639-84.543V96.491c0-73.987 10.584-84.544 84.639-84.544z" filter="url(#b)"/>
+  <defs>
+   <filter id="b" width="4" height="4" x="-2" y="-2" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="4.294"/>
+    <feOffset dy="4" result="pf_100_offsetBlur"/>
+    <feFlood flood-opacity=".4"/>
+    <feComposite in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+    <feBlend in="SourceGraphic" in2="pf_100_dropShadow"/>
+   </filter>
+  </defs>
+  <path opacity=".4" d="M10.5 56.5H245v23.25H10.5z" filter="url(#c)"/>
+  <defs>
+   <filter id="c" width="4" height="4" x="-2" y="-2" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+    <feGaussianBlur stdDeviation="4.294"/>
+   </filter>
+  </defs>
+  <path fill="#333333" d="M165.685 11.947c64.324 0 80.762 7.965 83.971 58.543-5.534-.093-249.79-.86-243.244-1.03C9.78 19.804 26.43 11.947 90.315 11.947z"/>
+  <g fill="#ebebeb">
+   <path fill-rule="evenodd" d="M30.5 44.5c0-5.3 2.109-10.391 5.855-14.145A20.037 20.037 0 0 1 50.5 24.5c5.3 0 10.391 2.109 14.145 5.855A20.037 20.037 0 0 1 70.5 44.5c0 5.3-2.109 10.391-5.855 14.145A20.037 20.037 0 0 1 50.5 64.5c-5.3 0-10.391-2.109-14.145-5.855A20.037 20.037 0 0 1 30.5 44.5zm3.636 0c0-4.336 1.728-8.5 4.791-11.573A16.405 16.405 0 0 1 50.5 28.136c4.336 0 8.5 1.728 11.573 4.791A16.405 16.405 0 0 1 66.864 44.5c0 4.336-1.728 8.5-4.791 11.573A16.405 16.405 0 0 1 50.5 60.864c-4.336 0-8.5-1.728-11.573-4.791A16.405 16.405 0 0 1 34.136 44.5z"/>
+   <circle cx="50.5" cy="44.5" r="13.636"/>
+  </g>
+  <g fill="#ebebeb">
+   <path d="M192.867 24.25h18.625c1.1 0 1.993.893 1.993 1.993v3.893c0 1.1-.893 1.993-1.993 1.993h-18.625c-1.1 0-1.993-.893-1.993-1.993v-3.893c0-1.1.893-1.993 1.993-1.993zM192.743 40.21h24.014c1.1 0 1.993.892 1.993 1.992v3.894a1.994 1.994 0 0 1-1.993 1.992h-24.014c-1.1 0-1.993-.893-1.993-1.992v-3.894c0-1.1.893-1.992 1.993-1.992zM192.743 56.371h16.085c1.1 0 1.993.893 1.993 1.993v3.893c0 1.1-.893 1.993-1.993 1.993h-16.085c-1.1 0-1.993-.893-1.993-1.993v-3.893c0-1.1.893-1.993 1.993-1.993z"/>
+  </g>
+  <path fill="#cfe9b4" d="M32.953 180h190.094a4.955 4.955 0 0 1 4.953 4.953v30.094a4.955 4.955 0 0 1-4.953 4.953H32.953A4.955 4.955 0 0 1 28 215.047v-30.094A4.955 4.955 0 0 1 32.953 180z"/>
+  <g opacity=".4">
+   <linearGradient id="d" x1="3.516" x2="3.516" y1="130.466" y2="-109.966" gradientTransform="scale(1.0345 .96666)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-opacity=".498"/>
+    <stop offset="12.5%" stop-opacity=".098"/>
+    <stop offset="92.5%" stop-color="#ffffff" stop-opacity=".098"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+   </linearGradient>
+   <path fill="none" stroke="url(#d)" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.077" d="M165.685 11.947c74.055 0 84.639 10.557 84.639 84.544v59.251c0 73.986-10.584 84.543-84.639 84.543h-75.37c-74.055 0-84.639-10.557-84.639-84.543V96.491c0-73.987 10.584-84.544 84.639-84.544z"/>
+  </g>
+ </g>
+</svg>

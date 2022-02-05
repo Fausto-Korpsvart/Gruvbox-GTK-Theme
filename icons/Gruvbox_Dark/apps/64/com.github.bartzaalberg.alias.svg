@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <filter id="x16iEelYXjWwv0XFPJ02I03YUOKhqz8m" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#x16iEelYXjWwv0XFPJ02I03YUOKhqz8m)">
+  <linearGradient id="_lgradient_32" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(244.648,0,0,228.338,5.676,11.952)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#5786ff"/>
+   <stop offset="50%" style="stop-color:#51a8ff"/>
+   <stop offset="100%" style="stop-color:#0f82f5"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_32)" d="M 165.685 11.952 C 239.74 11.952 250.324 22.509 250.324 96.495 L 250.324 155.746 C 250.324 229.733 239.74 240.29 165.685 240.29 L 90.315 240.29 C 16.26 240.29 5.676 229.733 5.676 155.746 L 5.676 96.495 C 5.676 22.509 16.26 11.952 90.315 11.952 L 165.685 11.952 Z"/>
+ </g>
+ <g>
+  <defs>
+   <filter id="dmp15et0zQd5prQdxdFXAGSOuyfAVMmj" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="4.294"/>
+   </filter>
+  </defs>
+  <g opacity=".4" filter="url(#dmp15et0zQd5prQdxdFXAGSOuyfAVMmj)">
+   <path d="M 113.959 61.5 L 113.221 63.236 L 59.996 201.5 L 90.02 201.5 L 100.793 171.5 L 155.344 171.5 L 166.035 201.5 L 196.004 201.5 L 142.52 61.5 L 113.959 61.5 Z M 128.164 102.365 L 144.639 141.5 L 111.566 141.5 L 128.164 102.365 Z"/>
+  </g>
+  <path fill="#ffffff" d="M 113.959 56.5 L 113.221 58.236 L 59.996 196.5 L 90.02 196.5 L 100.793 166.5 L 155.344 166.5 L 166.035 196.5 L 196.004 196.5 L 142.52 56.5 L 113.959 56.5 Z M 128.164 97.365 L 144.639 136.5 L 111.566 136.5 L 128.164 97.365 Z"/>
+ </g>
+</svg>

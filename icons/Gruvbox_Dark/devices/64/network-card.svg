@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <clipPath id="_clipPath_Rs1Z4p8ER5dLGy13XAWaJ1DL92K0YftS">
+   <rect width="256" height="256"/>
+  </clipPath>
+ </defs>
+ <g clip-path="url(#_clipPath_Rs1Z4p8ER5dLGy13XAWaJ1DL92K0YftS)">
+  <g filter="url(#tHYT8Z2r0CNrC35kvHWURf8yENC5ZsUf)">
+   <linearGradient id="_lgradient_110" x1=".5" x2=".5" y1="0" y2="1" gradientTransform="matrix(244.648,0,0,228.338,5.68,11.95)" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" style="stop-color:rgb(26,214,171)"/>
+    <stop offset="100%" style="stop-color:rgb(50,157,182)"/>
+   </linearGradient>
+   <path fill="url(#_lgradient_110)" d="M 165.689 11.95 C 239.745 11.95 250.328 22.507 250.328 96.494 L 250.328 155.745 C 250.328 229.731 239.745 240.288 165.689 240.288 L 106 240.288 L 106 199 L 60.333 199 Q 60.333 223.667 60.333 239.336 C 13.245 235.509 5.68 218.295 5.68 155.745 L 5.68 96.494 C 5.68 22.507 16.264 11.95 90.319 11.95 L 165.689 11.95 L 165.689 11.95 Z"/>
+  </g>
+  <defs>
+   <filter id="tHYT8Z2r0CNrC35kvHWURf8yENC5ZsUf" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+    <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+    <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+    <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+    <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+   </filter>
+  </defs>
+  <linearGradient id="_lgradient_111" x1="0" x2="0" y1="0" y2="1" gradientTransform="matrix(24.109,0,0,211.849,5.68,20.626)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:rgb(230,230,230)"/>
+   <stop offset="100%" style="stop-color:rgb(174,175,179)"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_111)" d="M 29.789 232.476 C 9.656 222.612 5.68 201.093 5.68 155.745 L 5.68 96.494 C 5.68 52.405 9.438 30.84 28.166 20.626 L 29.789 232.476 L 29.789 232.476 L 29.789 232.476 Z"/>
+  <g>
+   <path fill="#FDC92B" d="M 121 198.925 L 137.182 198.925 L 137.182 240.288 L 121 240.288 L 121 198.925 L 121 198.925 Z"/>
+   <path fill="#FDC92B" d="M 145.273 198.925 L 161.455 198.925 L 161.455 240.288 L 145.273 240.288 L 145.273 198.925 L 145.273 198.925 Z"/>
+   <path fill="#FDC92B" d="M 169.545 198.925 L 185.727 198.925 L 185.727 240 C 181.347 240.175 175.963 240.281 169.545 240.288 L 169.545 198.925 L 169.545 198.925 Z"/>
+   <path fill="#FDC92B" d="M 193.818 239.438 L 193.818 198.925 L 210 198.925 L 210 237.5 C 204.952 238.358 199.568 239.014 193.818 239.438 Z"/>
+  </g>
+  <g>
+   <path fill="#4E4E4E" d="M 115 64.667 L 167 64.667 C 176.567 64.667 184.333 72.433 184.333 82 L 184.333 134 C 184.333 143.567 176.567 151.333 167 151.333 L 115 151.333 C 105.433 151.333 97.667 143.567 97.667 134 L 97.667 82 C 97.667 72.433 105.433 64.667 115 64.667 Z"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="112.11" y="43" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="155.44" y="43" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="112.11" y="144.11" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="155.44" y="144.11" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="184.33" y="71.89" transform="matrix(0,1,-1,0,277.884,-105.225)"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="184.34" y="115.22" transform="matrix(0,1,-1,0,321.221,-61.895)"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="83.22" y="71.89" transform="matrix(0,1,-1,0,176.774,-4.112)"/>
+   <rect fill="#E6E6E6" width="14.444" height="28.889" x="83.22" y="115.22" transform="matrix(0,1,-1,0,220.111,39.218)"/>
+  </g>
+ </g>
+</svg>

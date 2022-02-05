@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g style="clip-rule:evenodd;fill:#eff0f2;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" transform="matrix(0.09375,0,0,0.09642855,-3.9997947,-4.0398239)">
+  <rect width="26.667" height="124.444" x="48" y="62.63" style="fill:#eff0f2"/>
+  <rect width="26.667" height="88.889" x="160.41" y="-136.89" transform="rotate(90)" style="fill:#eff0f2"/>
+  <rect width="26.667" height="124.444" x="-208" y="-187.08" transform="scale(-1)" style="fill:#eff0f2"/>
+  <rect width="26.667" height="88.889" x="-89.3" y="119.11" transform="rotate(-90)" style="fill:#eff0f2"/>
+ </g>
+</svg>

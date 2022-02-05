@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g transform="matrix(0.0875,0,0,0.0875,-49.187374,-39.450559)" style="fill:#eff0f2">
+  <path d="m 593.56998,496.57778 v 19.99999 h -19.99999 v 10.00001 h 19.99999 v 19.99999 h -19.99999 v 9.99999 h 19.99999 v 20 h 10 v -20 h 19.99999 v 20 h 9.99999 v -20 h 20 v -9.99999 h -20 v -19.99999 h 20 v -10.00001 h -20 v -19.99999 h -9.99999 v 19.99999 h -19.99999 v -19.99999 z m 10,30 h 19.99999 v 19.99999 h -19.99999 z" style="fill:#eff0f2"/>
+  <rect width="20" height="20" x="713.57" y="556.58" rx="10" style="fill:#eff0f2"/>
+  <rect width="20" height="20" x="683.57" y="556.58" rx="10" style="fill:#eff0f2"/>
+ </g>
+</svg>

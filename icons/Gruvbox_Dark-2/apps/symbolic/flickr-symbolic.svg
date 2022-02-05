@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <defs>
+  <clipPath id="_clipPath_uXCgxcya0gshLOCZ8Dd7a2VHPE1d4fQ7">
+   <rect width="16" height="16"/>
+  </clipPath>
+ </defs>
+ <switch>
+  <g clip-path="url(#_clipPath_uXCgxcya0gshLOCZ8Dd7a2VHPE1d4fQ7)">
+   <rect style="fill:#000000" fill-opacity="0" width="16" height="16"/>
+   <g>
+    <path fill="#eff0f2" d="M 7.512 8 C 7.512 9.798 6.054 11.256 4.256 11.256 C 2.458 11.256 1 9.798 1 8 C 1 6.202 2.458 4.744 4.256 4.744 C 6.054 4.744 7.512 6.202 7.512 8 Z"/>
+    <path fill="#eff0f2" d="M 15 8 C 15 9.798 13.542 11.256 11.744 11.256 C 9.946 11.256 8.488 9.798 8.488 8 C 8.488 6.202 9.946 4.744 11.744 4.744 C 13.542 4.744 15 6.202 15 8 Z"/>
+   </g>
+  </g>
+  <foreignObject requiredExtensions="http://ns.gravit.io/">
+   <gravitDesigner:gravitElementRef xmlns:gravitDesigner="http://ns.gravit.io/" xlink:href="#jj9WvQ1oWjWIzVDzdJMN9SESx3IkB0yE"/>
+  </foreignObject>
+ </switch>
+ <gravitDesigner:gravitGraphicSource xmlns:gravitDesigner="http://ns.gravit.io/" id="jj9WvQ1oWjWIzVDzdJMN9SESx3IkB0yE" version="1">
+  <![CDATA[eMKcw41Vw5nCjsKjRhTDvcKVwqg6w4pLw5w9FDvCliLCpWHCvAHDhsOgbsKbwqXDlcKKw5gKw5tgwqAxYMOsUcO/ewrCvMKMPcKTwofCvETCihACTsOdczjDt8OWQXwDf8KCPsOIw50oBD3DsCvDqMK/fcOrwoDCqMOIwqrDvA7DicOdcsKFAT/DiXZhAMO6ZVHChT3CkMKXO1zDsAZmNcOiwoxlRUXDscO0D1zDtMKAT1PCnUF2Rw/DqcOxw4bClMOiwrhuJMKBwrd0w6XCq2ozM8OXwrTChsK4wqTDlcOrwpjDpsOBRETDhxxfIHvCvVktMMO0w557AxvDosKQGsOGQloPwq7DqsOjwonCt8OOQyPDnyjCnibCi8ObQcOkE3tPw7YlPl4Ew7VkOz3Cq3vDuy/Dpg3Cs1XDn8KIw7PDpgrCtcOqwod4wprDvMOgw71FasKCFSpZwrrDjsONRnHDtcO1NMKbBFXCpiUlwo8+worClXpWw6/CmMOWw68nwqMnw7XCk8OYw4fCqcKdwqvDt8OlFyfDvMKuTsKMwqRFKMOHDH9Aw6QxDh1nMMKywoJhYyFLwq9ew6QXw7PCrG7Ci1pzw4Nsw5XDicKIM8Kvw5DDu3sPFCEqwpsSw7TDkypJwronN8O1V1nDkW4KXi0LwoRvwognworDoFjCisOhWcOIQ8KBw4bDlx7DkR4/w4PCj8OkE8OkOHxHQsKewqQhR3DCvUfCjnzCoklGw4AFwpDCohnCgcKnwrFuw6puw4NzImjCjmPCscKxwr8Sw7cQwrbCr8K9ZGXCncKWw6oJwrrDjRBaJ8KJfl1reTk2D8Kkwoc3SMOywr3Ds8O5Dj7DsTt+w4M4wqHDqRXCt8KXwr3DgHhVw5hJwrRjRkg7bkU6M8Omw6Esw5ZJw7DCiRVCwoQmOMKPw4BKNWbDpsKnwqx9GG42w7ZOwqDCh8Orw4HCoBjDpcK5IgtaSkvCuMO4XwQZw4EEGcOJXRhmw6kyw6N9w40wGTYrw4XDksORfcOEw6YMLMKrKMOew5Urw4E/b1fDh8Ocw54FwrnCg8KywpsgK8KRAcKNw6guw4gewootcsK8FHldw5FrRV5MwobDrhFqwpLDvcK6ZMOEw61IYsOOw6pbcznCvWHCtsOqwqI7DcKuUMKrDhVaw7nDgcO7w47CmU/Dt3I6w5guRStewrHDhcKow7Z8ZcOmBnLCkiXCoUTCl2fDtcKOwpnDngXDuSR2E8Okw457chfDpBTCsXpswqvDmsKqwqoJSsKUVcO2wrkgwozDo3gxwq5TwqvCoMOKw4tnUn1MwoIbZsKrw75Kw6J2wpLDv1XCkBnCmsO+w4/CgkxGwqFlIjE5LElCZjzCuXYaKTnCusOzwoDDosOlw7DDmVPDr8KCw4xTw4Fowp5sMsKDRT4/wrTCnVjDjjxyEU1Cw5bCocKDwrEjdMKqwpfCiRACw4swwpDDg01SwpxAQcKCOsKPw6Rnw7zCkX5qZ0QSLMOfwq3CscOCP0DDn2fCgsKSwrUfd8KdXXx5WREEwpPCrwV0wpxYw7UbwplAM8ObwpNLDcKKwqTDs2JkTcOnw6sBF8K+HsOtUcKkw67ClsKpwrIPZcO/eUrDqHvDicOfNcKUTmXCpnrCnMK3wqHDm8KDPmTDm3R0wpcMwqHDkz57fnzCmmLDl8OEe8O7eWQ5w6gTV1c6w75Pw70Cw4HDp8OfHMKCw6dB]]>
+ </gravitDesigner:gravitGraphicSource>
+</svg>

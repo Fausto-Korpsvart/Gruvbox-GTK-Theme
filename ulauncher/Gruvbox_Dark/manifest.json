@@ -1,0 +1,12 @@
+{
+  "manifest_version": "1",
+  "name": "Gruvbox-Dark",
+  "display_name": "Gruvbox-Dark",
+  "extend_theme": "light",
+  "css_file": "theme.css",
+  "css_file_gtk_3.20+": "theme-gtk-3.20.css",
+  "matched_text_hl_colors": {
+    "when_selected": "#e78a4e",
+    "when_not_selected": "#ea6962"
+  }
+}

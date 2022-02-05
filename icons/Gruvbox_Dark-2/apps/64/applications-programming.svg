@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256">
+ <g filter="url(#a)">
+  <linearGradient id="b" x1=".568" x2=".567" y1="1.005" y2="-.071" gradientTransform="matrix(244.648 0 0 228.338 5.68 11.95)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" stop-color="#00979c"/>
+   <stop offset="100%" stop-color="#20b6bb"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M165.689 11.95c74.056 0 84.639 10.557 84.639 84.544v59.251c0 73.986-10.583 84.543-84.639 84.543h-75.37c-74.055 0-84.639-10.557-84.639-84.543V96.494c0-73.987 10.584-84.544 84.639-84.544h75.37z"/>
+ </g>
+ <defs>
+  <filter id="a" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow"/>
+  </filter>
+ </defs>
+ <defs>
+  <filter id="c" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation=".383"/>
+  </filter>
+ </defs>
+ <path opacity=".3" d="M57.3 165.541h3.121v-9.184H57.3c-6.242-.179-9.274-3.835-9.274-10.077v-6.064c0-7.49-2.675-10.878-7.044-12.038v-.356c4.369-1.16 7.044-4.191 7.044-12.039v-6.063c0-6.153 3.032-9.72 9.274-9.987h3.121v-9.274H57.3c-11.771.356-19.618 7.133-19.618 20.866v5.439c0 3.924-1.516 6.599-4.369 6.599h-2.319v9.185h2.319c2.853 0 4.369 2.675 4.369 6.599v5.617c0 13.644 7.847 20.51 19.618 20.777zm138.279 0h3.121c11.86-.267 19.618-7.133 19.618-20.777v-5.617c0-3.924 1.516-6.599 4.369-6.599h2.319v-9.185h-2.319c-2.853 0-4.369-2.675-4.369-6.599v-5.439c0-13.733-7.758-20.51-19.618-20.866h-3.121v9.274h3.121c6.242.267 9.274 3.834 9.274 9.987v6.063c0 7.848 2.764 10.879 7.044 12.039v.356c-4.369 1.16-7.044 4.548-7.044 12.038v6.064c0 6.242-3.032 9.898-9.274 10.077h-3.121v9.184z" filter="url(#c)"/>
+ <path fill="#ffffff" d="M57.3 165.541h3.121v-9.184H57.3c-6.242-.179-9.274-3.835-9.274-10.077v-6.064c0-7.49-2.675-10.878-7.044-12.038v-.356c4.369-1.16 7.044-4.191 7.044-12.039v-6.063c0-6.153 3.032-9.72 9.274-9.987h3.121v-9.274H57.3c-11.771.356-19.618 7.133-19.618 20.866v5.439c0 3.924-1.516 6.599-4.369 6.599h-2.319v9.185h2.319c2.853 0 4.369 2.675 4.369 6.599v5.617c0 13.644 7.847 20.51 19.618 20.777zm138.279 0h3.121c11.86-.267 19.618-7.133 19.618-20.777v-5.617c0-3.924 1.516-6.599 4.369-6.599h2.319v-9.185h-2.319c-2.853 0-4.369-2.675-4.369-6.599v-5.439c0-13.733-7.758-20.51-19.618-20.866h-3.121v9.274h3.121c6.242.267 9.274 3.834 9.274 9.987v6.063c0 7.848 2.764 10.879 7.044 12.039v.356c-4.369 1.16-7.044 4.548-7.044 12.038v6.064c0 6.242-3.032 9.898-9.274 10.077h-3.121v9.184z"/>
+ <g opacity=".3" filter="url(#d)">
+  <circle opacity=".3" cx="97" cy="159.973" r="5" vector-effect="non-scaling-stroke"/>
+  <circle opacity=".3" cx="129" cy="159.973" r="5" vector-effect="non-scaling-stroke"/>
+  <circle opacity=".3" cx="159" cy="159.973" r="5" vector-effect="non-scaling-stroke"/>
+ </g>
+ <defs>
+  <filter id="d" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation=".712"/>
+  </filter>
+ </defs>
+ <g fill="#ffffff">
+  <circle cx="97" cy="159.973" r="5" vector-effect="non-scaling-stroke"/>
+  <circle cx="129" cy="159.973" r="5" vector-effect="non-scaling-stroke"/>
+  <circle cx="159" cy="159.973" r="5" vector-effect="non-scaling-stroke"/>
+ </g>
+</svg>

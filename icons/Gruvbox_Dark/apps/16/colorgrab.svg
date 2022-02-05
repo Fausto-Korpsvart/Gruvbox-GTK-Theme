@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1" viewBox="0 0 16 16">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#eff0f2; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#928374; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#928374; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(-8,176.00213)">
+  <path d="M 9.7382812,-175.00195 C 9.4921876,-174.98657 9,-174.86328 9,-174.125 L 9,-168 c 0,3.878 3.122,7 7,7 3.878,0 7,-3.122 7,-7 0,-3.878 -3.122,-7 -7,-7 l -6.125,0 c 0,0 -0.054687,-0.007 -0.1367188,-0.002 z M 10.5,-174 a 0.5,0.5 0 0 1 0.5,0.5 0.5,0.5 0 0 1 -0.5,0.5 0.5,0.5 0 0 1 -0.5,-0.5 0.5,0.5 0 0 1 0.5,-0.5 z m 5.5,1 a 5,5 0 0 1 5,5 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 z" style="fill:url(#oomox);" class="ColorScheme-Text"/>
+  <rect style="opacity:0.7;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-15" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.8;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-13" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.7;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-13" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.6;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-17" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.6;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-15" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.6;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-13" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-19" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-17" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-15" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.5;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-13" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-21" y="171" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-19" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-17" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-15" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.4;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-13" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-21" y="169" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-19" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-17" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.3;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-15" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.2;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-21" y="167" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.2;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-19" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.2;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-17" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.1;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-21" y="165" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.1;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-19" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+  <rect style="opacity:0.05;fill:url(#oomox);" class="ColorScheme-Text" width="2" height="2" x="-21" y="163" rx="0" ry="0" transform="scale(-1,-1)"/>
+ </g>
+</svg>

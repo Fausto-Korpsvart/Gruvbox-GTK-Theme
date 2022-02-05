@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <g>
+  <path fill="#eff0f2" d="M 0 11.2 L 0 13.6 L 1.6 13.6 L 1.6 15.2 C 1.6 15.641828 1.958172 16 2.4 16 C 2.841828 16 3.2 15.641828 3.2 15.2 L 3.2 13.6 L 12.8 13.6 L 12.8 15.2 C 12.8 15.641828 13.158172 16 13.6 16 C 14.041828 16 14.4 15.641828 14.4 15.2 L 14.4 13.6 L 16 13.6 L 16 11.2 L 0 11.2 Z"/>
+  <g>
+   <rect fill="#eff0f2" width="3.2" height="5.6" x=".8" y="2.4" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#eff0f2" width="3.2" height="1.6" x=".8" y="0" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#eff0f2" width="3.2" height="1.6" x=".8" y="8.8" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g>
+   <rect fill="#eff0f2" width="3.2" height="5.6" x="4.86" y="2.4" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#eff0f2" width="3.2" height="1.6" x="4.8" y="8.8" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#eff0f2" width="3.2" height="1.6" x="4.86" y="0" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g>
+   <rect fill="#eff0f2" width="2.4" height=".8" x="8.8" y="3.2" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#eff0f2" width="2.4" height=".8" x="8.8" y="9.6" transform="matrix(1,0,0,1,0,0)"/>
+   <rect fill="#eff0f2" width="2.4" height="4" x="8.8" y="4.8" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g>
+   <rect fill="#eff0f2" width="2.4" height="4" x="12.74" y="4.63" transform="matrix(0.976699,-0.214616,0.214616,0.976699,-1.097078,3.146942)"/>
+   <rect fill="#eff0f2" width="2.4" height=".8" x="13.43" y="9.35" transform="matrix(0.976699,-0.214616,0.214616,0.976699,-1.751843,3.367114)"/>
+   <rect fill="#eff0f2" width="2.4" height=".8" x="12.06" y="3.1" transform="matrix(0.976699,-0.214616,0.214616,0.976699,-0.442268,2.926799)"/>
+  </g>
+ </g>
+</svg>

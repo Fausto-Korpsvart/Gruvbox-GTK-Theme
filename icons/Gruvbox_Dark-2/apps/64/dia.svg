@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256">
+ <g filter="url(#a)">
+  <linearGradient id="b" x1=".233" x2=".933" y1="-.071" y2=".924" gradientTransform="matrix(244.648 0 0 228.338 5.676 11.947)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" stop-color="#e8e8e8"/>
+   <stop offset="100%" stop-color="#f5f5f5"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M165.685 11.947c74.055 0 84.639 10.557 84.639 84.544v59.251c0 73.986-10.584 84.543-84.639 84.543h-75.37c-74.055 0-84.639-10.557-84.639-84.543V96.491c0-73.987 10.584-84.544 84.639-84.544h75.37z"/>
+ </g>
+ <defs>
+  <filter id="a" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow"/>
+  </filter>
+ </defs>
+ <g opacity=".1">
+  <linearGradient id="c" x2="0" y1=".5" gradientTransform="matrix(160.124 0 0 210 47.938 21)" gradientUnits="userSpaceOnUse">
+   <stop offset="50%"/>
+   <stop offset="80%"/>
+   <stop offset="100%"/>
+  </linearGradient>
+  <path fill="url(#c)" d="M47.938 21v210h2.625V21h-2.625zm26.25 0v210h2.625V21h-2.625zm26.25 0v210h2.625V21h-2.625zm26.249 0v210h2.625V21h-2.625zm26.25 0v210h2.625V21h-2.625zm26.25 0v210h2.625V21h-2.625zm26.25 0v210h2.625V21h-2.625z"/>
+ </g>
+ <g opacity=".1">
+  <linearGradient id="d" x1=".5" x2="1" gradientTransform="matrix(210 0 0 160.125 23 47.25)" gradientUnits="userSpaceOnUse">
+   <stop offset="50%"/>
+   <stop offset="80%"/>
+   <stop offset="100%"/>
+  </linearGradient>
+  <path fill="url(#d)" d="M233 47.25H23v2.625h210V47.25zm0 26.25H23v2.625h210V73.5zm0 26.25H23v2.625h210V99.75zm0 26.25H23v2.625h210V126zm0 26.25H23v2.625h210v-2.625zm0 26.25H23v2.625h210V178.5zm0 26.25H23v2.625h210v-2.625z"/>
+ </g>
+ <path fill="#282828" d="M82.424 68.906v14.461h57.546c24.121 0 43.085 18.964 43.085 43.085 0 24.121-18.964 43.084-43.085 43.084H82.424v14.461h57.546c31.881 0 57.546-25.665 57.546-57.545 0-31.881-25.665-57.546-57.546-57.546H82.424z"/>
+ <path fill="#282828" d="M92.02 54.52h4.795v139.069H92.02V54.52z"/>
+ <linearGradient id="e" x1=".3" x2="0" y1=".5" y2=".5" gradientTransform="matrix(95.91 0 0 4.795 58.45 126.45)" gradientUnits="userSpaceOnUse">
+  <stop offset="0%" stop-color="#464646"/>
+  <stop offset="100%" stop-color="#464646" stop-opacity="0"/>
+ </linearGradient>
+ <path fill="url(#e)" d="M58.45 126.45h95.91v4.795H58.45v-4.795z"/>
+ <path fill="#282828" d="M173.539 128.849l-19.182 9.591v-19.182l19.182 9.591zM94.413 212.77l-9.591-19.181h19.182l-9.591 19.181zM87.22 44.93h14.386v14.386H87.22V44.93z"/>
+ <path fill="#76c22b" d="M89.62 47.33h9.591v9.591H89.62V47.33z"/>
+ <path fill="#bc1938" d="M125.584 102.474l23.977 47.955h-47.955l23.978-47.955z"/>
+</svg>

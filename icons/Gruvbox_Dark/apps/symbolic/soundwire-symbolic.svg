@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+ <g transform="translate(-392 -40)">
+  <path fill="#eff0f2" d="M402 43h3v1h-3z"/>
+  <path fill="#eff0f2" fill-rule="evenodd" d="M393 40v4h1v-3h12v3h1v-4z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible"/>
+  <path fill="#eff0f2" d="M402 48h3v1h-3z"/>
+  <path fill="#eff0f2" fill-rule="evenodd" d="M393 45v4h1v-3h12v3h1v-4z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible"/>
+  <path fill="#eff0f2" d="M402 53h3v1h-3z"/>
+  <path fill="#eff0f2" fill-rule="evenodd" d="M393 50v6h14v-6zm1 1h12v4h-12z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible"/>
+ </g>
+</svg>

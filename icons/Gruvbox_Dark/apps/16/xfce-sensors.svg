@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+<defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#eff0f2; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#928374; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#928374; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+ <path style="fill:url(#oomox)" class="ColorScheme-Text" d="M 7.416544,15.477111 C 6.722732,15.368582 6.126368,15.035773 5.677439,14.506576 4.860439,13.543497 4.772873,12.181814 5.466737,11.230058 L 5.665874,10.956909 V 6.6475147 c 0,-4.189434 0.0022,-4.316501 0.08001,-4.564952 0.216352,-0.691089 0.737978,-1.23145892 1.42385,-1.47500692 0.392782,-0.13947595 1.004877,-0.14377695 1.391428,-0.0098 0.543172,0.188292 0.988563,0.57922992 1.251222,1.09825292 0.245971,0.486047 0.236631,0.289829 0.236631,4.971228 v 4.2804963 l 0.159184,0.206331 c 0.331121,0.429195 0.498789,0.955452 0.500352,1.570437 0.0032,1.25101 -0.90806,2.412926 -2.111163,2.691941 -0.345119,0.08004 -0.880936,0.107558 -1.18084,0.06064 z m 1.20422,-1.300673 C 9.397915,13.792352 9.752227,12.85534 9.41154,12.08516 9.36598,11.982157 9.228839,11.793192 9.106789,11.665233 L 8.884878,11.432584 8.873818,6.9313837 8.862748,2.4301847 8.767718,2.2199937 C 8.560902,1.7625587 8.128309,1.5369167 7.659352,1.6418667 7.367363,1.7072067 7.140388,1.8790807 7.003801,2.1382697 l -0.111452,0.21149 -0.01072,4.526961 -0.01073,4.5269613 -0.194251,0.201532 c -0.360169,0.37367 -0.540476,0.914183 -0.45013,1.34938 0.106516,0.513082 0.430025,0.972093 0.838614,1.189869 0.324406,0.172906 0.490045,0.208029 0.905334,0.19197 0.311303,-0.01202 0.390216,-0.03145 0.650298,-0.159995 z M 7.515638,13.873184 C 6.984662,13.711085 6.654277,13.271582 6.652163,12.724527 c -0.0013,-0.346499 0.110309,-0.562204 0.441197,-0.8524 l 0.220202,-0.193117 4.9e-4,-4.2725553 4.9e-4,-4.272553 h 0.562972 0.562972 l 9.1e-4,4.29266 9.1e-4,4.2926573 0.162517,0.115011 c 0.08938,0.06325 0.228498,0.214382 0.309141,0.335837 0.182914,0.275489 0.220376,0.603269 0.107715,0.942462 -0.09888,0.297694 -0.439094,0.634665 -0.736504,0.729481 -0.221526,0.07063 -0.591188,0.0856 -0.769469,0.03118 z"/>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1" viewBox="0 0 16 16">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#eff0f2; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#928374; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#928374; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <path style="fill:url(#oomox);" class="ColorScheme-Text" d="M 1.5917969 0.5 C 0.63725186 0.5 0.5 2.0401564 0.5 3.1601562 L 0.5 6 C 0.4664931 12 2.9996535 12.929483 5.7265625 13.660156 C 6.072085 13.962572 6.4085579 14.5 6.5449219 14.5 L 9.4550781 14.5 C 9.5914421 14.5 9.9279145 13.962572 10.273438 13.660156 C 13.000345 12.929483 15.484248 12 15.5 6 L 15.5 3.1601562 C 15.5 2.0401566 15.362748 0.5 14.408203 0.5 C 14.408203 2.04 12.5 3.2442295 11 3.3007812 L 5 3.3007812 C 3.5 3.3007812 1.5917969 2.04 1.5917969 0.5 z M 5 4.5 A 2.5 2.4999731 0 0 1 7.5 7 A 2.5 2.4999731 0 0 1 5 9.5 A 2.5 2.4999731 0 0 1 2.5 7 A 2.5 2.4999731 0 0 1 5 4.5 z M 11 4.5 A 2.5 2.4999731 0 0 1 13.5 7 A 2.5 2.4999731 0 0 1 11 9.5 A 2.5 2.4999731 0 0 1 8.5 7 A 2.5 2.4999731 0 0 1 11 4.5 z"/>
+  <path d="M 0.5,3.1599998 0.5,6 c 0,6 2.5,7 5.226909,7.66 0.3455225,0.302416 0.681818,0.84 0.818182,0.84 l 2.909818,0 c 0.136364,0 0.4726595,-0.537584 0.818182,-0.84 C 13,12.929327 15.5,12 15.5,6 l 0,-2.8400002 C 15.5,2.04 15.363636,0.5 14.409091,0.5 14.409091,2.04 12.5,3.2434481 11,3.3 l -6,0 C 3.5,3.3 1.590909,2.04 1.590909,0.5 0.636364,0.5 0.5,2.04 0.5,3.1599998 Z" style="opacity:0.6;fill:none"/>
+  <ellipse style="fill:#585858" cx="8" cy="13.5" rx="3" ry="2"/>
+  <circle style="fill:#585858" cx="5" cy="8" r="1.5"/>
+  <ellipse cx="5" cy="7" rx="2.5" ry="2.5" style="opacity:0.60000005;fill:none"/>
+  <circle cx="11" cy="8" r="1.5" style="fill:#585858"/>
+  <ellipse style="opacity:0.6;fill:none" cx="11" cy="7" rx="2.5" ry="2.5"/>
+  <ellipse cx="8" cy="13.5" rx="3" ry="2" style="opacity:0.6;fill:none"/>
+ </g>
+</svg>

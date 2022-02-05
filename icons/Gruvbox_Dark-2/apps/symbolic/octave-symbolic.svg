@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g style="fill:#eff0f2" transform="translate(16.067797,3.3056748)">
+  <path style="clip-rule:evenodd;fill:#eff0f2;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" d="m -13.076275,-1.3985252 c -2.351378,2.5552891 -1.781514,7.3173023 1.272149,10.6357753 3.0536644,3.3184829 7.4349383,3.9369789 9.7863203,1.3816899 C 0.33357733,8.0636511 -0.23466867,3.3014466 -3.2883357,-0.01702678 -6.3419984,-3.3355103 -10.724893,-3.9538244 -13.076275,-1.3985252 Z m 2.132185,1.06147352 c 1.8475632,-2.00777682 5.2446042,-1.57103932 7.5880923,0.9756806 2.343496,2.54671998 2.74538403,6.23835718 0.897818,8.24614418 -1.847562,2.0077669 -5.245493,1.5720169 -7.5889883,-0.974713 -2.343494,-2.5467296 -2.744485,-6.2393248 -0.896922,-8.24711178 z"/>
+  <rect style="clip-rule:evenodd;fill:#eff0f2;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" width="1.969" height="1.969" x="-4.5" y="-.49" rx=".348" ry=".348"/>
+  <rect style="clip-rule:evenodd;fill:#eff0f2;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" width="4.637" height="4.637" x="-15.57" y="2.1" rx=".82" ry=".82"/>
+  <rect style="clip-rule:evenodd;fill:#eff0f2;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" width="2.801" height="2.801" x="-3.58" y="8.17" rx=".496" ry=".496"/>
+ </g>
+</svg>
