@@ -35,13 +35,18 @@ So, this is my first attempt with GTK themes, which currently only works on the 
 ---
 
 #### More themes of the 'Code Editors Colours for GTK Themes' serie
-
-- [**Gruvbox Shell Themes**](https://www.pling.com/p/1681451/) <br>
-- [**Gruvbox Icons Themes**](https://www.pling.com/p/1681460/) <br>
-**Tokyonight**
-- [**Tokyo Night Themes**](https://www.pling.com/p/1681315/) <br>
+**Material**
+- [**Material GTK Themes**](https://www.pling.com/p/1706139/) <br>
+- [**Material Shell Themes**](https://www.pling.com/p/1706218/) <br>
+- [**Material Icon Themes**](https://www.pling.com/p/1706189/) <br>
+**Tokyo Night**
+- [**Tokyo Night GTK Themes**](https://www.pling.com/p/1681315/) <br>
 - [**Tokyo Night Shell Themes**](https://www.pling.com/p/1681470/) <br>
 - [**Tokyo Night Icon Themes**](https://www.pling.com/p/1681475/) <br>
+**Gruvbox**
+- [**Gruvbox GTK Themes**](https://www.pling.com/p/1681313/) <br>
+- [**Gruvbox Shell Themes**](https://www.pling.com/p/1681451/) <br>
+- [**Gruvbox Icons Themes**](https://www.pling.com/p/1681460/) <br>
 **Everforest**
 - [**Everforest GTK Themes**](https://www.pling.com/p/1695467/) <br>
 - [**Everforest Shell Themes**](https://www.pling.com/p/1695475/) <br>
