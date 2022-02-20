@@ -34,11 +34,18 @@ So, this is my first attempt with GTK themes, which currently only works on the 
 
 ---
 
-#### More themes of the 'Code Editors Colours for GTK Themes' serie
+#### More themes of the 'Code Editors Colours for GTK Themes' series
+**Catppuccin**
+- [**Catppuccin GTK Themes**](https://www.pling.com/p/1715554/) <br>
+- [**Catppuccin Shell Themes**](https://www.pling.com/p/1715555/) <br>
+- [**Catppuccin Icon Themes**](https://www.pling.com/p/1715570/) <br>
 **Material**
-- [**Material GTK Themes**](https://www.pling.com/p/1706139/) <br>
-- [**Material Shell Themes**](https://www.pling.com/p/1706218/) <br>
-- [**Material Icon Themes**](https://www.pling.com/p/1706189/) <br>
+- [**DeepOcean GTK Themes**](https://www.pling.com/p/1706139/) <br>
+- [**DeepOcean Shell Themes**](https://www.pling.com/p/1706218/) <br>
+- [**DeepOcean Icon Themes**](https://www.pling.com/p/1706189/) <br>
+- [**Palenight GTK Themes**](https://www.pling.com/p/1706139/) <br>
+- [**Palenight Shell Themes**](https://www.pling.com/p/1706218/) <br>
+- [**Palenight Icon Themes**](https://www.pling.com/p/1706189/) <br>
 **Tokyo Night**
 - [**Tokyo Night GTK Themes**](https://www.pling.com/p/1681315/) <br>
 - [**Tokyo Night Shell Themes**](https://www.pling.com/p/1681470/) <br>
