@@ -26,8 +26,8 @@ This is a small table of the themes that are available so far, I hope to be able
 
 |[Catppuccin](https://www.pling.com/p/1715554)|[Material](https://www.pling.com/p/1706139)|[Rosé Pine](https://www.pling.com/p/1810530)|[Tokyonight](https://www.pling.com/p/1681315)|
 |------|-------|-------|-------|
-|Catppuccin Mocha Border|Material Deep Ocean Border|Rosé Pine Border|Tokyionight Dark Border|
-|Catppuccin Mocha Borderless|Material Deep Ocean Borderless|Rosé Pine Borderless|Tokyionight Dark Borderless|
+|Catppuccin Mocha Border|Material Deep Ocean Border|Rosé Pine Border|Tokyonight Dark Border|
+|Catppuccin Mocha Borderless|Material Deep Ocean Borderless|Rosé Pine Borderless|Tokyonight Dark Borderless|
 |Catppuccin Macchiato Border|Material Palenight Border|Rosé Pine Moon Border|Tokyonight Storm Border|
 |Catppuccin Macchiato Borderless|Material Palenight Borderless|Rosé Pine Moon Borderless|Tokyonight Storm Borderless|
 
