@@ -7,59 +7,34 @@
 
 ---
 
-Gruvbox Dark is a GTK theme based on the [Gruvbox Material VSCode](https://github.com/sainnhe/gruvbox-material-vscod) and [Graphite](https://www.pling.com/p/1598493) theme by [@VinceLiuice](https://www.pling.com/u/vinceliuice) and part of the 'Code Editors Colours for GTK' series
+## Small Description
+<ins>**Gruvbox Material**</ins> is a GTK theme based on the colour palette of the [Gruvbox Material for Neovim](https://github.com/sainnhe/gruvbox-material) by [@Sainnhe](https://github.com/sainnhe), the [Graphite GTK theme](https://github.com/vinceliuice/Graphite-gtk-theme) by [@VinceLiuice](https://github.com/vinceliuice) and the [Suru Plus](https://github.com/gusbemacbe/suru-plus) icons by [@gusbemacbe.](https://github.com/gusbemacbe)
 
-The idea was born because I wanted a GTK theme to match the color palettes of my Xmonad TWM and Neovim setups. I use various colour palettes for my working environment based on the themes of my Neovim code editor; I have used the most popular code editors but in Neovim I feel more comfortable, so based on the theme of my Neovim setup I set my working environment as Xmonad TWM and the Gnome or KDE desktops.
+The idea was born from the need for **GTK** themes that match the most prominent colour palettes of **Neovim** code editor and **Tiling Window Manager**, such as **Xmonad**, **Awesome**, **DWM**, etc, which use these colour schemes to give a uniform and unique look to working environments. See on **Reddit:** [r/unixporn](https://www.reddit.com/r/unixporn/).
 
-There are many really cool themes for GTK such as:  [Juno](https://www.pling.com/p/1280977), [Sweet](https://www.pling.com/p/1253385) and [Ant](https://www.pling.com/p/1099856) by [@EliverLara](https://www.pling.com/u/eliverlara), or [Layan](https://www.pling.com/p/1309214), [Orchis](https://www.pling.com/p/1357889) and [Fluent](https://www.pling.com/p/1477941) by [@VinceLiuice](https://www.pling.com/u/vinceliuice) which I have used to combine my Neovim and Xmonad configurations with my working environment, but they don't quite work as well as I would like them to; and that's why I started looking for a way to achieve that combination of the gtk applications and the Neovim colour scheme and the Xmonad configuration.
+The colour palettes in this series of themes are the ones I have used the most in my setup for **Neovim**, **Xmonad** and **Gnome DE**, so creating themes started as something personal that I then decided to share thanks to several people asking me to share them because they seemed good, I hope you find them useful and make your desktops look good too.
 
-I started creating themes in Oomox to achieve this but Oomox is not a full customisation application and you can only change the colours of a few well known Gnome desktop themes, however, this application has helped me a lot to understand basic concepts of creating how GTK themes work, for example that GTK customisation is based on CSS stylesheets.
-I know a bit about how CSS stylesheets work from web development, so I decided to learn a bit about modifying and creating GTK themes.
+## Installing Themes
+Themes work in <ins>**Gnome versions 40, 41 and 42**,</ins> the current version, but since Gnome 42 introduced <ins>**libadwaita**</ins> the themes files for **GTK4** applications must be placed in a different folder than the one we have been used to, this was the <ins>**`'/.themes'`**</ins> folder in the <ins>**`'$HOME'`**</ins> directory, which for **GTK3** applications will always be the default themes folder, but for themes to be applied in <ins>**GTK4/libadwaita**</ins> applications, the themes must be placed in the new path: <ins>**`'~/.config/gtk-4.0'`**</ins> with the name <ins>**`'gtk.css'`**</ins>; this will apply the themes automatically without use **Gnome Tweaks** but, for **GTK3** applications, we must always use **Tweaks** as we have done so far.
 
-Finding information on this topic is a bit difficult for a beginner, but you have to start somewhere, and even in the official documentation they recommend to start by modifying themes to understand the basics of how GTK themes are structured.
+To install the [themes](https://www.pling.com/u/fkorpsvart) you will need to download <ins>**two files**</ins>, themes for **GTK3** and **GTK4**.
+The **GTK4** themes have the specification: <ins>**'Gnome42'**</ins>, these themes go in the path: **<ins>`'~/.config/gtk-4.0/'`</ins>**, and for **GTK3** themes go to the usual path, this is: <ins>**`'~/.themes/'`**</ins>.
 
-After trying and modifying some Oomox themes, I decided to understand more modern and complex themes, like VinceLiuice's [WhiteSur](https://www.pling.com/p/1403328) theme, but this kind of themes are still a bit complicated for me that I'm just starting with GTK theme modification and creation, so I took as an example and basis for my modifications EliverLara's great theme, [Otis](https://www.pling.com/p/1619506), which has a pretty cool colour palette, but I still felt it was a bit complicated for me, although I managed to adapt it a bit to GTK4 for those applications to which the theme didn't apply; But it wasn't until I started modifying another cool VinceLiuice theme, [Graphite](https://www.pling.com/p/1598493), that I started to understand a bit more about modifying and creating GTK themes.
+As I mentioned before, the **GTK4** themes don't need to be applied with **Tweaks**, they are applied automatically but, if you have applications open you will have to close and open them for the theme to be applied and, But for GTK3 applications you do need to apply them with **Tweaks**, as usual.
 
-So, this is my first attempt with GTK themes, which currently only works on the Gnome Desktop, at least until I learn to understand a bit more about creating themes for other desktop environments; but I thought many of you might like these modifications I made for my personal use, and I'm planning to make a series of GTK themes based on the colour schemes I use in my Neovim and Xmonad configurations and I hope you like them and find them useful.
+This is a small table of the themes that are available so far, I hope to be able to add a few more of the themes I use in my Neovim setup.
 
----
+|[Catppuccin](https://www.pling.com/p/1715554)|[Material](https://www.pling.com/p/1706139)|[Rosé Pine](https://www.pling.com/p/1810530)|[Tokyonight](https://www.pling.com/p/1681315)|
+|------|-------|-------|-------|
+|Catppuccin Mocha Border|Material Deep Ocean Border|Rosé Pine Border|Tokyonight Dark Border|
+|Catppuccin Mocha Borderless|Material Deep Ocean Borderless|Rosé Pine Borderless|Tokyonight Dark Borderless|
+|Catppuccin Macchiato Border|Material Palenight Border|Rosé Pine Moon Border|Tokyonight Storm Border|
+|Catppuccin Macchiato Borderless|Material Palenight Borderless|Rosé Pine Moon Borderless|Tokyonight Storm Borderless|
 
-#### Installing themes in GNOME
-
-- 1 Download the theme from: [Gruvbox GTK Theme](https://) and unzip the files.
-- Cut the unzipped files and paste it into any of the following paths:
-  - '~/.local/share' Create the folder 'themes' and paste the themes folders inside.
-  - '~/.themes' in the 'home' directory, Create the folder '.themes' and paste the theme folders inside.
-- With Gnome Tweaks you can change every detail, the shell, the icons, the theme...
-
----
-
-#### More themes of the 'Code Editors Colours for GTK Themes' series
-**Catppuccin**
-- [**Catppuccin GTK Themes**](https://www.pling.com/p/1715554/) <br>
-- [**Catppuccin Shell Themes**](https://www.pling.com/p/1715555/) <br>
-- [**Catppuccin Icon Themes**](https://www.pling.com/p/1715570/) <br>
-**Material**
-- [**DeepOcean GTK Themes**](https://www.pling.com/p/1706139/) <br>
-- [**DeepOcean Shell Themes**](https://www.pling.com/p/1706218/) <br>
-- [**DeepOcean Icon Themes**](https://www.pling.com/p/1706189/) <br>
-- [**Palenight GTK Themes**](https://www.pling.com/p/1706139/) <br>
-- [**Palenight Shell Themes**](https://www.pling.com/p/1706218/) <br>
-- [**Palenight Icon Themes**](https://www.pling.com/p/1706189/) <br>
-**Tokyo Night**
-- [**Tokyo Night GTK Themes**](https://www.pling.com/p/1681315/) <br>
-- [**Tokyo Night Shell Themes**](https://www.pling.com/p/1681470/) <br>
-- [**Tokyo Night Icon Themes**](https://www.pling.com/p/1681475/) <br>
-**Gruvbox**
-- [**Gruvbox GTK Themes**](https://www.pling.com/p/1681313/) <br>
-- [**Gruvbox Shell Themes**](https://www.pling.com/p/1681451/) <br>
-- [**Gruvbox Icons Themes**](https://www.pling.com/p/1681460/) <br>
-**Everforest**
-- [**Everforest GTK Themes**](https://www.pling.com/p/1695467/) <br>
-- [**Everforest Shell Themes**](https://www.pling.com/p/1695475/) <br>
-- [**Everforest Icons Themes**](https://www.pling.com/p/1695476/) <br>
-
----
+|[Gruvbox](https://www.pling.com/p/1681313)|[Everforest](https://www.pling.com/p/1695467)|[Kanagawa](https://www.pling.com/p/1810560)|
+|------|-------|-------|
+|Gruvbox Material Border|Everforest Border|Kanagawa Border|
+|Gruvbox Material Borderless|Everforest Borderless|Kanagawa Borderless| 
 
 You all know that you can leave comments to report bugs or give your opinion about the theme, so please leave comments to report bugs and get them fixed as soon as possible.
 
