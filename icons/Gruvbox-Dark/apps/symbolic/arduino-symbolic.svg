@@ -1,0 +1,34 @@
+<svg:svg xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" width="16.015" height="16.079" version="1.1" inkscape:version="0.92.3 (2405546, 2018-03-11)" sodipodi:docname="arduino-symbolic.svg">
+ <svg:metadata>
+  <rdf:RDF>
+   <cc:Work>
+    <dc:format>
+     image/svg+xml
+    </dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </svg:metadata>
+ <svg:defs/>
+ <sodipodi:namedview bordercolor="#d4be98666" borderopacity="1" gridtolerance="10" guidetolerance="10" objecttolerance="10" pagecolor="#d4be98" showgrid="false" inkscape:current-layer="svg10" inkscape:cx="8.007" inkscape:cy="8.04" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="912" inkscape:window-maximized="0" inkscape:window-width="1690" inkscape:window-x="0" inkscape:window-y="34" inkscape:zoom="14.678"/>
+ <svg:g transform="matrix(0.28346457,0,0,0.28346457,-1.4031364,-66.513957)" style="fill:none;stroke:#d4be98">
+  <svg:g style="fill:none;stroke:#d4be98;stroke-width:60" transform="matrix(0.07338438,0,0,0.07338438,6.8271835,250.52694)">
+   <svg:path d="m 174,30 a 145.54455,140 0 0 0 0,280 C 364,320 344,30 544,30 a 145.54455,140 0 0 1 0,280 C 354,320 374,30 174,30" inkscape:connector-curvature="0" style="fill:none;stroke:#d4be98"/>
+  </svg:g>
+  <svg:g style="font-size:167px;text-anchor:middle;fill:none;stroke:#d4be98;stroke-width:20" font-size="167" transform="matrix(0.07338438,0,0,0.07338438,6.8271835,251.26078)">
+   <svg:g style="fill:none;stroke:#d4be98">
+    <svg:path d="M 528.06885,194.67432 V 161.89404 H 495.5332 v -13.69922 h 32.53565 v -32.53564 h 13.8623 v 32.53564 h 32.53565 v 13.69922 h -32.53565 v 32.78028 z" inkscape:connector-curvature="0" style="fill:none;stroke:#d4be98"/>
+   </svg:g>
+   <svg:text x="181" y="218" dy="0" style="fill:none;stroke:#d4be98">
+    <ndash/>
+   </svg:text>
+  </svg:g>
+  <svg:g style="font-size:167px;text-anchor:middle;fill:none;stroke:#d4be98;stroke-width:20" font-size="167" transform="matrix(0.07338438,0,0,0.07338438,-20.01642,250.56567)">
+   <svg:g style="font-size:197.21893311px;fill:none;stroke:#d4be98;stroke-width:23.61903381" transform="scale(1.5645974,0.63914206)">
+    <svg:path style="font-size:197.21893311px;fill:none;stroke:#d4be98;stroke-width:23.61903381" d="m 321.41756,266.30877 v -17.43 h 53.25297 v 17.43 z" inkscape:connector-curvature="0"/>
+   </svg:g>
+   <svg:g style="fill:none;stroke:#d4be98"/>
+  </svg:g>
+ </svg:g>
+</svg:svg>

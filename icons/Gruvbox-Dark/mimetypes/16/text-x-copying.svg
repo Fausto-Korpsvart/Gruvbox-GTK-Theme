@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <defs>
+   <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#efefe7; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#8f8f8b; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+   <path style="fill:currentColor;" class="ColorScheme-Text" fill-rule="evenodd" d="M 13.701657 13.701657 L 13.701657 13.701657 L 13.701657 13.701657 Q 11.403315 16 8 16 L 8 16 L 8 16 Q 4.596685 16 2.298343 13.701657 L 2.298343 13.701657 L 2.298343 13.701657 Q 0 11.403315 0 8 L 0 8 L 0 8 Q 0 4.596685 2.298343 2.298343 L 2.298343 2.298343 L 2.298343 2.298343 Q 4.596685 0 8 0 L 8 0 L 8 0 Q 11.403315 0 13.701657 2.298343 L 13.701657 2.298343 L 13.701657 2.298343 Q 16 4.596685 16 8 L 16 8 L 16 8 Q 16 11.403315 13.701657 13.701657 Z M 3.337017 12.718232 L 3.337017 12.718232 L 3.337017 12.718232 Q 5.19337 14.607735 8 14.607735 L 8 14.607735 L 8 14.607735 Q 10.80663 14.607735 12.651934 12.718232 L 12.651934 12.718232 L 12.651934 12.718232 Q 14.497238 10.828729 14.497238 8 L 14.497238 8 L 14.497238 8 Q 14.497238 5.171271 12.651934 3.281768 L 12.651934 3.281768 L 12.651934 3.281768 Q 10.80663 1.392265 8 1.392265 L 8 1.392265 L 8 1.392265 Q 5.19337 1.392265 3.337017 3.281768 L 3.337017 3.281768 L 3.337017 3.281768 Q 1.480663 5.171271 1.480663 8 L 1.480663 8 L 1.480663 8 Q 1.480663 10.828729 3.337017 12.718232 Z M 8.110497 12.751381 L 8.110497 12.751381 L 8.110497 12.751381 Q 6.165746 12.751381 5.160221 11.414365 L 5.160221 11.414365 L 5.160221 11.414365 Q 4.154696 10.077348 4.154696 7.933702 L 4.154696 7.933702 L 4.154696 7.933702 Q 4.154696 5.878453 5.19337 4.497238 L 5.19337 4.497238 L 5.19337 4.497238 Q 6.232044 3.116022 8.198895 3.116022 L 8.198895 3.116022 L 8.198895 3.116022 Q 9.392265 3.116022 10.232044 3.723757 L 10.232044 3.723757 L 10.232044 3.723757 Q 11.071823 4.331492 11.447514 5.325967 L 11.447514 5.325967 L 10.033149 5.966851 L 10.033149 5.966851 Q 9.414365 4.640884 8.088398 4.640884 L 8.088398 4.640884 L 8.088398 4.640884 Q 5.745856 4.640884 5.745856 7.933702 L 5.745856 7.933702 L 5.745856 7.933702 Q 5.745856 11.248619 8.132597 11.248619 L 8.132597 11.248619 L 8.132597 11.248619 Q 9.61326 11.248619 10.121547 9.790055 L 10.121547 9.790055 L 11.491713 10.298343 L 11.491713 10.298343 Q 11.116022 11.447514 10.232044 12.099448 L 10.232044 12.099448 L 10.232044 12.099448 Q 9.348066 12.751381 8.110497 12.751381 Z"/>
+</svg>

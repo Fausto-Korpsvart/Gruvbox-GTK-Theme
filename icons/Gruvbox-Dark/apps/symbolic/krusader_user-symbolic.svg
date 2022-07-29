@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <defs>
+  <filter id="Lg3mKPSuVk55Q0vfYngV9BjWlLyPcDAR" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#Lg3mKPSuVk55Q0vfYngV9BjWlLyPcDAR)">
+  <path fill="#d4be98" d="M 8.98627 15.890374 C 8.930904 15.890374 8.876643 15.890374 8.763695 15.836115 C 8.653513 15.779639 8.543333 15.669458 8.433153 15.559279 L 6.384014 10.796595 L 3.892492 13.122016 C 3.836571 13.231642 3.72639 13.288117 3.559736 13.288117 C 3.50326 13.288117 3.393634 13.288117 3.339374 13.231642 C 3.172719 13.177936 3.006064 12.954806 3.006064 12.734446 L 3.006064 0.553672 C 3.006064 0.33331 3.116798 0.110734 3.339374 0.056475 C 3.393634 0 3.503815 0 3.560289 0 C 3.671024 0 3.837125 0.056475 3.94786 0.166102 L 12.806604 8.471174 C 12.972705 8.638383 13.029181 8.858745 12.972705 9.079107 C 12.91623 9.302236 12.69587 9.412416 12.475509 9.468891 L 8.986824 9.799433 L 11.145035 14.505642 C 11.201511 14.616374 11.201511 14.782478 11.145035 14.949132 C 11.091329 15.059867 10.978934 15.225968 10.8682 15.282443 L 9.26366 16 C 9.152925 15.889821 9.04053 15.889821 8.986824 15.889821 L 8.98627 15.890374 Z"/>
+ </g>
+</svg>

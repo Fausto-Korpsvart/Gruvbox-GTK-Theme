@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="8" viewBox="0 0 16 8">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#efefe7; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#8f8f8b; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+  <clipPath id="_clipPath_Pq8gi0UFH0yVcqOiKSjNhmu1ToEQ47bH">
+   <rect width="16" height="16"/>
+  </clipPath>
+ </defs>
+ <path style="fill:currentColor" class="ColorScheme-Text" fill-rule="evenodd" d="M1.1991 1.13854C1.96104 0.405626 2.9869 0 4.04932 0C5.9892 0 7.16301 1.04479 8 2.17069C8.83699 1.04479 10.0108 0 11.9507 0C13.0131 0 14.039 0.405613 14.801 1.13854C15.5642 1.87266 16 2.87631 16 3.93089C16 4.98547 15.5642 5.98913 14.801 6.72326C14.045 7.45043 13.0292 7.85541 11.9757 7.86172C10.69 7.92302 9.72231 7.46463 8.96707 6.76845C8.6008 6.43083 8.28324 6.03472 8 5.62998C7.71676 6.03472 7.3992 6.43083 7.03293 6.76845C6.27769 7.46463 5.31002 7.92302 4.02429 7.86172C2.97081 7.85541 1.95506 7.45042 1.1991 6.72326C0.435937 5.98916 0 4.98552 0 3.93089C0 2.87626 0.435941 1.87263 1.1991 1.13854ZM6.89106 3.88587C6.09267 2.65114 5.38217 1.88235 4.04932 1.88235C3.46308 1.88235 2.90787 2.1067 2.50404 2.49515C2.10143 2.88243 1.88235 3.39968 1.88235 3.93089C1.88235 4.46211 2.10143 4.97937 2.50404 5.36664C2.90787 5.75509 3.46308 5.97944 4.04932 5.97944H4.07407L4.09878 5.98075C4.82959 6.01921 5.3226 5.78495 5.75713 5.3844C6.16254 5.0107 6.5047 4.50569 6.89106 3.88587ZM9.10894 3.88586C9.4953 4.50569 9.83746 5.0107 10.2429 5.3844C10.6774 5.78495 11.1704 6.01921 11.9012 5.98075L11.9259 5.97944H11.9507C12.5369 5.97944 13.0922 5.75508 13.496 5.36664C13.8986 4.97941 14.1176 4.46216 14.1176 3.93089C14.1176 3.39963 13.8986 2.88239 13.496 2.49515C13.0922 2.10672 12.5369 1.88235 11.9507 1.88235C10.6178 1.88235 9.90733 2.65114 9.10894 3.88586Z" clip-rule="evenodd"/>
+</svg>

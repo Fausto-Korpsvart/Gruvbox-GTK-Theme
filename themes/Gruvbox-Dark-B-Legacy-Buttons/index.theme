@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Gruvbox_Dark
+Comment=An elegant GTK theme with the 'Gruvbox Dark' colour palette, and based on '@Vinceliuice's Graphite' GTK theme.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Gruvbox_Dark
+MetacityTheme=Gruvbox_Dark
+IconTheme=Gruvbox_Icons
+CursorTheme=Gruvbox
+ButtonLayout=close,minimize,maximize:menu

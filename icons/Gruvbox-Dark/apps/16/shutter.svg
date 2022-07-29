@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#efefe7; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#8f8f8b; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#d4be98; } .ColorScheme-ButtonBackground { color:#d4be98; }
+  </style>
+ </defs>
+ <g style="fill:currentColor" class="ColorScheme-Text" transform="matrix(0.8344504,0,0,0.8344504,-456.8104,334.27237)">
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="matrix(0.546,0,0,0.54523,543.66,-951.37)">
+   <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 31.043,1019.7 c -3.179,0.2271 -8.7671,5.5822 -7.9813,5.5551 6.4993,-0.2244 10.559,0.146 15.63,1.7055 0.75087,0.231 -0.81026,-6.7379 -7.6487,-7.2606 z" xml:space="default"/>
+   <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 21.375,1015.3 c -1.8074,2.6003 -2.0343,12.777 -1.5677,12.15 3.8452,-5.1661 13.062,-11.546 18.558,-14.115 6.7943,-3.1757 -12.967,-2.7882 -16.99,1.9653 z" xml:space="default"/>
+   <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 13.191,1026.3 c 1.0415,2.9837 7.7064,6.9501 7.4773,6.2052 -1.8951,-6.1617 -2.5807,-10.142 -2.3673,-15.397 0.0316,-0.7781 -6.3637,2.5131 -5.11,9.192 z" xml:space="default"/>
+   <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 14.061,1036.1 c 2.9518,1.191 10.357,-1.1587 9.6399,-1.4791 -5.9273,-2.6501 -9.4014,-4.7632 -13.251,-8.3861 -0.56994,-0.5364 -2.2867,6.3965 3.6106,9.8652 z" xml:space="default"/>
+   <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 22.601,1041.7 c 2.8222,-1.4672 5.7825,-8.5885 5.0733,-8.2525 -5.8667,2.7794 -9.7372,4.0475 -15.015,4.6262 -0.78146,0.086 3.4625,5.8552 9.9416,3.6263 z" xml:space="default"/>
+   <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 32.554,1038.7 c 0.6894,-3.0822 -2.8932,-9.9173 -3.0917,-9.1638 -1.6417,6.2326 -3.1611,9.9796 -6.1202,14.347 -0.43814,0.6466 6.7504,1.158 9.2119,-5.1828 z" xml:space="default"/>
+   <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 36.472,1029 c -1.9176,-2.5217 -9.4911,-4.2654 -9.0418,-3.6263 3.7167,5.2856 5.6052,8.8642 7.0341,13.93 0.21158,0.75 5.2747,-4.3301 2.0076,-10.303 z" xml:space="default"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g color="#000" transform="translate(-572 -32)">
+  <path style="fill:#d4be98" d="m 577.5,32 v 2 h -3 v 12 h 3 v 2 h -5 V 32 h 5"/>
+  <path d="m 582.5,48 v -2 h 3 V 34 h -3 v -2 h 5 v 16 h -5" style="fill:#d4be98"/>
+ </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="256" height="256" viewBox="0 0 256 256">
+ <defs>
+  <filter id="RfURA4LnzmezbHtlVmeLrS5bGcht3ep3" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#RfURA4LnzmezbHtlVmeLrS5bGcht3ep3)">
+  <linearGradient id="_lgradient_3" x1=".518" x2=".532" y1="-.194" y2="1.208" gradientTransform="matrix(244.648,0,0,228.338,5.682,11.95)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#4ce0c6"/>
+   <stop offset="100%" style="stop-color:#3b85b5"/>
+  </linearGradient>
+  <path fill="url(#_lgradient_3)" d="M 165.691 11.95 C 239.746 11.95 250.33 22.507 250.33 96.494 L 250.33 155.745 C 250.33 229.731 239.746 240.288 165.691 240.288 L 90.321 240.288 C 16.265 240.288 5.682 229.731 5.682 155.745 L 5.682 96.494 C 5.682 22.507 16.265 11.95 90.321 11.95 L 165.691 11.95 Z"/>
+ </g>
+ <defs>
+  <filter id="RCPRxvGP0riM4E4Bi76BZOOXZcBi8F5M" width="400%" height="400%" x="-200%" y="-200%" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox">
+   <feGaussianBlur xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" stdDeviation="4.294"/>
+   <feOffset xmlns="http://www.w3.org/2000/svg" dx="0" dy="4" result="pf_100_offsetBlur"/>
+   <feFlood xmlns="http://www.w3.org/2000/svg" flood-opacity=".4"/>
+   <feComposite xmlns="http://www.w3.org/2000/svg" in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+   <feBlend xmlns="http://www.w3.org/2000/svg" in="SourceGraphic" in2="pf_100_dropShadow" mode="normal"/>
+  </filter>
+ </defs>
+ <g filter="url(#RCPRxvGP0riM4E4Bi76BZOOXZcBi8F5M)">
+  <radialGradient id="_rgradient_0" cx=".5" cy=".5" r="14.914" fx=".5" fy=".5" gradientTransform="matrix(108.694,0,0,117.938,73.653,69.031)" gradientUnits="userSpaceOnUse">
+   <stop offset="0%" style="stop-color:#f5f5f5"/>
+   <stop offset="100%" style="stop-color:#fbfbfb"/>
+  </radialGradient>
+  <path fill="url(#_rgradient_0)" d="M 73.653 69.031 L 73.653 186.969 C 73.653 186.969 133.469 162.793 182.347 127.962 C 182.347 127.951 182.341 127.944 182.335 127.93 C 182.329 127.916 182.322 127.903 182.313 127.891 C 182.303 127.876 182.294 127.865 182.288 127.852 C 182.281 127.841 182.277 127.828 182.276 127.815 C 130.719 91.875 73.653 69.031 73.653 69.031 Z"/>
+ </g>
+</svg>

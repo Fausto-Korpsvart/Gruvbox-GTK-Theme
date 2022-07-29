@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+ <g color="#000" transform="translate(-492 -180)">
+  <path fill="#d4be98" d="M494 187v9h12v-9zm1 1h10v7h-10z" font-family="sans-serif" font-weight="400" overflow="visible"/>
+  <path fill="#d4be98" d="M500 180a5 5 0 0 0-5 5v2h1v-2c0-2.222 1.778-4 4-4s4 1.778 4 4v2h1v-2a5 5 0 0 0-5-5z" font-family="sans-serif" font-weight="400" overflow="visible"/>
+  <path fill="#d4be98" d="M494 187v9h12v-9zm1 1h10v7h-10zm4 2v3h2v-3.25z" font-family="sans-serif" font-weight="400" overflow="visible"/>
+ </g>
+</svg>

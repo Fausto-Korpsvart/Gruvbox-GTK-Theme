@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g transform="translate(0,-32)">
+  <g transform="translate(1.2397766e-5,0.49999956)">
+   <g transform="matrix(0.16,0,0,0.16,-38.000012,-16.877949)" style="fill:#d4be98">
+    <circle cx="325" cy="227.362" r="12.5" transform="translate(-73.5,89)" style="fill:#d4be98;fill-rule:evenodd"/>
+    <circle cx="325" cy="227.362" r="12.5" transform="translate(-73.5,161)" style="fill:#d4be98;fill-rule:evenodd"/>
+    <circle cx="325" cy="227.362" r="12.5" transform="translate(-1.5,89)" style="fill:#d4be98;fill-rule:evenodd"/>
+    <circle cx="325" cy="227.362" r="12.5" transform="translate(-1.5,161)" style="fill:#d4be98;fill-rule:evenodd"/>
+    <circle cx="325" cy="227.362" r="12.5" transform="translate(-37.5,125)" style="fill:#d4be98;fill-rule:evenodd"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#d4be98; } .ColorScheme-ButtonBackground { color:#d4be98; }
+  </style>
+ </defs>
+ <g style="fill:currentColor" class="ColorScheme-Text" transform="matrix(0.33595793,0,0,0.33595793,-0.19848674,-78.37577)">
+  <rect style="fill:currentColor" class="ColorScheme-Text" width="3.702" height="7.404" x="2.48" y="269.05" rx="1.481" ry="1.481"/>
+  <rect style="fill:currentColor" class="ColorScheme-Text" width="3.702" height="16.196" x="15.8" y="260.25" rx="1.481" ry="1.481"/>
+  <rect style="fill:currentColor" class="ColorScheme-Text" width="3.702" height="11.106" x="9.14" y="265.35" rx="1.481" ry="1.481"/>
+  <rect style="fill:currentColor" class="ColorScheme-Text" width="3.702" height="11.476" x="22.47" y="264.97" rx="1.481" ry="1.481"/>
+  <rect style="fill:currentColor" class="ColorScheme-Text" width="3.702" height="12.587" x="29.13" y="263.86" rx="1.481" ry="1.481"/>
+  <rect style="fill:currentColor" class="ColorScheme-Text" width="3.702" height="18.51" x="35.61" y="257.94" rx="1.481" ry="1.481"/>
+  <rect style="fill:currentColor" class="ColorScheme-Text" width="3.702" height="24.988" x="42.27" y="251.46" rx="1.481" ry="1.481"/>
+  <path style="solid-color:#d4be98;fill:currentColor" class="ColorScheme-Text" d="m 46.11941,237.83787 a 2.0363025,2.0363025 0 0 0 -1.400546,0.61624 l -17.995319,17.99531 -7.815734,-7.81573 a 2.0363025,2.0363025 0 0 0 -2.878978,0 l -14.8075364,14.8089 a 2.0363025,2.0363025 0 1 0 2.8789779,2.87898 l 13.3673635,-13.36736 7.815736,7.81436 a 2.0363025,2.0363025 0 0 0 2.880342,0 l 19.435492,-19.43549 a 2.0363025,2.0363025 0 0 0 -1.479798,-3.49521 z"/>
+ </g>
+</svg>

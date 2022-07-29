@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0" y="0" version="1.1" viewBox="0 0 16 16" xml:space="preserve">
+<defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#efefe7; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#8f8f8b; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+ <g transform="matrix(0.03244678,0,0,0.03260867,-0.30573791,-0.34679297)" style="fill:currentColor;enable-background:new">
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(211.2566,272.1264)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -22.696,-40.428 c -56.222,0 -163.728,25.112 -163.728,25.112 0,0 83.413,19.483 141.716,24.125 7.883,0.627 15.315,0.987 22.012,0.987 53.163,0 66.058,-22.45 67.303,-24.894 0.072,-0.14 0.107,-0.219 0.107,-0.219 0,10e-4 -11.188,-25.111 -67.41,-25.111"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(219.2061,225.0598)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -18.663,77.584 c 28.11,-48.69 55.454,-45.823 55.454,-45.823 0,0 16.153,22.245 -11.958,70.936 -28.112,48.69 -103.612,129.236 -103.612,129.236 0,0 32.005,-105.659 60.116,-154.349"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(208.9522,247.3169)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="M -23.865,21.778 C 24.825,-6.332 47.07,9.82 47.07,9.82 c 0,0 2.867,27.342 -45.823,55.454 -48.69,28.11 -154.349,60.116 -154.349,60.116 0,0 80.546,-75.502 129.237,-103.612"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(219.2061,225.0598)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -18.663,77.584 c 28.11,-48.69 55.454,-45.823 55.454,-45.823 0,0 16.153,22.245 -11.958,70.936 -28.112,48.69 -103.612,129.236 -103.612,129.236 0,0 32.005,-105.659 60.116,-154.349"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(239.3321,212.0587)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -8.452,110.182 c 0,-56.222 25.112,-67.41 25.112,-67.41 0,0 25.112,11.188 25.112,67.41 0,56.222 -25.112,163.728 -25.112,163.728 0,0 -25.112,-107.505 -25.112,-163.728"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(292.7701,225.0732)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 18.659,77.551 c -28.11,-48.69 -55.454,-45.823 -55.454,-45.823 0,0 -16.153,22.245 11.958,70.936 C 3.275,151.353 78.775,231.9 78.775,231.9 c 0,0 -32.005,-105.659 -60.116,-154.349"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(303.0716,247.3243)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="M 23.886,21.759 C -24.805,-6.351 -47.05,9.802 -47.05,9.802 c 0,0 -2.867,27.342 45.823,55.454 48.69,28.11 154.349,60.116 154.349,60.116 0,0 -80.546,-75.502 -129.236,-103.613"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(300.7121,272.1259)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 22.688,-40.427 c -56.222,0 -67.41,25.112 -67.41,25.112 0,0 11.188,25.112 67.41,25.112 56.222,0 163.728,-25.112 163.728,-25.112 0,0 -107.505,-25.112 -163.728,-25.112"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(286.3854,293.5722)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 15.42,-94.2 c -48.69,28.11 -45.823,55.454 -45.823,55.454 0,0 22.245,16.153 70.936,-11.958 48.69,-28.112 129.237,-103.612 129.237,-103.612 0,0 -105.66,32.006 -154.35,60.116"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(292.7701,285.8877)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 18.659,-74.932 c -28.11,48.69 -55.454,45.823 -55.454,45.823 0,0 -16.153,-22.245 11.958,-70.936 28.112,-48.69 103.612,-129.236 103.612,-129.236 0,0 -32.005,105.658 -60.116,154.349"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(272.6643,299.9913)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 8.459,-110.295 c 0,56.222 -25.112,67.41 -25.112,67.41 0,0 -25.112,-11.188 -25.112,-67.41 0,-56.222 25.112,-163.728 25.112,-163.728 0,0 25.112,107.506 25.112,163.728"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(248.0452,302.5332)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -4.032,-116.668 c 28.11,48.69 11.958,70.936 11.958,70.936 0,0 -27.342,2.867 -55.454,-45.823 -28.11,-48.69 -60.116,-154.349 -60.116,-154.349 0,0 75.502,80.545 103.612,129.236"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(225.5708,293.5722)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -15.434,-94.2 c 48.69,28.11 45.823,55.454 45.823,55.454 0,0 -22.245,16.152 -70.935,-11.958 -48.69,-28.112 -129.237,-103.612 -129.237,-103.612 0,0 105.659,32.006 154.349,60.116"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(198.0606,271.581)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -29.391,-39.06 c 5.717,3.88 11.215,7.38 16.355,10.346 43.298,24.999 65.684,14.994 70.111,12.47 -3.433,-5.372 -18.621,-23.638 -66.575,-23.638 -6.094,0 -12.793,0.295 -19.891,0.822"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(228.4915,256.0105)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="M -13.952,-0.02 C 7.938,6.484 20.771,2.211 25.441,-0.044 20.715,-2.31 7.877,-6.521 -13.952,-0.02"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(220.0577,239.1506)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -18.231,42.254 c -33.112,33.112 -81.636,111.215 -81.636,111.215 0,0 60.6,-37.652 97.67,-69.253 5.013,-4.273 9.6,-8.438 13.545,-12.383 31.309,-31.31 25.682,-52.125 24.976,-54.298 -0.041,-0.125 -0.065,-0.193 -0.065,-0.193 0,0 -21.378,-8.2 -54.49,24.912"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(252.4586,216.1132)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="M -1.793,100.016 C -13.912,54.785 3.878,40.37 3.878,40.37 c 0,0 22.615,3.589 34.735,48.818 12.119,45.231 15.092,137.134 15.092,137.134 0,0 -43.379,-81.075 -55.498,-126.306"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(233.3117,223.1823)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="M -11.507,82.292 C 0.612,37.061 23.227,33.473 23.227,33.473 c 0,0 17.791,14.415 5.672,59.646 -12.121,45.229 -55.497,126.305 -55.497,126.305 0,0 2.972,-91.901 15.091,-137.132"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(252.4586,216.1132)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="M -1.793,100.016 C -13.912,54.785 3.878,40.37 3.878,40.37 c 0,0 22.615,3.589 34.735,48.818 12.119,45.231 15.092,137.134 15.092,137.134 0,0 -43.379,-81.075 -55.498,-126.306"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(271.9683,220.3093)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 8.105,89.495 c -33.112,-33.112 -24.912,-54.49 -24.912,-54.49 0,0 21.38,-8.2 54.49,24.912 33.112,33.11 81.636,111.215 81.636,111.215 0,0 -78.102,-48.525 -111.214,-81.637"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(295.7752,259.4455)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 20.184,-8.633 c -45.231,-12.119 -59.646,5.671 -59.646,5.671 0,0 3.589,22.615 48.818,34.735 45.231,12.119 137.134,15.092 137.134,15.092 0,0 -81.075,-43.379 -126.306,-55.498"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(288.7375,278.6169)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 16.613,-56.702 c -45.231,12.119 -48.818,34.734 -48.818,34.734 0,0 14.415,17.791 59.645,5.672 45.23,-12.121 126.305,-55.497 126.305,-55.497 0,0 -91.901,2.972 -137.132,15.091"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(272.7415,291.8339)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 8.498,-89.841 c -33.112,33.112 -24.91,54.49 -24.91,54.49 0,0 21.379,8.2 54.489,-24.912 33.112,-33.11 81.636,-111.215 81.636,-111.215 0,0 -78.103,48.525 -111.215,81.637"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(251.6735,296.0268)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -2.191,-100.354 c -12.119,45.23 5.671,59.645 5.671,59.645 0,0 22.615,-3.589 34.735,-48.818 12.119,-45.231 15.092,-137.134 15.092,-137.134 0,0 -43.379,81.076 -55.498,126.307"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(259.9593,295.2614)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m 2.013,-98.435 c 12.119,45.23 -5.671,59.645 -5.671,59.645 0,0 -22.615,-3.589 -34.735,-48.818 -12.119,-45.231 -15.092,-137.134 -15.092,-137.134 0,0 43.379,81.076 55.498,126.307"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(239.8122,291.7264)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -8.209,-89.572 c 33.112,33.112 24.912,54.49 24.912,54.49 0,0 -21.38,8.2 -54.49,-24.912 -33.112,-33.11 -81.636,-111.215 -81.636,-111.215 0,0 78.102,48.525 111.214,81.637"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(223.8161,278.7244)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -16.324,-56.971 c 45.231,12.119 48.818,34.734 48.818,34.734 0,0 -14.415,17.79 -59.646,5.671 -45.229,-12.121 -126.305,-55.497 -126.305,-55.497 0,0 91.902,2.973 137.133,15.092"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(215.8576,260.211)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -20.362,-10.552 c 45.231,-12.119 59.646,5.671 59.646,5.671 0,0 -3.589,22.614 -48.819,34.735 -45.231,12.119 -137.134,15.092 -137.134,15.092 0,0 81.076,-43.379 126.307,-55.498"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(212.6073,231.0578)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="m -22.011,62.545 c 5.653,-1.082 10.951,-2.26 15.726,-3.538 C 33.937,48.23 41.228,29.153 42.35,25.06 37.165,23.916 17.462,22.104 -10.781,50.346 c -3.589,3.589 -7.359,7.709 -11.23,12.199"/>
+  </g>
+  <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(239.6991,239.8096)">
+   <path style="fill:currentColor" class="ColorScheme-Text" d="M -8.266,40.601 C 8.456,31.539 13.498,21.466 14.92,17.387 10.802,18.837 0.761,23.917 -8.266,40.601"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <defs>
+   <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#efefe7; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#8f8f8b; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+   <path style="fill:currentColor;" class="ColorScheme-Text" fill-rule="evenodd" d="M 11.651111 1.111111 C 11.651111 0.497872 12.148983 0 12.762222 0 C 13.375461 0 13.873333 0.497872 13.873333 1.111111 C 13.873333 1.72435 13.375461 2.222222 12.762222 2.222222 C 12.148983 2.222222 11.651111 1.72435 11.651111 1.111111 L 11.651111 1.111111 L 11.651111 1.111111 Z M 1.873333 14.888889 C 1.873333 14.27565 2.371206 13.777778 2.984445 13.777778 C 3.597683 13.777778 4.095556 14.27565 4.095556 14.888889 C 4.095556 15.502128 3.597683 16 2.984445 16 C 2.371206 16 1.873333 15.502128 1.873333 14.888889 L 1.873333 14.888889 L 1.873333 14.888889 Z M 1.873333 2.222222 C 1.873333 1.731631 2.271631 1.333333 2.762222 1.333333 C 3.252813 1.333333 3.651111 1.731631 3.651111 2.222222 C 3.651111 2.712813 3.252813 3.111111 2.762222 3.111111 C 2.271631 3.111111 1.873333 2.712813 1.873333 2.222222 L 1.873333 2.222222 Z M 8.095556 1.777778 C 5.242836 1.781114 2.757801 3.723932 2.066222 6.491555 C 3.162387 5.243702 5.511783 4.446023 8.095556 4.444444 C 10.681503 4.446302 13.032166 5.245561 14.126667 6.49511 C 13.436306 3.725434 10.949973 1.780707 8.095556 1.777778 L 8.095556 1.777778 Z M 2.064445 9.50489 C 2.754805 12.274567 5.241138 14.219293 8.095556 14.222222 C 10.948274 14.218886 13.433309 12.276067 14.12489 9.508445 C 13.028724 10.756297 10.679328 11.553977 8.095556 11.555556 C 5.509608 11.553699 3.158946 10.754439 2.064445 9.50489 L 2.064445 9.50489 Z"/>
+</svg>

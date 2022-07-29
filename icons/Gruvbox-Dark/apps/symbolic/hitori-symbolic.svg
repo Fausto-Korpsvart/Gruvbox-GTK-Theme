@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <g transform="translate(-323.00022,104.99999)">
+  <path d="m 323.50022,-104.49999 v 0.50046 14.49954 h 15 v -15 z m 1.00091,1.00091 h 12.99818 v 12.998178 h -12.99818 z" style="solid-color:#d4be98;fill:#d4be98"/>
+  <path d="m 330.50074,-103.92329 v 13.934573 h 1.00091 v -13.934573 z" style="solid-color:#d4be98;fill:#d4be98"/>
+  <path d="m 324.12189,-97.501423 v 1.000912 H 337.99 v -1.000912 z" style="solid-color:#d4be98;fill:#d4be98"/>
+  <path d="m 328.43007,-103.52371 a 3.9655879,3.9655879 0 0 1 -3.96559,3.965586 l 0,-3.965586 z" style="opacity:0.5;solid-color:#d4be98;fill:#d4be98"/>
+  <path d="m -333.52694,-96.534645 a 3.9968665,3.9968665 0 0 1 -3.99686,3.996866 l 0,-3.996866 z" transform="scale(-1,1)" style="opacity:0.5;solid-color:#d4be98;fill:#d4be98"/>
+ </g>
+</svg>

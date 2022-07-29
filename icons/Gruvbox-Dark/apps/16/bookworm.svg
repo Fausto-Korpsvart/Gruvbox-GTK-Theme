@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" width="16" height="16" viewBox="0 0 16 16">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <linearGradient id="arrongin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#dd9b44; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#ad6c16; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#09D4DF; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#9269F4; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="fitdance" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#1AD6AB; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#329DB6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="oomox" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#efefe7; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#8f8f8b; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="rainblue" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color:#00F260; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#0575E6; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="sunrise" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #FF8501; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #FFCB01; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="telinkrin" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #b2ced6; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #6da5b7; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="60spsycho" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #df5940; stop-opacity:1"/>
+   <stop offset="25%" style="stop-color: #d8d15f; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #e9882a; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #279362; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="90ssummer" x1="0%" x2="0%" y1="0%" y2="100%">
+   <stop offset="0%" style="stop-color: #f618c7; stop-opacity:1"/>
+   <stop offset="20%" style="stop-color: #94ffab; stop-opacity:1"/>
+   <stop offset="50%" style="stop-color: #fbfd54; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color: #0f83ae; stop-opacity:1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <path style="fill:currentColor" class="ColorScheme-Text" d="M 0 11.2 L 0 13.6 L 1.6 13.6 L 1.6 15.2 C 1.6 15.641828 1.958172 16 2.4 16 C 2.841828 16 3.2 15.641828 3.2 15.2 L 3.2 13.6 L 12.8 13.6 L 12.8 15.2 C 12.8 15.641828 13.158172 16 13.6 16 C 14.041828 16 14.4 15.641828 14.4 15.2 L 14.4 13.6 L 16 13.6 L 16 11.2 L 0 11.2 Z"/>
+  <g>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="3.2" height="5.6" x=".8" y="2.4" transform="matrix(1,0,0,1,0,0)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="3.2" height="1.6" x=".8" y="0" transform="matrix(1,0,0,1,0,0)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="3.2" height="1.6" x=".8" y="8.8" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="3.2" height="5.6" x="4.86" y="2.4" transform="matrix(1,0,0,1,0,0)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="3.2" height="1.6" x="4.8" y="8.8" transform="matrix(1,0,0,1,0,0)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="3.2" height="1.6" x="4.86" y="0" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="2.4" height=".8" x="8.8" y="3.2" transform="matrix(1,0,0,1,0,0)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="2.4" height=".8" x="8.8" y="9.6" transform="matrix(1,0,0,1,0,0)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="2.4" height="4" x="8.8" y="4.8" transform="matrix(1,0,0,1,0,0)"/>
+  </g>
+  <g>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="2.4" height="4" x="12.74" y="4.63" transform="matrix(0.976699,-0.214616,0.214616,0.976699,-1.097078,3.146942)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="2.4" height=".8" x="13.43" y="9.35" transform="matrix(0.976699,-0.214616,0.214616,0.976699,-1.751843,3.367114)"/>
+   <rect style="fill:currentColor" class="ColorScheme-Text" width="2.4" height=".8" x="12.06" y="3.1" transform="matrix(0.976699,-0.214616,0.214616,0.976699,-0.442268,2.926799)"/>
+  </g>
+ </g>
+</svg>

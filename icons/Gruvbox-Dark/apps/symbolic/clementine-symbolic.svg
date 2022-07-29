@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" version="1.1">
+ <defs>
+  <style id="current-color-scheme" type="text/css">
+   .ColorScheme-Text { color:#d4be98; } .ColorScheme-Highlight { color:#d4be98; } .ColorScheme-ButtonBackground { color:#d4be98; }
+  </style>
+ </defs>
+ <g style="fill:currentColor" class="ColorScheme-Text" transform="translate(-268.50442,416.69742)">
+  <path style="fill:currentColor" class="ColorScheme-ButtonBackground" d="m 271.64,-416.36 a 9,9 0 0 0 0,12.727 9,9 0 0 0 12.727,0 l -1.4141,-1.4141 a 7,7 0 0 1 -9.8984,0 7,7 0 0 1 0,-9.8984 l -1.4141,-1.4141 z m 2.1035,2.1738 a 6,6 0 0 0 -1.3945,3.3711 h 4.7656 z m -1.4023,4.3711 a 6,6 0 0 0 1.4023,3.3711 l 3.3711,-3.3711 z m 5.4805,0.70703 -3.3711,3.3711 a 6,6 0 0 0 3.3711,1.3945 z m 1,0 v 4.7734 a 6,6 0 0 0 3.3711,-1.4023 z"/>
+ </g>
+</svg>
