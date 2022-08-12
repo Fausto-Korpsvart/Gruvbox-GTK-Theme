@@ -4761,23 +4761,23 @@ windowcontrols {
   border-spacing: 6px;
 }
 
-windowcontrols:not(.empty).start:dir(ltr),
-windowcontrols:not(.empty).end:dir(rtl) {
-  margin-right: 6px;
-  margin-left: 3px;
+windowcontrols.start:not(.empty):dir(ltr),
+windowcontrols.end:not(.empty):dir(rtl) {
+  margin-left: 12px;
+  margin-right: 3px;
 }
 
-windowcontrols:not(.empty).start:dir(rtl),
-windowcontrols:not(.empty).end:dir(ltr) {
-  margin-left: 6px;
+windowcontrols.start:not(.empty):dir(rtl),
+windowcontrols.end:not(.empty):dir(ltr) {
+  margin-left: 12px;
   margin-right: 3px;
 }
 
 windowcontrols button:not(.suggested-action):not(.destructive-action) {
-  min-height: 14px;
-  min-width: 14px;
+  min-height: 12px;
+  min-width: 12px;
   padding: 0;
-  margin: 0 3px;
+  margin: 0 2px;
   border-radius: 9999px;
 }
 

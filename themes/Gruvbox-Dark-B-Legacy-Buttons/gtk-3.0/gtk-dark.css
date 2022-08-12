@@ -13541,9 +13541,13 @@ box.vertical headerbar {
 	background-color: #1d2021;
 }
 
+.nautilus-window headerbar > box.horizontal.left {
+  padding-right: 40px;
+}
+
 headerbar > box.left,
 headerbar > box.right {
-	padding: 0 3px;
+  padding: 0 2px;
 }
 
 headerbar entry,
@@ -17025,7 +17029,7 @@ button.titlebutton:not(.suggested-action):not(.destructive-action) {
   min-height: 24px;
   min-width: 24px;
   padding: 0;
-  margin: 0 3px;
+  margin: 0 2px;
 }
 
 button.titlebutton:not(.suggested-action):not(.destructive-action).close:hover {

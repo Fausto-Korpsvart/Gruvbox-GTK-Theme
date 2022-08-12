@@ -4748,35 +4748,122 @@ windowcontrols {
   border-spacing: 6px;
 }
 
-windowcontrols:not(.empty).start:dir(ltr),
-windowcontrols:not(.empty).end:dir(rtl) {
-  margin-right: 6px;
-  margin-left: 3px;
+windowcontrols.start:not(.empty):dir(ltr),
+windowcontrols.end:not(.empty):dir(rtl) {
+  margin-left: 12px;
+  margin-right: 3px;
 }
 
-windowcontrols:not(.empty).start:dir(rtl),
-windowcontrols:not(.empty).end:dir(ltr) {
-  margin-left: 6px;
+windowcontrols.start:not(.empty):dir(rtl),
+windowcontrols.end:not(.empty):dir(ltr) {
+  margin-left: 12px;
   margin-right: 3px;
 }
 
 windowcontrols button:not(.suggested-action):not(.destructive-action) {
-  min-height: 24px;
-  min-width: 24px;
+  min-height: 12px;
+  min-width: 12px;
   padding: 0;
-  margin: 0 3px;
+  margin: 0 2px;
+}
+
+windowcontrols button:not(.suggested-action):not(.destructive-action).minimize,
+windowcontrols button:not(.suggested-action):not(.destructive-action).maximize,
+windowcontrols button:not(.suggested-action):not(.destructive-action).close {
+  color: transparent;
 }
 
 windowcontrols
-  button.close:not(.suggested-action):not(.destructive-action):hover {
-  background-color: #eee0b7;
-  color: #1d2021;
+  button:not(.suggested-action):not(.destructive-action).minimize
+  image,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize
+  image,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).close
+  image {
+  padding: 0;
 }
 
 windowcontrols
-  button.close:not(.suggested-action):not(.destructive-action):active {
-  background-color: #c7c7c7;
-  color: #1d2021;
+  button:not(.suggested-action):not(.destructive-action).minimize:hover,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).minimize:active {
+  background-color: #b47109;
+  color: transparent;
+}
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize:hover,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize:active {
+  background-color: #6c782e;
+  color: transparent;
+}
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).close:hover,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).close:active {
+  background-color: #c14a4a;
+  color: transparent;
+}
+
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).minimize:backdrop,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize:backdrop,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).close:backdrop {
+  background-color: #504945;
+  color: transparent;
+}
+
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:hover,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:active {
+  background-color: #e9b143;
+  color: transparent;
+}
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize:backdrop:hover,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize:backdrop:active {
+  background-color: #b0b846;
+  color: transparent;
+}
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).close:backdrop:hover,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).close:backdrop:active {
+  background-color: #f2594b;
+  color: transparent;
+}
+
+windowcontrols button:not(.suggested-action):not(.destructive-action).minimize {
+  background-color: #e9b143;
+}
+
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).minimize:active {
+  background-color: #e9b143;
+}
+
+windowcontrols button:not(.suggested-action):not(.destructive-action).maximize {
+  background-color: #b0b846;
+}
+
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize:active {
+  background-color: #b0b846;
+}
+
+windowcontrols button:not(.suggested-action):not(.destructive-action).close {
+  background-color: #f2594b;
+}
+
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).close:active {
+  background-color: #f2594b;
 }
 
 gridview > child:selected,
