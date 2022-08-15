@@ -22,6 +22,8 @@ The **GTK4** themes have the specification: <ins>**'Gnome42'**</ins>, these them
 
 As I mentioned before, the **GTK4** themes don't need to be applied with **Tweaks**, they are applied automatically but, if you have applications open you will have to close and open them for the theme to be applied and, But for GTK3 applications you do need to apply them with **Tweaks**, as usual.
 
+It is also possible to use the theme inside Flatpaks, by cloning refi64's `stylepak` repo, which can be found [here](https://github.com/refi64/stylepak).
+
 This is a small table of the themes that are available so far, I hope to be able to add a few more of the themes I use in my Neovim setup.
 
 |[Catppuccin](https://www.pling.com/p/1715554)|[Material](https://www.pling.com/p/1706139)|[Rosé Pine](https://www.pling.com/p/1810530)|[Tokyonight](https://www.pling.com/p/1681315)|
