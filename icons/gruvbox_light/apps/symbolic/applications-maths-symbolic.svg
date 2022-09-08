@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
- <defs>
-  <style id="current-color-scheme" type="text/css">
-   .ColorScheme-Text { color:#eff0f2; } .ColorScheme-Highlight { color:#eff0f2; } .ColorScheme-ButtonBackground { color:#eff0f2; }
-  </style>
- </defs>
- <path fill="#eff0f2" fill-rule="evenodd" stroke-width=".26" class="fil0" d="m14.445 10.816-0.49802 4.6837h-11.947v-0.37153l6.0369-6.7224-5.8673-7.5378v-0.36813h11.312v3.9838h-0.75055c-0.15496-0.7036-0.45444-1.3676-0.89477-1.9917-0.44033-0.62445-0.89477-0.97425-1.3676-1.05-0.21264-0.03779-0.51244-0.06501-0.90214-0.07937-0.39307-0.0189-0.71066-0.03024-0.95982-0.03024h-3.2655l4.7052 6.0474v0.1697l-5.499 6.0872h6.9029c0.31759 0 0.59897-0.09373 0.84783-0.28498 0.24548-0.18746 0.45843-0.43294 0.63518-0.72877 0.16233-0.26683 0.30652-0.56644 0.43296-0.8914 0.12642-0.32844 0.23811-0.63485 0.3357-0.91654h0.74319z" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision"/>
-</svg>

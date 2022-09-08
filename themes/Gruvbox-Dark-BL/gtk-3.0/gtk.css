@@ -23020,7 +23020,7 @@ box.vertical headerbar {
 }
 
 .nautilus-window headerbar > box.horizontal.left {
-  padding: 0 6px;
+  padding: 0 10px;
   padding-right: 60px;
 }
 
@@ -23969,8 +23969,8 @@ notebook.frame frame > list row.activatable {
 notebook > header {
   border: none;
   background-color: transparent;
-  padding: 0 3px 3px 1px;
-  margin: 0 3px 3px 1px;
+  padding: 0 4px 3px 4px;
+  margin: 0 4px 3px 4px;
 	border-radius: 9px;
 }
 
@@ -26547,20 +26547,46 @@ button.titlebutton:not(.suggested-action):not(.destructive-action).close {
   color: transparent;
 }
 
+button.titlebutton:not(.suggested-action):not(.destructive-action).minimize,
+button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:active,
+button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:backdrop:hover,
+button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:backdrop:active {
+  background-color: #e9b143;
+  color: transparent;
+}
+
 button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:hover,
 button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:active {
-  background-color: #b47109;
+  background-color: shade(#e9b143, 0.5);
   color: transparent;
 }
+
+button.titlebutton:not(.suggested-action):not(.destructive-action).maximize,
+button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:active,
+button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:backdrop:hover,
+button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:backdrop:active {
+  background-color: #b0b846;
+  color: transparent;
+}
+
 button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:hover,
 button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:active {
-  background-color: #6c782e;
+  background-color: shade(#b0b846, 0.5);
   color: transparent;
 }
+
+button.titlebutton:not(.suggested-action):not(.destructive-action).close,
+button.titlebutton:not(.suggested-action):not(.destructive-action).close:active,
+button.titlebutton:not(.suggested-action):not(.destructive-action).close:backdrop:hover,
+button.titlebutton:not(.suggested-action):not(.destructive-action).close:backdrop:active {
+  background-color: #f2594b;
+  color: transparent;
+}
+
 button.titlebutton:not(.suggested-action):not(.destructive-action).close:hover,
 button.titlebutton:not(.suggested-action):not(.destructive-action).close:active {
+  background-color: shade(#f2594b, 0.5);
   color: transparent;
-  background-color: #c14a4a;
 }
 
 button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:backdrop,
@@ -26568,46 +26594,6 @@ button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:back
 button.titlebutton:not(.suggested-action):not(.destructive-action).close:backdrop {
   background-color: #504945;
   color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:backdrop:hover,
-button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:backdrop:active {
-  background-color: #e9b143;
-  color: transparent;
-}
-button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:backdrop:hover,
-button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:backdrop:active {
-  background-color: #b0b846;
-  color: transparent;
-}
-button.titlebutton:not(.suggested-action):not(.destructive-action).close:backdrop:hover,
-button.titlebutton:not(.suggested-action):not(.destructive-action).close:backdrop:active {
-  background-color: #f2594b;
-  color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).minimize {
-  background-color: #e9b143;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).minimize:active {
-  background-color: #e9b143;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).maximize {
-  background-color: #b0b846;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).maximize:active {
-  background-color: #b0b846;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).close {
-  background-color: #f2594b;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).close:active {
-  background-color: #f2594b;
 }
 
 .monospace {
@@ -26822,13 +26808,13 @@ popover.emoji-completion .emoji:hover {
 .nautilus-window.background.csd placessidebar > viewport.frame {
   background-color: transparent;
   color: #eee0b7;
-  margin: 2px 0 2px 6px;
+	margin: 0;
   border-radius: 12px;
 }
 
 .nautilus-window.background.csd placessidebar > viewport.frame > list {
 	background: none;
-  padding: 4px 0 4px 4px;
+  padding: 0 0 0 8px;
 }
 
 .nautilus-window.background.csd
@@ -26993,7 +26979,7 @@ filechooser
   background-color: #32302f;
   border-radius: 12px;
   border: 1px solid rgba(221, 199, 161, 0.1);
-  margin: 0 6px 6px 6px;
+  margin: 0 6px 6px;
 }
 
 .nautilus-window.background.csd
