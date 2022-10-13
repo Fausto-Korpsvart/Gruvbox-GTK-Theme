@@ -11,25 +11,25 @@ define variables for them in _colors.scss */
 /* Gruvbox Dark Hard Borderless Legacy Buttons Theme */
 
 /* The main accent color and the matching text value */
-@define-color accent_bg_color #eee0b7;
-@define-color accent_fg_color #1d2021;
-@define-color accent_color @accent_bg_color;
+@define-color accent_color #266b79;
+@define-color accent_bg_color shade(#266b79, 0.5);
+@define-color accent_fg_color #f9f5d7;
 
 /* Destructive-action buttons */
-@define-color destructive_bg_color #f2594b;
-@define-color destructive_fg_color #f9f5d7;
 @define-color destructive_color #f2594b;
+@define-color destructive_bg_color shade(#f2594b, 0.5);
+@define-color destructive_fg_color #f9f5d7;
 
 /* Levelbars, entries, labels and infobars. These don't need text colors */
-@define-color success_bg_color #b0b846;
-@define-color success_fg_color #f9f5d7;
 @define-color success_color #b0b846;
-@define-color warning_bg_color #f28534;
-@define-color warning_fg_color #1d2021;
+@define-color success_bg_color shade(#b0b846, 0.5);
+@define-color success_fg_color #f9f5d7;
 @define-color warning_color #f28534;
-@define-color error_bg_color #f2594b;
-@define-color error_fg_color #f9f5d7;
+@define-color warning_bg_color shade(#f28534, 0.5);
+@define-color warning_fg_color #f9f5d7;
 @define-color error_color #f2594b;
+@define-color error_bg_color shade(#f2594b, 0.5);
+@define-color error_fg_color #f9f5d7;
 
 /* Window */
 @define-color window_bg_color #1d2021;
@@ -147,61 +147,37 @@ windowcontrols
 }
 
 windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:hover {
-  background-color: #2e302f;
-}
-
+  button:not(.suggested-action):not(.destructive-action).minimize:hover,
 windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:active {
-  background-color: #464844;
-}
+  button:not(.suggested-action):not(.destructive-action).maximize:hover,
 windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:hover {
-  background-color: #2e302f;
-}
-
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:active {
-  background-color: #464844;
-}
-
-windowcontrols
-  button.close:not(.suggested-action):not(.destructive-action):hover {
-  background-color: #504945;
-  color: #eee0b7;
-}
-
-windowcontrols
-  button.close:not(.suggested-action):not(.destructive-action):active {
-  background-color: #eee0b7;
-  color: #1d2021;
-}
-
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:hover {
-  background-color: #2e302f;
-}
-
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:active {
-  background-color: #464844;
-}
+  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:hover,
 windowcontrols
   button:not(.suggested-action):not(.destructive-action).maximize:backdrop:hover {
   background-color: #2e302f;
 }
 
 windowcontrols
+  button:not(.suggested-action):not(.destructive-action).minimize:active,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).maximize:active,
+windowcontrols
+  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:active,
+windowcontrols
   button:not(.suggested-action):not(.destructive-action).maximize:backdrop:active {
   background-color: #464844;
 }
 
+windowcontrols
+  button.close:not(.suggested-action):not(.destructive-action):hover,
 windowcontrols
   button:not(.suggested-action):not(.destructive-action).close:backdrop:hover {
   background-color: #504945;
   color: #eee0b7;
 }
 
+windowcontrols
+  button.close:not(.suggested-action):not(.destructive-action):active,
 windowcontrols
   button:not(.suggested-action):not(.destructive-action).close:backdrop:active {
   background-color: #eee0b7;
@@ -223,8 +199,9 @@ calendar > grid > label.today,
 filechooser stack.view scrolledwindow treeview.view:selected,
 stacksidebar row:selected,
 .navigation-sidebar > row:selected {
-  color: #c8c093;
-  background-color: rgba(224, 224, 224, 0.2);
+  color: #e9b143;
+  font-weight: 500;
+  background-color: rgba(238, 224, 183, 0.2);
 }
 
 textview text selection:focus,

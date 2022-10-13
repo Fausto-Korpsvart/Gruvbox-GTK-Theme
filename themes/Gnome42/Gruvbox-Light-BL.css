@@ -11,24 +11,24 @@ define variables for them in _colors.scss */
 /* Gruvbox Light Borderless Theme */
 
 /* The main accent color and the matching text value */
-@define-color accent_color #2b3339;
-@define-color accent_bg_color #2b3339;
+@define-color accent_color #266b79;
+@define-color accent_bg_color shade(#266b79, 0.5);
 @define-color accent_fg_color #f9f5d7;
 
 /* Destructive-action buttons */
-@define-color destructive_color #ea6962;
-@define-color destructive_bg_color #c14a4a;
+@define-color destructive_color #f2594b;
+@define-color destructive_bg_color shade(#f2594b, 0.5);
 @define-color destructive_fg_color #f9f5d7;
 
 /* Levelbars, entries, labels and infobars. These don't need text colors */
-@define-color success_color #a9b665;
-@define-color success_bg_color #6c782e;
+@define-color success_color #b0b846;
+@define-color success_bg_color shade(#b0b846, 0.5);
 @define-color success_fg_color #f9f5d7;
-@define-color warning_color #e78a4e;
-@define-color warning_bg_color #c35e0a;
+@define-color warning_color #f28534;
+@define-color warning_bg_color shade(#f28534, 0.5);
 @define-color warning_fg_color #f9f5d7;
-@define-color error_color #ea6962;
-@define-color error_bg_color #c14a4a;
+@define-color error_color #f2594b;
+@define-color error_bg_color shade(#f2594b, 0.5);
 @define-color error_fg_color #f9f5d7;
 
 /* Window */

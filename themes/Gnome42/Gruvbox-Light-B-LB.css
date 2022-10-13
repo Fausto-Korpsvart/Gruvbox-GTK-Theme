@@ -11,25 +11,25 @@ define variables for them in _colors.scss */
 /* Everforest Light Border Legacy Buttons Theme */
 
 /* The main accent color and the matching text value */
-@define-color accent_color #2b3339;
-@define-color accent_bg_color #2b3339;
-@define-color accent_fg_color #fff9e8;
+@define-color accent_color #266b79;
+@define-color accent_bg_color shade(#266b79, 0.5);
+@define-color accent_fg_color #f9f5d7;
 
 /* Destructive-action buttons */
-@define-color destructive_color #e67e80;
-@define-color destructive_bg_color #e67e80;
-@define-color destructive_fg_color #fff9e8;
+@define-color destructive_color #f2594b;
+@define-color destructive_bg_color shade(#f2594b, 0.5);
+@define-color destructive_fg_color #f9f5d7;
 
 /* Levelbars, entries, labels and infobars. These don't need text colors */
-@define-color success_color #a7c080;
-@define-color success_bg_color #a7c080;
-@define-color success_fg_color #fff9e8;
-@define-color warning_color #dbbc7f;
-@define-color warning_bg_color #dbbc7f;
-@define-color warning_fg_color #fff9e8;
-@define-color error_color #e67e80;
-@define-color error_bg_color #e67e80;
-@define-color error_fg_color #fff9e8;
+@define-color success_color #b0b846;
+@define-color success_bg_color shade(#b0b846, 0.5);
+@define-color success_fg_color #f9f5d7;
+@define-color warning_color #f28534;
+@define-color warning_bg_color shade(#f28534, 0.5);
+@define-color warning_fg_color #f9f5d7;
+@define-color error_color #f2594b;
+@define-color error_bg_color shade(#f2594b, 0.5);
+@define-color error_fg_color #f9f5d7;
 
 /* Window */
 @define-color window_bg_color #fff9e8;

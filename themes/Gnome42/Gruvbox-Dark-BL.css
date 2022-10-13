@@ -11,25 +11,25 @@ define variables for them in _colors.scss */
 /* Gruvbox Dark Hard Borderless Theme */
 
 /* The main accent color and the matching text value */
-@define-color accent_bg_color #eee0b7;
-@define-color accent_fg_color #1d2021;
-@define-color accent_color @accent_bg_color;
+@define-color accent_color #266b79;
+@define-color accent_bg_color shade(#266b79, 0.5);
+@define-color accent_fg_color #f9f5d7;
 
 /* Destructive-action buttons */
-@define-color destructive_bg_color #f2594b;
-@define-color destructive_fg_color #f9f5d7;
 @define-color destructive_color #f2594b;
+@define-color destructive_bg_color shade(#f2594b, 0.5);
+@define-color destructive_fg_color #f9f5d7;
 
 /* Levelbars, entries, labels and infobars. These don't need text colors */
-@define-color success_bg_color #b0b846;
-@define-color success_fg_color #f9f5d7;
 @define-color success_color #b0b846;
-@define-color warning_bg_color #f28534;
-@define-color warning_fg_color #1d2021;
+@define-color success_bg_color shade(#b0b846, 0.5);
+@define-color success_fg_color #f9f5d7;
 @define-color warning_color #f28534;
-@define-color error_bg_color #f2594b;
-@define-color error_fg_color #f9f5d7;
+@define-color warning_bg_color shade(#f28534, 0.5);
+@define-color warning_fg_color #f9f5d7;
 @define-color error_color #f2594b;
+@define-color error_bg_color shade(#f2594b, 0.5);
+@define-color error_fg_color #f9f5d7;
 
 /* Window */
 @define-color window_bg_color #1d2021;
@@ -133,103 +133,59 @@ windowcontrols button:not(.suggested-action):not(.destructive-action) {
   border-radius: 9999px;
 }
 
-windowcontrols button:not(.suggested-action):not(.destructive-action).minimize,
-windowcontrols button:not(.suggested-action):not(.destructive-action).maximize,
-windowcontrols button:not(.suggested-action):not(.destructive-action).close {
-  color: transparent;
-}
-
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize
-  image,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize
-  image,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close
-  image {
+button.titlebutton.minimize,
+button.titlebutton.maximize,
+button.titlebutton.close,
+windowcontrols button.minimize image,
+windowcontrols button.maximize image,
+windowcontrols button.close image {
   padding: 0;
-}
-
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:hover,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:active {
-  background-color: #49443c;
-  color: transparent;
-}
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:hover,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:active {
-  background-color: #2b3328;
-  color: transparent;
-}
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:hover,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:active {
-  background-color: #43242b;
   color: transparent;
 }
 
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:backdrop,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:backdrop,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:backdrop {
-  background-color: #363646;
-  color: transparent;
+button.titlebutton.close,
+button.titlebutton.close:hover:backdrop,
+windowcontrols > button.close,
+windowcontrols > button.close:hover:backdrop {
+  background-color: #f2594b;
 }
 
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:hover,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:backdrop:active {
-  background-color: #dca561;
-  color: transparent;
-}
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:backdrop:hover,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:backdrop:active {
-  background-color: #76946a;
-  color: transparent;
-}
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:backdrop:hover,
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:backdrop:active {
-  background-color: #c34043;
-  color: transparent;
+button.titlebutton.close:hover,
+windowcontrols > button.close:hover {
+  background-color: shade(#f2594b, 0.5);
 }
 
-windowcontrols button:not(.suggested-action):not(.destructive-action).minimize {
-  background-color: #dca561;
+button.titlebutton.maximize,
+button.titlebutton.maximize:hover:backdrop,
+windowcontrols > button.maximize,
+windowcontrols > button.maximize:hover:backdrop {
+  background-color: #b0b846;
 }
 
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).minimize:active {
-  background-color: #dca561;
+button.titlebutton.maximize:hover,
+windowcontrols > button.maximize:hover {
+  background-color: shade(#b0b846, 0.5);
 }
 
-windowcontrols button:not(.suggested-action):not(.destructive-action).maximize {
-  background-color: #76946a;
+button.titlebutton.minimize,
+button.titlebutton.minimize:hover:backdrop,
+windowcontrols > button.minimize,
+windowcontrols > button.minimize:hover:backdrop {
+  background-color: #e9b143;
 }
 
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).maximize:active {
-  background-color: #76946a;
+button.titlebutton.minimize:hover,
+windowcontrols > button.minimize:hover {
+  background-color: shade(#e9b143, 0.5);
 }
 
-windowcontrols button:not(.suggested-action):not(.destructive-action).close {
-  background-color: #c34043;
-}
-
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:active {
-  background-color: #c34043;
+button.titlebutton.close:backdrop,
+button.titlebutton.maximize:backdrop,
+button.titlebutton.minimize:backdrop,
+windowcontrols > button.close:backdrop,
+windowcontrols > button.maximize:backdrop,
+windowcontrols > button.minimize:backdrop {
+  background-color: #504945;
 }
 
 gridview > child:selected,
@@ -247,7 +203,8 @@ calendar > grid > label.today,
 filechooser stack.view scrolledwindow treeview.view:selected,
 stacksidebar row:selected,
 .navigation-sidebar > row:selected {
-  color: #c8c093;
+  color: #e9b143;
+  font-weight: 500;
   background-color: rgba(224, 224, 224, 0.2);
 }
 
