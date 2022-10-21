@@ -334,9 +334,7 @@ StScrollBar StButton#hhandle:active {
   border-radius: 12px;
   margin: 6px;
   border: 1px solid rgba(249, 245, 215, 0.2);
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.05),
-    0 4px 6px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.05),
-    0 0 0 1px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
   background-clip: border-box;
 }
 

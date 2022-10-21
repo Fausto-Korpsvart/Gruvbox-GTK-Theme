@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Tokyonight-Light-Borderless
-Comment=An elegant GTK theme with the 'Tokyonight Light' colour palette, and based on '@Vinceliuice's Graphite' GTK theme.
+Name=Gruvbox-Light
+Comment=An elegant GTK theme with the 'Gruvbox Light' colour palette, and based on '@Vinceliuice's Graphite' GTK theme.
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Tokyonight-Light-Borderless
-MetacityTheme=Tokyonight-Light-Borderless
-IconTheme=Tokyonight-Light
-CursorTheme=Tokyonight-Light
+GtkTheme=Gruvbox-Light
+MetacityTheme=Gruvbox-Light
+IconTheme=Gruvbox-Light
+CursorTheme=Gruvbox-Light
 ButtonLayout=close,minimize,maximize:menu

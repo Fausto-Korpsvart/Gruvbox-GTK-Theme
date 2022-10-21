@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
   <info>
-    <name>Tokyonight Light</name>
+    <name>Gruvbox Light</name>
     <author>vinceliucie | mod: fkorpsvart</author>
     <copyright>GPL</copyright>
     <date>2022</date>
-    <description>Tokyonight Light Metacity theme</description>
+    <description>Gruvbox Light Metacity theme</description>
   </info>
 
   <!-- meaningful constants -->

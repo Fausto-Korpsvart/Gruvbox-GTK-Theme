@@ -41610,7 +41610,7 @@ headerbar
 
 .titlebar.default-decoration {
   min-height: 24px;
-  padding: 6px;
+  padding: 10px 20px;
   box-shadow: inset 0 1px rgba(249, 245, 215, 0.1);
   border-radius: 12px 12px 0 0;
 }
@@ -41641,7 +41641,7 @@ headerbar
 
 headerbar {
   min-height: 48px;
-  padding: 0 6px;
+  padding: 1px 20px;
 }
 
 headerbar:not(.titlebar) {
@@ -41657,12 +41657,9 @@ box.vertical headerbar {
   padding-right: 60px;
 }
 
-headerbar > box.horizontal.left {
-  padding: 0 15px;
-}
-
-headerbar > box.right{
-  padding: 0 3px;
+headerbar > box.left,
+headerbar > box.right {
+  padding: 0;
 }
 
 headerbar entry,

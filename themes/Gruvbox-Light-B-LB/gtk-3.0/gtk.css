@@ -41614,7 +41614,7 @@ headerbar
 
 .titlebar.default-decoration {
   min-height: 24px;
-  padding: 6px;
+  padding: 10px 15px;
   border-radius: 11px 11px 0 0;
 }
 
@@ -41644,7 +41644,7 @@ headerbar
 
 headerbar {
   min-height: 48px;
-  padding: 0 6px;
+  padding: 1px 15px;
 }
 
 headerbar:not(.titlebar) {
@@ -41656,12 +41656,13 @@ box.vertical headerbar {
 }
 
 .nautilus-window headerbar > box.horizontal.left {
+  padding: 0 10px;
   padding-right: 40px;
 }
 
 headerbar > box.left,
 headerbar > box.right {
-  padding: 0 8px;
+  padding: 0;
 }
 
 headerbar entry,
@@ -46545,6 +46546,7 @@ box.horizontal
   row.activatable,
 list.navigation-sidebar > row {
   border-radius: 6px;
+  margin: 1px 3px;
 }
 
 window.background.csd
