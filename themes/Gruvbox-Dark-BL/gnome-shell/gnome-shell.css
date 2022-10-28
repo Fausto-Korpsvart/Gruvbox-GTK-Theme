@@ -734,7 +734,7 @@ StWidget.focused .app-well-app-running-dot {
 
 /* Activities Ripple */
 .ripple-box {
-  background-color: rgba(169, 177, 214, 0.35);
+  background-color: rgba(238, 224, 183, 0.35);
   box-shadow: 0 0 2px 2px #f9f5d7;
   width: 52px;
   height: 52px;
@@ -795,8 +795,8 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .modal-dialog-linked-button:insensitive:last-child {
-  background-color: rgba(169, 177, 214, 0.05);
-  color: rgba(169, 177, 214, 0.35);
+  background-color: rgba(238, 224, 183, 0.05);
+  color: rgba(238, 224, 183, 0.35);
 }
 
 .headline {
@@ -1936,7 +1936,7 @@ StEntry StLabel.hint-text,
 }
 
 .select-area-rubberband {
-  background-color: rgba(169, 177, 214, 0.3);
+  background-color: rgba(238, 224, 183, 0.3);
   border: 1px solid #eee0b7;
   border-radius: 6px;
 }
@@ -2824,7 +2824,7 @@ StEntry StLabel.hint-text,
 
 #unlockDialogNotifications StButton#vhandle:active,
 #unlockDialogNotifications StButton#hhandle:active {
-  background-color: rgba(169, 177, 214, 0.5);
+  background-color: rgba(238, 224, 183, 0.5);
 }
 
 /* Scrollbars */
@@ -3147,7 +3147,7 @@ StScrollBar StButton#hhandle:active {
 
 /* Tiled window previews */
 .tile-preview {
-  background-color: rgba(169, 177, 214, 0.3);
+  background-color: rgba(238, 224, 183, 0.3);
   border: 1px solid #eee0b7;
   border-radius: 12px;
 }

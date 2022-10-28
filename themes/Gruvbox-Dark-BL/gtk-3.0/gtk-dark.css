@@ -41653,7 +41653,7 @@ box.vertical headerbar {
 }
 
 .nautilus-window headerbar > box.horizontal.left {
-  padding: 0 10px;
+  padding: 0 12px;
   padding-right: 60px;
 }
 

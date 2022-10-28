@@ -41654,7 +41654,7 @@ box.vertical headerbar {
 }
 
 .nautilus-window headerbar > box.horizontal.left {
-  padding: 0;
+  padding: 0 10px;
   padding-right: 40px;
 }
 

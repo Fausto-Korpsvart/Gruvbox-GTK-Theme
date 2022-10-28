@@ -57,7 +57,7 @@ I have abbreviated the themes because I don't like to put such long names like: 
 | Tokyonight GTK Theme          | [Github](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) | [Pling](https://www.pling.com/p/1681315/) |
 
 ## If you want to support
-You can buy me a coffee, a beer and donate to support the development of these themes.
+You can donate to support the development of these themes.
 - [Donate in PayPal.Me](https://www.paypal.me/korpsvart)
 - [PayPal Donation Page](https://www.paypal.com/donate/?hosted_button_id=LHKL2JYTUURVA)
 
