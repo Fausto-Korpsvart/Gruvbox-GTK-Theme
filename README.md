@@ -17,7 +17,7 @@ The colour palettes in this series of themes are the ones I have used the most i
 
 ## Installing Themes
 
-Before applying the themes you need to check if the `Murrine Engine` package is already installed on your distro, as it is necessary for the correct rendering of the themes.
+Before applying the themes you need to check if the `Murrine Engine` and `gnome-themes-extra` or `gnome-themes-standard` packages are already installed on your distro, as it is necessary for the correct rendering of the themes.
 Depending on your Linux distro, the package may have a different name, here are the package names in some distro: On Fedora: `gtk-murrine-engine`, OpenSUSE: `gtk2-engine-murrine`, Arch: `gtk-engine-murrine`, Debian and derivatives: `gtk2-engines-murrine`
 
 Themes work in <ins>**Gnome 40, 41 and 42 versions**,</ins> but since Gnome 42 introduced [<ins>**libadwaita**</ins>](https://en.wikipedia.org/wiki/Adwaita_(design_language)) the themes files for <ins>**GTK4**</ins> applications must be placed in a new directory in a new path: **`'~/.config/gtk-4.0'`** with the name **`'gtk.css'`**; this will apply the themes automatically without use **Gnome Tweaks** but, for **GTK3** applications, we must always use **Tweaks** as we have done so far.
@@ -26,6 +26,10 @@ To install the [themes](https://www.pling.com/u/fkorpsvart) you will need to dow
 The **GTK4** themes have the specification: <ins>**'Gnome42' or just 'G42'**</ins>, these themes go in the path: **`'~/.config/gtk-4.0/'`**, and **GTK3** themes go to the usual path, this is: **`'~/.themes/'`**.
 
 As I mentioned before, the **GTK4** themes don't need to be applied with **Tweaks**, they are applied automatically but, if you have applications open you will have to close and open them for the theme to be applied, but for GTK3 applications you do need to apply them with **Tweaks**, as usual.
+
+## Flatpak
+
+To apply themes to Flatpak applications you need to run a few commands from the terminal to give Flatpak applications permissions to override the default themes and apply the GTK theme you are using, the commands are: `flatpak override --user --filesystem=xdg-config/gtk-4.0`, to do it locally, and `flatpak override --filesystem=xdg-config/gtk-4.0` to do it globally.
 
 ## Clarifying some doubts.
 
@@ -53,6 +57,7 @@ I have abbreviated the themes because I don't like to put such long names like: 
 | Kanagawa GTK Theme            | [Github](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme)    | [Pling](https://www.pling.com/p/1810560/) |
 | Material Deep Ocean GTK Theme | [Github](https://github.com/Fausto-Korpsvart/Material-GTK-Themes)   | [Pling](https://www.pling.com/p/1706139/) |
 | Material Palenight GTK Theme  | [Github](https://github.com/Fausto-Korpsvart/Material-GTK-Themes)   | [Pling](https://www.pling.com/p/1706139/) |
+| Nightfox Dusk GTK Theme       | [Github](https://github.com/Fausto-Korpsvart/Nightfox-GTK-Theme)    | [Pling](https://www.pling.com/p/1929101/) |
 | Rosé Pine GTK Theme           | [Github](https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme)   | [Pling](https://www.pling.com/p/1810530/) |
 | Tokyonight GTK Theme          | [Github](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) | [Pling](https://www.pling.com/p/1681315/) |
 
