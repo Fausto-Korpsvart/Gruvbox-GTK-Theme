@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Gruvbox-Light
-Comment=An elegant GTK theme with the 'Gruvbox Light' colour palette, and based on '@Vinceliuice's Graphite' GTK theme.
+Name=Graphite
+Comment=An Flat Gtk+ theme based on Elegant Design
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Gruvbox-Light
-MetacityTheme=Gruvbox-Light
-IconTheme=Gruvbox-Light
-CursorTheme=Gruvbox-Light
+GtkTheme=Graphite
+MetacityTheme=Graphite
+IconTheme=Tela-circle
+CursorTheme=Graphite-cursors
 ButtonLayout=close,minimize,maximize:menu

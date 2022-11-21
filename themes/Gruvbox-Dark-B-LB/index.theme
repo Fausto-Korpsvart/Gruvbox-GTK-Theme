@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Gruvbox-Dark
-Comment=An elegant GTK theme with the 'Gruvbox Dark' colour palette, and based on '@Vinceliuice's Graphite' GTK theme.
+Name=Tokyonight-Dark
+Comment=An Flat Gtk+ theme based on Elegant Design
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Gruvbox-Dark
-MetacityTheme=Gruvbox-Dark
-IconTheme=Gruvbox-Dark
-CursorTheme=Gruvbox-Dark
+GtkTheme=Tokyonight-Dark
+MetacityTheme=Tokyonight-Dark
+IconTheme=Tokyonight-Dark
+CursorTheme=Tokyonight-cursors
 ButtonLayout=close,minimize,maximize:menu

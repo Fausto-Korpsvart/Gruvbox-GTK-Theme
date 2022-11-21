@@ -6,7 +6,7 @@
    viewBox="0 0 256 256"
    version="1.1"
    id="svg44"
-   sodipodi:docname="applogo2.svg"
+   sodipodi:docname="applogo6.svg"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,10 +23,10 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="2.5293854"
-     inkscape:cx="71.163532"
-     inkscape:cy="129.28042"
+     inkscape:cx="70.76818"
+     inkscape:cy="129.4781"
      inkscape:window-width="1920"
-     inkscape:window-height="946"
+     inkscape:window-height="944"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -134,7 +134,7 @@
   <g
      filter="url(#rxmzpKZhS1Rg1bUBpXZWxPjgMjI9gn7l)"
      id="g22"
-     style="fill:#ddc7a1;fill-opacity:1">
+     style="fill:#343b58;fill-opacity:1">
     <linearGradient
        id="_lgradient_133"
        x1=".567"
@@ -156,7 +156,7 @@
        fill="url(#_lgradient_133)"
        d="M 165.628 11.952 C 239.684 11.952 250.267 22.509 250.267 96.495 L 250.267 155.746 C 250.267 229.733 239.684 240.29 165.628 240.29 L 90.259 240.29 C 16.203 240.29 5.619 229.733 5.619 155.746 L 5.619 96.495 C 5.619 22.509 16.203 11.952 90.259 11.952 L 165.628 11.952 Z"
        id="path20"
-       style="fill:#ddc7a1;fill-opacity:1" />
+       style="fill:#343b58;fill-opacity:1" />
   </g>
   <linearGradient
      id="_lgradient_134"

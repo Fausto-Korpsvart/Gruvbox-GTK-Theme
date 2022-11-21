@@ -22,8 +22,8 @@ Depending on your Linux distro, the package may have a different name, here are 
 
 Themes work in <ins>**Gnome 40, 41 and 42 versions**,</ins> but since Gnome 42 introduced [<ins>**libadwaita**</ins>](https://en.wikipedia.org/wiki/Adwaita_(design_language)) the themes files for <ins>**GTK4**</ins> applications must be placed in a new directory in a new path: **`'~/.config/gtk-4.0'`** with the name **`'gtk.css'`**; this will apply the themes automatically without use **Gnome Tweaks** but, for **GTK3** applications, we must always use **Tweaks** as we have done so far.
 
-To install the [themes](https://www.pling.com/u/fkorpsvart) you will need to download <ins>**two files**</ins>, themes for **GTK3** and **GTK4**.
-The **GTK4** themes have the specification: <ins>**'Gnome42' or just 'G42'**</ins>, these themes go in the path: **`'~/.config/gtk-4.0/'`**, and **GTK3** themes go to the usual path, this is: **`'~/.themes/'`**.
+To install the [themes](https://www.pling.com/u/fkorpsvart) you will need to download the theme pack of your choice and place it in the following path.
+`~/.themes`; for themes in `Gnome 43` there is no longer a separate stylesheet, you can create a symlink for the files inside the `gtk-4.0` folder which is inside the theme package, or just copy the files inside the `gtk-4.0` folder into the `~/.config/gtk-4.0` path.
 
 As I mentioned before, the **GTK4** themes don't need to be applied with **Tweaks**, they are applied automatically but, if you have applications open you will have to close and open them for the theme to be applied, but for GTK3 applications you do need to apply them with **Tweaks**, as usual.
 
@@ -34,36 +34,40 @@ To apply themes to Flatpak applications you need to run a few commands from the 
 ## Clarifying some doubts.
 
 Some people have told me that they find the names a bit complicated and confusing because of the abbreviations I have put next to the name of each theme.
-I have abbreviated the themes because I don't like to put such long names like: **`Material-Deep-Ocean-Borderless-Legacy-Buttons-Gnome-42`**, Admittedly, it is a very explicit name, but it is a ridiculously long name. so I decided to abbreviate the different versions for each theme, like **`Tokyonight-Dark-BL-LB-G42`**, so to clarify the abbreviations here is a small table.
+I have abbreviated the themes because I don't like to put such long names like: **`Material-Deep-Ocean-Borderless-Legacy-Buttons-Gnome`**, Admittedly, it is a very explicit name, but it is a ridiculously long name. so I decided to abbreviate the different versions for each theme, like **`Tokyonight-Dark-BL-LB`**, so to clarify the abbreviations here is a small table.
 
-| Abbreviation example | Explanation of abbreviations |
-| ------ | ------------ |
-| Theme-Name-B      |Theme with `Border` decoration                                 |
-| Theme-Name-B-LB   |Theme with `Border` decoration and `Legacy Buttons` in Windows |
-| Theme-Name-B-G42  |Theme with `Border` decoration for `Gnome 42` version          |
-| Theme-Name-B-GS   |Theme with `Border` decoration for `Gnome Shell`               |
-| Theme-Name-BL     |Theme `Borderless` decoration                                  |
-| Theme-Name-BL-LB  |Theme `Borderless` decoration and `Legacy Buttons` in Windows  |
-| Theme-Name-BL-G42 |Theme `Borderless` decoration for `Gnome 42` version           |
-| Theme-Name-BL-GS  |Theme `Borderless` decoration for `Gnome Shell`                |
-
+| Abbreviation example | Explanation of abbreviations                                 |
+| -------------------- | ------------------------------------------------------------ |
+| Theme-Name-B         | Theme with `Border` decoration                               |
+| Theme-Name-B-LB      | Theme with `Border` decoration and `Legacy Buttons` in Windows |
+| Theme-Name-B-GS      | Theme with `Border` decoration for `Gnome Shell`             |
+| Theme-Name-BL        | Theme `Borderless` decoration                                |
+| Theme-Name-BL-LB     | Theme `Borderless` decoration and `Legacy Buttons` in Windows |
+| Theme-Name-BL-GS     | Theme `Borderless` decoration for `Gnome Shell`              |
 
 ## More themes based on Neovim colour schemes.
-| Neovim Colorschemes for GTK | Source | Package |
-| ------ | ------ | ------ |
-| Catppuccin GTK Theme          | [Github](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme)  | [Pling](https://www.pling.com/p/1715554/) |
-| Everforest GTK Theme          | [Github](https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme)  | [Pling](https://www.pling.com/p/1695467/) |
-| Gruvbox Material GTK Theme    | [Github](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)     | [Pling](https://www.pling.com/p/1681313/) |
-| Kanagawa GTK Theme            | [Github](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme)    | [Pling](https://www.pling.com/p/1810560/) |
-| Material Deep Ocean GTK Theme | [Github](https://github.com/Fausto-Korpsvart/Material-GTK-Themes)   | [Pling](https://www.pling.com/p/1706139/) |
-| Material Palenight GTK Theme  | [Github](https://github.com/Fausto-Korpsvart/Material-GTK-Themes)   | [Pling](https://www.pling.com/p/1706139/) |
-| Nightfox Dusk GTK Theme       | [Github](https://github.com/Fausto-Korpsvart/Nightfox-GTK-Theme)    | [Pling](https://www.pling.com/p/1929101/) |
-| Rosé Pine GTK Theme           | [Github](https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme)   | [Pling](https://www.pling.com/p/1810530/) |
+
+| Neovim Colorschemes for GTK   | Source                                                       | Package                                   |
+| ----------------------------- | ------------------------------------------------------------ | ----------------------------------------- |
+| Catppuccin GTK Theme          | [Github](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme) | [Pling](https://www.pling.com/p/1715554/) |
+| Everforest GTK Theme          | [Github](https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme) | [Pling](https://www.pling.com/p/1695467/) |
+| Gruvbox Material GTK Theme    | [Github](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) | [Pling](https://www.pling.com/p/1681313/) |
+| Kanagawa GTK Theme            | [Github](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme) | [Pling](https://www.pling.com/p/1810560/) |
+| Material Deep Ocean GTK Theme | [Github](https://github.com/Fausto-Korpsvart/Material-GTK-Themes) | [Pling](https://www.pling.com/p/1706139/) |
+| Material Palenight GTK Theme  | [Github](https://github.com/Fausto-Korpsvart/Material-GTK-Themes) | [Pling](https://www.pling.com/p/1706139/) |
+| Nightfox Dusk GTK Theme       | [Github](https://github.com/Fausto-Korpsvart/Nightfox-GTK-Theme) | [Pling](https://www.pling.com/p/1929101/) |
+| Rosé Pine GTK Theme           | [Github](https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme) | [Pling](https://www.pling.com/p/1810530/) |
 | Tokyonight GTK Theme          | [Github](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) | [Pling](https://www.pling.com/p/1681315/) |
 
+### Special thanks.
+
+Thanks to [@f1yn](https://github.com/f1yn) for the solution to the active and inactive borders in the new version of `Cinnamon` which no longer uses `Metacity`.
+
 ## If you want to support
+
 You can donate to support the development of these themes.
+
 - [Donate in PayPal.Me](https://www.paypal.me/korpsvart)
 - [PayPal Donation Page](https://www.paypal.com/donate/?hosted_button_id=LHKL2JYTUURVA)
 
-#### **<ENJOY IT!! :nerd_face:/>**
+#### **<ENJOY IT!! :nerd_face:/>

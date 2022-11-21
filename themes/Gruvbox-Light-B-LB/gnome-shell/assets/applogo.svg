@@ -6,8 +6,8 @@
    viewBox="0 0 256 256"
    version="1.1"
    id="svg44"
-   sodipodi:docname="applogo2.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="applogo.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -23,14 +23,16 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="2.5293854"
-     inkscape:cx="71.163532"
-     inkscape:cy="129.28042"
+     inkscape:cx="71.756562"
+     inkscape:cy="129.87345"
      inkscape:window-width="1920"
-     inkscape:window-height="946"
+     inkscape:window-height="1003"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg44" />
+     inkscape:current-layer="svg44"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#505050" />
   <defs
      id="defs13">
     <filter
@@ -130,11 +132,6 @@
          offset="1"
          id="stop4164" />
     </linearGradient>
-  </defs>
-  <g
-     filter="url(#rxmzpKZhS1Rg1bUBpXZWxPjgMjI9gn7l)"
-     id="g22"
-     style="fill:#ddc7a1;fill-opacity:1">
     <linearGradient
        id="_lgradient_133"
        x1=".567"
@@ -152,12 +149,12 @@
          style="stop-color:#4d4d4d"
          id="stop17" />
     </linearGradient>
-    <path
-       fill="url(#_lgradient_133)"
-       d="M 165.628 11.952 C 239.684 11.952 250.267 22.509 250.267 96.495 L 250.267 155.746 C 250.267 229.733 239.684 240.29 165.628 240.29 L 90.259 240.29 C 16.203 240.29 5.619 229.733 5.619 155.746 L 5.619 96.495 C 5.619 22.509 16.203 11.952 90.259 11.952 L 165.628 11.952 Z"
-       id="path20"
-       style="fill:#ddc7a1;fill-opacity:1" />
-  </g>
+  </defs>
+  <path
+     fill="url(#_lgradient_133)"
+     d="m 165.628,11.952 c 74.056,0 84.639,10.557 84.639,84.543 v 59.251 c 0,73.987 -10.583,84.544 -84.639,84.544 H 90.259 c -74.056,0 -84.64,-10.557 -84.64,-84.544 V 96.495 c 0,-73.986 10.584,-84.543 84.64,-84.543 z"
+     id="path20"
+     style="fill:#565f89;fill-opacity:1;filter:url(#rxmzpKZhS1Rg1bUBpXZWxPjgMjI9gn7l)" />
   <linearGradient
      id="_lgradient_134"
      x1=".516"
