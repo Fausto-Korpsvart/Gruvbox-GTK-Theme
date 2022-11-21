@@ -31,6 +31,8 @@ As I mentioned before, the **GTK4** themes don't need to be applied with **Tweak
 
 To apply themes to Flatpak applications you need to run a few commands from the terminal to give Flatpak applications permissions to override the default themes and apply the GTK theme you are using, the commands are: `flatpak override --user --filesystem=xdg-config/gtk-4.0`, to do it locally, and `flatpak override --filesystem=xdg-config/gtk-4.0` to do it globally.
 
+If that doesn't work, you can use `stylepak` which you can find in this repository [stylepak](https://github.com/refi64/stylepak)
+
 ## Clarifying some doubts.
 
 Some people have told me that they find the names a bit complicated and confusing because of the abbreviations I have put next to the name of each theme.
@@ -62,6 +64,8 @@ I have abbreviated the themes because I don't like to put such long names like: 
 ### Special thanks.
 
 Thanks to [@f1yn](https://github.com/f1yn) for the solution to the active and inactive borders in the new version of `Cinnamon` which no longer uses `Metacity`.
+
+Thanks to [@telometto](https://github.com/telometto) for the alternative for the application of themes in `Flatpak`.
 
 ## If you want to support
 
