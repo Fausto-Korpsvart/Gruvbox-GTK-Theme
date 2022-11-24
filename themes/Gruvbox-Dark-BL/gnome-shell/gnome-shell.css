@@ -2863,7 +2863,7 @@ StEntry StLabel.hint-text,
 
 .quick-toggle:checked:hover {
   background-color: #928374 !important;
-  color: rgba(0, 0, 0, 0.87);
+  color: #f9f5d7;
 }
 
 .quick-toggle:checked:active {
@@ -3005,7 +3005,8 @@ StEntry StLabel.hint-text,
   icon-size: 24px;
   border-radius: 6px;
   padding: 9px;
-  background-color: rgba(249, 245, 215, 0.12) !important;
+  background-color: #e9b143 !important;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .quick-toggle-menu .header .icon.active {
@@ -3024,6 +3025,13 @@ StEntry StLabel.hint-text,
   border: 1px solid rgba(249, 245, 215, 0.2);
 }
 
+.quick-settings-system-item .icon-button:hover {
+  background-color: rgba(234, 232, 255, 0.12);
+  color: #f9f5d7;
+  border-radius: 6px;
+  border: 1px solid rgba(234, 232, 255, 0.2);
+}
+
 .quick-settings-system-item .icon-button > StIcon {
   -st-icon-style: symbolic;
   icon-size: 16px !important;
@@ -3033,6 +3041,12 @@ StEntry StLabel.hint-text,
   min-height: 0;
   min-width: 0;
   color: #e9b143;
+}
+
+.quick-settings-system-item .power-item:hover {
+  min-height: 0;
+  min-width: 0;
+  color: #f9f5d7;
 }
 
 .quick-settings-system-item .power-item:insensitive {
@@ -3684,7 +3698,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 #overviewGroup {
-  background-color: #16161e;
+  background-color: #1d2021;
 }
 
 .osd-window {

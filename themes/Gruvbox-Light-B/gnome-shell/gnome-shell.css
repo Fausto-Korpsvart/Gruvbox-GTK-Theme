@@ -2872,13 +2872,13 @@ StEntry StLabel.hint-text,
 }
 
 .quick-toggle:checked:hover {
-  background-color: #5a524c !important;
-  color: #ebdbb2;
+  background-color: #45403d !important;
+  color: #e78a4e;
 }
 
 .quick-toggle:checked:active {
   background-color: #3a3735 !important;
-  color: #ebdbb2;
+  color: #e78a4e;
 }
 
 .quick-toggle > StBoxLayout {
@@ -3014,12 +3014,13 @@ StEntry StLabel.hint-text,
   icon-size: 24px;
   border-radius: 6px;
   padding: 9px;
-  background-color: rgba(0, 0, 0, 0.12) !important;
+  background-color: #e78a4e !important;
+  color: #f9f5d7;
 }
 
 .quick-toggle-menu .header .icon.active {
-  background-color: rgba(0, 0, 0, 0.12) !important;
-  color: #3c3836;
+  background-color: #e78a4e !important;
+  color: #f9f5d7;
 }
 
 .quick-settings-system-item > StBoxLayout {
@@ -3032,8 +3033,15 @@ StEntry StLabel.hint-text,
 }
 
 .quick-settings-system-item .icon-button {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(249, 245, 215, 0.12);
   color: #1d2021;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quick-settings-system-item .icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: #e78a4e;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -3043,6 +3051,13 @@ StEntry StLabel.hint-text,
   min-width: 0;
   background-color: rgba(249, 245, 215, 0.12);
   color: #1d2021;
+}
+
+.quick-settings-system-item .power-item:hover {
+  min-height: 0;
+  min-width: 0;
+  background-color: rgba(249, 245, 215, 0.12);
+  color: #e78a4e;
 }
 
 .quick-settings-system-item .power-item:insensitive {
@@ -3694,7 +3709,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 #overviewGroup {
-  background-color: #16161e;
+  background-color: #1d2021;
 }
 
 .osd-window {
