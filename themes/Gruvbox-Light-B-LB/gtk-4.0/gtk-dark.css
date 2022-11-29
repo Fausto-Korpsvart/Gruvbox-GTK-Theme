@@ -248,7 +248,7 @@ label.separator {
 label:disabled {
   color: rgba(0, 0, 0, 0.38);
   opacity: 1;
-  filter: 0;
+  filter: none;
 }
 
 headerbar label:disabled,
@@ -7051,4 +7051,3 @@ indicatorbin.needs-attention > indicator {
 indicatorbin.needs-attention > indicator > label {
   color: #f9f5d7;
 }
-
