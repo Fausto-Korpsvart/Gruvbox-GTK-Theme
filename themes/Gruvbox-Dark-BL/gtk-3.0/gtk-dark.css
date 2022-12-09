@@ -9355,7 +9355,7 @@ window.background.csd.unified headerbar {
 }
 
 window.background.csd.unified > decoration-overlay {
-  box-shadow: inset 0 0 0 1px rgba(59, 66, 97, 1);
+  box-shadow: inset 0 0 0 1px rgba(249, 245, 215, 0.2);
 }
 
 window.background.csd.unified,

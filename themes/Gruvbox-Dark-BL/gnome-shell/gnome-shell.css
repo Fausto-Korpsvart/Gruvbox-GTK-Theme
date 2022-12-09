@@ -3132,14 +3132,14 @@ StEntry StLabel.hint-text,
 
 #unlockDialogNotifications StButton#vhandle,
 #unlockDialogNotifications StButton#hhandle {
-  background-color: rgba(44, 44, 44, 0.3);
+  background-color: rgba(40, 40, 40, 0.3);
 }
 
 #unlockDialogNotifications StButton#vhandle:hover,
 #unlockDialogNotifications StButton#vhandle:focus,
 #unlockDialogNotifications StButton#hhandle:hover,
 #unlockDialogNotifications StButton#hhandle:focus {
-  background-color: rgba(44, 44, 44, 0.5);
+  background-color: rgba(40, 40, 40, 0.5);
 }
 
 #unlockDialogNotifications StButton#vhandle:active,

@@ -5608,38 +5608,103 @@ windowcontrols {
 
 windowcontrols.start:not(.empty):dir(ltr),
 windowcontrols.end:not(.empty):dir(rtl) {
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 windowcontrols.start:not(.empty):dir(rtl),
 windowcontrols.end:not(.empty):dir(ltr) {
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 windowcontrols button:not(.suggested-action):not(.destructive-action) {
-  min-height: 24px;
-  min-width: 24px;
+  min-height: 12px;
+  min-width: 12px;
   padding: 0;
-  margin: 0 3px;
+  margin: 0 2px;
   border-radius: 9999px;
 }
 
-windowcontrols button:not(.suggested-action):not(.destructive-action) image {
-  background: none;
+windowcontrols button.minimize:not(.suggested-action):not(.destructive-action),
+windowcontrols button.maximize:not(.suggested-action):not(.destructive-action),
+windowcontrols button.close:not(.suggested-action):not(.destructive-action) {
+  color: transparent;
 }
 
 windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:hover {
+  button.minimize:not(.suggested-action):not(.destructive-action)
+  image,
+windowcontrols
+  button.maximize:not(.suggested-action):not(.destructive-action)
+  image,
+windowcontrols
+  button.close:not(.suggested-action):not(.destructive-action)
+  image {
+  padding: 0;
+}
+
+windowcontrols
+  button.minimize:hover:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.minimize:active:not(.suggested-action):not(.destructive-action) {
+  background-color: shade(#e9b143, 0.5);
+}
+
+windowcontrols
+  button.maximize:hover:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.maximize:active:not(.suggested-action):not(.destructive-action) {
+  background-color: shade(#b0b846, 0.5);
+}
+
+windowcontrols
+  button.close:hover:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.close:active:not(.suggested-action):not(.destructive-action) {
+  background-color: shade(#f2594b, 0.5);
+}
+
+windowcontrols
+  button.minimize:backdrop:hover:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.minimize:backdrop:active:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.maximize:backdrop:hover:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.maximize:backdrop:active:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.close:backdrop:hover:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.close:backdrop:active:not(.suggested-action):not(.destructive-action) {
+  color: transparent;
+}
+
+windowcontrols button.minimize:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.minimize:active:not(.suggested-action):not(.destructive-action) {
+  background-color: #e9b143;
+}
+
+windowcontrols button.maximize:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.maximize:active:not(.suggested-action):not(.destructive-action) {
+  background-color: #b0b846;
+}
+
+windowcontrols button.close:not(.suggested-action):not(.destructive-action),
+windowcontrols
+  button.close:active:not(.suggested-action):not(.destructive-action) {
+  background-color: #f2594b;
+}
+
+button.titlebutton.close:backdrop,
+button.titlebutton.maximize:backdrop,
+button.titlebutton.minimize:backdrop,
+windowcontrols > button.close:backdrop,
+windowcontrols > button.maximize:backdrop,
+windowcontrols > button.minimize:backdrop {
   background-color: #504945;
-  color: #eee0b7;
-}
-
-windowcontrols
-  button:not(.suggested-action):not(.destructive-action).close:active {
-  background-color: #eee0b7;
-  color: #1d2021;
 }
 
 gridview > child:selected,
@@ -5860,7 +5925,7 @@ popover.entry-completion > contents {
 }
 
 .nautilus-window separator.spacer {
-  padding-right: 1.5em;
+  padding-right: 2em;
 }
 
 .nautilus-window flap.unfolded > placessidebar {
