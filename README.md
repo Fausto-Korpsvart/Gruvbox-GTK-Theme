@@ -17,21 +17,31 @@ The colour palettes in this series of themes are the ones I have used the most i
 
 ## Installing Themes
 
-Before applying the themes you need to check if the `Murrine Engine` and `gnome-themes-extra` or `gnome-themes-standard` packages are already installed on your distro, as it is necessary for the correct rendering of the themes.
-Depending on your Linux distro, the package may have a different name, here are the package names in some distro: On Fedora: `gtk-murrine-engine`, OpenSUSE: `gtk2-engine-murrine`, Arch: `gtk-engine-murrine`, Debian and derivatives: `gtk2-engines-murrine`
+Make sure `Murrine Engine` and `gnome-themes-extra` or `gnome-themes-standard` packages are already installed on your distro
 
-Themes work in <ins>**Gnome 40, 41, 42 and 43 versions**,</ins> but since Gnome 42 introduced [<ins>**libadwaita**</ins>](https://en.wikipedia.org/wiki/Adwaita_(design_language)) the themes files for <ins>**GTK4**</ins> applications must be placed in a new directory in a new path: **`'~/.config/gtk-4.0'`** with the name **`'gtk.css'`**; this will apply the themes automatically without use **Gnome Tweaks** but, for **GTK3** applications, we must always use **Tweaks** as we have done so far.
+The names might vary depending on your distro, for e.g: On Fedora it is: `gtk-murrine-engine`, OpenSUSE: `gtk2-engine-murrine`, Arch: `gtk-engine-murrine`, Debian and derivatives: `gtk2-engines-murrine`
 
-To install the [themes](https://www.pling.com/u/fkorpsvart) you will need to download the theme pack of your choice and place it in the following path.
-`~/.themes`; for themes in `Gnome 43` there is no longer a separate stylesheet, you can create a symlink for the files inside the `gtk-4.0` folder which is inside the theme package, or just copy the files inside the `gtk-4.0` folder into the `~/.config/gtk-4.0` path.
+Works in gnome 40, 41, 42, 43
 
-As I mentioned before, the **GTK4** themes don't need to be applied with **Tweaks**, they are applied automatically but, if you have applications open you will have to close and open them for the theme to be applied, but for GTK3 applications you do need to apply them with **Tweaks**, as usual.
+**How to install:**
 
-## Flatpak
+1) Download the file from [here](https://www.pling.com/p/1681313) (in the files tab)
+2) unzip it
+3) cd into the where-ever u installed it then ``cp -r Gruvbox* /usr/share/themes/``
+4) ``mkdir ~/.config/gtk-4.0 && cp -r Gruvbox*/* ~/.config/gtk-4.0``
+5) Get (and enable) the user-themes extension: https://extensions.gnome.org/extension/19/user-themes/
+6) Download the "tweaks" or "gnome tweaks" app
+7) in tweaks, under appearance>shell u can select gruvbox
+8) in tweaks under appearance>legacy applications, u can select gruvbox
 
-To apply themes to Flatpak applications you need to run a few commands from the terminal to give Flatpak applications permissions to override the default themes and apply the GTK theme you are using, the commands are: `flatpak override --user --filesystem=xdg-config/gtk-4.0`, to do it locally, and `flatpak override --filesystem=xdg-config/gtk-4.0` to do it globally.
+**If you use flatpak apps, u can also apply the theme to those:**
 
-If that doesn't work, you can use `stylepak` which you can find in this repository [stylepak](https://github.com/refi64/stylepak)
+(make sure git is installed, it usually is by default)
+
+1) ``git clone https://github.com/refi64/stylepak``
+2) ``cd stylepak && ./style install-system NAME-OF-THEME-HERE``
+
+the name of the theme is the exact name of the folder u downloaded, for example, Gruvbox-Dark-B-LB
 
 ## Clarifying some doubts.
 
