@@ -39,9 +39,11 @@ Works in gnome 40, 41, 42, 43
 (make sure git is installed, it usually is by default)
 
 1) ``git clone https://github.com/refi64/stylepak``
-2) ``cd stylepak && ./style install-system NAME-OF-THEME-HERE``
+2) ``cd stylepak && sudo ./style install-system NAME-OF-THEME-HERE``
 
 the name of the theme is the exact name of the folder u downloaded, for example, Gruvbox-Dark-B-LB
+
+(stylepak used instead of overrides, as the latter rarely works)
 
 ## Clarifying some doubts.
 
