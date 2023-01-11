@@ -422,7 +422,7 @@ entry:disabled {
 
 entry.search {
   border-radius: 6px;
-  padding: 2px;
+  padding: 2px 12px;
 }
 
 entry.flat {
@@ -5718,7 +5718,7 @@ calendar > grid > label.today:selected,
 stacksidebar row:selected,
 .navigation-sidebar > row:selected {
   color: #eee0b7;
-  background-color: #32302f;
+  background-color: #45403d;
 }
 
 .monospace {
@@ -6916,9 +6916,9 @@ viewswitcher.narrow button.toggle {
 }
 
 headerbar viewswitcher.narrow button.toggle {
-  border-radius: 0 0 12px 12px;
-  margin: 0;
-  min-width: 120px;
+  border-radius: 6px;
+  margin: 5px 2px;
+  min-width: 119px;
   padding: 0;
   background-color: transparent;
 }

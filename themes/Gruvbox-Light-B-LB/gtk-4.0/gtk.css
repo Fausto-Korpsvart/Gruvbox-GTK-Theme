@@ -422,7 +422,7 @@ entry:disabled {
 
 entry.search {
   border-radius: 6px;
-  padding: 2px;
+  padding: 2px 12px;
 }
 
 entry.flat {
@@ -5660,14 +5660,14 @@ windowcontrols {
 
 windowcontrols.start:not(.empty):dir(ltr),
 windowcontrols.end:not(.empty):dir(rtl) {
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 windowcontrols.start:not(.empty):dir(rtl),
 windowcontrols.end:not(.empty):dir(ltr) {
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 windowcontrols button:not(.suggested-action):not(.destructive-action) {
@@ -5916,7 +5916,7 @@ popover.entry-completion > contents {
 }
 
 .nautilus-window separator.spacer {
-  padding-right: 1.5em;
+  padding-right: 0.8em;
 }
 
 .nautilus-window flap.unfolded > placessidebar {
@@ -6959,8 +6959,8 @@ viewswitcher.narrow button.toggle {
 
 headerbar viewswitcher.narrow button.toggle {
   border-radius: 6px;
-  margin: 2px 0;
-  min-width: 120px;
+  margin: 5px 2px;
+  min-width: 119px;
   padding: 0;
   background-color: transparent;
 }
