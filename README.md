@@ -52,8 +52,7 @@ The themes work on versions 40 to 43 of the GNOME D.E. just follow the steps bel
 
 ## Clarifying some doubts.
 
-Some people have told me that they find the names a bit complicated and confusing because of the abbreviations I have put next to the name of each theme.
-I have abbreviated the themes because I don't like to put such long names like: **`Material-Deep-Ocean-Borderless-Legacy-Buttons-Gnome-43`**, Admittedly, it is a very explicit name, but it is a ridiculously long name. so I decided to abbreviate the different versions for each theme, like **`Tokyonight-Dark-BL-LB-G42`**, so to clarify the abbreviations here is a small table.
+This is just to clarify doubts about the abbreviations of the Themes, as many found the names confusing.
 
 | Abbreviation example | Explanation of abbreviations                                 |
 | -------------------- | ------------------------------------------------------------ |
