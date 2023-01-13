@@ -9,7 +9,7 @@
 
 > A GTK theme based on the colours of [Sainnhe's](https://github.com/sainnhe) great theme: [Gruvbox Material for Neovim](https://github.com/sainnhe/gruvbox-material), the [VinceLiuice's](https://github.com/vinceliuice) awesome: [Graphite GTK theme](https://github.com/vinceliuice/Graphite-gtk-theme) and the creativity of [Ggusbemacbe's](https://github.com/gusbemacbe): [Suru Plus Icon Theme](https://github.com/gusbemacbe/suru-plus).<br />
 > Great to combine in your Gnome Desktop Environment and TWMs like: XmonadWM, AwesomeWM, BSPWM, etc...
-> With support also for the desktop environments Cinamon and XFCE.<br />
+> With support also for the desktop environments Cinnamon and XFCE.<br />
 > You can check **Reddit:** [r/unixporn](https://www.reddit.com/r/unixporn/) to get some ideas.
 
 ![Gruvbox Dark](https://raw.githubusercontent.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/master/screenshoots/Gruvbox-2.png)
