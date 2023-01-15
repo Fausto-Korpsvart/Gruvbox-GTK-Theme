@@ -40,9 +40,9 @@ The themes work on versions 40 to 43 of the GNOME D.E. just follow the steps bel
 ## Flatpak
 
 *   Applying GTK Themes to Flatpak Apps
-    *   Override flatpak themes to `~/.themes`: `sudo flarpak override --filesystem=$HOME/.themes`
+    *   Override flatpak themes to `~/.themes`: `sudo flatpak override --filesystem=$HOME/.themes`
 
-    *   Override flatpak icons to `~/.icons`: `sudo flarpak override --filesystem=$HOME/.icons`
+    *   Override flatpak icons to `~/.icons`: `sudo flatpak override --filesystem=$HOME/.icons`
 
     *   Override flatpak themes to `~/.config/gtk-4.0` locally: `flatpak override --user --filesystem=xdg-config/gtk-4.0`
 
