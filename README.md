@@ -13,7 +13,7 @@
 > With support also for the desktop environments Cinnamon and XFCE.<br />
 > You can check **Reddit:** [r/unixporn](https://www.reddit.com/r/unixporn/) to get some ideas.
 
-![Gruvbox Dark](https://raw.githubusercontent.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/master/screenshoots/Gruvbox-2.png)
+![Gruvbox Dark](https://raw.githubusercontent.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/master/extra/screenshoots/Gruvbox-2.png)
 
 ## Installing Themes
 
