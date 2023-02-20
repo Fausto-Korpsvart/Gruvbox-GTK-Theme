@@ -87,6 +87,6 @@ Thanks to [@telometto](https://github.com/telometto) for the alternative for the
 ## Donate
 
 If you would like to support the project financially, you can do this through
-[![](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge\&logo=paypal\&logoColor=white)](https://paypal.me/korpsvart) 
+[![](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge\&logo=paypal\&logoColor=white)](https://paypal.me/FKorpsvart) 
 
 ## **\<ENJOY IT!! :nerd\_face:/>**
