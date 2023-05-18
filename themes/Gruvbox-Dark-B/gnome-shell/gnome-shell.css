@@ -2911,18 +2911,9 @@ StEntry StLabel.hint-text,
   icon-size: 16px !important;
 }
 
-/* .quick-menu-toggle:ltr > StBoxLayout {
-  padding-right: 0;
-}
-
-.quick-menu-toggle:rtl > StBoxLayout {
-  padding-left: 0;
-} */
-
 .quick-menu-toggle .quick-toggle {
   min-width: auto;
   max-width: auto;
-
 }
 
 .quick-menu-toggle .quick-toggle:ltr {
