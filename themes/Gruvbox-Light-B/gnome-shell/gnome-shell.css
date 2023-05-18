@@ -2906,18 +2906,32 @@ StEntry StLabel.hint-text,
   icon-size: 16px !important;
 }
 
-.quick-menu-toggle:ltr > StBoxLayout {
-  padding-right: 0;
+.quick-menu-toggle .quick-toggle {
+  min-width: auto;
+  max-width: auto;
 }
 
-.quick-menu-toggle:rtl > StBoxLayout {
-  padding-left: 0;
+.quick-menu-toggle .quick-toggle:ltr {
+  border-radius: 6px 0 0 6px;
+}
+
+.quick-menu-toggle .quick-toggle:ltr > StBoxLayout {
+  padding-right: 9px;
+}
+
+.quick-menu-toggle .quick-toggle:rtl {
+  border-radius: 0 6px 6px 0;
+}
+
+.quick-menu-toggle .quick-toggle:rtl > StBoxLayout {
+  padding-left: 9px;
 }
 
 .quick-menu-toggle .quick-toggle-arrow {
   background-color: rgba(0, 0, 0, 0.04) !important;
   padding: 6px 10.5px;
   icon-size: 16px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .quick-menu-toggle .quick-toggle-arrow:active {
@@ -2926,10 +2940,12 @@ StEntry StLabel.hint-text,
 
 .quick-menu-toggle .quick-toggle-arrow:ltr {
   border-radius: 0 6px 6px 0;
+  border-left-width: 0px;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:rtl {
   border-radius: 6px 0 0 6px;
+  border-right-width: 0px;
 }
 
 .quick-slider {
