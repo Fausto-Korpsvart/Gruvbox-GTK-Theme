@@ -251,7 +251,7 @@ label.separator {
 label:disabled {
   color: rgba(221, 199, 161, 0.5);
   opacity: 1;
-  filter: 0;
+  filter: none;
 }
 
 headerbar label:disabled,
@@ -2347,7 +2347,7 @@ headerbar entry image:disabled {
 
 headerbar {
   min-height: 48px;
-  padding: 3px 0;
+  padding: 2px 0;
   margin: 0;
   border: none;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
@@ -2909,12 +2909,12 @@ popover.background > contents {
   background-clip: border-box;
   border-radius: 12px;
   color: #ddc7a1;
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
 }
 
 popover.background:backdrop > arrow,
 popover.background:backdrop > contents {
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
 }
 
 popover.background modelbutton {
@@ -5604,7 +5604,7 @@ window.csd {
   margin: 0;
   padding: 0;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), 0 10px 18px rgba(0, 0, 0, 0.14),
-    0 8px 24px rgba(0, 0, 0, 0.12), 0 0 0 2px #eee0b7, 0 1px 2px transparent,
+    0 8px 24px rgba(0, 0, 0, 0.12), 0 0 0 2px #ddc7a1, 0 1px 2px transparent,
     0 3px 4px transparent, 0 1px 6px transparent;
 }
 
@@ -5639,7 +5639,7 @@ window.solid-csd {
   padding: 2px;
   border-radius: 0;
   background-color: #1d2021;
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
 }
 
 window.solid-csd:backdrop {
@@ -5777,7 +5777,7 @@ text > selection,
 label > selection,
 calendar > grid > label.today:selected,
 stacksidebar row:selected {
-  color: #eee0b7;
+  color: #ddc7a1;
   background-color: #3c3836;
 }
 

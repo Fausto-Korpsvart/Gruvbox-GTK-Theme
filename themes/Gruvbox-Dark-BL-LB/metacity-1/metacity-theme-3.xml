@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
   <info>
-    <name>Gruvbox Dark</name>
+    <name>Kanagawa Dark</name>
     <author>vinceliucie | mod: f.korpsvart</author>
     <copyright>GPL</copyright>
     <date>2023</date>
-    <description>Gruvbox Dark Metacity theme</description>
+    <description>Kanagawa Dark Metacity theme</description>
   </info>
 
   <!-- meaningful constants -->

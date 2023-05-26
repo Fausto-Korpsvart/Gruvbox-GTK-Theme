@@ -3142,7 +3142,7 @@ headerbar
 
 .titlebar.default-decoration {
   min-height: 24px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 12px 12px 0 0;
 }
 
@@ -3172,7 +3172,7 @@ headerbar
 
 headerbar {
   min-height: 48px;
-  padding: 2px 20px;
+  padding: 1px 20px;
 }
 
 headerbar:not(.titlebar) {
@@ -8859,8 +8859,6 @@ window.background.csd evview.view.content-view {
  * Terminal *
  ************/
 terminal-window decoration {
-  padding: 0 2px 3px 2px;
-  background-color: #1d2021;
   border-radius: 12px;
 }
 
@@ -9573,8 +9571,7 @@ window.background.chromium {
 
 window.background.chromium decoration {
   background-clip: padding-box;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2),
-    0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
 }
 
 window.background.chromium entry,

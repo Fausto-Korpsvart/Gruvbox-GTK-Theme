@@ -3146,7 +3146,7 @@ headerbar
 
 .titlebar.default-decoration {
   min-height: 24px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border-radius: 12px 12px 0 0;
 }
 
@@ -3176,7 +3176,7 @@ headerbar
 
 headerbar {
   min-height: 48px;
-  padding: 2px 15px;
+  padding: 1px 15px;
 }
 
 headerbar:not(.titlebar) {
@@ -3553,7 +3553,7 @@ menu,
   background-color: #141617;
   background-clip: border-box;
   border-radius: 12px;
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
 }
 
 .csd menu,
@@ -3712,7 +3712,7 @@ popover.background {
 
 popover.background,
 .csd popover.background {
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
   box-shadow: none;
 }
 
@@ -6005,7 +6005,7 @@ decoration {
   box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2),
     0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12),
     0 0 0 50px transparent;
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
   background-clip: border-box;
   margin: 8px;
 }
@@ -6036,7 +6036,7 @@ decoration:backdrop {
   background-color: #1d2021;
   margin: 0;
   padding: 4px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 0 0 2px #eee0b7;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 0 0 2px #ddc7a1;
   border: none;
   border-radius: 12px 12px 0 0;
 }
@@ -6050,7 +6050,7 @@ decoration:backdrop {
   background-color: #1d2021;
   background-clip: border-box;
   padding: 2.5px;
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
   border-radius: 14px;
 }
 
@@ -6064,7 +6064,7 @@ decoration:backdrop {
 
 .csd.popup decoration {
   border-radius: 14px;
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
   background-clip: border-box;
 }
 
@@ -6080,7 +6080,7 @@ tooltip.csd decoration {
   border-radius: 0;
   box-shadow: none;
   background-color: #1d2021;
-  border: 2px solid #eee0b7;
+  border: 2px solid #ddc7a1;
 }
 
 .solid-csd decoration:backdrop {
@@ -8796,8 +8796,6 @@ window.background.csd evview.view.content-view {
  * Terminal *
  ************/
 terminal-window decoration {
-  padding: 0 2px 3px 2px;
-  background-color: #1d2021;
   border-radius: 12px;
 }
 
@@ -9393,7 +9391,7 @@ window.background.csd.unified > decoration-overlay {
   border: none;
   box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.2),
     0 4px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 6px 0 rgba(0, 0, 0, 0.12),
-    0 0 0 2px #eee0b7, 0 0 16px transparent;
+    0 0 0 2px #ddc7a1, 0 0 16px transparent;
 }
 
 window.background.csd.unified:backdrop,
@@ -9522,8 +9520,7 @@ window.background.chromium {
 
 window.background.chromium decoration {
   background-clip: padding-box;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2),
-    0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
 }
 
 window.background.chromium entry,
