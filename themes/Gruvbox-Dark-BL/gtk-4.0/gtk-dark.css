@@ -5617,7 +5617,7 @@ window.csd {
   transition: none;
   margin: 0;
   padding: 0;
-  outline: 1px solid rgba(40, 40, 40, 1);
+  outline: 1px solid rgba(221, 199, 161, 0.2);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), 0 10px 18px rgba(0, 0, 0, 0.14),
     0 8px 24px rgba(0, 0, 0, 0.12), 0 1px 2px transparent, 0 3px 4px transparent,
     0 1px 6px transparent;
