@@ -6625,14 +6625,10 @@ popover.emoji-completion .emoji:hover {
 
 .path-bar-box
   .linked.nautilus-path-bar
-  button:not(.suggested-action):not(.destructive-action):last-child:dir(
-    ltr
-  ):disabled,
+  button:not(.suggested-action):not(.destructive-action):last-child:dir(ltr):disabled,
 .path-bar-box
   .linked.nautilus-path-bar
-  button:not(.suggested-action):not(.destructive-action):first-child:dir(
-    rtl
-  ):disabled {
+  button:not(.suggested-action):not(.destructive-action):first-child:dir(rtl):disabled {
   color: #89b482;
   background-color: #282828;
 }
