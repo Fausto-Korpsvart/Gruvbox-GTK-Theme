@@ -277,6 +277,10 @@ row label.subtitle {
   opacity: 1;
 }
 
+.sidebar-pane {
+  background-color: transparent:
+}
+
 window.assistant .sidebar {
   padding: 4px 0;
 }
