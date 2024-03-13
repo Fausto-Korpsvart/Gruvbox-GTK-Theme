@@ -664,7 +664,7 @@ style "default" {
 
     image {
       function = VLINE
-      file     = "CE93D8assets/border.png"
+      file     = "assets/border.png"
       border   = {1, 0, 0, 0}
     }
 
