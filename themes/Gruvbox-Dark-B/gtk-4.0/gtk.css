@@ -5174,6 +5174,11 @@ separator.sidebar.selection-mode,
 /****************
  * File chooser *
  ****************/
+
+placessidebar {
+  background-color: #1d2021;
+}
+
 row image.sidebar-icon {
   transition: color 75ms cubic-bezier(0, 0, 0.2, 1);
   color: rgba(221, 199, 161, 0.7);
