@@ -1,0 +1,42 @@
+.popup-menu {
+    .popup-menu-item {
+        padding: $base_padding * 1.5 $base_padding * 2;
+    }
+}
+
+// separator
+.popup-separator-menu-item {
+    padding: $base_padding * 0.5 0 !important;
+
+    .popup-menu-ornament {
+        width: 0 !important;
+    }
+
+    .popup-separator-menu-item-separator {
+        height: 1px; //not really the whole box
+        background-color: $divider;
+        margin: $base_padding 32px;
+        padding: 0 !important;
+
+        .popup-sub-menu & {
+            //submenu separators
+            padding: 0 !important;
+            margin: 0 32px 0 0;
+            height: 1px;
+        }
+    }
+}
+
+// container for radio and check boxes
+.popup-menu-ornament {
+    icon-size: $base_icon_size !important;
+    width: $base_icon_size;
+}
+
+// system status popover menu
+// .aggregate-menu {
+//   .popup-sub-menu .popup-menu-item > :first-child {
+//     &:ltr { padding-left: $base_padding * 2 !important; margin-left: 0 !important; }
+//     &:rtl { padding-right: $base_padding * 2 !important; margin-right: 0 !important; }
+//   }
+// }

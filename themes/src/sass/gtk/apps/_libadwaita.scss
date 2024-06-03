@@ -1,0 +1,918 @@
+//
+// avatar
+//
+
+avatar {
+    border-radius: $circular-radius;
+    font-weight: bold;
+
+    // The list of colors to generate avatars.
+    // Each avatar color is represented by a font color, a gradient start color and a gradient stop color.
+    // There are 8 different colors for avtars in the list if you change the number of them you
+    // need to update the NUMBER_OF_COLORS in src/adw-avatar.c.
+    // The 2D list has this form: ((font-color, gradient-top-color, gradient-bottom-color)).
+    $avatarcolorlist: (
+        (#cfe1f5, #83b6ec, #337fdc), // blue
+        (#caeaf2, #7ad9f1, #0f9ac8), // cyan
+        (#cef8d8, #8de6b1, #29ae74), // green
+        (#e6f9d7, #b5e98a, #6ab85b), // lime
+        (#f9f4e1, #f8e359, #d29d09), // yellow
+        (#ffead1, #ffcb62, #d68400), // gold
+        (#ffe5c5, #ffa95a, #ed5b00), // orange
+        (#f8d2ce, #f78773, #e62d42), // raspberry
+        (#fac7de, #e973ab, #e33b6a), // magenta
+        (#e7c2e8, #cb78d4, #9945b5), // purple
+        (#d5d2f5, #9e91e8, #7a59ca), // violet
+        (#f2eade, #e3cf9c, #b08952), // beige
+        (#e5d6ca, #be916d, #785336), // brown
+        (#d8d7d3, #c0bfbc, #6e6d71)  // gray
+    );
+
+    @for $i from 1 through length($avatarcolorlist) {
+        &.color#{$i} {
+            $avatarcolor: nth($avatarcolorlist, $i);
+            background-image: linear-gradient(
+                nth($avatarcolor, 2),
+                nth($avatarcolor, 3)
+            );
+            color: nth($avatarcolor, 1);
+        }
+    }
+
+    &.contrasted {
+        color: $white;
+    }
+
+    &.image {
+        background: none;
+    }
+}
+
+// Card
+.card {
+    @at-root %card,
+        & {
+        border-radius: $corner-radius;
+        border: none;
+        background-clip: border-box;
+        color: $text-secondary;
+        box-shadow: none;
+        outline: none;
+        background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+        color: $text;
+    }
+
+    &.activatable {
+        @include button(normal);
+        background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+
+        &:hover {
+            @include button(hover);
+        }
+
+        &:active {
+            @include button(active);
+        }
+    }
+}
+
+//
+// Toasts
+//
+
+toast {
+    margin: $space-size * 2;
+    margin-bottom: $space-size * 4;
+    border-radius: $circular-radius;
+    border-spacing: $space-size;
+    padding: $space-size;
+    box-shadow:
+        $shadow-z6,
+        inset 0 1px highlight($popover);
+    background-color: $popover;
+    color: on($popover);
+    border: none;
+
+    &:dir(ltr) {
+        padding-left: $space-size * 2;
+    }
+    &:dir(rtl) {
+        padding-right: $space-size * 2;
+    }
+
+    > label {
+        margin: 0 $space-size;
+    }
+}
+
+//
+// viewswitcher
+//
+
+viewswitcher {
+    margin: 0;
+    border-spacing: $space-size / 2;
+
+    &.wide {
+        button.toggle {
+            border-radius: $space-size / 2;
+
+            &:first-child {
+                border-top-left-radius: $medium-size / 2;
+                border-bottom-left-radius: $medium-size / 2;
+            }
+
+            &:last-child {
+                border-top-right-radius: $medium-size / 2;
+                border-bottom-right-radius: $medium-size / 2;
+            }
+        }
+    }
+
+    &.narrow {
+        button.toggle {
+            border-radius: 0 0 $space-size / 2 $space-size / 2;
+            margin: 0;
+
+            &:first-child {
+                border-bottom-left-radius: $corner-radius;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: $corner-radius;
+            }
+        }
+    }
+
+    button.toggle {
+        font-weight: bold;
+        padding: 0;
+
+        &:focus:not(:hover):not(:active) {
+            box-shadow: none;
+            outline: none;
+        }
+
+        > stack > box {
+            &.narrow {
+                font-size: 0.75rem;
+                padding-top: $space-size + 2px;
+                padding-bottom: $space-size - 2px;
+                border-spacing: $space-size / 2;
+
+                > stack > label {
+                    padding-left: $space-size;
+                    padding-right: $space-size;
+                }
+            }
+
+            &.wide {
+                padding: 2px $space-size * 2;
+                border-spacing: $space-size;
+            }
+        }
+    }
+}
+
+// AdwViewSwitcherBar
+viewswitcherbar actionbar > revealer > box {
+    padding: 0;
+
+    viewswitcher.narrow button.toggle {
+        border-radius: $corner-radius;
+        margin: $space-size / 2 0;
+
+        > stack > box {
+            &.narrow {
+                padding-top: $space-size / 2 + 2px;
+                padding-bottom: $space-size / 2 - 2px;
+                border-spacing: 0;
+            }
+        }
+    }
+}
+
+// AdwViewSwitcherTitle
+viewswitchertitle {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    viewswitcher {
+        margin-left: $space-size * 2;
+        margin-right: $space-size * 2;
+
+        &.narrow {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            button.toggle {
+                > stack > box {
+                    &.narrow {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        border-spacing: 0;
+                    }
+                }
+            }
+        }
+
+        &.wide {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    windowtitle {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+// AdwIndicatorBin
+indicatorbin {
+    > indicator,
+    > mask {
+        min-width: $space-size;
+        min-height: $space-size;
+        border-radius: $circular-radius;
+    }
+
+    > indicator {
+        margin: 1px;
+        background-color: gtkalpha(currentColor, 0.4);
+
+        > label {
+            font-size: 0.6rem;
+            font-weight: bold;
+            padding: 1px 4px;
+            color: $white;
+        }
+    }
+
+    > mask {
+        padding: 1px;
+        background: black;
+    }
+
+    &.needs-attention > indicator {
+        background-color: $primary;
+
+        > label {
+            color: on($primary);
+        }
+    }
+}
+
+//
+// preferencespage
+//
+
+preferencespage > scrolledwindow > viewport > clamp > box {
+    margin: $space-size * 4 $space-size * 2;
+    border-spacing: $space-size * 4;
+}
+
+preferencesgroup > box {
+    &,
+    .labels {
+        border-spacing: $space-size;
+    }
+
+    > box.header:not(.single-line) {
+        margin-bottom: $space-size;
+    }
+
+    > box.single-line {
+        min-height: 34px;
+    }
+
+    button.background-preview-button.toggle {
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        outline-color: transparent;
+        outline-width: 3px;
+        outline-offset: $space-size / 2;
+        outline-style: solid;
+
+        &,
+        > background-preview {
+            border-radius: $corner-radius;
+        }
+
+        &:hover {
+            outline-color: $fill;
+        }
+
+        &:active {
+            outline-color: $track;
+        }
+
+        &:checked {
+            outline-color: $primary;
+        }
+    }
+
+    .cutout-button {
+        background-color: $base-alt;
+    }
+}
+
+//
+// AdwAboutWindow
+//
+
+window.about {
+    .main-page {
+        > viewport > clamp > box {
+            margin: $space-size * 2;
+            border-spacing: $space-size;
+
+            > box {
+                margin-top: $space-size * 3;
+                border-spacing: $space-size * 3;
+                margin-bottom: $space-size;
+            }
+        }
+
+        .app-version {
+            padding: $space-size / 2 $space-size * 3;
+            color: $primary;
+            border-radius: $corner-radius;
+            margin-top: $space-size / 2;
+        }
+    }
+
+    .subpage {
+        > viewport > clamp > box {
+            margin: $space-size * 3 $space-size * 2;
+            border-spacing: $space-size * 3;
+        }
+
+        > clamp > textview {
+            background: none;
+            color: inherit;
+        }
+    }
+}
+
+//
+// AdwStatusPage
+//
+
+statuspage {
+    > scrolledwindow > viewport > box {
+        margin: $space-size * 6 $space-size * 2;
+        border-spacing: $space-size * 6;
+
+        > clamp > box {
+            border-spacing: $space-size * 2;
+
+            > .icon {
+                -gtk-icon-size: 128px;
+
+                color: gtkalpha(currentColor, 0.55);
+
+                &:disabled {
+                    opacity: 0.35;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: $space-size * 4;
+                }
+            }
+        }
+    }
+
+    &.compact > scrolledwindow > viewport > box {
+        margin: $space-size * 4 $space-size * 2;
+        border-spacing: $space-size * 4;
+
+        > clamp > box {
+            > .icon {
+                -gtk-icon-size: 96px;
+
+                &:not(:last-child) {
+                    margin-bottom: $space-size * 2;
+                }
+            }
+
+            > .title {
+                font-size: 18pt;
+            }
+        }
+    }
+}
+
+// Transition shadows
+flap,
+leaflet,
+navigation-view,
+overlay-split-view {
+    @include transition-shadows($frame);
+}
+
+// Sidebar
+%sidebar_style {
+    background-color: $background;
+    color: on($background);
+    border-radius: $corner-radius;
+    margin: 0;
+
+    .dim-label {
+        color: on($indicator, disabled);
+    }
+}
+
+%sidebar_scrollbar {
+    > range > trough {
+        > slider {
+            background-color: $text-disabled;
+
+            &:hover {
+                background-color: $text-secondary;
+            }
+
+            &:active {
+                background-color: $text;
+            }
+
+            &:disabled {
+                background-color: $text-secondary-disabled;
+            }
+        }
+    }
+
+    &.overlay-indicator {
+        &:not(.dragging):not(.hovering) {
+            button {
+                background-color: on($indicator, disabled);
+
+                &:disabled {
+                    background-color: on($indicator, secondary-disabled);
+                }
+            }
+        }
+    }
+}
+
+%content_style {
+    background-color: if($variant == 'light', rgba($white, 0.6), $fill);
+    border-radius: $corner-radius;
+    margin: $space-size;
+}
+
+%sidebar_list {
+    padding: 6px 0 6px 6px;
+    background: none;
+    color: $titlebar-text-secondary;
+
+    > separator {
+        background-color: transparent;
+    }
+
+    > row {
+        color: on($indicator, secondary);
+        border-radius: $modal-radius;
+        color: $text;
+        padding: 7px 0;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $text;
+        }
+
+        &:selected {
+            font-weight: 500;
+            background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+            color: $primary;
+            border-left: 3px solid $primary;
+
+            &:hover,
+            &:focus {
+                background-color: rgba($base, 0.9);
+                color: $text;
+            }
+        }
+    }
+}
+
+%sidebar_entry {
+    background-color: if(
+        $variant == 'light',
+        on($indicator, secondary-fill),
+        on($indicator, fill)
+    );
+    color: on($indicator, secondary);
+    border-radius: $corner-radius - $space-size;
+
+    &:focus-within {
+        color: on($indicator);
+    }
+
+    &:drop(active),
+    &:hover:not(:focus-within) {
+        color: on($indicator);
+    }
+
+    &:disabled {
+        color: on($indicator, secondary-disabled);
+    }
+
+    image {
+        // icons inside the entry
+        color: on($indicator, secondary);
+
+        &:hover,
+        &:active {
+            color: on($indicator);
+        }
+
+        &:disabled {
+            color: on($indicator, secondary-disabled);
+        }
+    }
+}
+
+%round_scrollbar {
+    &.top {
+        border-bottom: none;
+    }
+    &.bottom {
+        border-top: none;
+    }
+    &.left {
+        border-right: none;
+    }
+    &.right {
+        border-left: none;
+    }
+
+    > range > trough {
+        > slider {
+            border: $corner-radius - 8px solid transparent;
+        }
+    }
+
+    &.overlay-indicator {
+        &:not(.dragging):not(.hovering) {
+            border-color: transparent;
+            background-color: transparent;
+
+            > range > trough > slider {
+                border: none;
+                margin: $corner-radius - 8px - $space-size / 2;
+            }
+
+            button {
+                border: none;
+            }
+        }
+
+        &.dragging,
+        &.hovering {
+            background-color: transparent;
+        }
+    }
+}
+
+%round_undershoot {
+    &.undershoot-top {
+        @include undershoot(top, $br: $corner-radius);
+    }
+
+    &.undershoot-bottom {
+        @include undershoot(bottom, $br: $corner-radius);
+    }
+
+    &.undershoot-start {
+        &:dir(ltr) {
+            @include undershoot(left, $br: $corner-radius);
+        }
+        &:dir(rtl) {
+            @include undershoot(right, $br: $corner-radius);
+        }
+    }
+
+    &.undershoot-end {
+        &:dir(ltr) {
+            @include undershoot(right, $br: $corner-radius);
+        }
+        &:dir(rtl) {
+            @include undershoot(left, $br: $corner-radius);
+        }
+    }
+}
+
+.sidebar-pane {
+    background-color: transparent;
+    color: $text;
+
+    &:backdrop {
+        background-color: transparent;
+        transition: none;
+    }
+
+    .sidebar-pane {
+        background-color: transparent;
+        color: inherit;
+    }
+
+    headerbar,
+    .navigation-sidebar,
+    searchbar > revealer > box {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+    }
+
+    .navigation-sidebar {
+        padding: $space-size - 4 $space-size - 2; //only vertical padding. horizontal row size would clip
+        background: none;
+        color: $titlebar-text-secondary;
+
+        > row {
+            color: $text;
+            min-height: $small-size;
+            padding: 0 $space-size 0 $space-size;
+            margin: 1px;
+            border-radius: $modal-radius;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $text;
+            }
+
+            &:selected {
+                font-weight: 500;
+                color: $primary;
+
+                &:hover,
+                &:focus {
+                    background-color: if(
+                        $variant == 'light',
+                        rgba($base, 0.4),
+                        $fill
+                    );
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .sidebar,
+    toolbarview {
+        > scrolledwindow {
+            @extend %sidebar_style;
+
+            > scrollbar {
+                @extend %sidebar_scrollbar;
+                @extend %round_scrollbar;
+            }
+        }
+    }
+}
+
+.content-pane {
+    toolbarview {
+        &,
+        &.view {
+            background-color: transparent;
+        }
+
+        > stack,
+        > box > stack.view {
+            @extend %content_style;
+        }
+    }
+
+    scrolledwindow scrollbar {
+        @extend %round_scrollbar;
+    }
+}
+
+/* Middle pane in three-pane setups */
+.content-pane .sidebar-pane,
+.sidebar-pane .content-pane {
+    background-color: transparent;
+    color: $text;
+
+    &:backdrop {
+        background-color: transparent;
+        transition: none;
+    }
+}
+
+.sidebar-pane,
+.content-pane,
+.content-pane .sidebar-pane,
+.sidebar-pane .content-pane {
+    banner > revealer > widget {
+        background-color: transparent;
+        color: $text;
+
+        &:backdrop {
+            background-color: transparent;
+        }
+    }
+
+    &:dir(ltr),
+    &.end:dir(rtl) {
+        &,
+        banner > revealer > widget {
+            box-shadow: none;
+            border: none;
+        }
+    }
+
+    &:dir(rtl),
+    &.end:dir(ltr) {
+        &,
+        banner > revealer > widget {
+            box-shadow: none;
+            border: none;
+        }
+    }
+
+    flap,
+    leaflet,
+    navigation-view,
+    overlay-split-view {
+        @include transition-shadows($frame);
+    }
+
+    toolbarview.undershoot-top scrolledwindow {
+        @include undershoot(top, $br: $corner-radius);
+    }
+
+    toolbarview.undershoot-bottom scrolledwindow {
+        @include undershoot(bottom, $br: $corner-radius);
+    }
+
+    scrolledwindow {
+        @extend %round_undershoot;
+    }
+}
+
+// Gnome >= 45.0
+.top-bar {
+    box-shadow: none;
+    background: none;
+    border: none;
+
+    headerbar {
+        &,
+        &:backdrop {
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    .collapse-spacing {
+        padding: 0;
+    }
+}
+
+// ThemeSelector
+themeselector, // Gnome text editor
+panelthemeselector {
+    // Gnome builder
+    margin: $space-size * 1.5;
+
+    checkbutton {
+        padding: 0;
+        min-height: 44px;
+        min-width: 44px;
+        padding: 1px;
+        background-clip: content-box;
+        border-radius: $circular-radius;
+        box-shadow: inset 0 0 0 1px $border;
+
+        &.follow:checked,
+        &.light:checked,
+        &.dark:checked {
+            box-shadow: inset 0 0 0 2px $primary;
+        }
+
+        &.follow {
+            background-image: linear-gradient(
+                to bottom right,
+                #e9e9ed 50%,
+                #292e42 50%
+            );
+        }
+
+        &.light {
+            background-color: #e9e9ed;
+        }
+
+        &.dark {
+            background-color: #292e42;
+        }
+
+        &.theme-selector radio {
+            -gtk-icon-source: none;
+            border: none;
+            background: none;
+            box-shadow: none;
+            min-height: 20px;
+            min-width: 20px;
+            padding: 0;
+
+            &:hover,
+            &:active,
+            &:checked {
+                background-color: transparent;
+            }
+
+            &:checked {
+                -gtk-icon-size: 20px;
+                -gtk-icon-source: -gtk-scaled(
+                    - gtk-recolor(url('assets/checkbox-checked-symbolic.svg')),
+                    - gtk-recolor(url('assets/checkbox-checked-symbolic@2.svg'))
+                );
+                color: on($primary);
+                background-color: $primary;
+
+                &,
+                &:hover,
+                &:active {
+                    box-shadow:
+                        0 2px 3px -1px rgba(black, 0.08),
+                        0 1px 2px 0 rgba(black, 0.1);
+                }
+            }
+        }
+    }
+}
+
+themeswitcher {
+    // Gnome console
+    padding: $space-size;
+
+    .check {
+        min-height: 20px;
+        min-width: 20px;
+        background: none;
+        padding: 0;
+        margin: 0;
+        border-radius: $circular-radius;
+        color: on($primary);
+        background-color: $primary;
+
+        &,
+        &:hover,
+        &:active {
+            box-shadow:
+                0 2px 3px -1px rgba(black, 0.08),
+                0 1px 2px 0 rgba(black, 0.1);
+        }
+    }
+
+    checkbutton {
+        padding: 0;
+        min-height: 44px;
+        min-width: 44px;
+        padding: 1px;
+        background-clip: content-box;
+        border-radius: $circular-radius;
+        box-shadow: inset 0 0 0 1px $border;
+
+        &:checked {
+            box-shadow: inset 0 0 0 2px $primary;
+        }
+
+        radio {
+            &,
+            &:hover,
+            &:active,
+            &:checked,
+            &:checked:hover,
+            &:checked:active {
+                background-color: transparent;
+                border: none;
+                background: none;
+                box-shadow: none;
+                color: transparent;
+                -gtk-icon-source: none;
+                -gtk-icon-size: 0;
+            }
+        }
+
+        &.system {
+            background: linear-gradient(-45deg, #1a1b26 50%, $white 50%);
+        }
+
+        &.light {
+            color: gtkalpha(black, 0.8);
+            background-color: $white;
+        }
+
+        &.dark {
+            color: $white;
+            background-color: #1a1b26;
+        }
+    }
+}

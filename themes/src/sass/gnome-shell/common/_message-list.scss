@@ -1,0 +1,177 @@
+/* Message List */
+// a.k.a. notifications in the menu
+
+.message-list {
+    width: if($compact == 'true', 25.5em, 31.5em);
+    text-shadow: none;
+    border: none;
+    padding: $base_margin 0;
+
+    // padding and margins to account for scrollbar
+    &:ltr {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        border-right-width: 0;
+    }
+    &:rtl {
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        border-left-width: 0;
+    }
+
+    .message-list-placeholder {
+        spacing: $base_spacing * 2;
+
+        // icon size and color
+        > StIcon {
+            icon-size: 48px; // 48px
+            margin-bottom: $base_margin * 3;
+            -st-icon-style: symbolic;
+        }
+    }
+}
+
+.message-list-sections {
+    margin: 0 $base_margin * 2 0 $base_margin * 4; // to account for scrollbar
+}
+
+.message-list-section,
+.message-list-sections,
+.message-list-section-list {
+    spacing: $base_spacing;
+}
+
+// message bubbles
+.message {
+    margin: $base_spacing / 2 0;
+
+    .popup-menu & {
+        @extend %popover_bubble;
+    }
+
+    // icon container
+    .message-icon-bin {
+        padding: $base_padding * 3;
+
+        &:ltr {
+            padding-right: $base_padding;
+        }
+        &:rtl {
+            padding-left: $base_padding;
+        }
+
+        // icon size and color
+        > StIcon {
+            icon-size: 32px; // 32px
+            -st-icon-style: symbolic;
+        }
+
+        // fallback
+        > .fallback-app-icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .message-secondary-bin {
+        padding: 0 $base_margin * 2;
+
+        > .event-time {
+            color: $text-disabled;
+            @include fontsize($font_size - 2);
+            text-align: right;
+            padding-bottom: 0.12em;
+
+            &:ltr {
+                text-align: right;
+            }
+            &:rtl {
+                text-align: left;
+            }
+        }
+    }
+
+    .message-title {
+        color: $text;
+        font-weight: bold;
+    }
+
+    .message-content {
+        padding: $base_padding * 1.5;
+        margin-bottom: $base_margin * 2;
+        spacing: 4px;
+        color: $text-disabled;
+    }
+
+    // close button
+    .message-close-button {
+        color: $text-secondary;
+        padding: 0;
+        height: 24px;
+        width: 24px;
+        border-radius: $circular_radius;
+
+        &:hover,
+        &:active {
+            color: $text;
+        }
+        &:hover,
+        &:focus {
+            background-color: $divider;
+        }
+        &:active {
+            background-color: $track;
+        }
+    }
+
+    // body
+    .message-body {
+        color: $text-disabled;
+    }
+}
+
+// URLs in messages
+.url-highlighter {
+    link-color: $link;
+}
+
+.message-media-control {
+    border-radius: $circular_radius;
+    color: $text-secondary;
+
+    &:last-child:ltr {
+        margin-right: $base_margin * 4;
+    }
+    &:last-child:rtl {
+        margin-left: $base_margin * 4;
+    }
+
+    &:hover,
+    &:focus {
+        color: $text;
+        background-color: $divider;
+    }
+    &:active {
+        color: $text;
+        background-color: $track;
+    }
+    &:insensitive {
+        color: $text-secondary-disabled;
+    }
+}
+
+// album-art
+.media-message-cover-icon {
+    icon-size: 48px;
+    border-radius: $base_radius;
+
+    &.fallback {
+        icon-size: 32px !important;
+        border: none;
+        border-radius: $base_radius;
+        background-color: $divider;
+        color: $text-disabled;
+    }
+}

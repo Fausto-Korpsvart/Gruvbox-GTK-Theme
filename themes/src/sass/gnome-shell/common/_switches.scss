@@ -1,0 +1,16 @@
+/* Switches */
+
+.toggle-switch {
+    width: 46px;
+    height: 24px;
+    background-size: contain;
+
+    &,
+    .popup-sub-menu & {
+        background-image: url('assets/toggle-off.svg');
+
+        &:checked {
+            background-image: url('assets/toggle-on#{$asset_suffix}.svg');
+        }
+    }
+}

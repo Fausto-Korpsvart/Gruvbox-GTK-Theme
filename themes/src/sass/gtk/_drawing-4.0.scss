@@ -1,0 +1,398 @@
+// generic drawing of more complex things
+
+//
+// Ripple keyframes
+//
+
+@keyframes ripple {
+    to {
+        background-size: 1000% 1000%;
+    }
+}
+
+@keyframes ripple-on-slider {
+    to {
+        background-size:
+            auto,
+            1000% 1000%;
+    }
+}
+
+@keyframes ripple-on-headerbar {
+    from {
+        background-image: radial-gradient(circle, $primary 0%, transparent 0%);
+    }
+
+    to {
+        background-image: radial-gradient(
+            circle,
+            $primary 100%,
+            transparent 100%
+        );
+    }
+}
+
+@mixin entry($t, $fc: $primary) {
+    //
+    // entry
+    //
+    // $t: entry type
+    // $fc: focus color
+    //
+
+    @if $t == normal {
+        transition:
+            $transition,
+            outline $ripple-fade-out-duration $ease-out,
+            box-shadow $ripple-fade-out-duration $ease-out;
+        box-shadow: inset 0 0 0 2px transparent;
+        background-color: if($fc == $primary, $entry, rgba($fc, 0.1));
+        color: if($fc == $primary, $text-secondary, rgba($fc, 0.75));
+        outline: 0 solid transparent;
+        outline-offset: 2px;
+    }
+
+    @if $t == hover {
+        transition:
+            $transition,
+            box-shadow $ripple-fade-out-duration $ease-out;
+        background-color: $overlay-hover;
+        box-shadow: inset 0 0 0 2px $overlay-hover;
+        color: if($fc == $primary, $text, $fc);
+        outline: 0 solid transparent;
+        outline-offset: 2px;
+    }
+
+    @if $t == focus {
+        background-color: $overlay-focus;
+        box-shadow: inset 0 0 0 2px transparent;
+        color: if($fc == $primary, $text, $fc);
+        outline: 2px solid if($fc == $primary, $track, $fc);
+        outline-offset: -2px;
+    }
+
+    @if $t == checked {
+        transition:
+            $transition,
+            outline $ripple-fade-out-duration $ease-out,
+            box-shadow $ripple-fade-out-duration $ease-out;
+        background-color: if($fc == $primary, $entry, rgba($fc, 0.1));
+        box-shadow: inset 0 0 0 2px transparent;
+        color: if($fc == $primary, $text, $fc);
+        outline: 2px solid if($fc == $primary, $primary, $fc);
+        outline-offset: -2px;
+    }
+
+    @if $t == disabled {
+        box-shadow: inset 0 0 0 2px transparent;
+        background-color: if($fc == $primary, $entry, rgba($fc, 0.1));
+        color: if($fc == $primary, $text-disabled, rgba($fc, 0.35));
+        outline: none;
+    }
+
+    @if $t == raised-normal {
+        transition:
+            $transition,
+            box-shadow $ripple-fade-out-duration $ease-out;
+        border-image: none;
+        box-shadow: inset 0 0 0 2px transparent;
+        background-color: if($fc == $primary, $surface, $fc);
+        color: if($fc == $primary, $text, on($fc));
+    }
+
+    @if $t == raised-hover {
+        box-shadow: inset 0 0 0 2px $overlay-hover;
+    }
+
+    @if $t == raised-focus {
+        border-image: none;
+        box-shadow: inset 0 0 0 2px if($fc == $primary, $primary, $fc);
+    }
+
+    @if $t == raised-disabled {
+        box-shadow: inset 0 0 0 2px transparent;
+        background-color: $base-alt;
+        color: $text-disabled;
+    }
+}
+
+@mixin button($t) {
+    //
+    // button
+    //
+    // $t: button type
+    //
+
+    @if $t == normal {
+        transition:
+            $transition,
+            background-size $ripple-fade-out-duration $ease-out,
+            background-image $ripple-fade-out-opacity-duration $ease-out,
+            outline $ripple-fade-out-duration $ease-out;
+        background-color: $button;
+        background-image: radial-gradient(
+            circle,
+            transparent 10%,
+            transparent 0%
+        );
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1000% 1000%;
+        outline: 0 solid transparent;
+        outline-offset: 2px;
+        color: $text;
+    }
+
+    @if $t == hover {
+        background-color: $overlay-hover;
+        color: $text;
+        outline: 0 solid transparent;
+    }
+
+    @if $t == focus {
+        outline: 2px solid rgba($primary, 0.35);
+        outline-offset: 0;
+    }
+
+    @if $t == active {
+        transition:
+            $transition,
+            background-size 0ms,
+            background-image 0ms,
+            border 0ms;
+        animation: ripple $ripple-fade-in-duration $ease-out forwards;
+        background-image: radial-gradient(
+            circle,
+            $overlay-hover 10%,
+            transparent 0%
+        );
+        background-size: 0% 0%;
+        background-color: $overlay-hover;
+        color: $text;
+        outline: 0 solid transparent;
+    }
+
+    @if $t == disabled {
+        background-color: $fill;
+        color: $text-disabled;
+        outline-color: transparent;
+    }
+
+    @if $t == checked {
+        background-color: $primary;
+        color: on($primary);
+    }
+
+    @if $t == checked-hover {
+        outline-color: transparent;
+        background-color: lighten($primary, 5%);
+        color: on($primary);
+    }
+
+    @if $t == checked-disabled {
+        outline-color: transparent;
+        background-color: rgba($primary, 0.35);
+        color: on($primary, disabled);
+    }
+
+    @if $t == flat-normal {
+        transition:
+            $transition,
+            border-image $ripple-fade-in-duration $ease-out,
+            background-size $ripple-fade-out-duration $ease-out,
+            background-image $ripple-fade-out-opacity-duration $ease-out,
+            outline $ripple-fade-out-duration $ease-out;
+        background-image: radial-gradient(
+            circle,
+            transparent 10%,
+            transparent 0%
+        );
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1000% 1000%;
+        background-color: transparent;
+        outline: 0 solid transparent;
+        outline-offset: 2px;
+        color: $text-secondary;
+    }
+
+    @if $t == flat-hover {
+        background-color: $overlay-hover;
+        color: $text;
+    }
+
+    @if $t == flat-focus {
+        color: $text;
+        outline: 2px solid $fill;
+        outline-offset: -2px;
+    }
+
+    @if $t == flat-active {
+        transition:
+            $transition,
+            border-image $ripple-fade-in-duration $ease-out,
+            background-size 0ms,
+            background-image 0ms;
+        animation: ripple $ripple-fade-in-duration $ease-out forwards;
+        background-image: radial-gradient(
+            circle,
+            $overlay-hover 10%,
+            transparent 0%
+        );
+        background-size: 0% 0%;
+        background-color: $overlay-hover;
+        color: $text;
+    }
+
+    @if $t == flat-disabled {
+        color: $text-secondary-disabled;
+        background-color: transparent;
+    }
+
+    @if $t == flat-checked {
+        background-color: $overlay-checked;
+        color: $text;
+    }
+
+    @if $t == flat-checked-disabled {
+        background-color: $overlay-checked;
+        color: $text-disabled;
+    }
+}
+
+@mixin overshoot($p) {
+    //
+    // overshoot
+    //
+    // $p: position
+    //
+    // possible $p values:
+    // top, bottom, right, left
+    //
+
+    $_small_gradient_length: 3%;
+    $_big_gradient_length: 50%;
+
+    $_small_gradient_size: 100% $_small_gradient_length;
+    $_big_gradient_size: 100% $_big_gradient_length;
+
+    @if $p==right or $p==left {
+        $_small_gradient_size: $_small_gradient_length 100%;
+        $_big_gradient_size: $_big_gradient_length 100%;
+    }
+
+    $_small_gradient: radial-gradient(
+        farthest-side at $p,
+        gtkalpha(currentColor, 0.12) 85%,
+        gtkalpha(currentColor, 0)
+    );
+
+    $_big_gradient: radial-gradient(
+        farthest-side at $p,
+        gtkalpha(currentColor, 0.05),
+        gtkalpha(currentColor, 0)
+    );
+
+    background-image: $_small_gradient, $_big_gradient;
+    background-size: $_small_gradient_size, $_big_gradient_size;
+
+    background-repeat: no-repeat;
+    background-position: $p;
+
+    background-color: transparent; // reset some properties to be sure to not inherit them somehow
+    border: none; //
+    box-shadow: none; //
+}
+
+@mixin undershoot($p, $c: $frame, $neighbor: false, $br: 0px) {
+    //
+    // undershoot
+    //
+    // $p: position
+    // $c: shade color
+    // $neighbor: use ~ instead of >
+    //
+    // possible $p values:
+    // top, bottom, right, left
+    //
+
+    $_border_pos: '';
+    $_direction: '';
+    $_border_radius: '';
+    $_selector: if($neighbor, '~', '>');
+
+    @if $p==top {
+        $_direction: bottom;
+        $_border_pos: 0 1px;
+        $_border_radius: $br $br 0 0;
+    } @else if $p==bottom {
+        $_direction: top;
+        $_border_pos: 0 -1px;
+        $_border_radius: 0 0 $br $br;
+    } @else if $p==left {
+        $_direction: right;
+        $_border_pos: 1px 0;
+        $_border_radius: $br 0 0 $br;
+    } @else if $p==right {
+        $_direction: left;
+        $_border_pos: -1px 0;
+        $_border_radius: 0 $br $br 0;
+    } @else {
+        @error "Unknown position #{$p}";
+    }
+
+    #{$_selector} undershoot.#{$p} {
+        border-radius: $_border_radius;
+        box-shadow: none;
+        background: linear-gradient(
+            to $_direction,
+            gtkalpha($c, 0.75),
+            transparent 4px
+        );
+    }
+}
+
+@mixin background-shadow($direction, $color) {
+    background-image: linear-gradient(
+            $direction,
+            gtkalpha($color, 0.7),
+            gtkalpha($color, 0.14) 40px,
+            gtkalpha($color, 0) 56px
+        ),
+        linear-gradient(
+            $direction,
+            gtkalpha($color, 0.4),
+            gtkalpha($color, 0.14) 7px,
+            gtkalpha($color, 0) 24px
+        );
+}
+
+@mixin transition-shadows($color) {
+    > dimming {
+        background-color: $color;
+        background-image: none;
+    }
+
+    > border {
+        background-color: transparent;
+        background-image: none;
+    }
+
+    > shadow {
+        min-width: 56px;
+        min-height: 56px;
+
+        &.left {
+            @include background-shadow(to right, $color);
+        }
+        &.right {
+            @include background-shadow(to left, $color);
+        }
+        &.up {
+            @include background-shadow(to bottom, $color);
+        }
+        &.down {
+            @include background-shadow(to top, $color);
+        }
+    }
+}

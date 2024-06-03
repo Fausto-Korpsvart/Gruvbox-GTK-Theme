@@ -1,0 +1,31 @@
+// Theme ColorScheme palette: night/moon/storm
+@import 'color-palette-soft';
+
+$colorscheme: 'soft';
+
+// transparent opacity
+$opacity: 'default';
+
+// Theme primary color
+$theme: 'red';
+
+// Theme size
+$compact: 'false';
+
+// Theme translucent
+$translucent: 'false';
+
+// Panel translucent opacity
+$panel_opacity: 0.6;
+
+// Blackness style
+$blackness: 'false';
+
+// Windows outline style
+$outline: 'true';
+
+// Windows button style : mac/normal
+$window_button: 'normal';
+
+// Gnome-Shell float panel version
+$float: 'true';

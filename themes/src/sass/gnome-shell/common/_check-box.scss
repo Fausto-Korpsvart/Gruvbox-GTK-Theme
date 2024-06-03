@@ -1,0 +1,31 @@
+/* Check Boxes */
+
+.check-box {
+    StBoxLayout {
+        spacing: 0.8em;
+    }
+
+    StBin {
+        width: 24px;
+        height: 24px;
+        padding: $base_padding / 2;
+    }
+
+    StBin,
+    &:focus StBin {
+        background-image: url('assets/checkbox-off.svg');
+    }
+
+    &:hover StBin {
+        background-image: url('assets/checkbox-off-hover.svg');
+    }
+
+    &:active StBin {
+        background-image: url('assets/checkbox-off-active.svg');
+    }
+
+    &:checked StBin,
+    &:focus:checked StBin {
+        background-image: url('assets/checkbox#{$asset_suffix}.svg');
+    }
+}

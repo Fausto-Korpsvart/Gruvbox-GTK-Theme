@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48"
+   height="24"
+   version="1.1"
+   id="svg939"
+   sodipodi:docname="toggle-on-dark.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs943">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter863"
+       x="-0.14699999"
+       y="-0.14699999"
+       width="1.294"
+       height="1.294">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.1025"
+         id="feGaussianBlur865" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview941"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="2.95"
+     inkscape:cx="74.067797"
+     inkscape:cy="14.40678"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg939">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1663"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
+  </sodipodi:namedview>
+  <rect
+     transform="scale(-1,1)"
+     x="-48"
+     y="-0.019988"
+     width="48"
+     height="24"
+     rx="12"
+     ry="12"
+     fill="#009688"
+     stroke-width="0"
+     style="paint-order:stroke fill markers;fill:#80aa9e;fill-opacity:1"
+     id="rect2" />
+  <circle
+     cx="36"
+     cy="13"
+     r="9"
+     fill="#ffffff"
+     stroke-width="0"
+     style="opacity:0.35;fill:#000000;paint-order:stroke fill markers;filter:url(#filter863)"
+     id="circle307" />
+  <circle
+     cx="36"
+     cy="12"
+     r="9"
+     fill="#ffffff"
+     stroke-width="0"
+     style="paint-order:stroke fill markers;fill:#1a1b26;fill-opacity:1"
+     id="circle4" />
+  <path
+     id="rect876"
+     style="opacity:0.1;fill:#ffffff;paint-order:stroke fill markers"
+     d="m 12,-0.01953125 c -6.6479934,0 -12,5.35200665 -12,12.00000025 0,0.171056 0.00665429,0.340494 0.01367188,0.509765 C 0.27938822,6.080891 5.523063,1 12,1 H 36 C 42.476937,1 47.720612,6.080891 47.986328,12.490234 47.993346,12.320963 48,12.151525 48,11.980469 48,5.3324754 42.647993,-0.01953125 36,-0.01953125 Z" />
+  <path
+     id="circle1665"
+     style="paint-order:stroke fill markers;fill:#ffffff;fill-opacity:1;opacity:0.1"
+     d="M 36 3 A 9 9 0 0 0 27 12 A 9 9 0 0 0 27.035156 12.5 A 9 9 0 0 1 36 4 A 9 9 0 0 1 44.974609 12.359375 A 9 9 0 0 0 45 12 A 9 9 0 0 0 36 3 z " />
+</svg>
