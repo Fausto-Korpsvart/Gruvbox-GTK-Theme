@@ -457,7 +457,8 @@ overlay-split-view {
 }
 
 %content_style {
-    background-color: if($variant == 'light', rgba($white, 0.6), $fill);
+    // background-color: if($variant == 'light', rgba($white, 0.6), $fill);
+    background-color: if($variant == 'light', #f4e7be, $fill);
     border-radius: $corner-radius;
     margin: $space-size;
 }

@@ -2596,7 +2596,8 @@ popover {
     > contents {
         transition: $transition-shadow;
         padding: $space-size;
-        background-color: $menu;
+        // background-color: $menu;
+        background-color: if($variant == 'light', #f4e7be, $menu);
         border-radius: $menu-radius;
         color: $text;
         border: none;
@@ -2652,7 +2653,8 @@ popover {
     // FIXME: Use the popover color instead of transparent as a workaround for .view
     .view:not(:selected),
     toolbar {
-        background-color: $menu;
+        // background-color: $menu;
+        background-color: if($variant == 'light', #f4e7be, $menu);
     }
 
     button,
