@@ -27,7 +27,7 @@ COLOR_VARIANTS=('-Light' '-Dark')
 SIZE_VARIANTS=('' '-Compact')
 
 if [[ "$(command -v gnome-shell)" ]]; then
-	gnome-shell --version
+	echo && gnome-shell --version
 	SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
 	if [[ "${SHELL_VERSION:-}" -ge "46" ]]; then
 	GS_VERSION="46-0"

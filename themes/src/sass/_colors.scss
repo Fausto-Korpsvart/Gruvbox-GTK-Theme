@@ -157,7 +157,7 @@ $surface:                               if($variant == 'light', background(b), b
 $base:                                  if($variant == 'light', background(c), background(h));
 $base-alt:                              if($variant == 'light', background(d), background(h));
 $card:                                  if($variant == 'light', background(b), background(h));
-$menu:                                  if($variant == 'light', background(b), background(e));
+$menu:                                  if($variant == 'light', $grey-150, $grey-850);
 
 $tooltip:                               if($variant == 'dark', rgba(darken(background(f), 3%), 0.9), rgba(darken(background(h), 3%), 0.9));
 $osd:                                   mix($primary, background(f), 0%);
@@ -175,7 +175,7 @@ $button:                                if($variant == 'dark', on($background, s
 $entry:                                 if($variant == 'dark', on($background, secondary-fill), on($background, fill));
 
 // Misc colors
-$chromium-tabs:                          if($variant == 'light', #ebdbb2, #504945);
+$chromium-tabs:                          if($variant == 'light', $grey-150, $grey-600);
 
 $link:                                  mix($blue-dark, $teal-dark, 50%);
 $link-visited:                          if($variant == 'light', $purple-dark, $purple-light);

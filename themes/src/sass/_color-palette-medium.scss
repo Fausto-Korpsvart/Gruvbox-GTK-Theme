@@ -32,10 +32,6 @@ $yellow-dark: #d8a657;
 $orange-light: #c35e0a;
 $orange-dark: #e78a4e;
 
-// Theme
-$accent-light: #266b79;
-$accent-dark: #80aa9e;
-
 // Grey
 $grey-050: #f9f5d7;
 $grey-100: #fbf1c7;
@@ -64,8 +60,8 @@ $white: #fbf1c7;
 $black: #282828;
 
 // Theme
-$default-light: $accent-light;
-$default-dark: $accent-dark;
+$default-light: $blue-light;
+$default-dark: $blue-dark;
 
 // Button
 $button-close: if($topbar == 'light', #c14a4a, #ea6962);
