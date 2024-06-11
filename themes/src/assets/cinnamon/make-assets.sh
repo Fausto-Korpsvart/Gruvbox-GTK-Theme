@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Blue' '-Grey'; do
-    for type in '' '-Storm' '-Moon'; do
+    for type in '' '-Soft' '-Medium'; do
         case "$theme" in
             '')
                 theme_color_dark='#27a1b9'
@@ -41,7 +41,7 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Blue' '-
                 ;;
         esac
 
-        if [[ "$type" == '-Storm' ]]; then
+        if [[ "$type" == '-Soft' ]]; then
             case "$theme" in
                 '')
                     theme_color_dark='#29a4bd'
@@ -82,7 +82,7 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Blue' '-
             esac
         fi
 
-        if [[ "$type" == '-Moon' ]]; then
+        if [[ "$type" == '-Medium' ]]; then
             case "$theme" in
                 '')
                     theme_color_dark='#589ed7'
