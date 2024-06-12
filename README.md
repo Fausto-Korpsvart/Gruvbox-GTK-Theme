@@ -126,10 +126,10 @@ This is just to clarify doubts about the abbreviations of the Themes, as many fo
 
 | Abbreviation example | Explanation of abbreviations                                   |
 | -------------------- | -------------------------------------------------------------- |
-| Theme-Name-B         | Theme with `Border` decoration                                 |
+| Theme-Name-B-MB      | Theme with `Border` decoration and `macOS Buttons` in Windows  |
 | Theme-Name-B-LB      | Theme with `Border` decoration and `Legacy Buttons` in Windows |
 | Theme-Name-B-GS      | Theme with `Border` decoration for `Gnome Shell`               |
-| Theme-Name-BL        | Theme `Borderless` decoration                                  |
+| Theme-Name-BL-MB     | Theme `Borderless` decoration and `macOS Buttons` in Windows   |
 | Theme-Name-BL-LB     | Theme `Borderless` decoration and `Legacy Buttons` in Windows  |
 | Theme-Name-BL-GS     | Theme `Borderless` decoration for `Gnome Shell`                |
 
