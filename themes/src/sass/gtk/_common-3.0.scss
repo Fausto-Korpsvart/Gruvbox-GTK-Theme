@@ -2305,9 +2305,16 @@ popover.background {
         box-shadow: $shadow-z4;
 
         @if $outline == 'false' {
-            border: none;
+            // box-shadow: none;
+            box-shadow:
+                $shadow-z16,
+                inset 0 1px highlight($background),
+                0 0 36px transparent;
         } @else {
-            border: 2px solid $primary;
+            box-shadow:
+                $shadow-z16,
+                0 0 0 2px $primary,
+                0 0 36px transparent;
         }
 
         &:backdrop {

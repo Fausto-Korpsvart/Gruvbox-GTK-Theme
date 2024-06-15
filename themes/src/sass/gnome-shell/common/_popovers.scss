@@ -29,13 +29,12 @@
         background-color: if($variant == 'light', rgba($white, 0.9), $black);
         border-radius: $menu_radius;
         margin: 0;
-        box-shadow: 0 3px 8px -5px rgba(black, 0.12);
+        box-shadow: 0 6px 15px -6px rgba(black, 0.25);
+        border: none;
         font-weight: normal;
 
         @if $outline == 'true' {
             border: 2px solid $primary;
-        } @else {
-            border: none;
         }
     }
 

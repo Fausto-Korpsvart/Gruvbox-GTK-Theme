@@ -146,7 +146,7 @@
         margin: $space-size;
         border-style: none;
         border-radius: $modal-radius;
-        background-color: $menu;
+        background-color: $background;
         color: $primary;
         box-shadow: $shadow-z3;
 
@@ -155,6 +155,27 @@
             color: on($primary);
 
             @extend %small-button;
+        }
+    }
+
+    banner > revealer > widget {
+        color: on($base);
+        background-color: rgba($base, 0.5);
+        border-radius: $modal-radius;
+        margin: $modal-radius;
+
+        &:hover {
+            background-color: $base;
+            border-radius: $modal-radius;
+            margin: $modal-radius;
+        }
+
+        button {
+            color: on($base);
+            background-color: rgba($primary, 0.3);
+            &:hover {
+                background-color: rgba($primary, 0.6);
+            }
         }
     }
 }
@@ -717,7 +738,7 @@ monthpopover > box {
 
 // Agenda View CSS
 agenda-view list.background {
-    background-color: if($variant == 'light', #ebdbb2, #121110);
+    background-color: if($variant == 'light', $grey-150, $grey-850);
 
     > row {
         padding: 2px $space-size * 2;
@@ -752,12 +773,12 @@ menubutton stack > box {
 
 .tweak-titlebar-left {
     // @extend %sidebar_style;
-    background-color: if($variant == 'light', #ebdbb2, #121110);
+    background-color: if($variant == 'light', $grey-150, $grey-850);
     box-shadow: inset 0 1px highlight($background);
     border-top-left-radius: $window-radius;
 
     &:backdrop {
-        background-color: if($variant == 'light', #ebdbb2, #121110);
+        background-color: if($variant == 'light', $grey-150, $grey-850);
         box-shadow: inset 0 1px highlight($background);
         border-top-left-radius: $window-radius;
     }
