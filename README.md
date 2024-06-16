@@ -17,35 +17,35 @@
 
 ## Installing Themes
 
-Before installing, make sure to install the `Murrine Engine` and `gnome-themes-extra` packages for the correct rendering of themes.
+Before installing the themes, make sure to install the following necessary packages: `sassc` `murrine-engine` and `gnome-themes-extra` packages for the correct rendering of themes.
 
 Here are some commands to install on some distributions.
 
 * On Fedora run:
 
 ```
- sudo dnf install gtk-murrine-engine
+ sudo dnf install gtk-murrine-engine sassc
 ```
 
 * On OpenSUSE run:
 
 ```
- sudo zypper install gtk2-engine-murrine
+ sudo zypper install gtk2-engine-murrine sassc
 ```
 
 * On Arch run:
 
 ```
-sudo pacman -S gtk-engine-murrine
+sudo pacman -S gtk-engine-murrine sassc
 ```
 
 * On Debian and derivatives run:
 
 ```
-sudo apt install gtk2-engines-murrine
+sudo apt install gtk2-engines-murrine sassc
 ```
 
-The themes work on versions 40 to 44 of the GNOME D.E. just follow the steps below for installation:
+The themes work on versions 40 to 46 of the GNOME D.E. just follow the steps below for installation:
 
 * Download the [themes](https://www.pling.com/u/fkorpsvart) packs and extract them
 * Move the extracted files to the following paths:
