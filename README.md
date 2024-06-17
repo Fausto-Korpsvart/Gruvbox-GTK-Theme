@@ -19,7 +19,7 @@
 
 Before installing the themes, make sure to install the following necessary packages: `sassc` `murrine-engine` and `gnome-themes-extra` packages for the correct rendering of themes.
 
-Here are some commands to install on some distributions.
+Here are some commands to install on some distributions:
 
 * On Fedora run:
 
@@ -101,7 +101,7 @@ Run the following commands in the terminal:
 -d, --dest DIR          Specify destination directory (Default: ~/.themes)
 -n, --name NAME         Specify theme name (Default: Tokyonight)
 -t, --theme VARIANT...  Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
--c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)
+-c, --color VARIANT...  Specify color variant(s) [light|dark] (Default: All variants)
 -s, --size VARIANT...   Specify size variant [standard|compact] (Default: standard variant)
 
 -l, --libadwaita        Link installed gtk-4.0 theme to config folder for all libadwaita app use this theme
@@ -153,8 +153,6 @@ Thanks to [@f1yn](https://github.com/f1yn) for the solution to the active and in
 
 Thanks to [@telometto](https://github.com/telometto) for the alternative for the application of themes in `Flatpak`.
 
-### Support
-
-[![](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge\&logo=paypal\&logoColor=white)](https://paypal.me/FKorpsvart)
+[Support](https://paypal.me/FKorpsvart)
 
 ###### **\<ENJOY IT!! :nerd\_face:/>**
