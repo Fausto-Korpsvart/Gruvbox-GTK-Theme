@@ -415,6 +415,13 @@ overlay-split-view {
 // Sidebar
 %sidebar_style {
     background-color: if($variant == 'light', $grey-150, $grey-850);
+
+    @if $colorscheme == 'medium' {
+        background-color: if($variant == 'light', $grey-150, #1d2021);
+    } @else if $colorscheme == 'soft' {
+        background-color: if($variant == 'light', $grey-150, #282828);
+    }
+
     color: on($background);
     border-radius: none;
     margin: 0;
@@ -623,7 +630,8 @@ overlay-split-view {
 }
 
 .sidebar-pane {
-    background-color: if($variant == 'light', $grey-150, $grey-850);
+    @extend %sidebar_style;
+
     color: $text;
     border-top-left-radius: $window-radius;
 

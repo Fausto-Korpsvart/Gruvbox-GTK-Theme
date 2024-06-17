@@ -738,7 +738,7 @@ monthpopover > box {
 
 // Agenda View CSS
 agenda-view list.background {
-    background-color: if($variant == 'light', $grey-150, $grey-850);
+    @extend %sidebar_style;
 
     > row {
         padding: 2px $space-size * 2;
@@ -772,13 +772,14 @@ menubutton stack > box {
 }
 
 .tweak-titlebar-left {
-    // @extend %sidebar_style;
-    background-color: if($variant == 'light', $grey-150, $grey-850);
+    @extend %sidebar_style;
+
     box-shadow: inset 0 1px highlight($background);
     border-top-left-radius: $window-radius;
 
     &:backdrop {
-        background-color: if($variant == 'light', $grey-150, $grey-850);
+        @extend %sidebar_style;
+
         box-shadow: inset 0 1px highlight($background);
         border-top-left-radius: $window-radius;
     }

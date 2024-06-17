@@ -1683,8 +1683,9 @@ button.combo:only-child {
  * Toolbars *
  ************/
 .toolbar {
+    @extend %sidebar_style;
+
     padding: $space-size;
-    background-color: if($variant == 'light', $grey-150, $grey-850);
     border-spacing: $space-size;
 
     button {
@@ -5235,7 +5236,7 @@ filechooser {
         }
 
         > box {
-            background-color: if($variant == 'light', $grey-150, $grey-850);
+            @extend %sidebar_style;
 
             #pathbarbox.view,
             stack.view,
