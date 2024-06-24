@@ -4660,42 +4660,43 @@ colorchooser .popover.osd {
  **********************/
 decoration {
     transition: none;
-    border-radius: $window-radius;
+    box-shadow:
+        $shadow-z16,
+        0 0 50px transparent;
 
-    @if $outline == 'false' {
-        box-shadow:
-            $shadow-z16,
-            0 0 36px transparent;
+    @if $outline == 'true' {
+        border-radius: $window-radius + 2px;
+        border: 2px solid $primary;
+        background-clip: border-box;
     } @else {
         box-shadow:
             $shadow-z16,
-            0 0 0 2px $primary,
             0 0 36px transparent;
     }
+
+    // FIXME rationalize shadows
 
     // this is used for the resize cursor area
     margin: 10px;
 
     &:backdrop {
         transition: $transition-shadow;
-
         // the transparent shadow here is to enforce that the shadow extents don't
         // change when we go to backdrop, to prevent jumping windows.
         // The biggest shadow should be in the same order then in the active state
         // or the jumping will happen during the transition.
+        box-shadow:
+            $shadow-z4,
+            0 0 50px transparent;
 
-        @if $outline == 'false' {
-            box-shadow:
-                $shadow-z4,
-                0 0 36px transparent;
-        } @else {
-            box-shadow:
-                $shadow-z4,
-                0 0 0 2px if($variant == 'light', $grey-450, $grey-750),
-                0 0 36px transparent;
+        @if $outline == 'true' {
+            border: 2px solid if($variant == 'light', $grey-450, $grey-750);
+            background-clip: border-box;
         }
     }
 
+    .maximized &,
+    .fullscreen &,
     .tiled &,
     .tiled-top &,
     .tiled-right &,
@@ -4704,52 +4705,58 @@ decoration {
         border-radius: 0;
     }
 
-    .maximized &,
-    .fullscreen & {
-        border-radius: 0;
-        box-shadow: none;
-    }
-
     .popup & {
         box-shadow: none;
-        border: none;
     }
 
     // server-side decorations as used by mutter
     .ssd & {
-        border: none;
-        border-radius: $window-radius $window-radius 0 0;
-        box-shadow: none;
-    }
+        margin: 0;
 
-    .metacity & {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border: none;
-    }
+        @if $outline == 'true' {
+            box-shadow:
+                0 3px 3px rgba(0, 0, 0, 0.16),
+                0 0 0 2px $primary;
+            border: none;
+            border-radius: $window-radius $window-radius 0 0;
+        } @else {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+        }
+
+        &:backdrop {
+            transition: $transition-shadow;
+            box-shadow:
+                $shadow-z4,
+                0 0 50px transparent;
+
+            @if $outline == 'true' {
+                border: 2px solid if($variant == 'light', $grey-450, $grey-750);
+                background-clip: border-box;
+            }
+        }
+    } // just doing borders, wm draws actual shadows
 
     .csd.popup & {
         border-radius: $menu-radius;
-        border: none;
 
-        @if $outline == 'false' {
-            box-shadow: $shadow-z4;
+        @if $outline == 'true' {
+            border-radius: $menu-radius + 2px;
+            border: 2px solid $primary;
+            background-clip: border-box;
         } @else {
-            box-shadow:
-                $shadow-z4,
-                0 0 0 2px $primary;
+            box-shadow: $shadow-z4;
         }
     }
 
     tooltip.csd & {
-        border-radius: $corner-radius;
+        border-radius: $menu-radius;
         box-shadow: none;
         border: none;
     }
 
-    messagedialog.background.csd & {
-        border-radius: $window-radius;
-    }
+    // messagedialog.csd & {
+    //   border-radius: $window-radius;
+    // }
 
     .solid-csd & {
         margin: 0;
@@ -4757,7 +4764,12 @@ decoration {
         border-radius: 0;
         box-shadow: none;
         background-color: $titlebar;
-        border: 1px solid $solid-border;
+
+        @if $outline == 'true' {
+            border: 2px solid $primary;
+        } @else {
+            border: 1px solid $solid-border;
+        }
 
         &:backdrop {
             background-color: $titlebar-backdrop;

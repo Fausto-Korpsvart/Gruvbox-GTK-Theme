@@ -341,9 +341,9 @@ $sub_menu_bg: mix($text, $popover, 10%);
     margin: $space-size;
     box-shadow: none;
 
-    @if $outline == 'true' {
+    /* @if $outline == 'true' {
         border: 2px solid $primary;
-    }
+    } */
 
     &-arrow {
         icon-size: 16px;
@@ -428,7 +428,12 @@ $sub_menu_bg: mix($text, $popover, 10%);
 
 .popup-combo-menu {
     @extend %menu;
+
     padding: $space-size;
+
+    @if $outline == 'true' {
+        border: 2px solid $primary;
+    }
 }
 
 // .popup-image-menu-item {}
