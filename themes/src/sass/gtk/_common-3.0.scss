@@ -4660,43 +4660,42 @@ colorchooser .popover.osd {
  **********************/
 decoration {
     transition: none;
-    box-shadow:
-        $shadow-z16,
-        0 0 50px transparent;
+    border-radius: $window-radius;
 
-    @if $outline == 'true' {
-        border-radius: $window-radius + 2px;
-        border: 2px solid $primary;
-        background-clip: border-box;
-    } @else {
+    @if $outline == 'false' {
         box-shadow:
             $shadow-z16,
             0 0 36px transparent;
+    } @else {
+        box-shadow:
+            $shadow-z16,
+            0 0 0 2px $primary,
+            0 0 36px transparent;
     }
-
-    // FIXME rationalize shadows
 
     // this is used for the resize cursor area
     margin: 10px;
 
     &:backdrop {
         transition: $transition-shadow;
+
         // the transparent shadow here is to enforce that the shadow extents don't
         // change when we go to backdrop, to prevent jumping windows.
         // The biggest shadow should be in the same order then in the active state
         // or the jumping will happen during the transition.
-        box-shadow:
-            $shadow-z4,
-            0 0 50px transparent;
 
-        @if $outline == 'true' {
-            border: 2px solid if($variant == 'light', $grey-450, $grey-750);
-            background-clip: border-box;
+        @if $outline == 'false' {
+            box-shadow:
+                $shadow-z4,
+                0 0 36px transparent;
+        } @else {
+            box-shadow:
+                $shadow-z4,
+                0 0 0 2px if($variant == 'light', $grey-450, $grey-750),
+                0 0 36px transparent;
         }
     }
 
-    .maximized &,
-    .fullscreen &,
     .tiled &,
     .tiled-top &,
     .tiled-right &,
@@ -4705,8 +4704,15 @@ decoration {
         border-radius: 0;
     }
 
+    .maximized &,
+    .fullscreen & {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
     .popup & {
         box-shadow: none;
+        border: none;
     }
 
     // server-side decorations as used by mutter
@@ -4754,19 +4760,19 @@ decoration {
         } @else {
             box-shadow:
                 $shadow-z4,
-                0 0 0 2px $indicator;
+                0 0 0 2px $primary;
         }
     }
 
     tooltip.csd & {
-        border-radius: $menu-radius;
+        border-radius: $corner-radius;
         box-shadow: none;
         border: none;
     }
 
-    // messagedialog.csd & {
-    //   border-radius: $window-radius;
-    // }
+    messagedialog.background.csd & {
+        border-radius: $window-radius;
+    }
 
     .solid-csd & {
         margin: 0;
@@ -4774,12 +4780,7 @@ decoration {
         border-radius: 0;
         box-shadow: none;
         background-color: $titlebar;
-
-        @if $outline == 'true' {
-            border: 2px solid $primary;
-        } @else {
-            border: 1px solid $solid-border;
-        }
+        border: 1px solid $solid-border;
 
         &:backdrop {
             background-color: $titlebar-backdrop;
