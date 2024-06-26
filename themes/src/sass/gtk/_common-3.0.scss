@@ -4711,40 +4711,50 @@ decoration {
 
     // server-side decorations as used by mutter
     .ssd & {
-        margin: 0;
-
         @if $outline == 'true' {
+            border: none;
+            border-radius: $window-radius $window-radius 0 0;
             box-shadow:
                 0 3px 3px rgba(0, 0, 0, 0.16),
                 0 0 0 2px $primary;
+        } @else {
             border: none;
             border-radius: $window-radius $window-radius 0 0;
-        } @else {
-            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: none;
         }
 
         &:backdrop {
-            transition: $transition-shadow;
-            box-shadow:
-                $shadow-z4,
-                0 0 50px transparent;
-
             @if $outline == 'true' {
-                border: 2px solid if($variant == 'light', $grey-450, $grey-750);
-                background-clip: border-box;
+                border: none;
+                border-radius: $window-radius $window-radius 0 0;
+
+                box-shadow:
+                    0 3px 3px rgba(0, 0, 0, 0.16),
+                    0 0 0 2px if($variant == 'light', $grey-450, $grey-750);
+            } @else {
+                border: none;
+                border-radius: $window-radius $window-radius 0 0;
+                box-shadow: none;
             }
         }
-    } // just doing borders, wm draws actual shadows
+    }
+
+    .metacity & {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border: none;
+    }
 
     .csd.popup & {
         border-radius: $menu-radius;
+        border: none;
 
-        @if $outline == 'true' {
-            border-radius: $menu-radius + 2px;
-            border: 2px solid $primary;
-            background-clip: border-box;
-        } @else {
+        @if $outline == 'false' {
             box-shadow: $shadow-z4;
+        } @else {
+            box-shadow:
+                $shadow-z4,
+                0 0 0 2px $indicator;
         }
     }
 
