@@ -4569,10 +4569,16 @@ row {
 
             // Specificity bump for header bar
             &,
-            > .title,
-            > .subtitle {
+            > .title {
                 padding: 0;
-                font-weight: inherit;
+                font-weight: bold;
+                color: $text;
+            }
+
+            > .subtitle {
+                padding: 2px 0;
+                font-weight: normal;
+                color: $text-secondary;
             }
         }
 
