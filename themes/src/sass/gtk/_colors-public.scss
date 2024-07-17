@@ -70,9 +70,9 @@
 read if you used those and something break with a version upgrade you're on your own... */
 
 $windows-border: if(
-    $variant == 'light',
-    mix(black, $base, 35%),
-    mix(black, $base, 80%)
+	$variant == 'light',
+	mix(black, $base, 35%),
+	mix(black, $base, 80%)
 );
 
 @define-color wm_focused_title #{"" + $titlebar-text};
@@ -85,7 +85,7 @@ $windows-border: if(
 @define-color wm_button_icon #{"" + $white};
 
 @if $colorscheme == 'moon' {
-    @define-color wm_button_icon alpha(#{black}, 0.5);
+	@define-color wm_button_icon alpha(#{black}, 0.5);
 }
 
 @define-color wm_button_focused_bg #{"" + if($topbar == 'light', mix($white, $titlebar, 60%), $titlebar-fill)};

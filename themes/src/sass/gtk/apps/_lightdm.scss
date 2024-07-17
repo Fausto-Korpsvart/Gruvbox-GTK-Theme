@@ -6,62 +6,62 @@
  ************************/
 // the panel widget at the top
 #panel_window {
-    background-color: $scrim-alt;
-    color: on($scrim-alt);
-    // font-weight: bold;
+	background-color: $scrim-alt;
+	color: on($scrim-alt);
+	// font-weight: bold;
 
-    // the menubars/menus of the panel, i.e. indicators
-    menubar,
-    separator {
-        background-color: transparent;
-    }
+	// the menubars/menus of the panel, i.e. indicators
+	menubar,
+	separator {
+		background-color: transparent;
+	}
 
-    separator {
-        padding: 0 4px;
+	separator {
+		padding: 0 4px;
 
-        &:first-child {
-            padding: 0 8px;
-        }
-    }
+		&:first-child {
+			padding: 0 8px;
+		}
+	}
 
-    menubar > menuitem {
-        color: on($scrim-alt, secondary);
+	menubar > menuitem {
+		color: on($scrim-alt, secondary);
 
-        &:hover {
-            color: on($scrim-alt);
-        }
+		&:hover {
+			color: on($scrim-alt);
+		}
 
-        &:disabled label {
-            color: on($scrim-alt, secondary-disabled);
-        }
-    }
+		&:disabled label {
+			color: on($scrim-alt, secondary-disabled);
+		}
+	}
 }
 
 // the login window
 #login_window,
 #shutdown_dialog,
 #restart_dialog {
-    margin: 8px;
-    border-radius: $corner-radius;
-    box-shadow:
-        $shadow-z4,
-        inset 0 1px highlight($surface);
-    background-color: $surface;
+	margin: 8px;
+	border-radius: $corner-radius;
+	box-shadow:
+		$shadow-z4,
+		inset 0 1px highlight($surface);
+	background-color: $surface;
 }
 
 // the top half of the login-window, in GtkDialog terms, the content
 #content_frame {
-    padding-bottom: 28px - 12px; // take into account the hard-coded 12px margin_bottom
+	padding-bottom: 28px - 12px; // take into account the hard-coded 12px margin_bottom
 }
 
 #login_window {
-    // the user-combobox
-    #user_combobox button {
-    }
+	// the user-combobox
+	#user_combobox button {
+	}
 
-    // the entries, one for the username, one for the password
-    entry {
-    }
+	// the entries, one for the username, one for the password
+	entry {
+	}
 }
 
 // the buttons, alternatively this could also be done with a simple ".lightdm-gtk-greeter button"
@@ -83,20 +83,20 @@
 
 // the lower half of the login-window, in GtkDialog terms the buttonbox or action area
 #buttonbox_frame {
-    padding-top: 24px;
+	padding-top: 24px;
 
-    > box,
-    > buttonbox {
-        margin: -16px;
-    }
+	> box,
+	> buttonbox {
+		margin: -16px;
+	}
 
-    button {
-        @extend %button-flat;
+	button {
+		@extend %button-flat;
 
-        &:not(:disabled) {
-            color: $primary;
-        }
-    }
+		&:not(:disabled) {
+			color: $primary;
+		}
+	}
 }
 
 // the shutdown button
@@ -109,5 +109,5 @@
 
 // the warning, in case a wrong password is entered or something else goes wrong according to PAM
 #greeter_infobar {
-    // font-weight: bold;
+	// font-weight: bold;
 }

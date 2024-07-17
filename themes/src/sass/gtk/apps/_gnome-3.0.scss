@@ -9,119 +9,119 @@
 $nautilus: $base-alt;
 
 .nautilus-window {
-    &.background.csd {
-        border-radius: 0 0 $window-radius $window-radius;
-        background-color: $nautilus;
+	&.background.csd {
+		border-radius: 0 0 $window-radius $window-radius;
+		background-color: $nautilus;
 
-        &:backdrop {
-            background-color: $base;
-        }
+		&:backdrop {
+			background-color: $base;
+		}
 
-        > grid.horizontal > paned.horizontal > separator,
-        > deck > box.vertical > paned.horizontal > separator {
-            margin-left: if($variant == 'light', -1px, 0);
-        }
+		> grid.horizontal > paned.horizontal > separator,
+		> deck > box.vertical > paned.horizontal > separator {
+			margin-left: if($variant == 'light', -1px, 0);
+		}
 
-        placessidebar {
-            > viewport.frame {
-                > list {
-                    > separator {
-                        background: none;
-                    }
-                }
-            }
-        }
+		placessidebar {
+			> viewport.frame {
+				> list {
+					> separator {
+						background: none;
+					}
+				}
+			}
+		}
 
-        notebook widget.view:selected {
-            @extend %selected_items_primary;
-        }
+		notebook widget.view:selected {
+			@extend %selected_items_primary;
+		}
 
-        &.unified {
-            notebook {
-                border-radius: 0;
-            }
-        }
+		&.unified {
+			notebook {
+				border-radius: 0;
+			}
+		}
 
-        &:not(.unified) {
-            .nautilus-list-view {
-                background-color: transparent;
-                border-bottom-right-radius: $window-radius;
+		&:not(.unified) {
+			.nautilus-list-view {
+				background-color: transparent;
+				border-bottom-right-radius: $window-radius;
 
-                // treeview.view:not(:hover):not(:active):not(:selected) {
-                //   background-color: transparent;
-                // }
-            }
+				// treeview.view:not(:hover):not(:active):not(:selected) {
+				//   background-color: transparent;
+				// }
+			}
 
-            notebook {
-                background-color: $base;
-                border-radius: 0 0 $window-radius $window-radius;
+			notebook {
+				background-color: $base;
+				border-radius: 0 0 $window-radius $window-radius;
 
-                > stack {
-                    background-color: transparent;
-                }
+				> stack {
+					background-color: transparent;
+				}
 
-                scrolledwindow
-                    > .view:not(:selected):not(:hover):not(:checked) {
-                    background-color: transparent;
-                }
+				scrolledwindow
+					> .view:not(:selected):not(:hover):not(:checked) {
+					background-color: transparent;
+				}
 
-                placesview {
-                    > stack > frame > scrolledwindow > viewport > list {
-                        background-color: transparent;
-                    }
-                    > actionbar {
-                        background-color: transparent;
-                        border-radius: 0 0 $window-radius $window-radius;
+				placesview {
+					> stack > frame > scrolledwindow > viewport > list {
+						background-color: transparent;
+					}
+					> actionbar {
+						background-color: transparent;
+						border-radius: 0 0 $window-radius $window-radius;
 
-                        > revealer > box {
-                            background-color: transparent;
-                        }
-                    }
-                }
-            }
+						> revealer > box {
+							background-color: transparent;
+						}
+					}
+				}
+			}
 
-            paned > separator.wide {
-                // Use paned separator to hide stack border-bottom-left-radius
-                min-width: $window-radius;
-                box-shadow: $window-radius 0 $base;
-                background-color: $base;
-                background-image: image(
-                    if(
-                        $variant == 'light',
-                        mix(black, $nautilus, 12%),
-                        mix(white, $nautilus, 12%)
-                    )
-                );
-            }
-        }
-    }
+			paned > separator.wide {
+				// Use paned separator to hide stack border-bottom-left-radius
+				min-width: $window-radius;
+				box-shadow: $window-radius 0 $base;
+				background-color: $base;
+				background-image: image(
+					if(
+						$variant == 'light',
+						mix(black, $nautilus, 12%),
+						mix(white, $nautilus, 12%)
+					)
+				);
+			}
+		}
+	}
 
-    &.maximized {
-        // No border radius when window maximized
-        &,
-        placessidebar {
-            border-radius: 0;
-        }
-    }
+	&.maximized {
+		// No border radius when window maximized
+		&,
+		placessidebar {
+			border-radius: 0;
+		}
+	}
 
-    // Floating status bar
-    .floating-bar {
-        min-height: 32px;
-        padding: 0;
-        margin: $space-size;
-        border: none;
-        border-radius: $corner-radius;
-        background-color: $primary;
-        color: on($primary);
-        box-shadow: $shadow-z3;
+	// Floating status bar
+	.floating-bar {
+		min-height: 32px;
+		padding: 0;
+		margin: $space-size;
+		border: none;
+		border-radius: $corner-radius;
+		background-color: $primary;
+		color: on($primary);
+		box-shadow: $shadow-z3;
 
-        button {
-            margin: (32px - $small-size) / 2;
-            color: on($primary);
+		button {
+			margin: (32px - $small-size) / 2;
+			color: on($primary);
 
-            @extend %small-button;
-        }
-    }
+			@extend %small-button;
+		}
+	}
 }
 
 // .nautilus-canvas-item {
@@ -130,259 +130,259 @@ $nautilus: $base-alt;
 
 .nautilus-canvas-item.dim-label,
 .nautilus-list-dim-label {
-    color: $text-secondary;
+	color: $text-secondary;
 }
 
 %desktop-canvas-item,
 .nautilus-desktop.nautilus-canvas-item {
-    // background-color: $scrim;
-    color: on(dark);
+	// background-color: $scrim;
+	color: on(dark);
 }
 
 // Toolbar
 
 @keyframes nautilus-operations-button-needs-attention {
-    to {
-        background-color: $overlay-focus;
-    }
+	to {
+		background-color: $overlay-focus;
+	}
 }
 
 .nautilus-operations-button-needs-attention {
-    animation: nautilus-operations-button-needs-attention
-        $ripple-fade-out-duration $ease 2 alternate;
+	animation: nautilus-operations-button-needs-attention
+		$ripple-fade-out-duration $ease 2 alternate;
 }
 
 .nautilus-operations-button-needs-attention-multiple {
-    animation: nautilus-operations-button-needs-attention
-        $ripple-fade-out-duration $ease 6 alternate;
+	animation: nautilus-operations-button-needs-attention
+		$ripple-fade-out-duration $ease 6 alternate;
 }
 
 // Path bar
 .path-bar-box {
-    transition: background-color $duration $ease-out;
-    margin: $space-size 0;
-    border-radius: $corner-radius;
+	transition: background-color $duration $ease-out;
+	margin: $space-size 0;
+	border-radius: $corner-radius;
 
-    button {
-        margin: 0;
-    } // reset the margin
+	button {
+		margin: 0;
+	} // reset the margin
 
-    &.width-maximized {
-        background-color: $titlebar-fill;
-    }
+	&.width-maximized {
+		background-color: $titlebar-fill;
+	}
 
-    // workaround for 3.30.1
-    &.background.frame {
-        border-style: none;
-        background-color: $titlebar-fill;
-    }
+	// workaround for 3.30.1
+	&.background.frame {
+		border-style: none;
+		background-color: $titlebar-fill;
+	}
 
-    // for 3.30
-    .path-bar button {
-        label:not(:only-child) {
-            &:first-child {
-                margin-left: 0;
-            }
+	// for 3.30
+	.path-bar button {
+		label:not(:only-child) {
+			&:first-child {
+				margin-left: 0;
+			}
 
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 
-    // for 3.32
-    .linked.nautilus-path-bar
-        button:not(.suggested-action):not(.destructive-action) {
-        padding-left: ($medium-size - 12px) / 2;
-        padding-right: ($medium-size - 12px) / 2;
-        margin-left: 1px;
-        margin-right: 1px;
+	// for 3.32
+	.linked.nautilus-path-bar
+		button:not(.suggested-action):not(.destructive-action) {
+		padding-left: ($medium-size - 12px) / 2;
+		padding-right: ($medium-size - 12px) / 2;
+		margin-left: 1px;
+		margin-right: 1px;
 
-        label:not(:only-child) {
-            &:first-child {
-                margin-left: 0;
-            }
+		label:not(:only-child) {
+			&:first-child {
+				margin-left: 0;
+			}
 
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 
-        &.text-button {
-            min-width: 0;
-            // border-radius: $circular_radius;
-        }
+		&.text-button {
+			min-width: 0;
+			// border-radius: $circular_radius;
+		}
 
-        &.text-button.image-button {
-            // border-radius: $circular_radius;
-            image:not(:only-child) {
-                margin: 0;
-            }
-        }
+		&.text-button.image-button {
+			// border-radius: $circular_radius;
+			image:not(:only-child) {
+				margin: 0;
+			}
+		}
 
-        &:last-child:dir(ltr),
-        &:first-child:dir(rtl) {
-            background-color: rgba($titlebar-text, 0.08);
+		&:last-child:dir(ltr),
+		&:first-child:dir(rtl) {
+			background-color: rgba($titlebar-text, 0.08);
 
-            &:disabled {
-                background-color: transparent;
-                color: $titlebar-text-disabled;
-            }
-        }
-    }
+			&:disabled {
+				background-color: transparent;
+				color: $titlebar-text-disabled;
+			}
+		}
+	}
 }
 
 // >= 42.0
 .windowhandle .linked.nautilus-path-bar {
-    background-color: $titlebar-fill;
-    border-radius: $corner-radius;
-    margin: $space-size 0;
+	background-color: $titlebar-fill;
+	border-radius: $corner-radius;
+	margin: $space-size 0;
 
-    button:not(.suggested-action):not(.destructive-action) {
-        margin-top: 0;
-        margin-bottom: 0;
+	button:not(.suggested-action):not(.destructive-action) {
+		margin-top: 0;
+		margin-bottom: 0;
 
-        &.current-dir {
-            color: $titlebar-text;
+		&.current-dir {
+			color: $titlebar-text;
 
-            &:hover,
-            &:active {
-                background: none;
-                box-shadow: none;
-            }
-        }
-    }
+			&:hover,
+			&:active {
+				background: none;
+				box-shadow: none;
+			}
+		}
+	}
 }
 
 .disk-space-display {
-    // border-style: solid;
-    // border-width: 2px;
+	// border-style: solid;
+	// border-width: 2px;
 
-    &.unknown {
-        background-color: $track;
-        color: $track;
-    }
+	&.unknown {
+		background-color: $track;
+		color: $track;
+	}
 
-    &.used {
-        background-color: $primary;
-        color: $primary;
-    }
+	&.used {
+		background-color: $primary;
+		color: $primary;
+	}
 
-    &.free {
-        background-color: $track-disabled;
-        color: $track-disabled;
-    }
+	&.free {
+		background-color: $track-disabled;
+		color: $track-disabled;
+	}
 }
 
 // View
 // Hide superfluous treeview drop target indication
 .nautilus-list-view .view:not(.dnd) {
-    // border-bottom: 1px solid $divider;
+	// border-bottom: 1px solid $divider;
 }
 
 .search-information {
-    padding: 2px;
-    border-bottom: 1px solid $divider;
-    background-color: $base;
-    color: $text;
+	padding: 2px;
+	border-bottom: 1px solid $divider;
+	background-color: $base;
+	color: $text;
 }
 
 .documents-entry-tag {
-    @extend .entry-tag;
+	@extend .entry-tag;
 }
 
 .conflict-row:not(:selected) {
-    background-color: mix($warning, $base, percentage(0.3));
+	background-color: mix($warning, $base, percentage(0.3));
 }
 
 // Icon view
 .nautilus-window flowboxchild {
-    // .icon-background { background-color: black; }
+	// .icon-background { background-color: black; }
 
-    .icon-item-background {
-        padding: 4px;
-        border-radius: $space-size;
-    }
+	.icon-item-background {
+		padding: 4px;
+		border-radius: $space-size;
+	}
 
-    &:selected {
-        background-color: transparent;
+	&:selected {
+		background-color: transparent;
 
-        .icon-item-background {
-            @extend %selected_items_color;
-        }
-    }
+		.icon-item-background {
+			@extend %selected_items_color;
+		}
+	}
 }
 
 .nautilus-window notebook :not(treeview).view {
-    border-radius: $space-size;
+	border-radius: $space-size;
 
-    selection,
-    &:selected {
-        @extend %selected_items_color;
-    }
+	selection,
+	&:selected {
+		@extend %selected_items_color;
+	}
 }
 
 // Batch rename dialog
 dialog.background > box.dialog-vbox.vertical > grid.horizontal {
-    > scrolledwindow.frame {
-        border-style: none;
-    }
+	> scrolledwindow.frame {
+		border-style: none;
+	}
 
-    > box.horizontal:last-child {
-        margin: -6px 0 0 -6px;
-        border-top: 1px solid $divider;
+	> box.horizontal:last-child {
+		margin: -6px 0 0 -6px;
+		border-top: 1px solid $divider;
 
-        > label {
-            margin: 0 8px;
-        }
+		> label {
+			margin: 0 8px;
+		}
 
-        > box > button {
-            border-radius: 0;
-        }
-    }
+		> box > button {
+			border-radius: 0;
+		}
+	}
 }
 
 // Tweak to fix the messy sizing of the popover menu
 .nautilus-window > popover.menu:not(:last-child) {
-    padding: 3px;
+	padding: 3px;
 
-    > stack > box > box > box {
-        margin-top: -6px;
+	> stack > box > box > box {
+		margin-top: -6px;
 
-        > box {
-            margin-bottom: -6px;
+		> box {
+			margin-bottom: -6px;
 
-            &.linked {
-                margin-top: 1px;
-            }
-        }
-    }
+			&.linked {
+				margin-top: 1px;
+			}
+		}
+	}
 
-    separator {
-        margin-bottom: -2px;
-    }
+	separator {
+		margin-bottom: -2px;
+	}
 }
 
 .nautilus-menu-sort-heading {
-    // min-height: 26px;
-    // padding-left: 5px;
-    // padding-right: 5px;
-    margin: 1px 3px;
-    font-weight: 500;
+	// min-height: 26px;
+	// padding-left: 5px;
+	// padding-right: 5px;
+	margin: 1px 3px;
+	font-weight: 500;
 
-    &:disabled {
-        color: $text-secondary;
-    }
+	&:disabled {
+		color: $text-secondary;
+	}
 }
 
 // Make operations button circular
 .nautilus-window headerbar revealer > button {
-    @extend %circular-button;
+	@extend %circular-button;
 }
 
 // Ensure paned separator rendering. See issue #84 for details.
 .nautilus-window paned > separator {
-    background-color: $base-alt;
+	background-color: $base-alt;
 }
 
 /*********
@@ -394,144 +394,144 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
 // https://gitlab.gnome.org/GNOME/gedit/blob/master/gedit/resources/css/gedit-style.css
 
 window.org-gnome-gedit {
-    > paned.titlebar {
-        > separator {
-            background-color: transparent;
-        }
-    }
+	> paned.titlebar {
+		> separator {
+			background-color: transparent;
+		}
+	}
 
-    > overlay > box.vertical {
-        > paned.gedit-side-panel-paned {
-            // 'file-browser' pane
-            > box.vertical > stack > grid.horizontal {
-                > box.horizontal {
-                    // header-part
-                    margin: 4px 0;
-                }
+	> overlay > box.vertical {
+		> paned.gedit-side-panel-paned {
+			// 'file-browser' pane
+			> box.vertical > stack > grid.horizontal {
+				> box.horizontal {
+					// header-part
+					margin: 4px 0;
+				}
 
-                > scrolledwindow {
-                    // raised widget
-                    border-bottom-left-radius: $window-radius;
+				> scrolledwindow {
+					// raised widget
+					border-bottom-left-radius: $window-radius;
 
-                    // treeview.view:not(:hover):not(:selected) {
-                    //   background: none;
-                    // }
-                }
-            }
+					// treeview.view:not(:hover):not(:selected) {
+					//   background: none;
+					// }
+				}
+			}
 
-            // 'files' pane
-            stack {
-                scrolledwindow {
-                    viewport.frame {
-                        list.gedit-document-panel {
-                            background: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
+			// 'files' pane
+			stack {
+				scrolledwindow {
+					viewport.frame {
+						list.gedit-document-panel {
+							background: none;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // Only normal state is handle
 .open-document-selector-path-label {
-    color: $text-secondary;
-    font-size: smaller;
+	color: $text-secondary;
+	font-size: smaller;
 }
 
 // Only normal state is handle
 .open-document-selector-match {
-    background-color: $warning;
-    color: on($warning);
+	background-color: $warning;
+	color: on($warning);
 }
 
 .gedit-document-panel {
-    background-color: $base-alt;
+	background-color: $base-alt;
 
-    // Try to look as the notebook tab close button
-    row button.flat {
-        margin-top: 8px;
-        margin-bottom: 8px;
+	// Try to look as the notebook tab close button
+	row button.flat {
+		margin-top: 8px;
+		margin-bottom: 8px;
 
-        @extend %small-button;
-    }
+		@extend %small-button;
+	}
 }
 
 .gedit-document-panel-group-row:not(:first-child) {
-    border-top: 1px solid $divider;
+	border-top: 1px solid $divider;
 }
 
 .gedit-side-panel-paned statusbar {
-    border-top: 1px solid $divider;
-    border-radius: 0 0 $window-radius $window-radius;
+	border-top: 1px solid $divider;
+	border-radius: 0 0 $window-radius $window-radius;
 }
 
 .gedit-search-slider {
-    margin: 0 6px 10px;
-    padding: $space-size;
-    background-color: $surface;
-    border-radius: 0 0 $menu-radius $menu-radius;
+	margin: 0 6px 10px;
+	padding: $space-size;
+	background-color: $surface;
+	border-radius: 0 0 $menu-radius $menu-radius;
 
-    @if $outline == 'false' {
-        box-shadow: $shadow-z5;
-    } @else {
-        box-shadow:
-            $shadow-z5,
-            0 0 0 2px $indicator;
-    }
+	@if $outline == 'false' {
+		box-shadow: $shadow-z5;
+	} @else {
+		box-shadow:
+			$shadow-z5,
+			0 0 0 2px $indicator;
+	}
 
-    .linked:not(.vertical) > entry {
-        .gedit-search-entry-occurrences-tag {
-            all: unset;
-            color: $text-secondary;
-        }
+	.linked:not(.vertical) > entry {
+		.gedit-search-entry-occurrences-tag {
+			all: unset;
+			color: $text-secondary;
+		}
 
-        &:dir(ltr) {
-            .gedit-search-entry-occurrences-tag {
-                margin-left: $space-size;
-            }
+		&:dir(ltr) {
+			.gedit-search-entry-occurrences-tag {
+				margin-left: $space-size;
+			}
 
-            image.right {
-                margin-right: 0;
-            }
-        }
+			image.right {
+				margin-right: 0;
+			}
+		}
 
-        &:dir(rtl) {
-            .gedit-search-entry-occurrences-tag {
-                margin-right: $space-size;
-            }
+		&:dir(rtl) {
+			.gedit-search-entry-occurrences-tag {
+				margin-right: $space-size;
+			}
 
-            image.left {
-                margin-left: 0;
-            }
-        }
+			image.left {
+				margin-left: 0;
+			}
+		}
 
-        &:not(.error) {
-            background-color: $surface;
-        }
+		&:not(.error) {
+			background-color: $surface;
+		}
 
-        &.error ~ button {
-            color: on($error, secondary);
+		&.error ~ button {
+			color: on($error, secondary);
 
-            &:hover,
-            &:active {
-                color: on($error);
-            }
+			&:hover,
+			&:active {
+				color: on($error);
+			}
 
-            &:disabled {
-                color: on($error, secondary-disabled);
-            }
-        }
-    }
+			&:disabled {
+				color: on($error, secondary-disabled);
+			}
+		}
+	}
 }
 
 frame.gedit-map-frame > border {
-    &:dir(ltr) {
-        border-style: none none none solid;
-    }
-    &:dir(rtl) {
-        border-style: none solid none none;
-    }
+	&:dir(ltr) {
+		border-style: none none none solid;
+	}
+	&:dir(rtl) {
+		border-style: none solid none none;
+	}
 }
 
 /**********
@@ -541,156 +541,156 @@ frame.gedit-map-frame > border {
 // the sidebar
 
 %sidebar_style {
-    background-color: $background;
-    color: if($variant == 'light', $black, $white);
-    border-radius: $corner-radius;
-    // margin: $space-size;
+	background-color: $background;
+	color: if($variant == 'light', $black, $white);
+	border-radius: $corner-radius;
+	// margin: $space-size;
 }
 
 %sidebar_scrollbar {
-    slider {
-        background-color: on($indicator, disabled);
+	slider {
+		background-color: on($indicator, disabled);
 
-        &:hover {
-            background-color: on($indicator, secondary);
-        }
+		&:hover {
+			background-color: on($indicator, secondary);
+		}
 
-        &:active {
-            background-color: on($indicator);
-        }
+		&:active {
+			background-color: on($indicator);
+		}
 
-        &:disabled {
-            background-color: on($indicator, secondary-disabled);
-        }
-    }
+		&:disabled {
+			background-color: on($indicator, secondary-disabled);
+		}
+	}
 
-    &.overlay-indicator {
-        &:not(.dragging):not(.hovering) {
-            button {
-                background-color: on($indicator, disabled);
+	&.overlay-indicator {
+		&:not(.dragging):not(.hovering) {
+			button {
+				background-color: on($indicator, disabled);
 
-                &:disabled {
-                    background-color: on($indicator, secondary-disabled);
-                }
-            }
-        }
-    }
+				&:disabled {
+					background-color: on($indicator, secondary-disabled);
+				}
+			}
+		}
+	}
 }
 
 %content_style {
-    background-color: if($variant == 'light', rgba($base, 0.4), $fill);
-    border-radius: $corner-radius;
-    margin: $space-size;
+	background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+	border-radius: $corner-radius;
+	margin: $space-size;
 }
 
 %sidebar_list {
-    padding: $space-size;
+	padding: $space-size;
 
-    > separator {
-        background-color: transparent;
-    }
+	> separator {
+		background-color: transparent;
+	}
 
-    > row {
-        padding: 0;
-        margin: -1px;
-        color: $text;
-        border-radius: $corner-radius - $space-size;
+	> row {
+		padding: 0;
+		margin: -1px;
+		color: $text;
+		border-radius: $corner-radius - $space-size;
 
-        &:hover,
-        &:active,
-        &:focus {
-            color: $text;
-        }
+		&:hover,
+		&:active,
+		&:focus {
+			color: $text;
+		}
 
-        &:selected {
-            font-weight: 500;
-            background-color: if($variant == 'light', rgba($base, 0.4), $fill);
-            border-radius: $modal-radius;
+		&:selected {
+			font-weight: 500;
+			background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+			border-radius: $modal-radius;
 
-            &,
-            label,
-            image {
-                color: $primary;
-            }
+			&,
+			label,
+			image {
+				color: $primary;
+			}
 
-            &:hover,
-            &:focus {
-                background-color: if(
-                    $variant == 'light',
-                    rgba($base, 0.4),
-                    $fill
-                );
-                color: $text;
-            }
-        }
+			&:hover,
+			&:focus {
+				background-color: if(
+					$variant == 'light',
+					rgba($base, 0.4),
+					$fill
+				);
+				color: $text;
+			}
+		}
 
-        & + row {
-            margin-top: $space-size / 2;
-        }
-    }
+		& + row {
+			margin-top: $space-size / 2;
+		}
+	}
 }
 
 %round_scrollbar {
-    border: none;
-    background-color: transparent;
+	border: none;
+	background-color: transparent;
 
-    trough {
-        background-color: transparent;
-    }
+	trough {
+		background-color: transparent;
+	}
 
-    slider {
-        border: $corner-radius - 8px solid transparent;
-    }
+	slider {
+		border: $corner-radius - 8px solid transparent;
+	}
 
-    &.overlay-indicator {
-        &:not(.dragging):not(.hovering) {
-            border-color: transparent;
-            background-color: transparent;
+	&.overlay-indicator {
+		&:not(.dragging):not(.hovering) {
+			border-color: transparent;
+			background-color: transparent;
 
-            slider {
-                border: none;
-                margin: $corner-radius - 8px - $space-size / 2;
-            }
+			slider {
+				border: none;
+				margin: $corner-radius - 8px - $space-size / 2;
+			}
 
-            button {
-                border: none;
-            }
-        }
+			button {
+				border: none;
+			}
+		}
 
-        &.dragging,
-        &.hovering {
-            background-color: transparent;
-        }
-    }
+		&.dragging,
+		&.hovering {
+			background-color: transparent;
+		}
+	}
 }
 
 .tweak {
-    padding: 3px;
+	padding: 3px;
 
-    &.title:hover {
-        box-shadow: none;
-    }
+	&.title:hover {
+		box-shadow: none;
+	}
 }
 
 .tweak-group-startup {
-    border: 1px solid $border;
+	border: 1px solid $border;
 
-    > row:not(:first-child) {
-        border-top: 1px solid $border;
-    }
+	> row:not(:first-child) {
+		border-top: 1px solid $border;
+	}
 }
 
 // Workaround for 3.26
 list {
-    &.tweak-group {
-        list {
-            @extend %circular_list;
+	&.tweak-group {
+		list {
+			@extend %circular_list;
 
-            > row {
-                @extend %circular_row;
-            }
-        }
-    }
+			> row {
+				@extend %circular_row;
+			}
+		}
+	}
 }
 
 // Add more spaces between title and list
@@ -698,7 +698,7 @@ row#Focus,
 row#ClickMethod,
 row#PrimaryWorkspaceTweak, // for 3.26.0
 row#workspaces-only-on-primary {
-    margin-top: 4px;
+	margin-top: 4px;
 }
 
 // See https://github.com/nana-4/materia-theme/issues/432
@@ -706,263 +706,263 @@ leaflet.titlebar > .titlebar.tweak-titlebar-left,
 leaflet.titlebar > .titlebar.tweak-titlebar-right, // Workaround for gnome-tweaks 40.0
 hdyleaflet.titlebar > .titlebar.tweak-titlebar-left,
 hdyleaflet.titlebar > .titlebar.tweak-titlebar-right {
-    // Workaround for gnome-tweaks 3.34
-    background-color: inherit;
-    box-shadow: inherit;
-    // Remove only background-color transition.
-    // This shouldn't be necessary, but otherwise it gets lag...
-    transition: color $duration $ease-out;
+	// Workaround for gnome-tweaks 3.34
+	background-color: inherit;
+	box-shadow: inherit;
+	// Remove only background-color transition.
+	// This shouldn't be necessary, but otherwise it gets lag...
+	transition: color $duration $ease-out;
 }
 
 leaflet.unfolded {
-    > box.vertical:first-child > scrolledwindow > viewport.frame {
-        @extend %sidebar_style;
+	> box.vertical:first-child > scrolledwindow > viewport.frame {
+		@extend %sidebar_style;
 
-        > list {
-            background-color: transparent;
-            @extend %sidebar_list;
-            margin: 0;
-        }
-    }
+		> list {
+			background-color: transparent;
+			@extend %sidebar_list;
+			margin: 0;
+		}
+	}
 
-    > box.vertical:last-child > scrolledwindow > viewport.frame,
-    > box.vertical:last-child > stack > scrolledwindow > viewport.frame {
-        @extend %content_style;
-    }
+	> box.vertical:last-child > scrolledwindow > viewport.frame,
+	> box.vertical:last-child > stack > scrolledwindow > viewport.frame {
+		@extend %content_style;
+	}
 }
 
 /************************
  * Gnome Control Center *
  ************************/
 window.background.csd {
-    > headerbar.titlebar {
-        > leaflet,
-        > hdyleaflet {
-            > headerbar {
-                &:first-child:not(:only-child) {
-                    border-top-left-radius: $window-radius;
-                }
+	> headerbar.titlebar {
+		> leaflet,
+		> hdyleaflet {
+			> headerbar {
+				&:first-child:not(:only-child) {
+					border-top-left-radius: $window-radius;
+				}
 
-                &:last-child:not(:only-child) {
-                    border-top-right-radius: $window-radius;
-                }
+				&:last-child:not(:only-child) {
+					border-top-right-radius: $window-radius;
+				}
 
-                &:first-child:only-child,
-                &:last-child:only-child {
-                    border-top-right-radius: $window-radius;
-                    border-top-left-radius: $window-radius;
-                }
-            }
-        }
-    }
+				&:first-child:only-child,
+				&:last-child:only-child {
+					border-top-right-radius: $window-radius;
+					border-top-left-radius: $window-radius;
+				}
+			}
+		}
+	}
 
-    > stack:not(.titlebar) > stack.background {
-        border-radius: 0 0 $window-radius $window-radius;
-    }
+	> stack:not(.titlebar) > stack.background {
+		border-radius: 0 0 $window-radius $window-radius;
+	}
 
-    > leaflet,
-    > hdyleaflet,
-    > box.horizontal {
-        > stack.background {
-            background: none;
+	> leaflet,
+	> hdyleaflet,
+	> box.horizontal {
+		> stack.background {
+			background: none;
 
-            frame > border {
-                border: none;
-            }
+			frame > border {
+				border: none;
+			}
 
-            > widget {
-                > box.vertical > box.vertical {
-                    // Gnome 3.34 Wallpaper setting
-                    > scrolledwindow > viewport.frame {
-                        background-color: $base;
-                        border-bottom-right-radius: $window-radius;
+			> widget {
+				> box.vertical > box.vertical {
+					// Gnome 3.34 Wallpaper setting
+					> scrolledwindow > viewport.frame {
+						background-color: $base;
+						border-bottom-right-radius: $window-radius;
 
-                        > box.vertical.view {
-                            background: none;
-                        }
-                    }
-                }
-            }
-        }
+						> box.vertical.view {
+							background: none;
+						}
+					}
+				}
+			}
+		}
 
-        frame.view {
-            // Wifi setting
-            border-radius: $corner-radius;
-            background: none;
-        }
+		frame.view {
+			// Wifi setting
+			border-radius: $corner-radius;
+			background: none;
+		}
 
-        > box.vertical > scrolledwindow.view {
-            // > 3.25.90
-            background-color: transparent;
+		> box.vertical > scrolledwindow.view {
+			// > 3.25.90
+			background-color: transparent;
 
-            > viewport.frame > stack {
-                &,
-                list {
-                    background-color: transparent;
-                }
+			> viewport.frame > stack {
+				&,
+				list {
+					background-color: transparent;
+				}
 
-                list {
-                    // left-pane
-                    @extend %sidebar_list;
-                }
+				list {
+					// left-pane
+					@extend %sidebar_list;
+				}
 
-                entry {
-                    @extend %entry-on-indicator;
-                }
-            }
+				entry {
+					@extend %entry-on-indicator;
+				}
+			}
 
-            scrollbar {
-                margin: $space-size;
-                @extend %sidebar_scrollbar;
-                @extend %round_scrollbar;
-            }
-        }
-    }
+			scrollbar {
+				margin: $space-size;
+				@extend %sidebar_scrollbar;
+				@extend %round_scrollbar;
+			}
+		}
+	}
 
-    stack.background clamp.medium {
-        frame > box.vertical > box.vertical {
-            // VPN setting
-            > list {
-                border-top-width: 0;
-                border-bottom-width: 0;
+	stack.background clamp.medium {
+		frame > box.vertical > box.vertical {
+			// VPN setting
+			> list {
+				border-top-width: 0;
+				border-bottom-width: 0;
 
-                &,
-                > row {
-                    border-radius: 0;
-                }
-            }
+				&,
+				> row {
+					border-radius: 0;
+				}
+			}
 
-            &:first-child {
-                > list {
-                    border-top-width: 1px;
+			&:first-child {
+				> list {
+					border-top-width: 1px;
 
-                    &,
-                    > row {
-                        border-radius: $corner-radius $corner-radius 0 0;
-                    }
-                }
-            }
+					&,
+					> row {
+						border-radius: $corner-radius $corner-radius 0 0;
+					}
+				}
+			}
 
-            &:last-child {
-                > list {
-                    border-bottom-width: 1px;
+			&:last-child {
+				> list {
+					border-bottom-width: 1px;
 
-                    &,
-                    > row {
-                        border-radius: 0 0 $corner-radius $corner-radius;
-                    }
-                }
-            }
-        }
-    }
+					&,
+					> row {
+						border-radius: 0 0 $corner-radius $corner-radius;
+					}
+				}
+			}
+		}
+	}
 
-    hdycolumn stack frame.view > stack > stack list > separator {
-        background-color: $border;
-    }
+	hdycolumn stack frame.view > stack > stack list > separator {
+		background-color: $border;
+	}
 }
 
 dialog.background.csd {
-    > box.vertical.dialog-vbox {
-        // wifi setting
-        > notebook > stack > box.horizontal > notebook > stack {
-            border-radius: 0 0 $window-radius $window-radius;
-        }
+	> box.vertical.dialog-vbox {
+		// wifi setting
+		> notebook > stack > box.horizontal > notebook > stack {
+			border-radius: 0 0 $window-radius $window-radius;
+		}
 
-        > scrolledwindow > viewport.frame > list {
-            background: none;
+		> scrolledwindow > viewport.frame > list {
+			background: none;
 
-            > row:not(:hover):not(:active):not(:selected) {
-                background-color: transparent;
-            }
-        }
-    }
+			> row:not(:hover):not(:active):not(:selected) {
+				background-color: transparent;
+			}
+		}
+	}
 }
 
 hdyleaflet,
 leaflet,
 box.horizontal > stack.background {
-    frame:not(.view) list:not(.contacts-contact-list) {
-        @extend %circular_list;
+	frame:not(.view) list:not(.contacts-contact-list) {
+		@extend %circular_list;
 
-        row {
-            @extend %circular_row;
-        }
-    }
+		row {
+			@extend %circular_row;
+		}
+	}
 
-    stack.background,
-    overlay {
-        scrolledwindow > viewport {
-            list {
-                @extend %circular_list;
+	stack.background,
+	overlay {
+		scrolledwindow > viewport {
+			list {
+				@extend %circular_list;
 
-                row {
-                    @extend %circular_row;
-                }
-            }
-        }
-    }
+				row {
+					@extend %circular_row;
+				}
+			}
+		}
+	}
 
-    list.view,
-    list.frame {
-        @extend %circular_list;
+	list.view,
+	list.frame {
+		@extend %circular_list;
 
-        row {
-            @extend %circular_row;
-        }
-    }
+		row {
+			@extend %circular_row;
+		}
+	}
 }
 
 /************************
  * Gnome system monitor *
  ************************/
 window#gnome-system-monitor.background.csd {
-    > box.vertical > stack {
-        background-color: $base;
-        border-radius: 0 0 $window-radius $window-radius;
+	> box.vertical > stack {
+		background-color: $base;
+		border-radius: 0 0 $window-radius $window-radius;
 
-        > box.vertical {
-            > revealer > actionbar > revealer > box {
-                border-radius: 0 0 $window-radius $window-radius;
-            }
-        }
-    }
+		> box.vertical {
+			> revealer > actionbar > revealer > box {
+				border-radius: 0 0 $window-radius $window-radius;
+			}
+		}
+	}
 }
 
 window#gnome-system-monitor.background:not(.csd) {
-    > box.vertical > headerbar {
-        box-shadow: none;
-    }
+	> box.vertical > headerbar {
+		box-shadow: none;
+	}
 }
 
 /************************
  * Gnome Sound Recorder *
  ************************/
 stack {
-    > grid.vertical {
-        > scrolledwindow {
-            border: none;
-            border-radius: 0 0 $window-radius $window-radius;
+	> grid.vertical {
+		> scrolledwindow {
+			border: none;
+			border-radius: 0 0 $window-radius $window-radius;
 
-            > viewport.frame {
-                list {
-                    border-radius: 0 0 $window-radius $window-radius;
-                }
-            }
-        }
+			> viewport.frame {
+				list {
+					border-radius: 0 0 $window-radius $window-radius;
+				}
+			}
+		}
 
-        scrolledwindow.frame.emptyGrid {
-            border: none;
-        } // Removed ugly borders
-    }
+		scrolledwindow.frame.emptyGrid {
+			border: none;
+		} // Removed ugly borders
+	}
 }
 
 /******************
  * Gnome Contacts *
  ******************/
 window.background.csd {
-    scrolledwindow.contacts-contact-form {
-        border-bottom-right-radius: $window-radius;
-    }
+	scrolledwindow.contacts-contact-form {
+		border-bottom-right-radius: $window-radius;
+	}
 }
 
 /************************
@@ -970,27 +970,27 @@ window.background.csd {
  ************************/
 
 tabbox {
-    // Gnome 40.0
-    border: none;
-    background-color: $fill;
-    padding: $space-size / 2;
-    margin: $space-size / 2;
-    border-radius: $modal-radius + $space-size / 2;
+	// Gnome 40.0
+	border: none;
+	background-color: $fill;
+	padding: $space-size / 2;
+	margin: $space-size / 2;
+	border-radius: $modal-radius + $space-size / 2;
 
-    > tab {
-        @extend %tabs_tab;
+	> tab {
+		@extend %tabs_tab;
 
-        // close button
-        button {
-            min-height: 24px;
-            min-width: 24px;
-            border-radius: $circular-radius;
-            border: none;
-            padding: 0;
-            margin-right: -6px;
-            @extend %button-flat-simple;
-        }
-    }
+		// close button
+		button {
+			min-height: 24px;
+			min-width: 24px;
+			border-radius: $circular-radius;
+			border: none;
+			padding: 0;
+			margin-right: -6px;
+			@extend %button-flat-simple;
+		}
+	}
 }
 
 /*****************
@@ -998,240 +998,240 @@ tabbox {
  *****************/
 #weather-page,
 #weekly-forecast-frame {
-    border-bottom-right-radius: $window-radius;
+	border-bottom-right-radius: $window-radius;
 }
 
 #weather-page-content-view {
-    border-bottom-right-radius: $window-radius;
-    border-bottom-left-radius: $window-radius;
+	border-bottom-right-radius: $window-radius;
+	border-bottom-left-radius: $window-radius;
 }
 
 /***************
  * Gnome Music *
  ***************/
 window.background.csd {
-    box.vertical > overlay > stack.background {
-        border-radius: 0 0 $window-radius $window-radius;
-    }
+	box.vertical > overlay > stack.background {
+		border-radius: 0 0 $window-radius $window-radius;
+	}
 }
 
 /****************
  * Gnome Clocks *
  ****************/
 window.background.csd.unified {
-    > deck > deck > deck {
-        list {
-            @extend %circular_list;
+	> deck > deck > deck {
+		list {
+			@extend %circular_list;
 
-            row {
-                @extend %circular_row;
-            }
-        }
-    }
+			row {
+				@extend %circular_row;
+			}
+		}
+	}
 }
 
 /*************
  * Rhythmbox *
  *************/
 %rhythmbox-image-button {
-    min-height: 24px;
-    min-width: 24px;
-    padding: ($medium-size - 24px) / 2;
-    margin: 0;
+	min-height: 24px;
+	min-width: 24px;
+	padding: ($medium-size - 24px) / 2;
+	margin: 0;
 }
 
 .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar {
-    box-shadow: inset 0 1px $border;
+	box-shadow: inset 0 1px $border;
 
-    button.image-button {
-        border-radius: $circular-radius;
+	button.image-button {
+		border-radius: $circular-radius;
 
-        &:not(:first-child),
-        &:not(:last-child) {
-            border-top-left-radius: $circular-radius;
-            border-bottom-left-radius: $circular-radius;
-            border-top-right-radius: $circular-radius;
-            border-bottom-right-radius: $circular-radius;
-        }
+		&:not(:first-child),
+		&:not(:last-child) {
+			border-top-left-radius: $circular-radius;
+			border-bottom-left-radius: $circular-radius;
+			border-top-right-radius: $circular-radius;
+			border-bottom-right-radius: $circular-radius;
+		}
 
-        &.image-button:not(.text-button) {
-            &:first-child {
-                border-top-left-radius: $circular-radius;
-                border-bottom-left-radius: $circular-radius;
-            }
+		&.image-button:not(.text-button) {
+			&:first-child {
+				border-top-left-radius: $circular-radius;
+				border-bottom-left-radius: $circular-radius;
+			}
 
-            &:last-child {
-                border-top-right-radius: $circular-radius;
-                border-bottom-right-radius: $circular-radius;
-            }
-        }
+			&:last-child {
+				border-top-right-radius: $circular-radius;
+				border-bottom-right-radius: $circular-radius;
+			}
+		}
 
-        > widget > box > image {
-            padding: 0;
-        }
-    }
+		> widget > box > image {
+			padding: 0;
+		}
+	}
 }
 
 // tweak border and frame in alt-toolbar
 window.csd > box.vertical > box.vertical,
 window.solid-csd > box.vertical > box.vertical {
-    > toolbar.horizontal {
-        padding: $space-size;
-        margin: -1px 0;
-        border-bottom: none;
-        border-top: 1px solid $border;
-        box-shadow: none;
-        background-color: transparent;
+	> toolbar.horizontal {
+		padding: $space-size;
+		margin: -1px 0;
+		border-bottom: none;
+		border-top: 1px solid $border;
+		box-shadow: none;
+		background-color: transparent;
 
-        > toolitem > .linked > button,
-        > toolitem > box.horizontal > button {
-            @extend %circular-button;
-            @extend %rhythmbox-image-button;
-            margin: $space-size 0;
-        }
-    }
+		> toolitem > .linked > button,
+		> toolitem > box.horizontal > button {
+			@extend %circular-button;
+			@extend %rhythmbox-image-button;
+			margin: $space-size 0;
+		}
+	}
 
-    > frame {
-        margin: -1px 0;
-        padding: 0;
+	> frame {
+		margin: -1px 0;
+		padding: 0;
 
-        > border {
-            border: none;
-        }
-    }
+		> border {
+			border: none;
+		}
+	}
 }
 
 // hard-coded spacing depends on non-scalable unit,
 // seems cover-art widget is the most biggest thing?
 window.background > box.vertical > toolbar.primary-toolbar {
-    padding: 0 $space-size * 2 0 $space-size;
+	padding: 0 $space-size * 2 0 $space-size;
 
-    > toolitem {
-        > .linked > button.image-button.raised {
-            // 'shuffle/repeat'
-            // @extend %circular-button;
-            // @extend %rhythmbox-image-button;
-            @include button(normal);
+	> toolitem {
+		> .linked > button.image-button.raised {
+			// 'shuffle/repeat'
+			// @extend %circular-button;
+			// @extend %rhythmbox-image-button;
+			@include button(normal);
 
-            &:hover {
-                @include button(hover);
-            }
+			&:hover {
+				@include button(hover);
+			}
 
-            &:active {
-                @include button(active);
-            }
+			&:active {
+				@include button(active);
+			}
 
-            &:disabled {
-                @include button(disabled);
-            }
+			&:disabled {
+				@include button(disabled);
+			}
 
-            &:checked {
-                @include button(checked);
-            }
+			&:checked {
+				@include button(checked);
+			}
 
-            > widget > box > image {
-                padding: 0 3px;
-            }
-        }
+			> widget > box > image {
+				padding: 0 3px;
+			}
+		}
 
-        button.flat.scale {
-            // 'volume'
-            // @extend %circular-button;
-            @extend %rhythmbox-image-button;
-        }
+		button.flat.scale {
+			// 'volume'
+			// @extend %circular-button;
+			@extend %rhythmbox-image-button;
+		}
 
-        > box.horizontal:not(.linked) > button.toggle,
-        > .linked > button:not(.toggle):not(.raised):not(.flat) {
-            @extend %circular-button;
-            @extend %rhythmbox-image-button;
-        }
-    }
+		> box.horizontal:not(.linked) > button.toggle,
+		> .linked > button:not(.toggle):not(.raised):not(.flat) {
+			@extend %circular-button;
+			@extend %rhythmbox-image-button;
+		}
+	}
 }
 
 window.background > box > .sidebar-paned {
-    > paned > box > notebook > stack > box {
-        > grid > grid > grid,
-        > box > grid > grid > grid,
-        > notebook > stack > grid > grid > grid {
-            // Button box part
-            border-bottom: 1px solid $border;
-            padding: $space-size;
-            margin: -6px;
-        }
+	> paned > box > notebook > stack > box {
+		> grid > grid > grid,
+		> box > grid > grid > grid,
+		> notebook > stack > grid > grid > grid {
+			// Button box part
+			border-bottom: 1px solid $border;
+			padding: $space-size;
+			margin: -6px;
+		}
 
-        > grid > grid > box,
-        > box > grid > grid > box,
-        > notebook > stack > grid > grid > box {
-            // Search box part
-            border-bottom: 1px solid $border;
-            padding: 0 $space-size $space-size;
-            margin: 0 -6px -6px 0;
-        }
+		> grid > grid > box,
+		> box > grid > grid > box,
+		> notebook > stack > grid > grid > box {
+			// Search box part
+			border-bottom: 1px solid $border;
+			padding: 0 $space-size $space-size;
+			margin: 0 -6px -6px 0;
+		}
 
-        > grid > paned > box,
-        > notebook > stack > grid > paned > box {
-            > scrolledwindow {
-                &:not(:last-child) {
-                    border-right: 1px solid $border;
-                    margin-right: -1px;
-                }
-            }
-        }
-    }
+		> grid > paned > box,
+		> notebook > stack > grid > paned > box {
+			> scrolledwindow {
+				&:not(:last-child) {
+					border-right: 1px solid $border;
+					margin-right: -1px;
+				}
+			}
+		}
+	}
 
-    > paned > box > notebook > stack > box > box {
-        > grid > grid > grid,
-        > box > grid > grid > grid,
-        > notebook > stack > grid > grid > grid {
-            border-bottom: 1px solid $border;
-            padding: $space-size / 2;
-            margin: -1px -6px -6px;
-        }
+	> paned > box > notebook > stack > box > box {
+		> grid > grid > grid,
+		> box > grid > grid > grid,
+		> notebook > stack > grid > grid > grid {
+			border-bottom: 1px solid $border;
+			padding: $space-size / 2;
+			margin: -1px -6px -6px;
+		}
 
-        > grid > paned > box,
-        > box > grid > paned > box,
-        > notebook > stack > grid > paned > box {
-            > scrolledwindow {
-                &:not(:last-child) {
-                    border-right: 1px solid $border;
-                    margin-right: -1px;
-                }
-            }
-        }
+		> grid > paned > box,
+		> box > grid > paned > box,
+		> notebook > stack > grid > paned > box {
+			> scrolledwindow {
+				&:not(:last-child) {
+					border-right: 1px solid $border;
+					margin-right: -1px;
+				}
+			}
+		}
 
-        > paned > box:first-child > box {
-            padding: 0 $space-size $space-size;
-            border-bottom: 1px solid $border;
-        }
-    }
+		> paned > box:first-child > box {
+			padding: 0 $space-size $space-size;
+			border-bottom: 1px solid $border;
+		}
+	}
 }
 
 /**********
  * Polari *
  **********/
 .polari-room-list {
-    .sidebar {
-        background: none;
+	.sidebar {
+		background: none;
 
-        > row.activatable:selected {
-            background-color: $primary;
-            color: on($primary);
+		> row.activatable:selected {
+			background-color: $primary;
+			color: on($primary);
 
-            // > widget > box.horizontal > label {
-            //   color: $text; // not use !
-            // }
-        }
-    }
+			// > widget > box.horizontal > label {
+			//   color: $text; // not use !
+			// }
+		}
+	}
 }
 
 stack.view.polari-entry-area {
-    background-color: $background;
-    border-top: 1px solid $divider;
-    border-bottom-right-radius: $window-radius;
+	background-color: $background;
+	border-top: 1px solid $divider;
+	border-bottom-right-radius: $window-radius;
 }
 
 stack:disabled.view.polari-entry-area {
-    background-image: image($background);
+	background-image: image($background);
 }
 
 /***********
@@ -1247,276 +1247,276 @@ stack:disabled.view.polari-entry-area {
 // Layout tab and tab bar tweaks
 // The following makes the layout stack header look similar to a tab bar.
 layouttabbar {
-    border-bottom: 1px solid $divider;
-    background-color: $background;
+	border-bottom: 1px solid $divider;
+	background-color: $background;
 
-    button {
-        @extend %button-flat;
-    }
+	button {
+		@extend %button-flat;
+	}
 
-    > box > button {
-        margin: (40px - $medium-size) / 2 0;
-        // border-radius: 0;
-    }
+	> box > button {
+		margin: (40px - $medium-size) / 2 0;
+		// border-radius: 0;
+	}
 }
 
 layouttab {
-    margin: 0 8px; // not working
-    border-style: none solid;
-    border-width: 1px;
-    border-color: $frame;
-    box-shadow: inset 0 -2px $primary;
-    background-color: $base;
+	margin: 0 8px; // not working
+	border-style: none solid;
+	border-width: 1px;
+	border-color: $frame;
+	box-shadow: inset 0 -2px $primary;
+	background-color: $base;
 
-    separator.vertical {
-        margin: 8px 4px;
-    }
+	separator.vertical {
+		margin: 8px 4px;
+	}
 
-    button {
-        &.text-button,
-        &.image-button,
-        & {
-            margin-top: 8px;
-            margin-bottom: 8px;
-            padding: 0 4px;
-        }
-    }
+	button {
+		&.text-button,
+		&.image-button,
+		& {
+			margin-top: 8px;
+			margin-bottom: 8px;
+			padding: 0 4px;
+		}
+	}
 
-    // Close button styling for layouttab.
-    // > box > button.close { @extend %circular-button; }
+	// Close button styling for layouttab.
+	// > box > button.close { @extend %circular-button; }
 }
 
 layout {
-    border: 1px solid $frame;
-    -pnldockbin-handle-size: 1;
+	border: 1px solid $frame;
+	-pnldockbin-handle-size: 1;
 }
 
 entry.search-missing {
-    background-color: $error;
-    color: on($error);
+	background-color: $error;
+	color: on($error);
 }
 
 // tweak icons for treeviews
 window.workbench treeview.image {
-    color: $text-secondary;
+	color: $text-secondary;
 }
 
 popover.popover-selector list {
-    padding: 8px - 2px;
+	padding: 8px - 2px;
 
-    row {
-        border-radius: $corner-radius;
+	row {
+		border-radius: $corner-radius;
 
-        image {
-            &:dir(ltr) {
-                margin-right: 6px;
-            }
-            &:dir(rtl) {
-                margin-left: 6px;
-            }
-        }
+		image {
+			&:dir(ltr) {
+				margin-right: 6px;
+			}
+			&:dir(rtl) {
+				margin-left: 6px;
+			}
+		}
 
-        .accel {
-            &:dir(ltr) {
-                margin-left: 6px;
-            }
-            &:dir(rtl) {
-                margin-right: 6px;
-            }
-        }
-    }
+		.accel {
+			&:dir(ltr) {
+				margin-left: 6px;
+			}
+			&:dir(rtl) {
+				margin-right: 6px;
+			}
+		}
+	}
 }
 
 omnibar {
-    &.linked:not(.vertical) entry {
-        border-radius: $corner-radius;
-    }
+	&.linked:not(.vertical) entry {
+		border-radius: $corner-radius;
+	}
 
-    &:not(:hover):not(:active) entry {
-        color: $text-secondary;
-    }
+	&:not(:hover):not(:active) entry {
+		color: $text-secondary;
+	}
 }
 
 popover.omnibar list row:not(:last-child) {
-    border-bottom: 1px solid $divider;
+	border-bottom: 1px solid $divider;
 }
 
 entry.preferences-search {
-    border-bottom: 1px solid $divider;
-    box-shadow: none;
-    background-color: $base;
+	border-bottom: 1px solid $divider;
+	box-shadow: none;
+	background-color: $base;
 
-    // doesn't work properly
-    // &:dir(ltr) { border-right: 1px solid $divider; }
-    // &:dir(rtl) { border-left: 1px solid $divider; }
+	// doesn't work properly
+	// &:dir(ltr) { border-right: 1px solid $divider; }
+	// &:dir(rtl) { border-left: 1px solid $divider; }
 }
 
 preferences stacksidebar.sidebar {
-    list {
-        background-color: $base-alt;
-    }
+	list {
+		background-color: $base-alt;
+	}
 
-    &:dir(ltr),
-    &:dir(rtl) {
-        list {
-            border-style: none;
-        }
-    }
+	&:dir(ltr),
+	&:dir(rtl) {
+		list {
+			border-style: none;
+		}
+	}
 
-    list separator {
-        @extend %hide_separators;
-    }
+	list separator {
+		@extend %hide_separators;
+	}
 }
 
 preferences > box > box {
-    &:dir(ltr) {
-        border-right: 1px solid $divider;
-    }
-    &:dir(rtl) {
-        border-left: 1px solid $divider;
-    }
+	&:dir(ltr) {
+		border-right: 1px solid $divider;
+	}
+	&:dir(rtl) {
+		border-left: 1px solid $divider;
+	}
 }
 
 popover.messagepopover {
-    &.background {
-        padding: 0;
-    }
+	&.background {
+		padding: 0;
+	}
 
-    .popover-action-area button {
-        @extend %button-flat-simple;
+	.popover-action-area button {
+		@extend %button-flat-simple;
 
-        padding: 8px 16px;
-        border-top: 1px solid $divider;
-        border-radius: 0;
+		padding: 8px 16px;
+		border-top: 1px solid $divider;
+		border-radius: 0;
 
-        &:first-child {
-            border-bottom-left-radius: $corner-radius;
-        }
+		&:first-child {
+			border-bottom-left-radius: $corner-radius;
+		}
 
-        &:last-child {
-            border-bottom-right-radius: $corner-radius;
-        }
-    }
+		&:last-child {
+			border-bottom-right-radius: $corner-radius;
+		}
+	}
 
-    .popover-content-area {
-        margin: 16px;
-    }
+	.popover-content-area {
+		margin: 16px;
+	}
 }
 
 popover.transfers list {
-    background-color: transparent;
+	background-color: transparent;
 
-    row:not(:first-child) {
-        border-top: 1px solid $divider;
-    }
+	row:not(:first-child) {
+		border-top: 1px solid $divider;
+	}
 
-    row > box {
-        padding: 10px;
-    }
+	row > box {
+		padding: 10px;
+	}
 }
 
 dockbin {
-    border: 1px solid $frame;
-    -pnldockbin-handle-size: 1;
+	border: 1px solid $frame;
+	-pnldockbin-handle-size: 1;
 }
 
 dockpaned {
-    border: 1px solid $frame;
+	border: 1px solid $frame;
 }
 
 eggsearchbar box.search-bar {
-    padding: 0 8px;
-    border-bottom: 1px solid $divider;
-    background-color: $background;
+	padding: 0 8px;
+	border-bottom: 1px solid $divider;
+	background-color: $background;
 }
 
 docktabstrip {
-    padding: 0 8px;
-    border-bottom: 1px solid $divider;
-    background-color: $background;
+	padding: 0 8px;
+	border-bottom: 1px solid $divider;
+	background-color: $background;
 }
 
 docktab {
-    transition:
-        $transition,
-        background-size 0ms,
-        background-image 0ms;
-    min-height: $small-size;
-    min-width: $small-size;
-    margin-bottom: -1px;
-    padding: $space-size 6px;
+	transition:
+		$transition,
+		background-size 0ms,
+		background-image 0ms;
+	min-height: $small-size;
+	min-width: $small-size;
+	margin-bottom: -1px;
+	padding: $space-size 6px;
 
-    border-width: 1px; // for reorderable tabs
-    border-color: transparent; //
+	border-width: 1px; // for reorderable tabs
+	border-color: transparent; //
 
-    box-shadow: inset 0 -2px transparent;
-    background-image: radial-gradient(circle, $primary 10%, transparent 0%);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 0% 0%;
+	box-shadow: inset 0 -2px transparent;
+	background-image: radial-gradient(circle, $primary 10%, transparent 0%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 0% 0%;
 
-    color: $text-secondary;
-    font-weight: 500;
+	color: $text-secondary;
+	font-weight: 500;
 
-    &:hover {
-        background-color: $overlay-hover;
-        color: $text;
-    }
+	&:hover {
+		background-color: $overlay-hover;
+		color: $text;
+	}
 
-    &:checked {
-        transition:
-            $transition,
-            background-size $ripple-fade-in-duration $ease-out,
-            background-image $ripple-fade-in-duration +
-                $ripple-fade-out-duration $ease-out;
-        box-shadow: inset 0 -2px $primary;
-        background-color: transparent;
-        background-image: radial-gradient(
-            circle,
-            transparent 10%,
-            transparent 0%
-        );
-        background-size: 1000% 1000%;
-        color: $text;
-    }
+	&:checked {
+		transition:
+			$transition,
+			background-size $ripple-fade-in-duration $ease-out,
+			background-image $ripple-fade-in-duration +
+				$ripple-fade-out-duration $ease-out;
+		box-shadow: inset 0 -2px $primary;
+		background-color: transparent;
+		background-image: radial-gradient(
+			circle,
+			transparent 10%,
+			transparent 0%
+		);
+		background-size: 1000% 1000%;
+		color: $text;
+	}
 }
 
 dockoverlayedge {
-    background-color: $background;
+	background-color: $background;
 
-    docktabstrip {
-        padding: 0;
-        border: none;
-    }
+	docktabstrip {
+		padding: 0;
+		border: none;
+	}
 
-    &.left-edge docktab:checked {
-        box-shadow: inset -2px 0 $primary;
-    }
+	&.left-edge docktab:checked {
+		box-shadow: inset -2px 0 $primary;
+	}
 
-    &.right-edge docktab:checked {
-        box-shadow: inset 2px 0 $primary;
-    }
+	&.right-edge docktab:checked {
+		box-shadow: inset 2px 0 $primary;
+	}
 }
 
 pillbox {
-    background-color: $background;
-    border-radius: $corner-radius;
+	background-color: $background;
+	border-radius: $corner-radius;
 }
 
 buildperspective row {
-    // padding: 10px;
+	// padding: 10px;
 }
 
 layoutpane entry.search {
-    border-bottom: 1px solid $divider;
-    box-shadow: none;
-    background-color: $base;
+	border-bottom: 1px solid $divider;
+	box-shadow: none;
+	background-color: $base;
 }
 
 editortweak entry.search {
-    margin-bottom: -1px;
-    box-shadow: none;
-    background-color: transparent;
+	margin-bottom: -1px;
+	box-shadow: none;
+	background-color: transparent;
 }
 
 //
@@ -1524,32 +1524,32 @@ editortweak entry.search {
 //
 
 .gb-search-entry-occurrences-tag {
-    box-shadow: none;
-    background-color: transparent;
+	box-shadow: none;
+	background-color: transparent;
 }
 
 // Keep search bar and layouttab height in sync.
 // layouttabbar > box,
 // eggsearchbar > revealer > box,
 docktabstrip {
-    min-height: 39px;
+	min-height: 39px;
 }
 
 eggsearchbar entry {
-    // min-height: 24px;
+	// min-height: 24px;
 }
 
 window.workbench preferences preferencesgroup list entry {
-    // background: none;
-    // min-height: 0px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+	// background: none;
+	// min-height: 0px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 button.run-arrow-button {
-    // min-width: 12px;
-    padding-left: ($medium-size - 16px) / 2;
-    padding-right: ($medium-size - 16px) / 2;
+	// min-width: 12px;
+	padding-left: ($medium-size - 16px) / 2;
+	padding-right: ($medium-size - 16px) / 2;
 }
 
 //
@@ -1557,94 +1557,94 @@ button.run-arrow-button {
 //
 
 button.dzlmenubutton image {
-    min-width: $medium-size - 6px;
+	min-width: $medium-size - 6px;
 
-    &.arrow {
-        min-width: $medium-size - 9px;
-    }
+	&.arrow {
+		min-width: $medium-size - 9px;
+	}
 }
 
 button.dzlmenubuttonitem {
-    color: $text;
-    font-weight: normal;
+	color: $text;
+	font-weight: normal;
 
-    &:disabled {
-        color: $text-disabled;
-    }
+	&:disabled {
+		color: $text-disabled;
+	}
 }
 
 idelayoutstackheader {
-    border-bottom: 1px solid $divider;
+	border-bottom: 1px solid $divider;
 
-    button:checked {
-        color: $text;
-    }
+	button:checked {
+		color: $text;
+	}
 }
 
 // utilities stack switcher
 ideeditorutilities > dzldockpaned > box > stackswitcher {
-    padding: 8px 0;
-    background-color: $background;
+	padding: 8px 0;
+	background-color: $background;
 
-    &:dir(ltr) {
-        border-right: 1px solid $divider;
-    }
+	&:dir(ltr) {
+		border-right: 1px solid $divider;
+	}
 
-    &:dir(rtl) {
-        border-left: 1px solid $divider;
-    }
+	&:dir(rtl) {
+		border-left: 1px solid $divider;
+	}
 
-    button {
-        border-radius: 0;
-        box-shadow: none;
-        background-color: transparent;
+	button {
+		border-radius: 0;
+		box-shadow: none;
+		background-color: transparent;
 
-        &:active {
-            background-image: radial-gradient(
-                circle,
-                rgba($primary, 0.7) 10%,
-                transparent 0%
-            );
-        }
+		&:active {
+			background-image: radial-gradient(
+				circle,
+				rgba($primary, 0.7) 10%,
+				transparent 0%
+			);
+		}
 
-        &:checked {
-            background-color: transparent;
-            color: $text;
-        }
+		&:checked {
+			background-color: transparent;
+			color: $text;
+		}
 
-        &:dir(ltr) {
-            margin-right: -1px;
+		&:dir(ltr) {
+			margin-right: -1px;
 
-            &:checked {
-                box-shadow: inset -2px 0 $primary;
-            }
-        }
+			&:checked {
+				box-shadow: inset -2px 0 $primary;
+			}
+		}
 
-        &:dir(rtl) {
-            margin-left: -1px;
+		&:dir(rtl) {
+			margin-left: -1px;
 
-            &:checked {
-                box-shadow: inset 2px 0 $primary;
-            }
-        }
-    }
+			&:checked {
+				box-shadow: inset 2px 0 $primary;
+			}
+		}
+	}
 }
 
 // buildui panel
 ideeditorsidebar notebook header {
-    background: transparent;
+	background: transparent;
 }
 
 popover.messagepopover {
-    // padding: 0;
+	// padding: 0;
 
-    list {
-        border: 1px solid $divider;
+	list {
+		border: 1px solid $divider;
 
-        row:not(:last-child) {
-            border-bottom: 1px solid $divider;
-        }
-    }
+		row:not(:last-child) {
+			border-bottom: 1px solid $divider;
+		}
+	}
 }
 
 /**********
@@ -1654,71 +1654,71 @@ popover.messagepopover {
 // https://gitlab.gnome.org/GNOME/gnome-photos/blob/master/data/Adwaita.css
 
 GdMainIconView.content-view {
-    -gdmainiconview-icon-size: 48;
+	-gdmainiconview-icon-size: 48;
 
-    // Make spinner visible on both dark and bright backgrounds w/o making
-    // it look ugly/weird.
-    // &.cell:active { color: $text-disabled; }
+	// Make spinner visible on both dark and bright backgrounds w/o making
+	// it look ugly/weird.
+	// &.cell:active { color: $text-disabled; }
 }
 
 .documents-counter {
-    margin: 8px;
-    border-radius: $circular-radius;
-    box-shadow: $shadow-z4;
-    background-color: $primary;
-    color: on($primary);
-    font-weight: bold;
+	margin: 8px;
+	border-radius: $circular-radius;
+	box-shadow: $shadow-z4;
+	background-color: $primary;
+	color: on($primary);
+	font-weight: bold;
 }
 
 .photos-entry-tag {
-    @extend .entry-tag;
+	@extend .entry-tag;
 }
 
 .documents-scrolledwin.frame {
-    border-style: none;
+	border-style: none;
 
-    frame.content-view > border {
-        border-style: none;
-    }
+	frame.content-view > border {
+		border-style: none;
+	}
 }
 
 .photos-icon-bg {
 }
 
 .photos-fade-in {
-    opacity: 1;
-    transition: opacity $duration $ease-out;
+	opacity: 1;
+	transition: opacity $duration $ease-out;
 }
 
 .photos-fade-out {
-    opacity: 0;
-    transition: opacity $duration $ease-out;
+	opacity: 0;
+	transition: opacity $duration $ease-out;
 }
 
 .photos-collection-icon {
 }
 
 button.photos-filter-preview {
-    color: $text;
-    font-weight: normal;
+	color: $text;
+	font-weight: normal;
 
-    &:checked {
-        background-color: $overlay-selected;
-        color: $text;
+	&:checked {
+		background-color: $overlay-selected;
+		color: $text;
 
-        image {
-            color: on(dark);
-        }
-    }
+		image {
+			color: on(dark);
+		}
+	}
 }
 
 overlay grid.horizontal > revealer > scrolledwindow.frame {
-    &:dir(ltr) {
-        border-style: none none none solid;
-    }
-    &:dir(rtl) {
-        border-style: none solid none none;
-    }
+	&:dir(ltr) {
+		border-style: none none none solid;
+	}
+	&:dir(rtl) {
+		border-style: none solid none none;
+	}
 }
 
 /*********
@@ -1728,62 +1728,62 @@ overlay grid.horizontal > revealer > scrolledwindow.frame {
 // https://gitlab.gnome.org/GNOME/gnome-music/blob/master/data/application.css
 
 .side-panel:dir(ltr) {
-    // border-width: 0 1px 0 0;
-    border-style: solid;
-    border-color: $divider;
+	// border-width: 0 1px 0 0;
+	border-style: solid;
+	border-color: $divider;
 }
 
 .side-panel:dir(rtl) {
-    // border-width: 0 0 0 1px;
-    border-style: solid;
-    border-color: $divider;
+	// border-width: 0 0 0 1px;
+	border-style: solid;
+	border-color: $divider;
 }
 
 .side-panel .view {
-    // background-color: mix(@theme_fg_color, @theme_bg_color, 0.9);
-    background-image: image($base-alt);
+	// background-color: mix(@theme_fg_color, @theme_bg_color, 0.9);
+	background-image: image($base-alt);
 
-    &:hover {
-        background-image: image(mix($text, $base-alt, percentage(0.08)));
-    }
+	&:hover {
+		background-image: image(mix($text, $base-alt, percentage(0.08)));
+	}
 }
 
 .side-panel .view:selected {
-    // background-color: mix(@theme_fg_color, @theme_bg_color, 0.5);
-    background-image: image($primary);
+	// background-color: mix(@theme_fg_color, @theme_bg_color, 0.5);
+	background-image: image($primary);
 
-    &:hover {
-        background-image: image(mix(on($primary), $primary, percentage(0.08)));
-    }
+	&:hover {
+		background-image: image(mix(on($primary), $primary, percentage(0.08)));
+	}
 }
 
 .songs-list {
-    // box-shadow: inset 0 -1px shade(@borders, 1.30);
-    // background-color: @theme_bg_color;
+	// box-shadow: inset 0 -1px shade(@borders, 1.30);
+	// background-color: @theme_bg_color;
 
-    &:hover {
-        background-image: image($overlay-hover);
-    }
+	&:hover {
+		background-image: image($overlay-hover);
+	}
 }
 
 frame.documents-dropdown {
-    @extend %toolbar_osd;
+	@extend %toolbar_osd;
 
-    margin: 8px;
+	margin: 8px;
 
-    > border {
-        border: none;
-    }
+	> border {
+		border: none;
+	}
 }
 
 box.vertical > revealer > toolbar.search-bar {
-    border-bottom: 1px solid $divider;
-    background-clip: border-box; // avoid black border
+	border-bottom: 1px solid $divider;
+	background-clip: border-box; // avoid black border
 
-    button > widget {
-        -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-        // -GtkArrow-arrow-scaling: 1;
-    }
+	button > widget {
+		-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+		// -GtkArrow-arrow-scaling: 1;
+	}
 }
 
 /*************
@@ -1791,80 +1791,80 @@ box.vertical > revealer > toolbar.search-bar {
  *************/
 // documents-scrolledwi (Totem, Documents, EvView)
 .documents-scrolledwin {
-    background-color: transparent;
+	background-color: transparent;
 
-    .content-view:not(:selected):not(:hover) {
-        background-color: transparent;
-        // border-radius: 0 0 $window-radius $window-radius;
-    }
+	.content-view:not(:selected):not(:hover) {
+		background-color: transparent;
+		// border-radius: 0 0 $window-radius $window-radius;
+	}
 
-    viewport.frame {
-        // Documents
-        background-color: transparent;
+	viewport.frame {
+		// Documents
+		background-color: transparent;
 
-        widget > frame.content-view:not(:selected):not(:hover) {
-            border {
-                border: none;
-            }
+		widget > frame.content-view:not(:selected):not(:hover) {
+			border {
+				border: none;
+			}
 
-            background-color: transparent;
-            // border-radius: 0 0 $window-radius $window-radius;
-        }
-    }
+			background-color: transparent;
+			// border-radius: 0 0 $window-radius $window-radius;
+		}
+	}
 }
 
 window.background.csd {
-    > stack > box > revealer > actionbar > revealer > box {
-        border-bottom-left-radius: $window-radius;
-        border-bottom-right-radius: $window-radius;
-    }
+	> stack > box > revealer > actionbar > revealer > box {
+		border-bottom-left-radius: $window-radius;
+		border-bottom-right-radius: $window-radius;
+	}
 }
 
 /*******************
  * Document Viewer *
  *******************/
 window.background.csd {
-    // > box.vertical {
-    //   > paned.horizontal > box.vertical > scrolledwindow {
-    //     > treeview.view:not(:hover):not(:selected) { background-color: transparent; }
-    //   }
-    // }
+	// > box.vertical {
+	//   > paned.horizontal > box.vertical > scrolledwindow {
+	//     > treeview.view:not(:hover):not(:selected) { background-color: transparent; }
+	//   }
+	// }
 
-    evview.view.content-view {
-        border-radius: 0 0 $window-radius $window-radius;
+	evview.view.content-view {
+		border-radius: 0 0 $window-radius $window-radius;
 
-        &:selected,
-        &:selected:backdrop {
-            @extend %selected_items_primary;
-        }
-    }
+		&:selected,
+		&:selected:backdrop {
+			@extend %selected_items_primary;
+		}
+	}
 }
 
 /*********************************
  * Archive Manager (File roller) *
  *********************************/
 .background.csd {
-    > grid.horizontal > paned.horizontal {
-        > scrolledwindow {
-            border-radius: 0 0 $window-radius $window-radius;
-            background-color: $base;
+	> grid.horizontal > paned.horizontal {
+		> scrolledwindow {
+			border-radius: 0 0 $window-radius $window-radius;
+			background-color: $base;
 
-            > treeview.view:not(:hover):not(:selected):not(:selected):not(
-                    :hover
-                ):not(.progressbar):not(.expander):not(.trough):not(
-                    .separator
-                ) {
-                background-color: $base;
-            }
-        }
+			> treeview.view:not(:hover):not(:selected):not(:selected):not(
+					:hover
+				):not(.progressbar):not(.expander):not(.trough):not(
+					.separator
+				) {
+				background-color: $base;
+			}
+		}
 
-        > box.vertical {
-            > scrolledwindow {
-                border-radius: 0 0 0 $window-radius;
-                background-color: $background;
-            }
-        }
-    }
+		> box.vertical {
+			> scrolledwindow {
+				border-radius: 0 0 0 $window-radius;
+				background-color: $background;
+			}
+		}
+	}
 }
 
 // /**************
@@ -1884,81 +1884,81 @@ window.background.csd {
  * Terminal *
  ************/
 terminal-window {
-    decoration {
-        border-radius: $window-radius $window-radius 0 0;
-    }
+	decoration {
+		border-radius: $window-radius $window-radius 0 0;
+	}
 
-    &.background.csd,
-    &.background.csd.maximized {
-        border-radius: 0;
-    } // Fixed gnome 3.32 issue: Unable to restore window size after maximization
+	&.background.csd,
+	&.background.csd.maximized {
+		border-radius: 0;
+	} // Fixed gnome 3.32 issue: Unable to restore window size after maximization
 
-    notebook > header {
-        > box {
-            // Remove hard-coded margin around button(s)
-            margin: -2px -2px -2px 1px;
+	notebook > header {
+		> box {
+			// Remove hard-coded margin around button(s)
+			margin: -2px -2px -2px 1px;
 
-            button.flat {
-                @extend %flat-button-on-indicator;
-                min-height: $small-size;
-                min-width: $small-size;
-                padding: $space-size / 2;
-                border-radius: $modal-radius;
-            }
-        }
-    }
+			button.flat {
+				@extend %flat-button-on-indicator;
+				min-height: $small-size;
+				min-width: $small-size;
+				padding: $space-size / 2;
+				border-radius: $modal-radius;
+			}
+		}
+	}
 }
 
 window.background {
-    // gnome-terminal 3.32 setting
-    > box.vertical > box.horizontal > frame {
-        > border {
-            border: none;
-        }
+	// gnome-terminal 3.32 setting
+	> box.vertical > box.horizontal > frame {
+		> border {
+			border: none;
+		}
 
-        > scrolledwindow > viewport.frame {
-            list {
-                border-radius: $corner-radius;
-                margin: 0 $space-size $space-size;
-                background-color: $indicator;
-                color: on($indicator);
+		> scrolledwindow > viewport.frame {
+			list {
+				border-radius: $corner-radius;
+				margin: 0 $space-size $space-size;
+				background-color: $indicator;
+				color: on($indicator);
 
-                button.flat {
-                    @extend %flat-button-on-indicator;
-                }
+				button.flat {
+					@extend %flat-button-on-indicator;
+				}
 
-                > row {
-                    &,
-                    &:hover,
-                    &:active,
-                    &:selected {
-                        color: on($indicator);
-                    }
-                }
-            }
-        }
-    }
+				> row {
+					&,
+					&:hover,
+					&:active,
+					&:selected {
+						color: on($indicator);
+					}
+				}
+			}
+		}
+	}
 
-    > box.vertical > box.horizontal > stack {
-        > widget > notebook.frame {
-            margin: 0 $space-size $space-size 0;
-        }
-    }
+	> box.vertical > box.horizontal > stack {
+		> widget > notebook.frame {
+			margin: 0 $space-size $space-size 0;
+		}
+	}
 }
 
 // gnome-console
 .terminal-window {
-    background-color: $background;
+	background-color: $background;
 
-    tabbar {
-        tabbox {
-            background-color: $base-alt;
-            margin: 0;
-            border-radius: 0;
-            border-bottom: 1px solid $border;
-            background-clip: border-box;
-        }
-    }
+	tabbar {
+		tabbox {
+			background-color: $base-alt;
+			margin: 0;
+			border-radius: 0;
+			border-bottom: 1px solid $border;
+			background-clip: border-box;
+		}
+	}
 }
 
 /*********
@@ -1966,122 +1966,122 @@ window.background {
  *********/
 // less than 3.28
 task-list-view {
-    taskrow {
-        transition: $transition;
-        margin: 0 -8px;
+	taskrow {
+		transition: $transition;
+		margin: 0 -8px;
 
-        &:hover {
-            transition: none;
-        }
+		&:hover {
+			transition: none;
+		}
 
-        label {
-            margin: 0 8px;
-        }
+		label {
+			margin: 0 8px;
+		}
 
-        image.dim-label {
-            min-width: 16px;
-        }
-    }
+		image.dim-label {
+			min-width: 16px;
+		}
+	}
 
-    > box > revealer > box > button {
-        margin: (12px * 2 - $medium-size) / 2;
+	> box > revealer > box > button {
+		margin: (12px * 2 - $medium-size) / 2;
 
-        .dim-label {
-            color: inherit;
-        }
-    }
+		.dim-label {
+			color: inherit;
+		}
+	}
 }
 
 // 3.28 or later
 tasklistview {
-    taskrow {
-        outline: none;
+	taskrow {
+		outline: none;
 
-        entry {
-            &,
-            &:focus,
-            &:disabled {
-                box-shadow: none;
-            }
-        }
+		entry {
+			&,
+			&:focus,
+			&:disabled {
+				box-shadow: none;
+			}
+		}
 
-        image.dim-label {
-            min-width: 16px;
-        }
-    }
+		image.dim-label {
+			min-width: 16px;
+		}
+	}
 
-    > box > revealer > box > button {
-        margin: (12px * 2 - $medium-size) / 2;
+	> box > revealer > box > button {
+		margin: (12px * 2 - $medium-size) / 2;
 
-        .dim-label {
-            color: inherit;
-        }
-    }
+		.dim-label {
+			color: inherit;
+		}
+	}
 }
 
 /*******
  * Eog *
  *******/
 #eog-thumb-nav {
-    scrolledwindow {
-        border-top: none;
-    }
+	scrolledwindow {
+		border-top: none;
+	}
 }
 
 /*************
  * Evolution *
  *************/
 frame.taskbar > border {
-    border-style: solid none none;
+	border-style: solid none none;
 }
 
 box.vertical > paned.horizontal notebook widget .frame {
-    border-style: none;
+	border-style: none;
 }
 
 /***********
  * Fractal *
  ***********/
 .background.csd.main-window {
-    .sidebar.rooms-sidebar {
-        border-bottom-left-radius: $window-radius;
-    }
+	.sidebar.rooms-sidebar {
+		border-bottom-left-radius: $window-radius;
+	}
 }
 
 /********
  * Gitg *
  ********/
 frame.commit-frame > border {
-    border-style: solid none none;
+	border-style: solid none none;
 }
 
 /**************
  * Characters *
  **************/
 box.dialog-vbox scrolledwindow.related {
-    border: 1px solid $frame;
+	border: 1px solid $frame;
 }
 
 list.categories {
-    background-image: image($base-alt);
+	background-image: image($base-alt);
 }
 
 /*********
  * Boxes *
  *********/
 .transparent-bg + stack overlay > label {
-    min-height: 24px;
-    padding: 0 4px;
-    border-radius: $corner-radius;
-    background-color: $scrim;
-    color: on($scrim);
+	min-height: 24px;
+	padding: 0 4px;
+	border-radius: $corner-radius;
+	background-color: $scrim;
+	color: on($scrim);
 }
 
 /**************
  * Calculator *
  **************/
 button.title label {
-    min-height: $medium-size;
+	min-height: $medium-size;
 }
 
 /*********
@@ -2089,276 +2089,276 @@ button.title label {
  *********/
 window.background.csd.geary-main-window,
 window#GearyMainWindow.background.csd {
-    > deck > overlay > box.vertical > paned.horizontal > box.sidebar.vertical {
-        border-bottom-left-radius: $window-radius;
+	> deck > overlay > box.vertical > paned.horizontal > box.sidebar.vertical {
+		border-bottom-left-radius: $window-radius;
 
-        statusbar {
-            border-bottom-left-radius: $window-radius;
-        }
-    }
+		statusbar {
+			border-bottom-left-radius: $window-radius;
+		}
+	}
 
-    stack#conversation_viewer {
-        border-bottom-right-radius: $window-radius;
+	stack#conversation_viewer {
+		border-bottom-right-radius: $window-radius;
 
-        scrolledwindow.geary-conversation-scroller {
-            viewport.frame {
-                list.conversation-listbox {
-                    background: none;
-                    border-bottom-right-radius: $window-radius;
-                }
-            }
-        }
+		scrolledwindow.geary-conversation-scroller {
+			viewport.frame {
+				list.conversation-listbox {
+					background: none;
+					border-bottom-right-radius: $window-radius;
+				}
+			}
+		}
 
-        .geary-expanded {
-            animation: none;
-            background-image: none;
+		.geary-expanded {
+			animation: none;
+			background-image: none;
 
-            > .geary-composer-embed {
-                actionbar > revealer > box {
-                    border-radius: 0;
-                }
+			> .geary-composer-embed {
+				actionbar > revealer > box {
+					border-radius: 0;
+				}
 
-                headerbar {
-                    color: $text;
-                    background-color: $background;
-                    box-shadow: none;
-                    border-bottom: 1px solid $frame;
+				headerbar {
+					color: $text;
+					background-color: $background;
+					box-shadow: none;
+					border-bottom: 1px solid $frame;
 
-                    button {
-                        @extend %button-flat;
-                    }
-                }
-            }
-        }
+					button {
+						@extend %button-flat;
+					}
+				}
+			}
+		}
 
-        .geary-composer-box {
-            actionbar > revealer > box {
-                border-bottom-left-radius: 0;
-            }
-        }
-    }
+		.geary-composer-box {
+			actionbar > revealer > box {
+				border-bottom-left-radius: 0;
+			}
+		}
+	}
 }
 
 preferencesgroup,
 .geary-accounts-editor-pane {
-    list {
-        @extend %circular_list;
+	list {
+		@extend %circular_list;
 
-        row {
-            @extend %circular_row;
-        }
-    }
+		row {
+			@extend %circular_row;
+		}
+	}
 }
 
 .geary-accounts-editor-pane {
-    frame:not(.geary-signature) > border,
-    scrolledwindow.frame {
-        border: none;
-    }
+	frame:not(.geary-signature) > border,
+	scrolledwindow.frame {
+		border: none;
+	}
 }
 
 .geary-main-window.unified {
-    > deck > overlay > .geary-main-layout {
-        background-color: $base;
+	> deck > overlay > .geary-main-layout {
+		background-color: $base;
 
-        > leaflet > separator.sidebar, // centry
+		> leaflet > separator.sidebar, // centry
     > leaflet > leaflet > separator.sidebar {
-            // left
-            // border-right: none;
-            background-color: $titlebar;
-            transition:
-                background-color $duration $ease-out,
-                color $duration $ease-out,
-                box-shadow $duration $ease-out;
+			// left
+			// border-right: none;
+			background-color: $titlebar;
+			transition:
+				background-color $duration $ease-out,
+				color $duration $ease-out,
+				box-shadow $duration $ease-out;
 
-            &:backdrop {
-                background-color: $titlebar-backdrop;
-            }
-        }
+			&:backdrop {
+				background-color: $titlebar-backdrop;
+			}
+		}
 
-        > leaflet > leaflet > box.vertical + separator.sidebar {
-            min-width: 1px;
-            background-color: $border;
-        }
-    }
+		> leaflet > leaflet > box.vertical + separator.sidebar {
+			min-width: 1px;
+			background-color: $border;
+		}
+	}
 
-    frame.geary-conversation-frame {
-        // center part
-        scrolledwindow {
-            // margin: -1px 0; // hide .view top border
-            padding: $space-size / 2;
+	frame.geary-conversation-frame {
+		// center part
+		scrolledwindow {
+			// margin: -1px 0; // hide .view top border
+			padding: $space-size / 2;
 
-            treeview.view {
-                border: 1px solid transparent;
-                border-radius: $corner-radius;
-                padding: $space-size;
+			treeview.view {
+				border: 1px solid transparent;
+				border-radius: $corner-radius;
+				padding: $space-size;
 
-                &:selected,
-                &:active {
-                    border-radius: $corner-radius;
-                    background-color: $primary;
-                    color: on($primary);
-                }
-            }
-        }
-    }
+				&:selected,
+				&:active {
+					border-radius: $corner-radius;
+					background-color: $primary;
+					color: on($primary);
+				}
+			}
+		}
+	}
 
-    separator.geary-sidebar-pane-separator {
-        min-width: 1px;
-        background-color: $divider;
-    }
+	separator.geary-sidebar-pane-separator {
+		min-width: 1px;
+		background-color: $divider;
+	}
 
-    geary-conversation-viewer#conversation_viewer {
-        // right side
-        list.background.conversation-listbox.content {
-            > row.activatable {
-                border: 1px solid $divider;
-                border-bottom-width: 0;
-                background-color: $base;
+	geary-conversation-viewer#conversation_viewer {
+		// right side
+		list.background.conversation-listbox.content {
+			> row.activatable {
+				border: 1px solid $divider;
+				border-bottom-width: 0;
+				background-color: $base;
 
-                &:first-child {
-                    border-top-left-radius: 8px;
-                    border-top-right-radius: 8px;
-                }
-            }
+				&:first-child {
+					border-top-left-radius: 8px;
+					border-top-right-radius: 8px;
+				}
+			}
 
-            .geary-attachment-pane {
-                border-radius: 0 0 8px 8px;
+			.geary-attachment-pane {
+				border-radius: 0 0 8px 8px;
 
-                actionbar.background {
-                    background-color: transparent;
+				actionbar.background {
+					background-color: transparent;
 
-                    > revealer > box {
-                        border-radius: 0 0 6px 6px;
-                    }
-                }
-            }
-        }
-    }
+					> revealer > box {
+						border-radius: 0 0 6px 6px;
+					}
+				}
+			}
+		}
+	}
 }
 
 /**************
  * Extensions *
  **************/
 window.background.csd {
-    > stack, // GameMode setting
+	> stack, // GameMode setting
   > stack > scrolledwindow > viewport > box, // User Themes (Workspace) setting
   > box > stack > scrolledwindow > viewport > box {
-        > list {
-            @extend %circular_list;
+		> list {
+			@extend %circular_list;
 
-            row {
-                @extend %circular_row;
-            }
-        }
-    }
+			row {
+				@extend %circular_row;
+			}
+		}
+	}
 
-    stack stack stack frame, // ArcMenu setting
+	stack stack stack frame, // ArcMenu setting
   > stack > stack > box > frame, // Night Theme Switcher setting
   > stack > stack > box > box > frame, // Night Theme Switcher setting bottom lists
   > stack > box > stack > box > frame, // ArcMenu setting
   > stack > box > stack > scrolledwindow > viewport frame, // ArcMenu setting
   > stack > box > stack > box > scrolledwindow > viewport > frame, // ArcMenu setting
   > stack > grid > scrolledwindow > viewport > box > frame {
-        // GSConnect setting
-        > border {
-            border: none;
-        }
+		// GSConnect setting
+		> border {
+			border: none;
+		}
 
-        > list {
-            @extend %circular_list;
+		> list {
+			@extend %circular_list;
 
-            row {
-                @extend %circular_row;
-            }
-        }
-    }
+			row {
+				@extend %circular_row;
+			}
+		}
+	}
 
-    > stack > box > box > list,
-    > stack > box > stack > scrolledwindow > viewport > list {
-        // ArcMenu setting sidebar
-        border-bottom-left-radius: $window-radius;
-    }
+	> stack > box > box > list,
+	> stack > box > stack > scrolledwindow > viewport > list {
+		// ArcMenu setting sidebar
+		border-bottom-left-radius: $window-radius;
+	}
 
-    > stack > box > .sidebar > scrolledwindow > viewport > list {
-        padding: 0 0;
-    }
+	> stack > box > .sidebar > scrolledwindow > viewport > list {
+		padding: 0 0;
+	}
 }
 
 /***********
  * Dialogs *
  ***********/
 dialog.background.csd {
-    > box.vertical.dialog-vbox {
-        > grid.horizontal {
-            > scrolledwindow.frame {
-                > viewport.frame {
-                    list:first-child {
-                        border-radius: 0 0 0 $window-radius;
-                    }
-                    list:last-child {
-                        border-radius: 0 0 $window-radius 0;
-                    }
-                }
-            }
-        }
+	> box.vertical.dialog-vbox {
+		> grid.horizontal {
+			> scrolledwindow.frame {
+				> viewport.frame {
+					list:first-child {
+						border-radius: 0 0 0 $window-radius;
+					}
+					list:last-child {
+						border-radius: 0 0 $window-radius 0;
+					}
+				}
+			}
+		}
 
-        > stack,
-        > stack > stack {
-            > scrolledwindow {
-                border-radius: 0 0 $window-radius $window-radius;
-                background-color: $base;
+		> stack,
+		> stack > stack {
+			> scrolledwindow {
+				border-radius: 0 0 $window-radius $window-radius;
+				background-color: $base;
 
-                iconview.view:not(:hover):not(:selected):not(:active) {
-                    // Wallpaper setting window
-                    // @extend %view;
-                    background-color: transparent;
-                }
-            }
-        }
+				iconview.view:not(:hover):not(:selected):not(:active) {
+					// Wallpaper setting window
+					// @extend %view;
+					background-color: transparent;
+				}
+			}
+		}
 
-        > stack {
-            > scrolledwindow > viewport.frame {
-                > list {
-                    border-radius: 0 0 $window-radius $window-radius;
+		> stack {
+			> scrolledwindow > viewport.frame {
+				> list {
+					border-radius: 0 0 $window-radius $window-radius;
 
-                    row.activatable:not(:hover):not(:selected):not(:active) {
-                        background-color: transparent;
-                    }
-                }
-            }
+					row.activatable:not(:hover):not(:selected):not(:active) {
+						background-color: transparent;
+					}
+				}
+			}
 
-            toolbar.toolbar {
-                border-radius: 0 0 $window-radius $window-radius;
-            }
-        }
+			toolbar.toolbar {
+				border-radius: 0 0 $window-radius $window-radius;
+			}
+		}
 
-        > notebook {
-            > stack {
-                border-radius: 0 0 $window-radius $window-radius;
-            }
-        }
-    }
+		> notebook {
+			> stack {
+				border-radius: 0 0 $window-radius $window-radius;
+			}
+		}
+	}
 
-    stack scrolledwindow {
-        &.frame {
-            border-radius: $corner-radius;
+	stack scrolledwindow {
+		&.frame {
+			border-radius: $corner-radius;
 
-            textview.view {
-                border-radius: $corner-radius;
+			textview.view {
+				border-radius: $corner-radius;
 
-                > text {
-                    background: none;
-                }
-            }
-        }
+				> text {
+					background: none;
+				}
+			}
+		}
 
-        viewport.frame {
-            &.view {
-                border-radius: $corner-radius;
-            }
-        }
-    }
+		viewport.frame {
+			&.view {
+				border-radius: $corner-radius;
+			}
+		}
+	}
 }
 
 //
@@ -2366,39 +2366,39 @@ dialog.background.csd {
 //
 
 window.background.csd.unified {
-    background-color: $background;
+	background-color: $background;
 
-    // Remove the sheen on headerbar...
-    headerbar {
-        box-shadow: none;
-    }
+	// Remove the sheen on headerbar...
+	headerbar {
+		box-shadow: none;
+	}
 
-    // ...and add it on the window itself
-    > decoration-overlay {
-        box-shadow: inset 0 1px highlight($titlebar);
-    }
+	// ...and add it on the window itself
+	> decoration-overlay {
+		box-shadow: inset 0 1px highlight($titlebar);
+	}
 
-    &,
-    > decoration,
-    > decoration-overlay {
-        border-radius: $window-radius;
-    }
+	&,
+	> decoration,
+	> decoration-overlay {
+		border-radius: $window-radius;
+	}
 
-    &.tiled,
-    &.tiled-top,
-    &.tiled-right,
-    &.tiled-bottom,
-    &.tiled-left,
-    &.maximized,
-    &.fullscreen {
-        > decoration-overlay {
-            box-shadow: none;
-        }
+	&.tiled,
+	&.tiled-top,
+	&.tiled-right,
+	&.tiled-bottom,
+	&.tiled-left,
+	&.maximized,
+	&.fullscreen {
+		> decoration-overlay {
+			box-shadow: none;
+		}
 
-        &,
-        > decoration,
-        > decoration-overlay {
-            border-radius: 0;
-        }
-    }
+		&,
+		> decoration,
+		> decoration-overlay {
+			border-radius: 0;
+		}
+	}
 }

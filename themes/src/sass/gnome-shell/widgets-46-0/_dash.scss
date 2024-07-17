@@ -3,9 +3,9 @@
 // uses system colors
 // $dash_background_color: on($osd, divider);
 $dash_background_color: if(
-    $variant == 'light',
-    rgba($white, 0.35),
-    rgba($base, 0.65)
+	$variant == 'light',
+	rgba($white, 0.35),
+	rgba($base, 0.65)
 );
 
 $dash_placeholder_size: 32px;
@@ -16,105 +16,105 @@ $dash_spacing: $base_margin * 0.5;
 
 // container for the dash
 #dash {
-    margin-top: $dash_edge_offset;
+	margin-top: $dash_edge_offset;
 
-    // background behind item container
-    .dash-background {
-        background-color: $dash_background_color;
-        box-shadow: inset 0 0 0 1px rgba($white, 0.12);
-        border: none; /* remove black border on ubuntu */
-        padding: 4px 3px;
-        border-radius: $dash_border_radius;
-    }
+	// background behind item container
+	.dash-background {
+		background-color: $dash_background_color;
+		box-shadow: inset 0 0 0 1px rgba($white, 0.12);
+		border: none; /* remove black border on ubuntu */
+		padding: 4px 3px;
+		border-radius: $dash_border_radius;
+	}
 
-    // items on the dash
-    .dash-item-container {
-        .placeholder {
-            // background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
-            background-image: none;
-            background-size: contain;
-            height: $dash_placeholder_size;
-        }
+	// items on the dash
+	.dash-item-container {
+		.placeholder {
+			// background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+			background-image: none;
+			background-size: contain;
+			height: $dash_placeholder_size;
+		}
 
-        .empty-dash-drop-target {
-            width: $dash_placeholder_size;
-            height: $dash_placeholder_size;
-        }
+		.empty-dash-drop-target {
+			width: $dash_placeholder_size;
+			height: $dash_placeholder_size;
+		}
 
-        // IMPORTANT: items on the dash need to extend to the edge to be adequate click targets
-        // as such the %tile style is overriden and button styles are applied to the child class .overview-icon
-        .show-apps,
-        .overview-tile {
-            background: none;
-            box-shadow: none;
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            margin: 0 $dash_spacing;
-            padding-bottom: $dash_edge_offset; // align with other items
+		// IMPORTANT: items on the dash need to extend to the edge to be adequate click targets
+		// as such the %tile style is overriden and button styles are applied to the child class .overview-icon
+		.show-apps,
+		.overview-tile {
+			background: none;
+			box-shadow: none;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			margin: 0 $dash_spacing;
+			padding-bottom: $dash_edge_offset; // align with other items
 
-            .overview-icon {
-                border-radius: $modal_radius;
-                padding: $base_padding;
-                spacing: $base_padding;
-                text-align: center;
-                transition-duration: 100ms;
-                background-color: transparent;
-                color: on($osd);
-            }
+			.overview-icon {
+				border-radius: $modal_radius;
+				padding: $base_padding;
+				spacing: $base_padding;
+				text-align: center;
+				transition-duration: 100ms;
+				background-color: transparent;
+				color: on($osd);
+			}
 
-            &:focus .overview-icon {
-                background-color: on($osd, divider);
-            }
-            &:hover .overview-icon {
-                background-color: rgba($white, 0.15);
-                box-shadow: inset 0 0 0 1px rgba($white, 0.15);
-            }
-            &:active .overview-icon {
-                background-color: on($osd, track);
-            }
-            &:checked .overview-icon {
-                background-color: on($osd, divider);
-            }
-        }
+			&:focus .overview-icon {
+				background-color: on($osd, divider);
+			}
+			&:hover .overview-icon {
+				background-color: rgba($white, 0.15);
+				box-shadow: inset 0 0 0 1px rgba($white, 0.15);
+			}
+			&:active .overview-icon {
+				background-color: on($osd, track);
+			}
+			&:checked .overview-icon {
+				background-color: on($osd, divider);
+			}
+		}
 
-        // running app dot
-        .app-well-app-running-dot,
-        .app-grid-running-dot {
-            // manually position the dot within the dash item
-            margin-bottom: $base_padding * 2; // 3px = size of dot (5px) subtracted from its translationY from appDisplay.js
-            offset-y: 8px;
-            width: 6px;
-            height: 6px;
-            border-radius: $circular_radius;
-            background-color: if($variant == 'light', $black, $white);
-        }
-    }
+		// running app dot
+		.app-well-app-running-dot,
+		.app-grid-running-dot {
+			// manually position the dot within the dash item
+			margin-bottom: $base_padding * 2; // 3px = size of dot (5px) subtracted from its translationY from appDisplay.js
+			offset-y: 8px;
+			width: 6px;
+			height: 6px;
+			border-radius: $circular_radius;
+			background-color: if($variant == 'light', $black, $white);
+		}
+	}
 
-    // separator between pinned and running apps
-    .dash-separator {
-        width: 1px;
-        margin-left: $base_margin;
-        margin-right: $base_margin;
-        background-color: if($variant == 'light', $black, rgba($white, 0.25));
-    }
+	// separator between pinned and running apps
+	.dash-separator {
+		width: 1px;
+		margin-left: $base_margin;
+		margin-right: $base_margin;
+		background-color: if($variant == 'light', $black, rgba($white, 0.25));
+	}
 
-    // make sure all dash components have same margin from screen edge
-    .dash-separator,
-    .dash-background {
-        margin-bottom: $dash_edge_offset;
-    }
+	// make sure all dash components have same margin from screen edge
+	.dash-separator,
+	.dash-background {
+		margin-bottom: $dash_edge_offset;
+	}
 }
 
 // OSD Tooltip
 .dash-label {
-    color: if($variant == 'light', $black, $white);
-    background-color: $dash_background_color;
-    border-radius: $base_radius;
-    padding: $base_padding $base_padding * 2;
-    box-shadow: none;
-    border: none;
-    text-align: center;
-    -y-offset: $base_margin * 3; // distance from the dash edge
-    -x-offset: 8px;
+	color: if($variant == 'light', $black, $white);
+	background-color: $dash_background_color;
+	border-radius: $base_radius;
+	padding: $base_padding $base_padding * 2;
+	box-shadow: none;
+	border: none;
+	text-align: center;
+	-y-offset: $base_margin * 3; // distance from the dash edge
+	-x-offset: 8px;
 }

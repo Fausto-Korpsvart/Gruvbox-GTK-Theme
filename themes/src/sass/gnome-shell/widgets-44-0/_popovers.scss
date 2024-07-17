@@ -1,36 +1,36 @@
 .popup-menu {
-    .popup-menu-item {
-        padding: $base_padding * 1.5 $base_padding * 2;
-    }
+	.popup-menu-item {
+		padding: $base_padding * 1.5 $base_padding * 2;
+	}
 }
 
 // separator
 .popup-separator-menu-item {
-    padding: $base_padding * 0.5 0 !important;
+	padding: $base_padding * 0.5 0 !important;
 
-    .popup-menu-ornament {
-        width: 0 !important;
-    }
+	.popup-menu-ornament {
+		width: 0 !important;
+	}
 
-    .popup-separator-menu-item-separator {
-        height: 1px; //not really the whole box
-        background-color: $divider;
-        margin: $base_padding 32px;
-        padding: 0 !important;
+	.popup-separator-menu-item-separator {
+		height: 1px; //not really the whole box
+		background-color: $divider;
+		margin: $base_padding 32px;
+		padding: 0 !important;
 
-        .popup-sub-menu & {
-            //submenu separators
-            padding: 0 !important;
-            margin: 0 32px 0 0;
-            height: 1px;
-        }
-    }
+		.popup-sub-menu & {
+			//submenu separators
+			padding: 0 !important;
+			margin: 0 32px 0 0;
+			height: 1px;
+		}
+	}
 }
 
 // container for radio and check boxes
 .popup-menu-ornament {
-    icon-size: $base_icon_size !important;
-    width: $base_icon_size;
+	icon-size: $base_icon_size !important;
+	width: $base_icon_size;
 }
 
 // system status popover menu

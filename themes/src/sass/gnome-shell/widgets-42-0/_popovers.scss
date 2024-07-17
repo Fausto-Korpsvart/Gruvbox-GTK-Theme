@@ -1,62 +1,62 @@
 .popup-menu {
-    .popup-menu-item {
-        padding: $base_padding $base_padding * 2 !important;
+	.popup-menu-item {
+		padding: $base_padding $base_padding * 2 !important;
 
-        &:ltr {
-            padding-right: $base_padding * 1.5 !important;
-            padding-left: 0 !important;
-        }
-        &:rtl {
-            padding-right: 0 !important;
-            padding-left: $base_padding * 1.5 !important;
-        }
-    }
+		&:ltr {
+			padding-right: $base_padding * 1.5 !important;
+			padding-left: 0 !important;
+		}
+		&:rtl {
+			padding-right: 0 !important;
+			padding-left: $base_padding * 1.5 !important;
+		}
+	}
 }
 
 // separator
 .popup-separator-menu-item {
-    padding: 0;
+	padding: 0;
 
-    .popup-menu-ornament {
-        width: 0 !important;
-    }
+	.popup-menu-ornament {
+		width: 0 !important;
+	}
 
-    .popup-separator-menu-item-separator {
-        height: 1px; //not really the whole box
-        background-color: $divider;
-        margin: $base_padding 32px;
+	.popup-separator-menu-item-separator {
+		height: 1px; //not really the whole box
+		background-color: $divider;
+		margin: $base_padding 32px;
 
-        .popup-sub-menu & {
-            //submenu separators
-            padding: 0;
-            margin: 0 32px 0 0;
-            height: 1px;
-        }
-    }
+		.popup-sub-menu & {
+			//submenu separators
+			padding: 0;
+			margin: 0 32px 0 0;
+			height: 1px;
+		}
+	}
 }
 
 // container for radio and check boxes
 .popup-menu-ornament {
-    width: 1.2em;
+	width: 1.2em;
 
-    &:ltr {
-        text-align: right;
-    }
-    &:rtl {
-        text-align: left;
-    }
+	&:ltr {
+		text-align: right;
+	}
+	&:rtl {
+		text-align: left;
+	}
 }
 
 // system status popover menu
 .aggregate-menu {
-    .popup-sub-menu .popup-menu-item > :first-child {
-        &:ltr {
-            padding-left: $base_padding * 2 !important;
-            margin-left: 0 !important;
-        }
-        &:rtl {
-            padding-right: $base_padding * 2 !important;
-            margin-right: 0 !important;
-        }
-    }
+	.popup-sub-menu .popup-menu-item > :first-child {
+		&:ltr {
+			padding-left: $base_padding * 2 !important;
+			margin-left: 0 !important;
+		}
+		&:rtl {
+			padding-right: $base_padding * 2 !important;
+			margin-right: 0 !important;
+		}
+	}
 }

@@ -6,77 +6,77 @@
  *********/
 // Decorations
 UnityDecoration {
-    -unitydecoration-extents: 28px 0 0 0;
-    -unitydecoration-input-extents: 8px;
+	-unitydecoration-extents: 28px 0 0 0;
+	-unitydecoration-input-extents: 8px;
 
-    -unitydecoration-shadow-offset-x: 0;
-    -unitydecoration-shadow-offset-y: 3px;
-    -unitydecoration-active-shadow-color: rgba(black, 0.48);
-    -unitydecoration-active-shadow-radius: 18px;
-    -unitydecoration-inactive-shadow-color: rgba(black, 0.32);
-    -unitydecoration-inactive-shadow-radius: 6px;
+	-unitydecoration-shadow-offset-x: 0;
+	-unitydecoration-shadow-offset-y: 3px;
+	-unitydecoration-active-shadow-color: rgba(black, 0.48);
+	-unitydecoration-active-shadow-radius: 18px;
+	-unitydecoration-inactive-shadow-color: rgba(black, 0.32);
+	-unitydecoration-inactive-shadow-radius: 6px;
 
-    -unitydecoration-glow-size: 8px;
-    -unitydecoration-glow-color: $primary;
+	-unitydecoration-glow-size: 8px;
+	-unitydecoration-glow-color: $primary;
 
-    -unitydecoration-title-indent: 4px;
-    -unitydecoration-title-fade: 32px;
-    -unitydecoration-title-alignment: 0;
+	-unitydecoration-title-indent: 4px;
+	-unitydecoration-title-fade: 32px;
+	-unitydecoration-title-alignment: 0;
 
-    .top {
-        padding: 0 2px;
-        border-style: none;
-        border-radius: $window-radius $window-radius 0 0;
-        box-shadow: inset 0 1px highlight($titlebar);
-        background-color: $titlebar;
-        color: $titlebar-text;
+	.top {
+		padding: 0 2px;
+		border-style: none;
+		border-radius: $window-radius $window-radius 0 0;
+		box-shadow: inset 0 1px highlight($titlebar);
+		background-color: $titlebar;
+		color: $titlebar-text;
 
-        &:backdrop {
-            background-color: $titlebar-backdrop;
-            color: $titlebar-text-secondary;
-        }
-    }
+		&:backdrop {
+			background-color: $titlebar-backdrop;
+			color: $titlebar-text-secondary;
+		}
+	}
 
-    .left,
-    .right {
-    }
+	.left,
+	.right {
+	}
 
-    .bottom {
-    }
+	.bottom {
+	}
 
-    .menuitem {
-        color: $titlebar-text-secondary;
+	.menuitem {
+		color: $titlebar-text-secondary;
 
-        &:hover {
-            box-shadow: inset 0 -2px $titlebar-indicator;
-            background-color: transparent;
-            color: $titlebar-text;
-        }
-    }
+		&:hover {
+			box-shadow: inset 0 -2px $titlebar-indicator;
+			background-color: transparent;
+			color: $titlebar-text;
+		}
+	}
 }
 
 .background:not(.csd) headerbar:not(.titlebar) {
-    border-radius: 0;
-    box-shadow: $shadow-z1;
+	border-radius: 0;
+	box-shadow: $shadow-z1;
 
-    &.inline-toolbar {
-        border-style: none;
-    }
+	&.inline-toolbar {
+		border-style: none;
+	}
 }
 
 sheet-style-dialog.unity-force-quit {
-    // background-color: $background;
+	// background-color: $background;
 }
 
 // Panel Style
 UnityPanelWidget,
 .unity-panel {
-    background-color: $panel-solid;
-    color: $titlebar-text;
+	background-color: $panel-solid;
+	color: $titlebar-text;
 
-    &:backdrop {
-        color: $titlebar-text-secondary;
-    }
+	&:backdrop {
+		color: $titlebar-text-secondary;
+	}
 }
 
 .unity-panel.menubar,
@@ -85,18 +85,18 @@ UnityPanelWidget,
 
 .unity-panel.menuitem,
 .unity-panel .menuitem {
-    color: $titlebar-text-secondary;
+	color: $titlebar-text-secondary;
 }
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-    box-shadow: inset 0 -2px $titlebar-indicator;
-    background-color: transparent;
-    color: $titlebar-text;
+	box-shadow: inset 0 -2px $titlebar-indicator;
+	background-color: transparent;
+	color: $titlebar-text;
 }
 
 .menu IdoPlaybackMenuItem.menuitem:active {
-    -gtk-icon-source: -gtk-icontheme('process-working-symbolic');
-    animation: spin 1s linear infinite;
-    color: $primary;
+	-gtk-icon-source: -gtk-icontheme('process-working-symbolic');
+	animation: spin 1s linear infinite;
+	color: $primary;
 }

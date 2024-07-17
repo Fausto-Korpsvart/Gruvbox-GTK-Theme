@@ -7,1060 +7,1060 @@
 // Container for both the "panel" area and the shadow. Wise to keep
 // this transparent..
 .budgie-container {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 // Budgie setting
 .budgie-settings-window {
-    list.sidebar {
-        background: none;
-        border-radius: 0 0 0 $window-radius;
-    }
+	list.sidebar {
+		background: none;
+		border-radius: 0 0 0 $window-radius;
+	}
 
-    buttonbox.inline-toolbar {
-        border-style: none none solid;
+	buttonbox.inline-toolbar {
+		border-style: none none solid;
 
-        button {
-            border-radius: $corner-radius;
+		button {
+			border-radius: $corner-radius;
 
-            @extend %button-flat-simple;
-        }
-    }
+			@extend %button-flat-simple;
+		}
+	}
 }
 
 // Budgie popover
 .budgie-popover {
-    @if $outline == 'false' {
-        border: none;
-        box-shadow: $shadow-z4;
-    } @else {
-        border-color: $popover;
-        box-shadow:
-            $shadow-z4,
-            0 0 0 2px $indicator;
-        background-clip: border-box;
-    }
+	@if $outline == 'false' {
+		border: none;
+		box-shadow: $shadow-z4;
+	} @else {
+		border-color: $popover;
+		box-shadow:
+			$shadow-z4,
+			0 0 0 2px $indicator;
+		background-clip: border-box;
+	}
 
-    background-color: $popover;
-    border-radius: $menu-radius;
+	background-color: $popover;
+	border-radius: $menu-radius;
 
-    frame.container {
-        padding: $space-size;
-        border: none;
+	frame.container {
+		padding: $space-size;
+		border: none;
 
-        .container {
-            padding: 0;
-        }
-    }
+		.container {
+			padding: 0;
+		}
+	}
 
-    list,
-    row {
-        padding: 0;
-    }
+	list,
+	row {
+		padding: 0;
+	}
 
-    separator {
-        margin: $space-size / 2 0;
-    }
+	separator {
+		margin: $space-size / 2 0;
+	}
 
-    border {
-        border: none;
-    }
+	border {
+		border: none;
+	}
 
-    list {
-        background-color: transparent;
-    }
+	list {
+		background-color: transparent;
+	}
 
-    row {
-        &:hover {
-            box-shadow: none;
-        }
+	row {
+		&:hover {
+			box-shadow: none;
+		}
 
-        button {
-            @extend %button-flat-simple;
-            // border-radius: $corner-radius;
-        }
-    }
+		button {
+			@extend %button-flat-simple;
+			// border-radius: $corner-radius;
+		}
+	}
 
-    // AppMenu (Elementary)
-    scrolledwindow.sidebar:not(.categories) {
-        background-color: $fill;
-        border-right: none;
-        border-bottom-left-radius: $menu-radius;
+	// AppMenu (Elementary)
+	scrolledwindow.sidebar:not(.categories) {
+		background-color: $fill;
+		border-right: none;
+		border-bottom-left-radius: $menu-radius;
 
-        list > row.activatable {
-            @extend %row_activatable;
-            padding: $space-size ($space-size + 2px);
-        }
-    }
+		list > row.activatable {
+			@extend %row_activatable;
+			padding: $space-size ($space-size + 2px);
+		}
+	}
 
-    treeview.view.sidebar {
-        border-right: none;
-        background: none;
+	treeview.view.sidebar {
+		border-right: none;
+		background: none;
 
-        &:hover {
-            background-color: $overlay-hover;
-        }
-        &:selected {
-            background-color: $overlay-active;
-        }
-    }
+		&:hover {
+			background-color: $overlay-hover;
+		}
+		&:selected {
+			background-color: $overlay-active;
+		}
+	}
 
-    &.bottom scrolledwindow.sidebar:not(.categories) {
-        padding-top: $menu-radius;
-        border-top-left-radius: $menu-radius;
-        border-bottom-left-radius: 0;
-    }
+	&.bottom scrolledwindow.sidebar:not(.categories) {
+		padding-top: $menu-radius;
+		border-top-left-radius: $menu-radius;
+		border-bottom-left-radius: 0;
+	}
 
-    > frame.container > grid.horizontal > grid.horizontal {
-        > widget > grid.horizontal > stack {
-            border-top: 1px solid $divider;
-        }
-    }
+	> frame.container > grid.horizontal > grid.horizontal {
+		> widget > grid.horizontal > stack {
+			border-top: 1px solid $divider;
+		}
+	}
 
-    &.bottom > frame.container > grid.horizontal > grid.horizontal {
-        > widget > grid.horizontal > stack {
-            border-top: none;
-            border-bottom: 1px solid $divider;
-        }
-    }
+	&.bottom > frame.container > grid.horizontal > grid.horizontal {
+		> widget > grid.horizontal > stack {
+			border-top: none;
+			border-bottom: 1px solid $divider;
+		}
+	}
 
-    &.budgie-menu {
-        // Budgie AppMenu
-        .container {
-            padding: 0;
-        }
+	&.budgie-menu {
+		// Budgie AppMenu
+		.container {
+			padding: 0;
+		}
 
-        .sidebar,
-        scrollbar,
-        entry.search {
-            background-color: transparent;
-        }
+		.sidebar,
+		scrollbar,
+		entry.search {
+			background-color: transparent;
+		}
 
-        entry.search {
-            border-bottom: 1px solid $divider;
-            border-image: none;
-            border-radius: 0;
-            box-shadow: none;
-            font-size: 120%;
-        }
+		entry.search {
+			border-bottom: 1px solid $divider;
+			border-image: none;
+			border-radius: 0;
+			box-shadow: none;
+			font-size: 120%;
+		}
 
-        scrolledwindow.sidebar.categories {
-            background-color: $fill;
-            padding-bottom: $menu-radius;
+		scrolledwindow.sidebar.categories {
+			background-color: $fill;
+			padding-bottom: $menu-radius;
 
-            button.flat.radio.category-button {
-                @extend %button-flat;
-                border-radius: 0;
-            }
-        }
+			button.flat.radio.category-button {
+				@extend %button-flat;
+				border-radius: 0;
+			}
+		}
 
-        scrolledwindow > viewport.frame > list > row.activatable > button.flat {
-            border-radius: 0;
-        }
+		scrolledwindow > viewport.frame > list > row.activatable > button.flat {
+			border-radius: 0;
+		}
 
-        list.left-overlay-menu {
-            border-radius: $menu-radius;
-            background-color: $base;
-            padding: $space-size;
-            margin: $space-size;
-            border: none;
+		list.left-overlay-menu {
+			border-radius: $menu-radius;
+			background-color: $base;
+			padding: $space-size;
+			margin: $space-size;
+			border: none;
 
-            @if $outline == 'false' {
-                box-shadow: $shadow-z4;
-            } @else {
-                box-shadow:
-                    $shadow-z4,
-                    0 0 0 2px $indicator;
-            }
+			@if $outline == 'false' {
+				box-shadow: $shadow-z4;
+			} @else {
+				box-shadow:
+					$shadow-z4,
+					0 0 0 2px $indicator;
+			}
 
-            > row.activatable {
-                border-radius: $corner-radius;
+			> row.activatable {
+				border-radius: $corner-radius;
 
-                &:not(:last-child) {
-                    margin-bottom: $space-size / 2;
-                }
+				&:not(:last-child) {
+					margin-bottom: $space-size / 2;
+				}
 
-                button.menuitem {
-                    border-radius: $corner-radius;
-                }
-            }
-        }
+				button.menuitem {
+					border-radius: $corner-radius;
+				}
+			}
+		}
 
-        .budgie-menu-footer {
-            border-top: 1px solid $border;
-            padding: $space-size;
+		.budgie-menu-footer {
+			border-top: 1px solid $border;
+			padding: $space-size;
 
-            button.flat {
-                padding: $space-size / 2;
-                border-radius: $corner-radius;
+			button.flat {
+				padding: $space-size / 2;
+				border-radius: $corner-radius;
 
-                &.image-button {
-                    border-radius: $circular-radius;
-                    padding: $space-size;
-                    min-height: 16px;
-                    min-width: 16px;
-                    margin-left: $space-size;
-                    background-clip: border-box;
-                }
-            }
-        }
-    }
+				&.image-button {
+					border-radius: $circular-radius;
+					padding: $space-size;
+					min-height: 16px;
+					min-width: 16px;
+					margin-left: $space-size;
+					background-clip: border-box;
+				}
+			}
+		}
+	}
 
-    &.user-menu {
-        list,
-        row {
-            // reset styling
-            border: none;
-            background: none;
-            box-shadow: none;
-        }
+	&.user-menu {
+		list,
+		row {
+			// reset styling
+			border: none;
+			background: none;
+			box-shadow: none;
+		}
 
-        // top-row (user-name and avatar)
-        > frame.container > box.vertical row.activatable:first-child {
-            margin-bottom: 0;
-            outline-width: 0;
-            border-radius: $corner-radius;
+		// top-row (user-name and avatar)
+		> frame.container > box.vertical row.activatable:first-child {
+			margin-bottom: 0;
+			outline-width: 0;
+			border-radius: $corner-radius;
 
-            button.indicator-item {
-                transition: none;
-                animation: none;
-            }
-        }
-    }
+			button.indicator-item {
+				transition: none;
+				animation: none;
+			}
+		}
+	}
 
-    // &.sound-popover {
-    //   separator { margin: $space-size / 2 0; }
-    // }
+	// &.sound-popover {
+	//   separator { margin: $space-size / 2 0; }
+	// }
 
-    // &.caffeine-popover {
-    // }
+	// &.caffeine-popover {
+	// }
 
-    &.night-light-indicator {
-        .view-header {
-            margin: 0 $space-size;
-        }
-    }
+	&.night-light-indicator {
+		.view-header {
+			margin: 0 $space-size;
+		}
+	}
 
-    &.places-menu {
-        .name-button {
-            image {
-                &:dir(ltr) {
-                    margin-right: $space-size / 2;
-                }
-                &:dir(rtl) {
-                    margin-left: $space-size / 2;
-                }
-            }
-        }
+	&.places-menu {
+		.name-button {
+			image {
+				&:dir(ltr) {
+					margin-right: $space-size / 2;
+				}
+				&:dir(rtl) {
+					margin-left: $space-size / 2;
+				}
+			}
+		}
 
-        .unmount-button {
-            margin: ($menuitem-size - $small-size) / 2;
-            padding: 0;
-        }
+		.unmount-button {
+			margin: ($menuitem-size - $small-size) / 2;
+			padding: 0;
+		}
 
-        .places-list:not(.always-expand) {
-            margin-top: $space-size / 2;
-            padding-top: $space-size / 2;
-            border-top: 1px solid $divider;
-        }
+		.places-list:not(.always-expand) {
+			margin-top: $space-size / 2;
+			padding-top: $space-size / 2;
+			border-top: 1px solid $divider;
+		}
 
-        // use such sizes for consistency with other hard-coded dim-label sizes
-        .alternative-label {
-            padding: $space-size / 2;
-            font-size: 15px;
-        }
-    }
+		// use such sizes for consistency with other hard-coded dim-label sizes
+		.alternative-label {
+			padding: $space-size / 2;
+			font-size: 15px;
+		}
+	}
 
-    &.workspace-popover {
-        flowboxchild {
-            padding: 0;
-        }
-    }
+	&.workspace-popover {
+		flowboxchild {
+			padding: 0;
+		}
+	}
 }
 
 // FIXME: workspace has unnecessary/unknown margin
 .workspace-switcher {
-    .workspace-layout {
-        border: 0 solid on($panel, divider);
+	.workspace-layout {
+		border: 0 solid on($panel, divider);
 
-        .top &,
-        .bottom & {
-            &:dir(ltr) {
-                border-left-width: 1px;
-            }
+		.top &,
+		.bottom & {
+			&:dir(ltr) {
+				border-left-width: 1px;
+			}
 
-            &:dir(rtl) {
-                border-right-width: 1px;
-            }
-        }
+			&:dir(rtl) {
+				border-right-width: 1px;
+			}
+		}
 
-        .left &,
-        .right & {
-            border-top-width: 1px;
-        }
-    }
+		.left &,
+		.right & {
+			border-top-width: 1px;
+		}
+	}
 
-    .workspace-item,
-    .workspace-add-button {
-        border: 0 solid on($panel, divider);
+	.workspace-item,
+	.workspace-add-button {
+		border: 0 solid on($panel, divider);
 
-        .top &,
-        .bottom & {
-            &:dir(ltr) {
-                border-right-width: 1px;
-            }
+		.top &,
+		.bottom & {
+			&:dir(ltr) {
+				border-right-width: 1px;
+			}
 
-            &:dir(rtl) {
-                border-left-width: 1px;
-            }
-        }
+			&:dir(rtl) {
+				border-left-width: 1px;
+			}
+		}
 
-        .left &,
-        .right & {
-            border-bottom-width: 1px;
-        }
-    }
+		.left &,
+		.right & {
+			border-bottom-width: 1px;
+		}
+	}
 
-    .workspace-item {
-        transition: $transition;
+	.workspace-item {
+		transition: $transition;
 
-        &.current-workspace {
-            background-color: $overlay-checked;
-        }
-    }
+		&.current-workspace {
+			background-color: $overlay-checked;
+		}
+	}
 
-    .workspace-add-button {
-        &:hover {
-            box-shadow: none;
-        }
+	.workspace-add-button {
+		&:hover {
+			box-shadow: none;
+		}
 
-        &:active {
-            background-image: none;
-        }
+		&:active {
+			background-image: none;
+		}
 
-        &:active image {
-            margin: 1px 0 -1px;
-        }
-    }
+		&:active image {
+			margin: 1px 0 -1px;
+		}
+	}
 
-    .workspace-icon-button {
-        .budgie-panel & {
-            // to overwrite the .budgie-panel button style below
-            min-height: 24px;
-            min-width: 24px;
-            padding: 0;
-            border-radius: $corner-radius;
-        }
-    }
+	.workspace-icon-button {
+		.budgie-panel & {
+			// to overwrite the .budgie-panel button style below
+			min-height: 24px;
+			min-width: 24px;
+			padding: 0;
+			border-radius: $corner-radius;
+		}
+	}
 }
 
 %panel_circular_button {
-    padding: 0;
-    margin: ($space-size / 2) 0;
-    min-width: 16px;
-    min-height: 16px;
-    color: on($panel, secondary);
+	padding: 0;
+	margin: ($space-size / 2) 0;
+	min-width: 16px;
+	min-height: 16px;
+	color: on($panel, secondary);
 
-    &,
-    &:hover,
-    &:active,
-    &:checked {
-        background: none;
-        box-shadow: none;
-    }
+	&,
+	&:hover,
+	&:active,
+	&:checked {
+		background: none;
+		box-shadow: none;
+	}
 
-    image {
-        padding: 0;
-        margin: 0;
-        border-radius: $circular-radius;
-        background-image: image(on($panel, divider));
-    }
+	image {
+		padding: 0;
+		margin: 0;
+		border-radius: $circular-radius;
+		background-image: image(on($panel, divider));
+	}
 
-    &:hover {
-        color: on($panel);
+	&:hover {
+		color: on($panel);
 
-        image {
-            background-image: image(rgba($white, 0.2));
-        }
-    }
+		image {
+			background-image: image(rgba($white, 0.2));
+		}
+	}
 
-    &:active,
-    &:checked {
-        color: on($panel);
+	&:active,
+	&:checked {
+		color: on($panel);
 
-        image {
-            background-image: image(rgba($white, 0.28));
-        }
-    }
+		image {
+			background-image: image(rgba($white, 0.28));
+		}
+	}
 }
 
 // Panel
 .budgie-panel {
-    transition: background-color $duration $ease-out;
-    background-color: $panel;
-    color: on($panel, secondary);
-    font-weight: 500;
+	transition: background-color $duration $ease-out;
+	background-color: $panel;
+	color: on($panel, secondary);
+	font-weight: 500;
 
-    &.transparent {
-        background-color: rgba($panel, 0.75);
-    }
+	&.transparent {
+		background-color: rgba($panel, 0.75);
+	}
 
-    .icon-tasklist {
-        button.launcher {
-            &:checked,
-            &:active {
-                color: on($panel);
-            }
-        }
-    }
+	.icon-tasklist {
+		button.launcher {
+			&:checked,
+			&:active {
+				color: on($panel);
+			}
+		}
+	}
 
-    .top & {
-        &.dock-mode {
-            border-radius: 0 0 $window-radius $window-radius;
-        }
-    }
+	.top & {
+		&.dock-mode {
+			border-radius: 0 0 $window-radius $window-radius;
+		}
+	}
 
-    .bottom & {
-        &.dock-mode {
-            border-radius: $window-radius $window-radius 0 0;
+	.bottom & {
+		&.dock-mode {
+			border-radius: $window-radius $window-radius 0 0;
 
-            .icon-tasklist {
-                > box > revealer {
-                    &:first-child > button.launcher {
-                        border-top-left-radius: $window-radius;
-                    }
-                    &:last-child > button.launcher {
-                        border-top-right-radius: $window-radius;
-                    }
-                }
-            }
-        }
-    }
+			.icon-tasklist {
+				> box > revealer {
+					&:first-child > button.launcher {
+						border-top-left-radius: $window-radius;
+					}
+					&:last-child > button.launcher {
+						border-top-right-radius: $window-radius;
+					}
+				}
+			}
+		}
+	}
 
-    .left & {
-        &.dock-mode {
-            border-radius: 0 $window-radius $window-radius 0;
+	.left & {
+		&.dock-mode {
+			border-radius: 0 $window-radius $window-radius 0;
 
-            .icon-tasklist {
-                .launcher {
-                    &:first-child {
-                        border-top-right-radius: $window-radius;
-                    }
-                    &:last-child {
-                        border-bottom-right-radius: $window-radius;
-                    }
-                }
-            }
-        }
-    }
+			.icon-tasklist {
+				.launcher {
+					&:first-child {
+						border-top-right-radius: $window-radius;
+					}
+					&:last-child {
+						border-bottom-right-radius: $window-radius;
+					}
+				}
+			}
+		}
+	}
 
-    .right & {
-        &.dock-mode {
-            border-radius: $window-radius 0 0 $window-radius;
+	.right & {
+		&.dock-mode {
+			border-radius: $window-radius 0 0 $window-radius;
 
-            .icon-tasklist {
-                .launcher {
-                    &:first-child {
-                        border-top-left-radius: $window-radius;
-                    }
-                    &:last-child {
-                        border-bottom-left-radius: $window-radius;
-                    }
-                }
-            }
-        }
-    }
+			.icon-tasklist {
+				.launcher {
+					&:first-child {
+						border-top-left-radius: $window-radius;
+					}
+					&:last-child {
+						border-bottom-left-radius: $window-radius;
+					}
+				}
+			}
+		}
+	}
 
-    button {
-        @extend %button-flat-simple;
-        color: on($panel, secondary);
-        min-height: 24px;
-        min-width: 24px;
-        padding: 0;
-        border-radius: 0;
+	button {
+		@extend %button-flat-simple;
+		color: on($panel, secondary);
+		min-height: 24px;
+		min-width: 24px;
+		padding: 0;
+		border-radius: 0;
 
-        &:hover {
-            color: on($panel);
-        }
+		&:hover {
+			color: on($panel);
+		}
 
-        &:active {
-            color: on($panel, secondary);
-        }
+		&:active {
+			color: on($panel, secondary);
+		}
 
-        // Menu Button
-        &.budgie-menu-launcher {
-            // @extend %panel_circular_button;
-            color: on($panel, secondary);
+		// Menu Button
+		&.budgie-menu-launcher {
+			// @extend %panel_circular_button;
+			color: on($panel, secondary);
 
-            &:focus {
-                // Fixed issues when global menubar item is hovering
-                // background: none;
-                box-shadow: none;
-                border: none;
-                color: on($panel);
-            }
-        }
+			&:focus {
+				// Fixed issues when global menubar item is hovering
+				// background: none;
+				box-shadow: none;
+				border: none;
+				color: on($panel);
+			}
+		}
 
-        // Raven Trigger
-        &.raven-trigger {
-            color: on($panel, secondary);
-        }
-    }
+		// Raven Trigger
+		&.raven-trigger {
+			color: on($panel, secondary);
+		}
+	}
 
-    &.horizontal button {
-        padding: 0 4px;
-    }
+	&.horizontal button {
+		padding: 0 4px;
+	}
 
-    &.vertical button {
-        padding: 4px 0;
-    }
+	&.vertical button {
+		padding: 4px 0;
+	}
 
-    separator {
-        background-color: on($panel, divider);
-    }
+	separator {
+		background-color: on($panel, divider);
+	}
 
-    // used to indicate unread notifications
-    .alert {
-        color: $destructive;
-    }
+	// used to indicate unread notifications
+	.alert {
+		color: $destructive;
+	}
 
-    // Add padding for panel indicators icons
-    > box > widget > widget {
-        > image, // normal
+	// Add padding for panel indicators icons
+	> box > widget > widget {
+		> image, // normal
     > stack > image, // Screenshot
     > box > image {
-            // Places
-            margin-left: 6px;
-            margin-right: 6px;
-        }
+			// Places
+			margin-left: 6px;
+			margin-right: 6px;
+		}
 
-        > box > image + label {
-            // Reset for mailneg
-            margin-left: -4px;
-        }
+		> box > image + label {
+			// Reset for mailneg
+			margin-left: -4px;
+		}
 
-        > box {
-            // keyboard Layout
-            > widget > image {
-                margin-left: 6px;
-            }
-            > stack > widget > label {
-                margin-right: 6px;
-            }
-        }
+		> box {
+			// keyboard Layout
+			> widget > image {
+				margin-left: 6px;
+			}
+			> stack > widget > label {
+				margin-right: 6px;
+			}
+		}
 
-        > box > widget > widget > image {
-            // Status
-            margin-left: 2px;
-            margin-right: 2px;
-        }
-    }
+		> box > widget > widget > image {
+			// Status
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+	}
 
-    // Time label
-    .budgie-clock-applet,
-    .budgie-calendar-applet {
-        > widget > box {
-            padding-left: 3px;
-            padding-right: 3px;
-        }
-    }
+	// Time label
+	.budgie-clock-applet,
+	.budgie-calendar-applet {
+		> widget > box {
+			padding-left: 3px;
+			padding-right: 3px;
+		}
+	}
 
-    // budgie-pixel-saver-applet
-    .titlebar:not(headerbar) {
-        min-height: 0;
-        padding: 0;
-        box-shadow: none;
-        background-color: transparent;
-        color: on($panel);
+	// budgie-pixel-saver-applet
+	.titlebar:not(headerbar) {
+		min-height: 0;
+		padding: 0;
+		box-shadow: none;
+		background-color: transparent;
+		color: on($panel);
 
-        button:not(.suggested-action):not(.destructive-action) {
-            color: on($panel, secondary);
+		button:not(.suggested-action):not(.destructive-action) {
+			color: on($panel, secondary);
 
-            &:hover,
-            &:active {
-                color: on($panel);
-            }
-        }
-    }
+			&:hover,
+			&:active {
+				color: on($panel);
+			}
+		}
+	}
 
-    // Budgie styled Gtk Menus
-    menubar,
-    .menubar {
-        color: on($panel, secondary);
-        box-shadow: none;
-        border: none;
+	// Budgie styled Gtk Menus
+	menubar,
+	.menubar {
+		color: on($panel, secondary);
+		box-shadow: none;
+		border: none;
 
-        > menuitem {
-            color: on($panel, secondary);
+		> menuitem {
+			color: on($panel, secondary);
 
-            &:hover,
-            &:active {
-                color: on($panel);
-            }
-        }
+			&:hover,
+			&:active {
+				color: on($panel);
+			}
+		}
 
-        menu separator {
-            background-color: $border;
-        }
-    }
+		menu separator {
+			background-color: $border;
+		}
+	}
 
-    // Tasklist
-    #tasklist-button {
-        padding: 0 4px;
+	// Tasklist
+	#tasklist-button {
+		padding: 0 4px;
 
-        @extend %underscores;
-    }
+		@extend %underscores;
+	}
 
-    &.vertical #tasklist-button {
-        min-height: 32px;
-    }
+	&.vertical #tasklist-button {
+		min-height: 32px;
+	}
 
-    // Icon Tasklist
-    button.flat.launcher {
-        padding: 0;
+	// Icon Tasklist
+	button.flat.launcher {
+		padding: 0;
 
-        // @extend %underscores;
+		// @extend %underscores;
 
-        // for indicator colors
-        &:not(:checked) {
-            color: on($panel, disabled);
+		// for indicator colors
+		&:not(:checked) {
+			color: on($panel, disabled);
 
-            &:hover,
-            &:active {
-                color: on($panel, secondary);
-            }
+			&:hover,
+			&:active {
+				color: on($panel, secondary);
+			}
 
-            &:disabled {
-                color: on($panel, secondary-disabled);
-            }
-        }
-    }
+			&:disabled {
+				color: on($panel, secondary-disabled);
+			}
+		}
+	}
 
-    .unpinned button.flat.launcher,
-    .pinned button.flat.launcher.running {
-        @each $pos, $b_pos,
-            $b_wid in (top, center calc(1px), 2 0 0 0 / 2px 0 0 0),
-            (bottom, center calc(100% - 1px), 0 0 2 0 / 0 0 2px 0),
-            (left, calc(1px) center, 0 0 0 2 / 0 0 0 2px),
-            (right, calc(100% - 1px) center, 0 2 0 0 / 0 2px 0 0)
-        {
-            .#{$pos} & {
-                &:checked {
-                    border-image: radial-gradient(
-                            circle closest-corner at #{$b_pos},
-                            currentColor 100%,
-                            transparent 0%
-                        )
-                        #{$b_wid};
-                }
-            }
-        }
-    }
+	.unpinned button.flat.launcher,
+	.pinned button.flat.launcher.running {
+		@each $pos, $b_pos,
+			$b_wid in (top, center calc(1px), 2 0 0 0 / 2px 0 0 0),
+			(bottom, center calc(100% - 1px), 0 0 2 0 / 0 0 2px 0),
+			(left, calc(1px) center, 0 0 0 2 / 0 0 0 2px),
+			(right, calc(100% - 1px) center, 0 2 0 0 / 0 2px 0 0)
+		{
+			.#{$pos} & {
+				&:checked {
+					border-image: radial-gradient(
+							circle closest-corner at #{$b_pos},
+							currentColor 100%,
+							transparent 0%
+						)
+						#{$b_wid};
+				}
+			}
+		}
+	}
 }
 
 %underscores {
-    @each $pos, $b_pos, $b_wid in (top, center calc(1px), 2 0 0 0 / 2px 0 0 0),
-        (bottom, center calc(100% - 1px), 0 0 2 0 / 0 0 2px 0),
-        (left, calc(1px) center, 0 0 0 2 / 0 0 0 2px),
-        (right, calc(100% - 1px) center, 0 2 0 0 / 0 2px 0 0)
-    {
-        .#{$pos} & {
-            & {
-                border-image: radial-gradient(
-                        circle closest-corner at #{$b_pos},
-                        currentColor 0%,
-                        transparent 0%
-                    )
-                    0
-                    0
-                    0
-                    0 /
-                    0
-                    0
-                    0
-                    0;
-            }
+	@each $pos, $b_pos, $b_wid in (top, center calc(1px), 2 0 0 0 / 2px 0 0 0),
+		(bottom, center calc(100% - 1px), 0 0 2 0 / 0 0 2px 0),
+		(left, calc(1px) center, 0 0 0 2 / 0 0 0 2px),
+		(right, calc(100% - 1px) center, 0 2 0 0 / 0 2px 0 0)
+	{
+		.#{$pos} & {
+			& {
+				border-image: radial-gradient(
+						circle closest-corner at #{$b_pos},
+						currentColor 0%,
+						transparent 0%
+					)
+					0
+					0
+					0
+					0 /
+					0
+					0
+					0
+					0;
+			}
 
-            &:checked {
-                border-image: radial-gradient(
-                        circle closest-corner at #{$b_pos},
-                        currentColor 100%,
-                        transparent 0%
-                    )
-                    #{$b_wid};
-            }
-        }
-    }
+			&:checked {
+				border-image: radial-gradient(
+						circle closest-corner at #{$b_pos},
+						currentColor 100%,
+						transparent 0%
+					)
+					#{$b_wid};
+			}
+		}
+	}
 }
 
 frame.raven-frame > border {
-    border-style: none;
-    // box-shadow: $shadow-z16;
+	border-style: none;
+	// box-shadow: $shadow-z16;
 }
 
 $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
 @each $pos, $b_pos in $pos_list {
-    // Panel borders
-    // .#{$pos} .budgie-panel { border-#{$b_pos}: 4px solid transparent; }
+	// Panel borders
+	// .#{$pos} .budgie-panel { border-#{$b_pos}: 4px solid transparent; }
 
-    // Raven borders
-    .#{$pos} frame.raven-frame > border {
-        margin-#{$b_pos}: 32px;
-        // border-#{$b_pos}: 1px solid $frame;
-    }
+	// Raven borders
+	.#{$pos} frame.raven-frame > border {
+		margin-#{$b_pos}: 32px;
+		// border-#{$b_pos}: 1px solid $frame;
+	}
 
-    // Shadows
-    // .#{$pos} .shadow-block { background-image: linear-gradient(to $b_pos, $frame, transparent); }
+	// Shadows
+	// .#{$pos} .shadow-block { background-image: linear-gradient(to $b_pos, $frame, transparent); }
 }
 
 // Raven
 .raven {
-    background-color: $surface;
-    box-shadow: $shadow-z16;
+	background-color: $surface;
+	box-shadow: $shadow-z16;
 
-    > box {
-        margin-bottom: -10px;
-    } // remove extra space between box and .raven-header.bottom
+	> box {
+		margin-bottom: -10px;
+	} // remove extra space between box and .raven-header.bottom
 
-    stackswitcher.linked {
-        margin: 6px 16px;
+	stackswitcher.linked {
+		margin: 6px 16px;
 
-        > button {
-            @extend %button-flat;
+		> button {
+			@extend %button-flat;
 
-            &:focus {
-                box-shadow: none;
-            }
-        }
-    }
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
 
-    .raven-header {
-        min-height: $medium-size;
-        padding: 3px;
+	.raven-header {
+		min-height: $medium-size;
+		padding: 3px;
 
-        &.top {
-            padding: 0;
-            border-bottom: 1px solid $divider;
+		&.top {
+			padding: 0;
+			border-bottom: 1px solid $divider;
 
-            stackswitcher button {
-                margin: -4px 0 -5px; // remove unwanted vertical margins
-                padding: 0 16px;
-                min-height: $small-size;
-            }
-        }
+			stackswitcher button {
+				margin: -4px 0 -5px; // remove unwanted vertical margins
+				padding: 0 16px;
+				min-height: $small-size;
+			}
+		}
 
-        &.bottom {
-            border-top: 1px solid $divider;
-        }
-    }
+		&.bottom {
+			border-top: 1px solid $divider;
+		}
+	}
 
-    stack {
-        .raven-header {
-            margin-top: -6px;
-        } // remove extra space in Notifications stack
+	stack {
+		.raven-header {
+			margin-top: -6px;
+		} // remove extra space in Notifications stack
 
-        scrolledwindow .raven-header {
-            margin-top: -8px;
-        } // remove extra spaces in Applets stack
-    }
+		scrolledwindow .raven-header {
+			margin-top: -8px;
+		} // remove extra spaces in Applets stack
+	}
 
-    .expander-button {
-        @extend %circular-button;
-    }
+	.expander-button {
+		@extend %circular-button;
+	}
 
-    .raven-background {
-        border-style: solid none;
-        border-width: 1px;
-        border-color: $divider;
-        background-color: $base;
+	.raven-background {
+		border-style: solid none;
+		border-width: 1px;
+		border-color: $divider;
+		background-color: $base;
 
-        // &.middle { border-bottom-style: none; } // applet background between two headers
+		// &.middle { border-bottom-style: none; } // applet background between two headers
 
-        > overlay > widget > image {
-            color: $divider;
-        }
-    }
+		> overlay > widget > image {
+			color: $divider;
+		}
+	}
 
-    scrolledwindow.raven-background {
-        border-bottom-style: none;
-    }
+	scrolledwindow.raven-background {
+		border-bottom-style: none;
+	}
 
-    .powerstrip button {
-        margin: 2px 0 1px;
-        padding: ($large-size - 24px) / 2;
-        border-radius: $circular-radius;
-    }
+	.powerstrip button {
+		margin: 2px 0 1px;
+		padding: ($large-size - 24px) / 2;
+		border-radius: $circular-radius;
+	}
 
-    .option-subtitle {
-        font-size: smaller;
-    }
+	.option-subtitle {
+		font-size: smaller;
+	}
 
-    .audio-widget {
-        scale.marks-after {
-            padding-top: 0;
-            padding-bottom: 0;
+	.audio-widget {
+		scale.marks-after {
+			padding-top: 0;
+			padding-bottom: 0;
 
-            label {
-                font-size: 90%;
-                padding: 0;
-                margin: -10px 0 0 6px;
-            }
-        }
+			label {
+				font-size: 90%;
+				padding: 0;
+				margin: -10px 0 0 6px;
+			}
+		}
 
-        button.flat.expander-button {
-            margin-top: 4px;
-            margin-bottom: 4px;
-        }
+		button.flat.expander-button {
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
 
-        list.devices-list.sound-devices {
-            > row.activatable {
-                &:selected,
-                &:checked {
-                    background-color: rgba($text, 0.06);
-                    color: $text;
+		list.devices-list.sound-devices {
+			> row.activatable {
+				&:selected,
+				&:checked {
+					background-color: rgba($text, 0.06);
+					color: $text;
 
-                    label {
-                        color: $text;
-                    }
-                }
+					label {
+						color: $text;
+					}
+				}
 
-                label {
-                    padding-left: 12px;
-                }
-            }
-        }
-    }
+				label {
+					padding-left: 12px;
+				}
+			}
+		}
+	}
 
-    levelbar {
-        &,
-        trough,
-        block {
-            border-radius: $circular-radius;
-        }
-    }
+	levelbar {
+		&,
+		trough,
+		block {
+			border-radius: $circular-radius;
+		}
+	}
 }
 
 // Calendar
 calendar.raven-calendar {
-    // padding: 3px;
-    border-style: none;
-    background-color: transparent;
+	// padding: 3px;
+	border-style: none;
+	background-color: transparent;
 
-    &:selected {
-        @extend %selected_items;
+	&:selected {
+		@extend %selected_items;
 
-        border-radius: $corner-radius;
-    }
+		border-radius: $corner-radius;
+	}
 }
 
 // MPRIS Applet
 .raven-mpris {
-    background-color: $scrim;
-    color: on($scrim);
+	background-color: $scrim;
+	color: on($scrim);
 
-    label {
-        min-height: 24px;
-    }
+	label {
+		min-height: 24px;
+	}
 
-    button.image-button {
-        padding: ($large-size - 24px) / 2;
+	button.image-button {
+		padding: ($large-size - 24px) / 2;
 
-        @extend %button-on-dark;
-    }
+		@extend %button-on-dark;
+	}
 }
 
 image.raven-mpris {
-    background-color: $divider;
-    color: $text-secondary;
-    border-radius: $corner-radius;
+	background-color: $divider;
+	color: $text-secondary;
+	border-radius: $corner-radius;
 }
 
 // notification list
 .raven-notifications-view {
-    > .raven-background > viewport.frame {
-        padding: 0; // reset padding for full-width list node
+	> .raven-background > viewport.frame {
+		padding: 0; // reset padding for full-width list node
 
-        > list > row.activatable {
-            margin-left: -$space-size;
-            margin-right: -$space-size / 2;
+		> list > row.activatable {
+			margin-left: -$space-size;
+			margin-right: -$space-size / 2;
 
-            .raven-notifications-group-header {
-                padding: 0 $space-size * 2;
-            }
+			.raven-notifications-group-header {
+				padding: 0 $space-size * 2;
+			}
 
-            // sub-list rows grouping
-            list {
-                padding: $space-size;
-                background: none;
+			// sub-list rows grouping
+			list {
+				padding: $space-size;
+				background: none;
 
-                > row.activatable {
-                    border: none;
-                    padding: $space-size;
-                    padding-left: $space-size * 2;
-                    margin: $space-size / 2;
-                    border-radius: $corner-radius;
-                    background-color: $fill;
+				> row.activatable {
+					border: none;
+					padding: $space-size;
+					padding-left: $space-size * 2;
+					margin: $space-size / 2;
+					border-radius: $corner-radius;
+					background-color: $fill;
 
-                    &:hover,
-                    &:selected {
-                        background-color: $divider;
-                    }
-                }
-            }
+					&:hover,
+					&:selected {
+						background-color: $divider;
+					}
+				}
+			}
 
-            &:selected,
-            &:selected:hover,
-            &:hover,
-            &:active,
-            &:focus {
-                background: none;
-                box-shadow: none;
-            }
-        }
-    }
+			&:selected,
+			&:selected:hover,
+			&:hover,
+			&:active,
+			&:focus {
+				background: none;
+				box-shadow: none;
+			}
+		}
+	}
 }
 
 // Notifications
 .budgie-notification-window {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 .budgie-notification {
-    .notification-title {
-        font-size: 120%;
-    }
+	.notification-title {
+		font-size: 120%;
+	}
 
-    .notification-body {
-        color: $text-secondary;
-    }
+	.notification-body {
+		color: $text-secondary;
+	}
 }
 
 // On Screen Display in Budgie
 .budgie-osd-window {
-    @extend .budgie-notification-window;
+	@extend .budgie-notification-window;
 }
 
 // Internal part of the OSD
 .budgie-osd {
-    .budgie-osd-text {
-        font-size: 120%;
-    }
+	.budgie-osd-text {
+		font-size: 120%;
+	}
 }
 
 // Alt+tab switcher in Budgie
 .budgie-switcher-window {
-    @extend .budgie-notification-window;
+	@extend .budgie-notification-window;
 }
 
 // Internal part of the Switcher
 .budgie-switcher {
-    @extend .budgie-notification;
+	@extend .budgie-notification;
 }
 
 .budgie-panel {
-    .lock-keys {
-        image:disabled {
-            color: on($panel, secondary-disabled);
-        }
-    }
+	.lock-keys {
+		image:disabled {
+			color: on($panel, secondary-disabled);
+		}
+	}
 }
 
 .drop-shadow {
-    margin: 5px 9px;
-    padding: $space-size;
-    border-radius: $window-radius;
-    box-shadow:
-        $shadow-z4,
-        inset 0 1px highlight($surface);
-    background-color: $surface;
+	margin: 5px 9px;
+	padding: $space-size;
+	border-radius: $window-radius;
+	box-shadow:
+		$shadow-z4,
+		inset 0 1px highlight($surface);
+	background-color: $surface;
 
-    button {
-        @extend %button-flat-simple;
-    }
+	button {
+		@extend %button-flat-simple;
+	}
 
-    .linked > button {
-        border-radius: $window-radius;
-    }
+	.linked > button {
+		border-radius: $window-radius;
+	}
 }
 
 %budgie_dialog {
-    background-color: $surface;
-    border: none;
-    padding: 0;
+	background-color: $surface;
+	border: none;
+	padding: 0;
 
-    > box > grid {
-        padding: $space-size * 4;
-    }
+	> box > grid {
+		padding: $space-size * 4;
+	}
 }
 
 // Session Dialog
 .budgie-session-dialog,
 .budgie-polkit-dialog,
 .budgie-run-dialog {
-    @extend %budgie_dialog;
+	@extend %budgie_dialog;
 
-    &.background,
-    & > decoration {
-        border-radius: $window-radius;
-    }
+	&.background,
+	& > decoration {
+		border-radius: $window-radius;
+	}
 
-    & > decoration {
-        border: none;
-        box-shadow:
-            $shadow-z16,
-            0 0 0 1px $window-border;
-    }
+	& > decoration {
+		border: none;
+		box-shadow:
+			$shadow-z16,
+			0 0 0 1px $window-border;
+	}
 
-    label:not(:last-child),
-    .dialog-title {
-        font-size: 120%;
-    }
+	label:not(:last-child),
+	.dialog-title {
+		font-size: 120%;
+	}
 
-    .linked.horizontal > button {
-        padding: 8px 16px;
-        border-top: 1px solid $divider;
-        border-radius: 0;
-        @extend %button-flat-simple;
+	.linked.horizontal > button {
+		padding: 8px 16px;
+		border-top: 1px solid $divider;
+		border-radius: 0;
+		@extend %button-flat-simple;
 
-        &:first-child {
-            border-bottom-left-radius: $window-radius;
-        }
-        &:last-child {
-            border-bottom-right-radius: $window-radius;
-        }
-    }
+		&:first-child {
+			border-bottom-left-radius: $window-radius;
+		}
+		&:last-child {
+			border-bottom-right-radius: $window-radius;
+		}
+	}
 }
 
 // PolKit Dialog
 .budgie-polkit-dialog {
-    .message {
-        color: $text-secondary;
-    }
-    .failure {
-        color: $destructive;
-    }
+	.message {
+		color: $text-secondary;
+	}
+	.failure {
+		color: $destructive;
+	}
 
-    > box > grid {
-        padding-bottom: 0;
-    }
+	> box > grid {
+		padding-bottom: 0;
+	}
 }
 
 // Run Dialog
 .budgie-run-dialog {
-    entry.search {
-        font-size: 120%;
-        padding: $space-size 8px + $space-size;
-        border-image: none;
-        box-shadow: none;
-        background-color: transparent;
-    }
+	entry.search {
+		font-size: 120%;
+		padding: $space-size 8px + $space-size;
+		border-image: none;
+		box-shadow: none;
+		background-color: transparent;
+	}
 
-    list .dim-label {
-        color: $text;
-    }
+	list .dim-label {
+		color: $text;
+	}
 
-    scrolledwindow {
-        border-top: 1px solid $divider;
-    }
+	scrolledwindow {
+		border-top: 1px solid $divider;
+	}
 }

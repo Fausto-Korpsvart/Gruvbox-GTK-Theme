@@ -1,82 +1,82 @@
 /* Network Dialogs */
 .nm-dialog {
-    max-height: 34em;
-    min-height: 31em;
-    min-width: 32em;
+	max-height: 34em;
+	min-height: 31em;
+	min-width: 32em;
 }
 
 .nm-dialog-content {
-    spacing: 20px;
-    padding: 24px;
+	spacing: 20px;
+	padding: 24px;
 }
 
 .nm-dialog-header-hbox {
-    spacing: 10px;
+	spacing: 10px;
 }
 .nm-dialog-airplane-box {
-    spacing: 12px;
+	spacing: 12px;
 }
 
 .nm-dialog-airplane-headline {
-    font-weight: bold;
-    text-align: center;
+	font-weight: bold;
+	text-align: center;
 }
 
 .nm-dialog-airplane-text {
-    color: $text;
+	color: $text;
 }
 
 // header
 .nm-dialog-header {
-    font-weight: bold;
+	font-weight: bold;
 }
 .nm-dialog-header-icon {
-    icon-size: $base_icon_size * 2;
+	icon-size: $base_icon_size * 2;
 }
 .nm-dialog-header-hbox {
-    spacing: 10px;
+	spacing: 10px;
 }
 
 // list of networks
 .nm-dialog-scroll-view {
-    border: none;
-    padding: 0;
-    background-color: $fill;
-    border-radius: $base_radius;
+	border: none;
+	padding: 0;
+	background-color: $fill;
+	border-radius: $base_radius;
 }
 // list item
 .nm-dialog-item {
-    @include fontsize($font_size);
-    border-bottom: none;
-    padding: $base_padding * 2;
-    spacing: 0px;
+	@include fontsize($font_size);
+	border-bottom: none;
+	padding: $base_padding * 2;
+	spacing: 0px;
 
-    &:selected {
-        background-color: $primary;
-        color: on($primary);
-    }
+	&:selected {
+		background-color: $primary;
+		color: on($primary);
+	}
 
-    &:hover,
-    &:focus {
-        background-color: $divider;
-    }
-    &:active {
-        background-color: $track;
-    }
+	&:hover,
+	&:focus {
+		background-color: $divider;
+	}
+	&:active {
+		background-color: $track;
+	}
 }
 
 // icons in list
 .nm-dialog-icon {
-    icon-size: $base_icon_size;
+	icon-size: $base_icon_size;
 }
 .nm-dialog-icons {
-    spacing: $base_spacing * 2;
+	spacing: $base_spacing * 2;
 }
 
 // no networks
 .no-networks-label {
-    color: $text-disabled;
+	color: $text-disabled;
 }
 .no-networks-box {
-    spacing: $base_padding;
+	spacing: $base_padding;
 }

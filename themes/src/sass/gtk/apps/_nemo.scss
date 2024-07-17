@@ -8,129 +8,129 @@
 // https://github.com/linuxmint/nemo/blob/master/gresources/nemo-style-application.css
 
 .nemo-window {
-    .primary-toolbar {
-        background-color: $titlebar;
-        border-bottom: 1px solid $divider;
+	.primary-toolbar {
+		background-color: $titlebar;
+		border-bottom: 1px solid $divider;
 
-        // FIXME: workaround for wrong size allocation of Nemo
-        entry {
-            min-height: 0;
-            margin: 0;
-            @extend %titlebar-entry;
-        }
+		// FIXME: workaround for wrong size allocation of Nemo
+		entry {
+			min-height: 0;
+			margin: 0;
+			@extend %titlebar-entry;
+		}
 
-        > toolitem > .linked > button.image-button {
-            margin-left: 1px;
-            margin-right: 1px;
-        }
+		> toolitem > .linked > button.image-button {
+			margin-left: 1px;
+			margin-right: 1px;
+		}
 
-        button:not(.text-button) {
-            @extend %titlebar-button;
-        }
+		button:not(.text-button) {
+			@extend %titlebar-button;
+		}
 
-        // instead of .path-bar button
-        button.text-button {
-            padding-left: 8px;
-            padding-right: 8px;
-            color: $titlebar-text-secondary;
+		// instead of .path-bar button
+		button.text-button {
+			padding-left: 8px;
+			padding-right: 8px;
+			color: $titlebar-text-secondary;
 
-            &:hover,
-            &:active,
-            &:checked {
-                color: $titlebar-text;
-            }
+			&:hover,
+			&:active,
+			&:checked {
+				color: $titlebar-text;
+			}
 
-            &:disabled {
-                color: $titlebar-text-secondary-disabled;
-            }
+			&:disabled {
+				color: $titlebar-text-secondary-disabled;
+			}
 
-            &:backdrop {
-                color: $titlebar-text-disabled;
-            }
-        }
+			&:backdrop {
+				color: $titlebar-text-disabled;
+			}
+		}
 
-        .path-bar.linked:not(.vertical) > button {
-            margin-left: 1px;
-            margin-right: 1px;
+		.path-bar.linked:not(.vertical) > button {
+			margin-left: 1px;
+			margin-right: 1px;
 
-            &:checked {
-                box-shadow: none;
-            }
+			&:checked {
+				box-shadow: none;
+			}
 
-            &.slider-button {
-                border-radius: $corner-radius / 2;
+			&.slider-button {
+				border-radius: $corner-radius / 2;
 
-                &:first-child {
-                    border-top-left-radius: $corner-radius;
-                    border-bottom-left-radius: $corner-radius;
-                }
+				&:first-child {
+					border-top-left-radius: $corner-radius;
+					border-bottom-left-radius: $corner-radius;
+				}
 
-                &:last-child {
-                    border-top-right-radius: $corner-radius;
-                    border-bottom-right-radius: $corner-radius;
-                }
-            }
-        }
+				&:last-child {
+					border-top-right-radius: $corner-radius;
+					border-bottom-right-radius: $corner-radius;
+				}
+			}
+		}
 
-        // instead of .path-bar button.slider-button
-        button:not(.text-button):not(.image-button) {
-            padding-left: 4px;
-            padding-right: 4px;
-        }
-    }
+		// instead of .path-bar button.slider-button
+		button:not(.text-button):not(.image-button) {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
 
-    // .nemo-places-sidebar { }
+	// .nemo-places-sidebar { }
 
-    scrolledwindow.frame {
-        border-style: none;
+	scrolledwindow.frame {
+		border-style: none;
 
-        .view:not(:selected) {
-            background-color: transparent;
-        }
-    }
+		.view:not(:selected) {
+			background-color: transparent;
+		}
+	}
 
-    // infobar { margin-top: -6px; }
+	// infobar { margin-top: -6px; }
 
-    // Inactive F3 pane shading
-    .nemo-inactive-pane .view:not(:selected) {
-        background-color: $base-alt;
-    }
+	// Inactive F3 pane shading
+	.nemo-inactive-pane .view:not(:selected) {
+		background-color: $base-alt;
+	}
 
-    // Rename box styling in the icon view.
-    .nemo-window-pane widget.entry {
-        border-radius: $corner-radius / 2;
-        background-color: $fill;
+	// Rename box styling in the icon view.
+	.nemo-window-pane widget.entry {
+		border-radius: $corner-radius / 2;
+		background-color: $fill;
 
-        &:selected {
-            @extend %selected_items_primary;
-        }
-    }
+		&:selected {
+			@extend %selected_items_primary;
+		}
+	}
 
-    .toolbar button {
-        @extend %button-flat;
-    }
+	.toolbar button {
+		@extend %button-flat;
+	}
 
-    .nemo-window-pane > notebook {
-        border-radius: 0;
-    }
+	.nemo-window-pane > notebook {
+		border-radius: 0;
+	}
 }
 
 // For Places Sidebar diskfull indicators
 .places-treeview {
-    -nemoplacestreeview-disk-full-bg-color: mix(
-        $text,
-        $background,
-        percentage(0.3)
-    ); // Can't use translucent colors
-    -nemoplacestreeview-disk-full-fg-color: $primary;
-    -nemoplacestreeview-disk-full-bar-width: 2px;
-    -nemoplacestreeview-disk-full-bar-radius: 0;
-    -nemoplacestreeview-disk-full-bottom-padding: 1px; // There is already hard-coded 1px bottom-padding
-    -nemoplacestreeview-disk-full-max-length: 80px;
-    padding-top: $space-size / 2;
-    padding-bottom: $space-size / 2;
+	-nemoplacestreeview-disk-full-bg-color: mix(
+		$text,
+		$background,
+		percentage(0.3)
+	); // Can't use translucent colors
+	-nemoplacestreeview-disk-full-fg-color: $primary;
+	-nemoplacestreeview-disk-full-bar-width: 2px;
+	-nemoplacestreeview-disk-full-bar-radius: 0;
+	-nemoplacestreeview-disk-full-bottom-padding: 1px; // There is already hard-coded 1px bottom-padding
+	-nemoplacestreeview-disk-full-max-length: 80px;
+	padding-top: $space-size / 2;
+	padding-bottom: $space-size / 2;
 }
 
 .nemo-desktop.nemo-canvas-item {
-    @extend %desktop-canvas-item;
+	@extend %desktop-canvas-item;
 }
