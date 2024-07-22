@@ -157,9 +157,9 @@ install() {
 
 	# Metacity Themes
 	mkdir -p                                                         					 "${THEME_DIR}/metacity-1"
-	cp -r "${SRC_DIR}/main/metacity-1/metacity-theme-3.xml"          					 "${THEME_DIR}/metacity-1/metacity-theme-3.xml"
-	cp -r "${SRC_DIR}/assets/metacity-1/assets"                      					 "${THEME_DIR}/metacity-1/assets"
-	cp -r "${SRC_DIR}/assets/metacity-1/thumbnail${ELSE_DARK:-}.png" 					 "${THEME_DIR}/metacity-1/thumbnail.png"
+	cp -r "${SRC_DIR}/main/metacity-1/metacity-theme-3${window}${color}.xml"             "${THEME_DIR}/metacity-1/metacity-theme-3.xml"
+	cp -r "${SRC_DIR}/assets/metacity-1/assets${window}"                                 "${THEME_DIR}/metacity-1/assets"
+	cp -r "${SRC_DIR}/assets/metacity-1/thumbnail${ELSE_DARK:-}.png"                     "${THEME_DIR}/metacity-1/thumbnail.png"
 	cd "${THEME_DIR}/metacity-1" && ln -s metacity-theme-3.xml metacity-theme-1.xml && ln -s metacity-theme-3.xml metacity-theme-2.xml
 
 	# XFWM4 Themes

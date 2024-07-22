@@ -22,9 +22,10 @@
 
 ![Gruvbox Dark](https://raw.githubusercontent.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/master/extra/screenshoots/Gruvbox-2.png)
 
-## Installing Themes
+## INSTALLING THEMES
 
-Before installing, make sure to install the `Murrine Engine` and `gnome-themes-extra` packages for the correct rendering of themes.
+Before installing the themes, make sure to install the following necessary packages:
+`sassc` `murrine-engine` and `gnome-themes-extra` packages for the correct rendering of themes.
 
 Here are some commands to install on some distributions.
 
@@ -60,13 +61,13 @@ The themes work on versions 40 to 44 of the GNOME D.E. just follow the steps bel
   - For GTK4: `~/.config/gtk-4.0` The files to move to this path can be found inside the theme directory in the `gtk-4.0` folder,
     copy only the `assets`, `gtk.css` and `gtk-dark.css` files or create a symlinks.
 
-### Applying themes from zip files
+### Applying Themes from zip files
 
 - For GTK3, apply themes from **Gnome Tweaks**.
 - For GTK4 applications it is only necessary to have moved the `assets`, `gtk.css` and `gtk-dark.css` files to the `~/.config/gtk-4.0` path,
   and if you notice that the theme has not been applied, just close and reopen the application.
 
-### Applying themes to Flatpak applications
+### Applying Themes to Flatpak Apps
 
 - Override flatpak themes to `~/.themes`:
 
@@ -94,7 +95,7 @@ sudo flatpak override --filesystem=xdg-config/gtk-4.0
 
 **Alternative Flatpak Theming: [stylepak](https://github.com/refi64/stylepak)**
 
-## Script Installation
+## CLI INSTALLATION
 
 Run the following command in the terminal for a general installation
 
@@ -112,7 +113,7 @@ The `./install.sh` allows some specific options like:
 
 ```
 -d, --dest DIR          Specify destination directory (Default: ~/.themes)
--n, --name NAME         Specify theme name (Default: Gruvbox)
+-n, --name NAME         Specify theme name (Default: Everforest)
 -t, --theme VARIANT...  Specify theme accent color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
 -c, --color VARIANT...  Specify color variant(s) [light|dark] (Default: All variants)
 -s, --size VARIANT...   Specify size variant [standard|compact] (Default: standard variant)
@@ -131,7 +132,7 @@ The `./install.sh` allows some specific options like:
 -h, --help              Show help
 ```
 
-### Clarifying some doubts
+## CLARIFYING SOME DOUBTS
 
 This is just to clarify doubts about the abbreviations of the Themes, as many found the names confusing.
 
@@ -144,7 +145,7 @@ This is just to clarify doubts about the abbreviations of the Themes, as many fo
 | Theme-Name-BL-LB     | Theme `Borderless` decoration and `Legacy Buttons` in windows  |
 | Theme-Name-BL-GS     | Theme `Borderless` decoration for `Gnome Shell`                |
 
-### Looking for other themes with Neovim colour schemes?
+## More Themes with Neovim colour schemes?
 
 | Neovim Colorschemes for GTK   | GitHub                                                              | Pling                                       |
 | ----------------------------- | ------------------------------------------------------------------- | ------------------------------------------- |
@@ -159,9 +160,10 @@ This is just to clarify doubts about the abbreviations of the Themes, as many fo
 
 #### Acknowledgements to
 
-Thanks to [@f1yn](https://github.com/f1yn) for the solution to the active and inactive borders in the new version of `Cinnamon.`
-
-Thanks to [@telometto](https://github.com/telometto) for the alternative to the application of themes in `Flatpak.`
+Thanks to [@telometto](https://github.com/telometto) for the alternative to the application of themes in `Flatpak.`<br>
+Thanks to [@f1yn](https://github.com/f1yn) for the solution to the active and inactive borders in the new version of `Cinnamon.`<br>
+Thanks to [@eeeXun](https://github.com/eeeXun) for the hint to solve the bug in `Mate Desktop` window control buttons.<br>
+Thanks to [@Icy-Thought](https://github.com/Icy-Thought),[@D3vil0p3r](https://github.com/D3vil0p3r) and others who have packaged these themes for NIX & AUR.
 
 #### Support
 

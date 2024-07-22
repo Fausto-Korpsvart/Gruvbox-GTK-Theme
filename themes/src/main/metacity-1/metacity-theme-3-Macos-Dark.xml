@@ -1,33 +1,33 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Magnetic</name>
-  <author>vinceliucie</author>
+  <name>Tokyonight</name>
+  <author>vinceliucie | mod: fkorpsvart</author>
   <copyright>GPL</copyright>
-  <date>2022</date>
-  <description>Magnetic Metacity theme</description>
+  <date>2024</date>
+  <description>Tokyonight Metacity theme</description>
 </info>
 
 <!-- meaningful constants -->
 
-<constant name="C_title_focused" value="gtk:custom(wm_focused_title,gtk:fg[NORMAL])"/>
-<constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])"/>
-<constant name="C_titlebar_focused" value="gtk:custom(wm_focused_bg,gtk:bg[NORMAL])"/>
+<constant name="C_titlebar_focused" value="gtk:custom(wm_bg,gtk:bg[NORMAL])"/>
 <constant name="C_titlebar_unfocused" value="gtk:custom(wm_unfocused_bg,gtk:bg[NORMAL])"/>
-
 <constant name="C_highlight_focused" value="gtk:custom(wm_highlight,gtk:base[NORMAL])"/>
 <constant name="C_highlight_unfocused" value="gtk:custom(wm_highlight,gtk:base[NORMAL])"/>
 <constant name="C_border_focused" value="gtk:custom(wm_border,blend/#000000/gtk:bg[NORMAL]/0.5)"/>
 <constant name="C_border_unfocused" value="gtk:custom(wm_border,blend/#000000/gtk:bg[NORMAL]/0.65)"/>
-
-<constant name="C_button_focused" value="gtk:custom(wm_focused_title,gtk:fg[NORMAL])"/>
-<constant name="C_button_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])"/>
-<constant name="C_button_prelight" value="gtk:custom(wm_button_hover_fg,gtk:fg[NORMAL])"/>
-<constant name="C_button_pressed" value="gtk:custom(wm_button_active_fg,gtk:fg[NORMAL])"/>
-<constant name="C_button_focused_bg" value="gtk:custom(wm_button_focused_bg,gtk:base[NORMAL])"/>
-<constant name="C_button_unfocused_bg" value="gtk:custom(wm_button_unfocused_bg,gtk:base[NORMAL])"/>
-<constant name="C_button_prelight_bg" value="gtk:custom(wm_button_hover_bg,gtk:bg[NORMAL])"/>
-<constant name="C_button_pressed_bg" value="gtk:custom(wm_button_active_bg,gtk:base[NORMAL])"/>
+<constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])"/>
+<constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])"/>
+<constant name="C_button_icon" value="gtk:custom(wm_button_icon,gtk:base[NORMAL])" />
+<constant name="C_button_close_focused_bg" value="#ea6962"/>
+<constant name="C_button_close_hover_bg" value="#c14a4a"/>
+<constant name="C_button_close_active_bg" value="#ea6962"/>
+<constant name="C_button_max_focused_bg" value="#a9b665"/>
+<constant name="C_button_max_hover_bg" value="#6c782e"/>
+<constant name="C_button_max_active_bg" value="#a9b665"/>
+<constant name="C_button_min_focused_bg" value="#e78a4e"/>
+<constant name="C_button_min_hover_bg" value="#c35e0a"/>
+<constant name="C_button_min_active_bg" value="#e78a4e"/>
 
 <!-- geometries -->
 
@@ -39,7 +39,7 @@
   <distance name="right_titlebar_edge" value="6"/>
   <distance name="title_vertical_pad" value="10"/>
   <border name="title_border" left="10" right="10" top="6" bottom="6"/>
-  <border name="button_border" left="3" right="3" top="5" bottom="5"/>
+  <border name="button_border" left="0" right="0" top="5" bottom="5"/>
   <aspect_ratio name="button" value="1"/>
 </frame_geometry>
 
@@ -165,196 +165,124 @@
   <arc color="C_highlight_unfocused" x="width - 26" y="1" width="25" height="25" start_angle="0" extent_angle="90"/>
 </draw_ops>
 
-<!-- buttons -->
-
-<draw_ops name="windows_button_focused">
-  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused_bg"/>
-</draw_ops>
-
-<draw_ops name="windows_button_focused_prelight">
-  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_prelight_bg"/>
-</draw_ops>
-
-<draw_ops name="windows_button_focused_pressed">
-  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_pressed_bg"/>
-</draw_ops>
-
-<draw_ops name="windows_button_unfocused">
-  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused_bg"/>
-</draw_ops>
-
-<draw_ops name="windows_button_unfocused_prelight">
-  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_prelight_bg"/>
-</draw_ops>
-
-<draw_ops name="windows_button_unfocused_pressed">
-  <image filename="assets/button.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_pressed_bg"/>
-</draw_ops>
+<!-- button icons -->
 
 <!-- close -->
 
-<draw_ops name="windows_close_icon_focused">
-  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused"/>
-</draw_ops>
-
-<draw_ops name="windows_close_icon_unfocused">
-  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused"/>
-</draw_ops>
-
 <draw_ops name="close_focused">
-  <include name="windows_close_icon_focused"/>
-  <include name="windows_button_focused"/>
+  <image filename="assets/button.svg" colorize="C_button_close_focused_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
-  <include name="windows_close_icon_focused"/>
-  <include name="windows_button_focused_prelight"/>
+  <image filename="assets/button.svg" colorize="C_button_close_hover_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-  <include name="windows_close_icon_focused"/>
-  <include name="windows_button_focused_pressed"/>
+  <image filename="assets/button.svg" colorize="C_button_close_active_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/close.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused">
-  <include name="windows_close_icon_unfocused"/>
-  <include name="windows_button_unfocused"/>
+  <image filename="assets/button.svg" colorize="C_title_unfocused" x="(width - object_width) / 2" y="(height - object_height) / 2" alpha="0.25" width="object_width" height="object_height"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused_prelight">
-  <include name="windows_close_icon_unfocused"/>
-  <include name="windows_button_unfocused_prelight"/>
+  <include name="close_focused_prelight"/>
 </draw_ops>
 
 <draw_ops name="close_unfocused_pressed">
-  <include name="windows_close_icon_unfocused"/>
-  <include name="windows_button_unfocused_pressed"/>
+  <include name="close_focused_pressed"/>
 </draw_ops>
 
 <!-- maximize -->
 
-<draw_ops name="windows_maximize_icon_focused">
-  <image filename="assets/maximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused"/>
-</draw_ops>
-
-<draw_ops name="windows_maximize_icon_unfocused">
-  <image filename="assets/maximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused"/>
-</draw_ops>
-
 <draw_ops name="maximize_focused">
-  <include name="windows_maximize_icon_focused"/>
-  <include name="windows_button_focused"/>
+  <image filename="assets/button.svg" colorize="C_button_max_focused_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
 </draw_ops>
 
 <draw_ops name="maximize_focused_prelight">
-  <include name="windows_maximize_icon_focused"/>
-  <include name="windows_button_focused_prelight"/>
+  <image filename="assets/button.svg" colorize="C_button_max_hover_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/maximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
-  <include name="windows_maximize_icon_focused"/>
-  <include name="windows_button_focused_pressed"/>
+  <image filename="assets/button.svg" colorize="C_button_max_active_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/maximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="maximize_unfocused">
-  <include name="windows_maximize_icon_unfocused"/>
-  <include name="windows_button_unfocused"/>
+  <include name="close_unfocused"/>
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_prelight">
-  <include name="windows_maximize_icon_unfocused"/>
-  <include name="windows_button_unfocused_prelight"/>
+  <include name="maximize_focused_prelight"/>
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_pressed">
-  <include name="windows_maximize_icon_unfocused"/>
-  <include name="windows_button_unfocused_pressed"/>
+  <include name="maximize_focused_pressed"/>
 </draw_ops>
 
 <!-- unmaximize -->
 
-<draw_ops name="windows_unmaximize_icon_focused">
-  <image filename="assets/unmaximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused"/>
-</draw_ops>
-
-<draw_ops name="windows_unmaximize_icon_unfocused">
-  <image filename="assets/unmaximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused"/>
-</draw_ops>
-
 <draw_ops name="unmaximize_focused">
-  <include name="windows_unmaximize_icon_focused"/>
-  <include name="windows_button_focused"/>
+  <image filename="assets/button.svg" colorize="C_button_max_focused_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_prelight">
-  <include name="windows_unmaximize_icon_focused"/>
-  <include name="windows_button_focused_prelight"/>
+  <image filename="assets/button.svg" colorize="C_button_max_hover_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/unmaximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_pressed">
-  <include name="windows_unmaximize_icon_focused"/>
-  <include name="windows_button_focused_pressed"/>
+  <image filename="assets/button.svg" colorize="C_button_max_active_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/unmaximize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused">
-  <include name="windows_unmaximize_icon_unfocused"/>
-  <include name="windows_button_unfocused"/>
+  <include name="close_unfocused"/>
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused_prelight">
-  <include name="windows_unmaximize_icon_unfocused"/>
-  <include name="windows_button_unfocused_prelight"/>
+  <include name="unmaximize_focused_prelight"/>
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused_pressed">
-  <include name="windows_unmaximize_icon_unfocused"/>
-  <include name="windows_button_unfocused_pressed"/>
+  <include name="unmaximize_focused_pressed"/>
 </draw_ops>
 
 <!-- minimize -->
 
-<draw_ops name="windows_minimize_icon_focused">
-  <image filename="assets/minimize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused"/>
-</draw_ops>
-
-<draw_ops name="windows_minimize_icon_unfocused">
-  <image filename="assets/minimize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused"/>
-</draw_ops>
-
 <draw_ops name="minimize_focused">
-  <include name="windows_minimize_icon_focused"/>
-  <include name="windows_button_focused"/>
+  <image filename="assets/button.svg" colorize="C_button_min_focused_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
 </draw_ops>
 
 <draw_ops name="minimize_focused_prelight">
-  <include name="windows_minimize_icon_focused"/>
-  <include name="windows_button_focused_prelight"/>
+  <image filename="assets/button.svg" colorize="C_button_min_hover_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/minimize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-  <include name="windows_minimize_icon_focused"/>
-  <include name="windows_button_focused_pressed"/>
+  <image filename="assets/button.svg" colorize="C_button_min_active_bg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height"/>
+  <image filename="assets/minimize.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" colorize="C_button_icon"/>
 </draw_ops>
 
 <draw_ops name="minimize_unfocused">
-  <include name="windows_minimize_icon_unfocused"/>
-  <include name="windows_button_unfocused"/>
+  <include name="close_unfocused"/>
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_prelight">
-  <include name="windows_minimize_icon_unfocused"/>
-  <include name="windows_button_unfocused_prelight"/>
+  <include name="minimize_focused_prelight"/>
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_pressed">
-  <include name="windows_minimize_icon_unfocused"/>
-  <include name="windows_button_unfocused_pressed"/>
+  <include name="minimize_focused_pressed"/>
 </draw_ops>
 
 <!-- menu -->
 
 <draw_ops name="menu_focused">
-  <image filename="assets/menu.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused"/>
+  <image filename="assets/menu.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.7" colorize="C_title_focused"/>
 </draw_ops>
 
 <draw_ops name="menu_focused_prelight">
@@ -366,7 +294,7 @@
 </draw_ops>
 
 <draw_ops name="menu_unfocused">
-  <image filename="assets/menu.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused"/>
+  <image filename="assets/menu.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.7" colorize="C_title_unfocused"/>
 </draw_ops>
 
 <draw_ops name="menu_unfocused_prelight">
@@ -380,7 +308,7 @@
 <!-- shade -->
 
 <draw_ops name="shade_focused">
-  <image filename="assets/shade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused"/>
+  <image filename="assets/shade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.7" colorize="C_title_focused"/>
 </draw_ops>
 
 <draw_ops name="shade_focused_prelight">
@@ -392,7 +320,7 @@
 </draw_ops>
 
 <draw_ops name="shade_unfocused">
-  <image filename="assets/shade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused"/>
+  <image filename="assets/shade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.7" colorize="C_title_unfocused"/>
 </draw_ops>
 
 <draw_ops name="shade_unfocused_prelight">
@@ -406,7 +334,7 @@
 <!-- unshade -->
 
 <draw_ops name="unshade_focused">
-  <image filename="assets/unshade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_focused"/>
+  <image filename="assets/unshade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.7" colorize="C_title_focused"/>
 </draw_ops>
 
 <draw_ops name="unshade_focused_prelight">
@@ -418,7 +346,7 @@
 </draw_ops>
 
 <draw_ops name="unshade_unfocused">
-  <image filename="assets/unshade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="1" colorize="C_button_unfocused"/>
+  <image filename="assets/unshade.svg" x="(width - object_width) / 2" y="(height - object_height) / 2" width="object_width" height="object_height" alpha="0.7" colorize="C_title_unfocused"/>
 </draw_ops>
 
 <draw_ops name="unshade_unfocused_prelight">
