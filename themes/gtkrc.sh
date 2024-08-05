@@ -259,6 +259,8 @@ make_gtkrc() {
 		esac
 	fi
 
+	mkdir -p "${THEME_DIR}/gtk-2.0"
+
 	cp -r "${GTKRC_DIR}/gtkrc${ELSE_DARK:-}-default" "${THEME_DIR}/gtk-2.0/gtkrc"
 	sed -i "s/#FFFFFF/${background_light}/g" "${THEME_DIR}/gtk-2.0/gtkrc"
 	sed -i "s/#2C2C2C/${background_dark}/g" "${THEME_DIR}/gtk-2.0/gtkrc"
