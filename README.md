@@ -163,7 +163,7 @@ This is just to clarify doubts about the abbreviations of the Themes, as many fo
 Thanks to [@telometto](https://github.com/telometto) for the alternative to the application of themes in `Flatpak.`<br>
 Thanks to [@f1yn](https://github.com/f1yn) for the solution to the active and inactive borders in the new version of `Cinnamon.`<br>
 Thanks to [@eeeXun](https://github.com/eeeXun) for the hint to solve the bug in `Mate Desktop` window control buttons.<br>
-Thanks to [@Icy-Thought](https://github.com/Icy-Thought),[@D3vil0p3r](https://github.com/D3vil0p3r) and others who have packaged these themes for NIX & AUR.
+Thanks to [@Icy-Thought](https://github.com/Icy-Thought),[@D3vil0p3r](https://github.com/D3vil0p3r) and to those who have packaged these themes for NIX and AUR.
 
 #### Support
 

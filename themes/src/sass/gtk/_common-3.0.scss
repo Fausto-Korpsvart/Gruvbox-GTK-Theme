@@ -3026,14 +3026,16 @@ radio {
 check {
 	&:checked {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/checkbox-checked-symbolic.svg')),
-			- gtk-recolor(url('assets/checkbox-checked-symbolic@2.svg'))
+			- gtk-recolor(url('assets/scalable/checkbox-checked-symbolic.svg')),
+			- gtk-recolor(
+					url('assets/scalable/checkbox-checked-symbolic@2.svg')
+				)
 		);
 	}
 	&:indeterminate {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/checkbox-mixed-symbolic.svg')),
-			- gtk-recolor(url('assets/checkbox-mixed-symbolic@2.svg'))
+			- gtk-recolor(url('assets/scalable/checkbox-mixed-symbolic.svg')),
+			- gtk-recolor(url('assets/scalable/checkbox-mixed-symbolic@2.svg'))
 		);
 	}
 }
@@ -3042,14 +3044,14 @@ check {
 radio {
 	&:checked {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/radio-checked-symbolic.svg')),
-			- gtk-recolor(url('assets/radio-checked-symbolic@2.svg'))
+			- gtk-recolor(url('assets/scalable/radio-checked-symbolic.svg')),
+			- gtk-recolor(url('assets/scalable/radio-checked-symbolic@2.svg'))
 		);
 	}
 	&:indeterminate {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/radio-mixed-symbolic.svg')),
-			- gtk-recolor(url('assets/radio-mixed-symbolic@2.svg'))
+			- gtk-recolor(url('assets/scalable/radio-mixed-symbolic.svg')),
+			- gtk-recolor(url('assets/scalable/radio-mixed-symbolic@2.svg'))
 		);
 	}
 }
@@ -3061,14 +3063,22 @@ menu menuitem check {
 
 	&:checked {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/small-checkbox-checked-symbolic.svg')),
-			- gtk-recolor(url('assets/small-checkbox-checked-symbolic@2.svg'))
+			- gtk-recolor(
+					url('assets/scalable/small-checkbox-checked-symbolic.svg')
+				),
+			- gtk-recolor(
+					url('assets/scalable/small-checkbox-checked-symbolic@2.svg')
+				)
 		);
 	}
 	&:indeterminate {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/small-checkbox-mixed-symbolic.svg')),
-			- gtk-recolor(url('assets/small-checkbox-mixed-symbolic@2.svg'))
+			- gtk-recolor(
+					url('assets/scalable/small-checkbox-mixed-symbolic.svg')
+				),
+			- gtk-recolor(
+					url('assets/scalable/small-checkbox-mixed-symbolic@2.svg')
+				)
 		);
 	}
 }
@@ -3080,14 +3090,20 @@ menu menuitem radio {
 
 	&:checked {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/small-radio-checked-symbolic.svg')),
-			- gtk-recolor(url('assets/small-radio-checked-symbolic@2.svg'))
+			- gtk-recolor(
+					url('assets/scalable/small-radio-checked-symbolic.svg')
+				),
+			- gtk-recolor(
+					url('assets/scalable/small-radio-checked-symbolic@2.svg')
+				)
 		);
 	}
 	&:indeterminate {
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/small-radio-mixed-symbolic.svg')),
-			- gtk-recolor(url('assets/small-radio-mixed-symbolic@2.svg'))
+			- gtk-recolor(url('assets/scalable/small-radio-mixed-symbolic.svg')),
+			- gtk-recolor(
+					url('assets/scalable/small-radio-mixed-symbolic@2.svg')
+				)
 		);
 	}
 }
@@ -3156,8 +3172,10 @@ treeview.view {
 		background-color: $assets-color;
 		color: on($assets-color);
 		-gtk-icon-source: -gtk-scaled(
-			- gtk-recolor(url('assets/checkbox-checked-symbolic.svg')),
-			- gtk-recolor(url('assets/checkbox-checked-symbolic@2.svg'))
+			- gtk-recolor(url('assets/scalable/checkbox-checked-symbolic.svg')),
+			- gtk-recolor(
+					url('assets/scalable/checkbox-checked-symbolic@2.svg')
+				)
 		);
 	}
 }
@@ -3311,7 +3329,7 @@ scale {
 		{
 			&.#{$dir_class}.#{$marks_class} {
 				slider {
-					$_scale_asset: 'assets/scale-#{$dir_infix}-#{$marks_infix}-slider-symbolic';
+					$_scale_asset: 'assets/scalable/scale-#{$dir_infix}-#{$marks_infix}-slider-symbolic';
 					-gtk-icon-source: -gtk-recolor(url('#{$_scale_asset}.svg'));
 				}
 			}
@@ -4991,7 +5009,9 @@ button.titlebutton:not(.suggested-action):not(.destructive-action) {
 // touch selection handlebars for the Popover.osd above
 cursor-handle {
 	color: $primary;
-	-gtk-icon-source: -gtk-recolor(url('assets/cursor-handle-symbolic.svg'));
+	-gtk-icon-source: -gtk-recolor(
+		url('assets/scalable/cursor-handle-symbolic.svg')
+	);
 
 	&.top:dir(ltr),
 	&.bottom:dir(rtl) {

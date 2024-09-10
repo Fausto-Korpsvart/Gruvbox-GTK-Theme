@@ -242,31 +242,25 @@
 	}
 }
 
-//
-// Gnome Control Center
-//
+/* Nautilus Progress Indicator */
+windowhandle box.vertical box.toolbar {
+	background-color: $background;
+	border: none;
+	outline: none;
+}
+windowhandle box.toolbar menubutton button.toggle {
+	background-color: $background;
+	border: none;
+	outline: none;
+}
 
-// window.background > widget > leaflet.unfolded {
-//     > box > scrolledwindow {
-//         @extend %sidebar_style;
+#NautilusProgressIndicator popover label {
+	color: $text-secondary;
+}
 
-//         > viewport > widget > stack,
-//         > viewport > widget > stack > box {
-//             > .navigation-sidebar {
-//                 @extend %sidebar_list;
-//             }
-//         }
-
-//         > scrollbar {
-//             @extend %sidebar_scrollbar;
-//             @extend %round_scrollbar;
-//         }
-
-//         entry {
-//             @extend %sidebar_entry;
-//         }
-//     }
-// }
+#NautilusProgressIndicator popover image {
+	color: $text-secondary;
+}
 
 window.dialog {
 	> box > stack > box > box {
@@ -2019,4 +2013,10 @@ window.dialog {
 list.music-list {
 	margin: -40px 0;
 	background-color: transparent;
+}
+
+/* Nicotine+ */
+
+notebook scrolledwindow treeview.treeview-spacing {
+	background-color: $background;
 }
