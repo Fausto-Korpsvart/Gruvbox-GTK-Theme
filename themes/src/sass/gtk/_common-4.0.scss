@@ -5186,6 +5186,10 @@ separator.sidebar {
 		margin: $space-size / 2 0;
 	}
 
+	row.activatable label.dim-label {
+		color: $text-secondary-disabled;
+	}
+
 	> row {
 		min-height: $small-size;
 		padding: 0 $space-size 0 $space-size;
@@ -5290,6 +5294,10 @@ filechooserbutton > button > box {
 filechooserbutton:drop(active) {
 	box-shadow: none;
 	border-color: transparent;
+}
+
+filechooser child.activatable filelistcell.dim-label {
+	color: $text-secondary;
 }
 
 // dim the sidebar icons, see bug #786613 for details on this oddity
