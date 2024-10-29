@@ -4064,6 +4064,10 @@ filechooser {
 		background: none;
 		border-bottom-left-radius: $window-radius;
 	}
+
+	paned > separator {
+		background: none;
+	}
 }
 
 // filechooserbutton:drop(active) {

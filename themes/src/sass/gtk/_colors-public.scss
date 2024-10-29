@@ -84,12 +84,12 @@ $windows-border: if(
 
 @define-color wm_button_icon #{"" + $white};
 
-@if $colorscheme == 'moon' {
+@if $colorscheme == 'medium' {
 	@define-color wm_button_icon alpha(#{black}, 0.5);
 }
 
-@define-color wm_button_focused_bg #{"" + if($topbar == 'light', mix($white, $titlebar, 60%), $titlebar-fill)};
-@define-color wm_button_unfocused_bg #{"" + if($topbar == 'light', mix($white, $titlebar, 60%), $titlebar-fill)};
+@define-color wm_button_focused_bg #{"" + if($topbar == 'light', mix(white, $titlebar, 60%), mix($titlebar-text, $titlebar, 6%))};
+@define-color wm_button_unfocused_bg #{"" + if($topbar == 'light', mix(white, $titlebar, 60%), mix($titlebar-text, $titlebar, 6%))};
 @define-color wm_button_hover_fg #{"" + on($titlebar-indicator)};
 @define-color wm_button_active_fg #{"" + on($titlebar-indicator)};
 @define-color wm_button_hover_bg #{"" + $titlebar-indicator};
@@ -105,7 +105,7 @@ $windows-border: if(
 // Budgie-desktop specific indicator colours
 
 // unfocused window 'dot(s)'
-@define-color budgie_tasklist_indicator_color #{"" + on($panel, track)};
+@define-color budgie_tasklist_indicator_color #{"" + mix(on($panel), $panel, 25%)};
 // focused window 'line'
 @define-color budgie_tasklist_indicator_color_active #{"" + $primary};
 // group-ed and unfocused window 'line(s)'

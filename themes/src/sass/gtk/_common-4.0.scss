@@ -922,29 +922,16 @@ button {
 			color: on($b_color);
 			box-shadow: none;
 
+			&:hover {
+				background-color: mix(on($b_color), $b_color, 10%);
+			}
+
 			&:disabled {
 				@include button(disabled);
 			}
 
-			&:hover {
-				background-color: rgba($b_color, 0.7);
-				box-shadow:
-					inset 0 0 0 9999px transparent,
-					0 2px (4px * 0.6) -1px rgba(black, 0.2),
-					0 4px (5px * 0.6) 0 rgba(black, 0.07),
-					0 1px (10px * 0.6) 0 rgba(black, 0.06);
-			}
-
 			&:checked {
-				background-color: mix(on($b_color), $b_color, percentage(0.3));
-			}
-
-			&:checked:hover {
-				box-shadow:
-					inset 0 0 0 9999px transparent,
-					0 3px 3px -3px rgba(black, 0.3),
-					0 2px 3px -1px rgba(black, 0.24),
-					0 2px 5px 0 rgba(black, 0.12);
+				background-color: mix(on($b_color), $b_color, 30%);
 			}
 
 			&:focus {
@@ -2642,8 +2629,8 @@ popover {
 		}
 
 		separator {
-			background-color: transparent;
-			margin: $space-size / 2 0;
+			background-color: $divider;
+			margin: 15px 10px;
 		}
 
 		list {
@@ -4955,23 +4942,11 @@ calendar {
  ***********/
 
 %dialog_action_button {
-	border-radius: 0;
+	border-radius: $modal-radius;
 	min-height: $menuitem-size;
 	padding: $space-size $space-size * 2;
 	margin: 0;
 	border: none;
-
-	&:first-child {
-		border-radius: 0 0 0 $window-radius;
-	}
-
-	&:last-child {
-		border-radius: 0 0 $window-radius 0;
-	}
-
-	&:only-child {
-		border-radius: 0 0 $window-radius $window-radius;
-	}
 }
 
 window.dialog.message {
@@ -5009,18 +4984,15 @@ window.dialog.message {
 
 	.dialog-action-area {
 		// margin-top: $space-size;
-		border-top: 1px solid $border;
+		borde: none;
 		margin: 0;
-		border-spacing: 0;
+		padding: $space-size;
+		border-spacing: $space-size;
 
 		> button {
 			border: none;
 			@extend %button-flat;
 			@extend %dialog_action_button;
-
-			&:not(:last-child) {
-				border-right: 1px solid $border;
-			}
 
 			&.suggested-action:not(:disabled) {
 				color: $suggested;
@@ -5054,51 +5026,32 @@ window.aboutdialog {
 window.messagedialog {
 	background-color: $surface;
 	color: $text;
+	padding: $space-size;
 
 	.message-area {
 		padding: 24px 30px;
 		border-spacing: 10px;
 	}
 
-	.response-area > box > button {
-		@extend %button-flat;
-		@extend %dialog_action_button;
+	.response-area {
+		border-spacing: $space-size;
 
-		&.suggested {
-			color: $primary;
-		}
+		button {
+			@extend %button-flat;
+			@extend %dialog_action_button;
 
-		&.destructive {
-			color: $destructive;
-		}
-	}
-
-	&.csd:not(.solid-csd) {
-		border-radius: $window-radius;
-
-		.response-area {
-			> box.horizontal > button {
-				margin: 0;
-
-				&:first-child {
-					margin-left: 0;
-				}
-
-				&:last-child {
-					margin-right: 0;
-				}
+			&.suggested {
+				color: $primary;
 			}
 
-			> box.vertical > button {
-				margin-top: 0;
-				margin-bottom: 0;
-
-				&:last-child {
-					border-bottom-left-radius: $window-radius;
-					border-bottom-right-radius: $window-radius;
-					margin-bottom: 0;
-				}
+			&.destructive {
+				color: $destructive;
 			}
+		}
+
+		separator {
+			background: none;
+			margin: $space-size / 2;
 		}
 	}
 }
@@ -5183,7 +5136,8 @@ separator.sidebar {
 	}
 
 	> separator {
-		margin: $space-size / 2 0;
+		background-color: $divider;
+		margin: 10px 15px;
 	}
 
 	row.activatable label.dim-label {
@@ -6131,6 +6085,7 @@ stackswitcher {
 /*********
  * Emoji *
  *********/
+
 popover.emoji-picker {
 	padding: 0;
 
@@ -6142,7 +6097,7 @@ popover.emoji-picker {
 .emoji-searchbar {
 	padding: $space-size;
 	border-spacing: $space-size;
-	border-bottom: 1px solid $divider;
+	/* border-bottom: 1px solid $divider; */
 	background: none;
 
 	entry {
@@ -6154,16 +6109,23 @@ popover.emoji-picker {
 }
 
 .emoji-toolbar {
-	padding: 0;
-	border-spacing: $space-size / 2;
-	border-top: 1px solid $divider;
+	padding: $space-size / 2;
+	border-spacing: 0;
 	background: none;
+
+	> flowboxchild {
+		padding: $space-size / 2;
+
+		> button {
+			padding: $space-size;
+		}
+	}
 }
 
 button.emoji-section {
 	margin: 0;
 	padding: $space-size;
-	border-radius: $corner-radius;
+	border-radius: $menuitem-radius;
 
 	&:checked {
 		color: $primary;
