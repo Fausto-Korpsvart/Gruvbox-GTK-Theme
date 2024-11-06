@@ -1,0 +1,32 @@
+/* Switches */
+
+.toggle-switch {
+	width: 46px;
+	height: 24px;
+	background-size: contain;
+	background-image: url('assets/toggle-off.svg');
+	transition-duration: 100ms;
+	color: transparent;
+
+	&:checked {
+		background-image: url('assets/toggle-on.svg');
+		color: transparent;
+
+		.handle {
+			background: none;
+		}
+	}
+
+	StIcon {
+		icon-size: 0;
+	}
+
+	.handle {
+		margin: 0;
+		width: 0;
+		height: 0;
+		background: none;
+		box-shadow: none;
+		transition-duration: 0;
+	}
+}
