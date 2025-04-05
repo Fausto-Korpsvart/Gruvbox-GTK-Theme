@@ -1807,7 +1807,7 @@ searchbar > revealer > box {
 
 %titlebar-button {
 	color: $titlebar-text-secondary;
-	background-color: if($topbar == 'light', rgba($white, 0.6), $titlebar-fill);
+	background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill);
 	border-radius: $corner-radius;
 	border: none;
 	outline: none;
@@ -1831,11 +1831,7 @@ searchbar > revealer > box {
 	}
 
 	&:hover {
-		background-color: if(
-			$topbar == 'light',
-			rgba($white, 0.8),
-			$titlebar-divider
-		);
+		background-color: if($topbar == 'light', $base_alt, $titlebar-divider);
 	}
 
 	&:focus,
@@ -1896,7 +1892,7 @@ searchbar > revealer > box {
 %titlebar-entry {
 	background-color: $titlebar-fill;
 	color: $titlebar-text;
-	border-radius: $circular-radius;
+	border-radius: $corner-radius;
 
 	&:disabled {
 		background-color: $titlebar-fill;
@@ -2026,8 +2022,8 @@ headerbar {
 
 	splitbutton {
 		background-color: if(
-			$topbar == 'light',
-			rgba($white, 0.6),
+			$variant == 'light',
+			rgba($base, 0.5),
 			$titlebar-fill
 		);
 		border-radius: $corner-radius;
@@ -3331,24 +3327,24 @@ scrollbar {
 
 	// scrollbar border
 	&.top {
-		border-bottom: 1px solid $divider;
-	}
-	&.bottom {
-		border-top: 1px solid $divider;
-	}
-	&.left {
-		border-right: 1px solid $divider;
-	}
-	&.right {
-		border-left: 1px solid $divider;
+		border-bottom: 1px solid transparent;
 	}
 
-	// slider
+	&.bottom {
+		border-top: 1px solid transparent;
+	}
+
+	&.left {
+		border-right: 1px solid transparent;
+	}
+
+	&.right {
+		border-left: 1px solid transparent;
+	}
+
 	> range > trough {
-		border: none;
-		background: none;
-		padding: 0;
 		outline: none;
+		background: none;
 
 		> slider {
 			transition: background-color $duration $ease-out;
@@ -3357,20 +3353,24 @@ scrollbar {
 			border: 4px solid transparent;
 			border-radius: $circular-radius;
 			background-clip: padding-box;
-			background-color: $text-disabled;
 			box-shadow: none;
 			outline: none;
+			background-color: if($variant == 'dark', $grey-800, $grey-200);
 
 			&:hover {
-				background-color: $text-secondary;
+				background-color: if($variant == 'dark', $grey-750, $grey-200);
 			}
 
 			&:active {
-				background-color: $text;
+				background-color: if($variant == 'dark', $grey-750, $grey-200);
 			}
 
 			&:disabled {
-				background-color: $text-secondary-disabled;
+				background-color: if(
+					$variant == 'dark',
+					$background,
+					$grey-050
+				);
 			}
 		}
 	}
@@ -3382,11 +3382,11 @@ scrollbar {
 		}
 
 		&.horizontal > trough > slider {
-			margin: $space-size / 2 0;
+			margin: 2px 0;
 		}
 
 		&.vertical > trough > slider {
-			margin: 0 $space-size / 2;
+			margin: 0 2px;
 		}
 	}
 
@@ -3402,14 +3402,14 @@ scrollbar {
 			> range > trough > slider {
 				min-width: 4px;
 				min-height: 4px;
-				margin: 0;
-				border: 1px solid rgba($base, 0.3);
+				margin: 2px;
+				border: none;
 			}
 
 			button {
 				min-width: 4px;
 				min-height: 4px;
-				margin: 0;
+				margin: 2px;
 				border: 1px solid rgba($base, 0.3);
 				border-radius: $circular-radius;
 				background-color: $text-disabled;
@@ -3444,7 +3444,7 @@ scrollbar {
 
 		&.dragging,
 		&.hovering {
-			background-color: rgba($surface, 0.9);
+			background-color: $background;
 		}
 	}
 
@@ -4187,9 +4187,7 @@ scrolledwindow {
 		}
 	}
 
-	// This is used when content is touch-dragged past boundaries.
-	// draws a box on top of the content, the size changes programmatically.
-	@at-root overshoot {
+	> overshoot {
 		&.top {
 			@include overshoot(top);
 		}
@@ -4207,22 +4205,36 @@ scrolledwindow {
 		}
 	}
 
-	// Overflow indication, works similarly to the overshoot, the size if fixed tho.
-	// @at-root undershoot {
-	//   &.top { @include undershoot(top); }
-	//
-	//   &.bottom { @include undershoot(bottom); }
-	//
-	//   &.left { @include undershoot(left); }
-	//
-	//   &.right { @include undershoot(right); }
-	// }
+	&.undershoot-top {
+		@include undershoot(top);
+	}
 
-	@at-root junction {
-		// the small square between two scrollbars
-		border: none;
-		// background-color: $base;
+	&.undershoot-bottom {
+		@include undershoot(bottom);
+	}
+
+	&.undershoot-start {
+		&:dir(ltr) {
+			@include undershoot(left);
+		}
+		&:dir(rtl) {
+			@include undershoot(right);
+		}
+	}
+
+	&.undershoot-end {
+		&:dir(ltr) {
+			@include undershoot(right);
+		}
+		&:dir(rtl) {
+			@include undershoot(left);
+		}
+	}
+
+	> undershoot {
 		background-image: none;
+		box-shadow: none;
+		border: none;
 	}
 }
 
@@ -4249,7 +4261,7 @@ separator {
  * Lists *
  *********/
 
-$list-row: if($variant == 'light', rgba($base, 0.4), $fill);
+$list-row: if($variant == 'light', rgba($base, 0.6), $fill);
 
 %circular_list {
 	border-radius: $corner-radius;
@@ -5147,7 +5159,7 @@ separator.sidebar {
 	> row {
 		min-height: $small-size;
 		padding: 0 $space-size 0 $space-size;
-		margin: 1px;
+		margin: 0;
 		border-radius: $modal-radius;
 
 		&:hover,
@@ -5196,6 +5208,18 @@ separator.sidebar {
 /****************
  * File chooser *
  ****************/
+
+#NautilusFileChooser gridview.view {
+	background-color: transparent;
+	margin: 10px 5px;
+	padding: 10px 5px;
+}
+
+#NautilusFileChooser columnview.view,
+row.activatable > cell {
+	background-color: transparent;
+	padding: 1px 10px;
+}
 
 filechooser {
 	paned {

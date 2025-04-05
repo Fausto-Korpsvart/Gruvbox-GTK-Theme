@@ -110,8 +110,8 @@
 	border: none;
 	box-shadow: none;
 	background-color: transparent;
-	padding: 0 !important;
-	margin: 0 !important;
+	padding: $base_padding !important;
+	margin: $base_margin !important;
 	text-shadow: none;
 	border-radius: $menu_radius;
 	color: $text-secondary;

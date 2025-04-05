@@ -1,7 +1,4 @@
-//
 // avatar
-//
-
 avatar {
 	border-radius: $circular-radius;
 	font-weight: bold;
@@ -72,7 +69,7 @@ avatar {
 		color: $text-secondary;
 		box-shadow: none;
 		outline: none;
-		background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+		background-color: if($variant == 'light', rgba($base, 0.6), $fill);
 		color: $text;
 	}
 
@@ -90,10 +87,7 @@ avatar {
 	}
 }
 
-//
 // Toasts
-//
-
 toast {
 	margin: $space-size * 2;
 	margin-bottom: $space-size * 4;
@@ -119,10 +113,7 @@ toast {
 	}
 }
 
-//
 // viewswitcher
-//
-
 viewswitcher {
 	margin: 0;
 	border-spacing: $space-size / 2;
@@ -277,16 +268,18 @@ indicatorbin {
 	}
 }
 
-//
 // preferencespage
-//
-
 preferencespage > scrolledwindow > viewport > clamp > box {
 	margin: $space-size * 4 $space-size * 2;
 	border-spacing: $space-size * 4;
 }
 
 preferencesgroup > box {
+	background-preview widget.sidebar,
+	widget.header-bar:not(.editable-area) {
+		background-color: if($variant == 'light', $grey-150, $grey-950);
+	}
+
 	&,
 	.labels {
 		border-spacing: $space-size;
@@ -399,12 +392,40 @@ preferencesgroup > box {
 			--accent-bg-color: var(--accent-slate);
 		}
 	}
+
+	box > list.boxed-list-separate {
+		background-color: transparent;
+		border-radius: $corner-radius;
+		& row {
+			color: $text;
+			background-color: if($variant == 'light', $base, $fill);
+			border-radius: $corner-radius $corner-radius 0 0;
+			margin-top: 0px;
+			margin-bottom: 2px;
+
+			&:first-child {
+				border-radius: $corner-radius $corner-radius 0 0;
+			}
+
+			&:last-child {
+				border-radius: 0 0 $corner-radius $corner-radius;
+				margin-bottom: 0;
+			}
+
+			& + row {
+				margin-top: 2px;
+			}
+
+			&:hover,
+			&:focus {
+				color: $text-secondary;
+				background-color: if($variant == 'light', $base, $fill);
+			}
+		}
+	}
 }
 
-//
 // AdwAboutWindow
-//
-
 window.about {
 	.main-page {
 		> viewport > clamp > box {
@@ -439,10 +460,7 @@ window.about {
 	}
 }
 
-//
 // AdwStatusPage
-//
-
 statuspage {
 	> scrolledwindow > viewport > box {
 		margin: $space-size * 6 $space-size * 2;
@@ -500,7 +518,7 @@ overlay-split-view {
 	background-color: if($variant == 'light', $grey-150, $grey-850);
 
 	@if $colorscheme == 'medium' {
-		background-color: if($variant == 'light', $grey-150, #1d2021);
+		background-color: if($variant == 'light', $grey-150, $black);
 	} @else if $colorscheme == 'soft' {
 		background-color: if($variant == 'light', $grey-150, #282828);
 	}
@@ -528,18 +546,22 @@ overlay-split-view {
 %sidebar_scrollbar {
 	> range > trough {
 		> slider {
-			background-color: $text-disabled;
+			background-color: if($variant == 'dark', $grey-800, $grey-200);
 
 			&:hover {
-				background-color: $text-secondary;
+				background-color: if($variant == 'dark', $grey-750, $grey-200);
 			}
 
 			&:active {
-				background-color: $text;
+				background-color: if($variant == 'dark', $grey-750, $grey-200);
 			}
 
 			&:disabled {
-				background-color: $text-secondary-disabled;
+				background-color: if(
+					$variant == 'dark',
+					$background,
+					$grey-050
+				);
 			}
 		}
 	}
@@ -558,15 +580,15 @@ overlay-split-view {
 }
 
 %content_style {
-	/* background-color: if($variant == 'light', $grey-150, $grey-850);
-    border-radius: $corner-radius; */
+	/* background-color: if($variant == 'light', rgba($white, 0.6), $fill);
+	border-radius: $corner-radius; */
 	margin: $space-size;
 }
 
 %nautilus_content_style {
 	background-color: $fill;
 	border-radius: $corner-radius;
-	margin: $space-size;
+	margin: 0 $space-size $space-size $space-size;
 }
 
 %sidebar_list {
@@ -592,14 +614,16 @@ overlay-split-view {
 		}
 
 		&:selected {
-			font-weight: 500;
-			background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+			/* background-color: if($variant == 'light', rgba($base, 0.4), $fill); */
+			background-color: $overlay-hover;
 			color: $primary;
+			font-weight: 500;
 			/* border-left: 3px solid $primary; */
 
 			&:hover,
 			&:focus {
-				background-color: rgba($base, 0.9);
+				/* background-color: rgba($base, 0.9); */
+				background-color: $overlay-hover;
 				color: $text;
 			}
 		}
@@ -761,26 +785,6 @@ overlay-split-view {
 	}
 }
 
-/*
-.content-pane {
-	toolbarview {
-		&,
-		&.view {
-			background-color: transparent;
-		}
-
-		> stack,
-		> box > stack.view {
-			@extend %content_style;
-		}
-	}
-
-	scrolledwindow scrollbar {
-		@extend %round_scrollbar;
-	}
-}
-*/
-
 /* Middle pane in three-pane setups */
 .content-pane .sidebar-pane,
 .sidebar-pane .content-pane {
@@ -864,7 +868,7 @@ panelthemeselector {
 			background-image: linear-gradient(
 				to bottom right,
 				$grey-050 50%,
-				$grey-750 50%
+				$grey-800 50%
 			);
 		}
 
@@ -873,7 +877,7 @@ panelthemeselector {
 		}
 
 		&.dark {
-			background-color: $grey-750;
+			background-color: $grey-800;
 		}
 
 		&.theme-selector radio {

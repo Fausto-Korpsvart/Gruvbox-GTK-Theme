@@ -50,10 +50,16 @@
 
 	.nautilus-grid-view,
 	.nautilus-list-view {
+		/* @extend %content_style; */
 		@extend %nautilus_content_style;
 
 		.view {
 			background-color: transparent;
+		}
+
+		row.activatable > cell {
+			padding: 0px;
+			margin: 0px;
 		}
 
 		scrolledwindow {
@@ -71,8 +77,8 @@
 		}
 
 		gridview.view {
-			margin: 6px;
-			padding: 6px;
+			margin: 10px 5px;
+			padding: 10px 5px;
 		}
 	}
 
@@ -146,7 +152,7 @@
 		margin: $space-size;
 		border-style: none;
 		border-radius: $modal-radius;
-		background-color: $background;
+		background-color: rgba($base, 0.95);
 		color: $primary;
 		box-shadow: $shadow-z3;
 
@@ -210,7 +216,7 @@
 }
 
 #NautilusPathBar {
-	background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+	background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill);
 	border-radius: $corner-radius;
 	margin: $space-size 0;
 }
@@ -761,7 +767,7 @@ menubutton stack > box {
 // Gnome Tweaks
 //
 
-#TweakPreferencesPage label.dim-label {
+#TweakPreferencesPage.tweak-group label.subtitle {
 	color: $text-secondary-disabled;
 }
 
@@ -2013,4 +2019,14 @@ list.music-list {
 
 notebook scrolledwindow treeview.treeview-spacing {
 	background-color: $background;
+}
+
+//
+// Fractal
+//
+.account-switcher-row label {
+	color: $text;
+}
+.account-switcher-row label.dim-label {
+	color: $text-secondary;
 }

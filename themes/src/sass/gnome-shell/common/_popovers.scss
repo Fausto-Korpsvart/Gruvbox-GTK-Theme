@@ -33,7 +33,7 @@
 		border: none;
 		font-weight: normal;
 
-		@if $outline == 'true' {
+		@if $float == 'true' {
 			border: 2px solid $primary;
 		}
 	}

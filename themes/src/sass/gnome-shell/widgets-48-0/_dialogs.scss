@@ -35,6 +35,7 @@
 .modal-dialog {
 	color: $text-secondary;
 	padding: $base_padding * 2;
+	margin: 0;
 	@extend %theme_dialogs;
 
 	&-button,
