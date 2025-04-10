@@ -5,6 +5,10 @@
 	border-radius: $modal_radius;
 	border: none;
 	box-shadow: inset 0 0.5px highlight($popover);
+
+	@if $float == 'true' {
+		border: 2px solid $primary;
+	}
 }
 
 %last_dialog_button {

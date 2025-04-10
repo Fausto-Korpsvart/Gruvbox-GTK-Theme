@@ -106,7 +106,7 @@ Run the following command in the terminal for a general installation
 The `./install.sh` allows some specific options like:
 
 ```sh
-./install.sh --tweak moon mac outline float -t green -l
+./install.sh --tweaks moon mac outline float -t green -l
 ```
 
 > For more information, run: `./install.sh --help`

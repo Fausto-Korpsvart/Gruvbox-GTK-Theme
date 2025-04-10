@@ -1918,21 +1918,28 @@ window.background {
 
 		> scrolledwindow > viewport.frame {
 			list {
-				border-radius: $corner-radius;
+				/* border-radius: $corner-radius; */
 				margin: 0 $space-size $space-size;
-				background-color: $indicator;
-				color: on($indicator);
+				background-color: $background;
+				color: on($background);
 
 				button.flat {
 					@extend %flat-button-on-indicator;
 				}
 
 				> row {
+					padding: 0 2px;
+					margin: 2px 0;
+					border-radius: $corner-radius;
+
+					&:selected,
+					&:hover {
+						color: $primary;
+					}
+
 					&,
-					&:hover,
-					&:active,
-					&:selected {
-						color: on($indicator);
+					&:active {
+						color: on($background);
 					}
 				}
 			}

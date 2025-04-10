@@ -1,10 +1,14 @@
 //
 // Nautilus
 //
-
 .nautilus-window {
 	&.view {
 		background-color: $background;
+	}
+
+	& headerbar widget > windowtitle {
+		padding: 0;
+		margin: 0 -10px;
 	}
 
 	.sidebar-pane {
@@ -773,6 +777,22 @@ menubutton stack > box {
 
 #TweakPreferencesPage label.dim-label {
 	color: $text-secondary-disabled;
+}
+
+.tweak-titlebar-left > windowhandle > box {
+	padding: 0px;
+	margin: 0 50px;
+}
+
+.tweak-titlebar-left > windowhandle widget > box.start {
+	padding: 0px;
+	margin: 0 -45px;
+}
+
+.tweak-titlebar-left > windowhandle widget > box,
+windowtitle {
+	padding: 0px;
+	margin: 0 -40px 0 45px;
 }
 
 .tweak-titlebar-left {

@@ -223,7 +223,8 @@
 
 	@if $t == flat-focus {
 		color: $text;
-		outline: 2px solid $fill;
+		outline: 2px solid transparent;
+		/* outline: 2px solid $fill; */
 		outline-offset: -2px;
 	}
 

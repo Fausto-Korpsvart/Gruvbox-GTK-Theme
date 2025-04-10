@@ -104,8 +104,8 @@
 
 // message bubbles
 .message {
-	padding: 0;
-	margin: $base_spacing / 2;
+	margin: 0 2px;
+	padding: $base_padding;
 	border-radius: $window_radius;
 
 	.popup-menu & {

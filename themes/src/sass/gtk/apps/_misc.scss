@@ -181,138 +181,138 @@ tooltip.background.chromium {
 /***********
  * Firefox *
  ***********/
-/* #MozillaGtkWidget { */
-/* 	decoration { */
-/* 		border: none; */
-/* 	} */
+#MozillaGtkWidget {
+	decoration {
+		border: none;
+	}
 
-/* 	> widget { */
-/* 		// For popover, entry in toolbar, etc. */
-/* 		text { */
-/* 			background-color: $background; */
-/* 		} */
+	> widget {
+		// For popover, entry in toolbar, etc.
+		text {
+			background-color: $background;
+		}
 
-/* 		// For selection, active tab indicator, etc. */
-/* 		text:selected { */
-/* 			// Use traditional selection style as workaround */
-/* 			background-color: $primary; */
-/* 			color: on($primary); */
-/* 		} */
+		// For selection, active tab indicator, etc.
+		text:selected {
+			// Use traditional selection style as workaround
+			background-color: $primary;
+			color: on($primary);
+		}
 
-/* 		// For separators in bookmark toolbar */
-/* 		> separator { */
-/* 			color: $solid-border; */
-/* 		} */
+		// For separators in bookmark toolbar
+		> separator {
+			color: $solid-border;
+		}
 
-/* 		// avoid black border */
-/* 		> scrollbar { */
-/* 			background-clip: border-box; */
-/* 		} */
+		// avoid black border
+		> scrollbar {
+			background-clip: border-box;
+		}
 
-/* 		// Emphasize toolbar's border-bottom */
-/* 		> frame > border { */
-/* 			border-color: $solid-border; */
-/* 		} */
+		// Emphasize toolbar's border-bottom
+		> frame > border {
+			border-color: $solid-border;
+		}
 
-/* 		> entry, */
-/* 		> button > button { */
-/* 			border: 1px solid $solid-border; */
-/* 			border-radius: $corner-radius; */
-/* 			box-shadow: none; */
+		> entry,
+		> button > button {
+			border: 1px solid $solid-border;
+			border-radius: $corner-radius;
+			box-shadow: none;
 
-/* 			&:disabled { */
-/* 				border-color: $track-disabled; */
-/* 			} */
-/* 		} */
+			&:disabled {
+				border-color: $track-disabled;
+			}
+		}
 
-/* 		> entry { */
-/* 			min-height: 32px - 2px; */
-/* 			background-color: $base; */
+		> entry {
+			min-height: 32px - 2px;
+			background-color: $base;
 
-/* 			&:focus { */
-/* 				border-color: $primary; */
-/* 				box-shadow: inset 0 0 0 1px $primary; */
-/* 			} */
+			&:focus {
+				border-color: $primary;
+				box-shadow: inset 0 0 0 1px $primary;
+			}
 
-/* 			&:disabled { */
-/* 				background-color: $base-alt; */
-/* 			} */
-/* 		} */
+			&:disabled {
+				background-color: $base-alt;
+			}
+		}
 
-/* 		> button > button { */
-/* 			padding: 4px 8px; */
-/* 			background-size: auto; */
+		> button > button {
+			padding: 4px 8px;
+			background-size: auto;
 
-/* 			&:hover { */
-/* 				box-shadow: inset 0 0 0 9999px $overlay-hover; */
-/* 			} */
+			&:hover {
+				box-shadow: inset 0 0 0 9999px $overlay-hover;
+			}
 
-/* 			&:active { */
-/* 				background-image: image($overlay-active); */
-/* 			} */
-/* 		} */
+			&:active {
+				background-image: image($overlay-active);
+			}
+		}
 
-/* 		// use 16px assets for hard-coded sizing */
-/* 		> checkbutton > check { */
-/* 			@extend %small_check; */
-/* 		} */
+		// use 16px assets for hard-coded sizing
+		> checkbutton > check {
+			@extend %small_check;
+		}
 
-/* 		> radiobutton > radio { */
-/* 			@extend %small_radio; */
-/* 		} */
+		> radiobutton > radio {
+			@extend %small_radio;
+		}
 
-/* 		> checkbutton > check, */
-/* 		> radiobutton > radio { */
-/* 			margin: 0; */
-/* 			padding: 0; */
-/* 		} */
+		> checkbutton > check,
+		> radiobutton > radio {
+			margin: 0;
+			padding: 0;
+		}
 
-/* 		// make check/radio visible regardless of whether the background is bright or dark */
-/* 		> checkbutton > check:not(:checked):not(:indeterminate), */
-/* 		> radiobutton > radio:not(:checked):not(:indeterminate) { */
-/* 			color: $grey-600; */
+		// make check/radio visible regardless of whether the background is bright or dark
+		> checkbutton > check:not(:checked):not(:indeterminate),
+		> radiobutton > radio:not(:checked):not(:indeterminate) {
+			color: $grey-600;
 
-/* 			&:hover, */
-/* 			&:active { */
-/* 				color: $grey-500; */
-/* 			} */
+			&:hover,
+			&:active {
+				color: $grey-500;
+			}
 
-/* 			&:disabled { */
-/* 				color: rgba($grey-600, 0.5); */
-/* 			} */
-/* 		} */
-/* 	} */
+			&:disabled {
+				color: rgba($grey-600, 0.5);
+			}
+		}
+	}
 
-/* 	// remove ugly border around the menus */
-/* 	menu { */
-/* 		border: none; */
-/* 	} */
-/* } */
+	// remove ugly border around the menus
+	menu {
+		border: none;
+	}
+}
 
-/* // for backward compatibility */
-/* #MozillaGtkWidget { */
-/* 	> widget { */
-/* 		> menubar { */
-/* 			color: $titlebar-text-secondary; */
+// for backward compatibility
+#MozillaGtkWidget {
+	> widget {
+		> menubar {
+			color: $titlebar-text-secondary;
 
-/* 			&:hover { */
-/* 				color: $titlebar-text; */
-/* 			} */
+			&:hover {
+				color: $titlebar-text;
+			}
 
-/* 			&:disabled { */
-/* 				color: $titlebar-text-secondary-disabled; */
-/* 			} */
-/* 		} */
+			&:disabled {
+				color: $titlebar-text-secondary-disabled;
+			}
+		}
 
-/* 		> frame { */
-/* 			color: $solid-border; */
-/* 		} */
-/* 	} */
+		> frame {
+			color: $solid-border;
+		}
+	}
 
-/* 	menu > separator { */
-/* 		color: $solid-border; */
-/* 	} */
-/* } */
+	menu > separator {
+		color: $solid-border;
+	}
+}
 
 //
 // plank
@@ -476,6 +476,46 @@ window.background.csd {
 					}
 				}
 			}
+		}
+	}
+}
+
+dialog-host > floating-sheet > sheet > widget.response-area {
+	padding: 6px !important;
+}
+
+//
+// KiCad / SLADE
+//
+
+window.background:not(.csd):not(.solid-csd) {
+	> button:not(:hover):not(:active):not(:checked):not(:disabled):not(.flat) {
+		// Why this ?
+		/* background-color: if($variant == 'light', $grey-100, $grey-900); */
+		background-color: $background;
+	}
+}
+
+//
+// FileZilla
+//
+
+window.background:not(.csd) {
+	> box
+		> widget
+		> widget
+		> widget
+		> widget
+		> widget
+		> widget
+		> widget
+		> scrolledwindow {
+		entry:focus {
+			background-color: if(
+				$variant == 'light',
+				mix(black, $background, 5%),
+				mix(white, $background, 5%)
+			);
 		}
 	}
 }
