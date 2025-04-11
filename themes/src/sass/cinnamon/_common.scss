@@ -1341,11 +1341,14 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	color: on($background);
 	background-color: rgba($background, 0.95);
 	padding: $space-size;
-	border: 1px solid $divider;
 	border-radius: $corner-radius;
 	box-shadow:
 		0 3px 8px rgba(black, 0.75),
 		0 5px 18px rgba(black, 0.55);
+	/* border: 1px solid $divider; */
+	@if $outline == 'true' {
+		border: 2px solid $primary;
+	}
 
 	> StBoxLayout:first-child {
 		padding: 20px 10px 10px 10px;
@@ -1866,6 +1869,13 @@ $sub_menu_bg: mix($text, $popover, 10%);
 //
 // OSD
 //
+
+$barlevel_height: 6px;
+
+$ws_indicator_height: 32px;
+$ws_dot_active: $ws_indicator_height / 3;
+$ws_dot_inactive: $ws_indicator_height / 6;
+
 .info-osd {
 	text-align: center;
 	font-weight: bold;
@@ -1902,6 +1912,42 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	.level-bar {
 		border-radius: $corner-radius;
 		background-color: $primary;
+	}
+}
+
+.workspace-switch-osd {
+	@extend %title_4;
+	color: $primary;
+	background-color: transparentize($background, 0.01);
+	/* border: 1px solid transparentize($divider, 0.01); */
+	@if $outline == 'true' {
+		border: 2px solid $primary;
+	}
+	border-radius: $modal-radius;
+	text-align: center;
+	padding: $space-size * 4;
+
+	min-width: 140px;
+	margin-bottom: 1em;
+	border-radius: 9999px;
+	font-weight: bold;
+	padding: $space-size * 2 $space-size * 6 0 $space-size * 6;
+
+	&-indicator-box {
+		spacing: $space-size * 2;
+	}
+
+	&-indicator {
+		background-color: transparentize($text, 0.5);
+		padding: $ws_dot_inactive / 2;
+		margin: ($ws_indicator_height - $ws_dot_inactive) / 2;
+		border-radius: $ws_indicator_height;
+
+		&:active {
+			background-color: $primary;
+			padding: $ws_dot_active / 2;
+			margin: ($ws_indicator_height - $ws_dot_active) / 2;
+		}
 	}
 }
 

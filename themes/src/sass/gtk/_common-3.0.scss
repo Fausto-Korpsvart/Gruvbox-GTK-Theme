@@ -2176,7 +2176,10 @@ menu {
 	background-color: $menu;
 	background-clip: border-box;
 	border-radius: $menu-radius;
-	border: 1px solid $primary;
+	/* border: 1px solid $primary; */
+	@if $outline == 'true' {
+		border: 2px solid $primary;
+	}
 
 	.csd & {
 		border: none;

@@ -536,7 +536,7 @@ overlay-split-view {
 	background-color: $background;
 	color: on($background);
 	border-radius: 0;
-	margin: 0;
+	margin: 0 6px 0 0;
 
 	.dim-label {
 		color: on($indicator, disabled);
@@ -545,6 +545,7 @@ overlay-split-view {
 
 %sidebar_scrollbar {
 	> range > trough {
+		margin: 0 -8px 0 0;
 		> slider {
 			background-color: if($variant == 'dark', $grey-800, $grey-200);
 
@@ -605,7 +606,7 @@ overlay-split-view {
 		color: on($indicator, secondary);
 		border-radius: $modal-radius;
 		color: $text;
-		padding: 7px 0;
+		padding: 6px 0;
 
 		&:hover,
 		&:active,

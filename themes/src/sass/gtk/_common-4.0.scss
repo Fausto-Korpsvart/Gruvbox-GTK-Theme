@@ -1807,7 +1807,8 @@ searchbar > revealer > box {
 
 %titlebar-button {
 	color: $titlebar-text-secondary;
-	background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill);
+	/* background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill); */
+	background-color: transparent;
 	border-radius: $corner-radius;
 	border: none;
 	outline: none;
@@ -2023,11 +2024,8 @@ headerbar {
 	}
 
 	splitbutton {
-		background-color: if(
-			$variant == 'light',
-			rgba($base, 0.5),
-			$titlebar-fill
-		);
+		/* background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill); */
+		background-color: transparent;
 		border-radius: $corner-radius;
 
 		button:not(.suggested-action):not(.destructive-action) {
