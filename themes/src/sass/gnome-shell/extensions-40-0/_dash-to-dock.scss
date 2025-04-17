@@ -228,8 +228,7 @@
 }
 
 #dashtodockPreviewSeparator.popup-separator-menu-item-horizontal {
-	// background-color: if($variant == 'light', $black, rgba($white, 0.25));
-	background-color: red !important;
+	background-color: if($variant == 'light', $black, rgba($white, 0.25));
 	width: 1px;
 	height: auto;
 	border-right-width: 1px;

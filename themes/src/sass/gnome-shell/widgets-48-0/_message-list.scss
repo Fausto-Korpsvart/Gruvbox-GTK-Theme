@@ -9,7 +9,7 @@
 
 	// padding and margins to account for scrollbar
 	&:ltr {
-		margin-left: 0;
+		margin-left: 2px;
 		margin-right: $base_margin * 2;
 		padding-right: $base_padding + $base_margin;
 		border-right-width: 0;
@@ -38,7 +38,7 @@
 .message-view {
 	// to account for scrollbar
 	&:ltr {
-		margin-right: 0;
+		margin-right: 10px;
 	}
 	&:rtl {
 		margin-left: 0;

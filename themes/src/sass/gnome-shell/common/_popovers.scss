@@ -27,8 +27,8 @@
 		padding: $base_padding;
 		// background-color: $popover;
 		background-color: if($variant == 'light', rgba($white, 0.9), $black);
-		border-radius: $menu_radius;
-		margin: 0;
+		border-radius: $base_radius;
+		margin: 0 2px;
 		box-shadow: 0 6px 15px -6px rgba(black, 0.25);
 		border: none;
 		font-weight: normal;
@@ -43,7 +43,7 @@
 		color: $text-secondary !important;
 		text-shadow: none;
 		border-radius: $base_radius;
-		margin: 0;
+		margin: 0 2px;
 		transition-duration: 100ms;
 		font-weight: normal;
 		background-color: transparent;

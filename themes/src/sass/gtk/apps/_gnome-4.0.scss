@@ -6,11 +6,6 @@
 		background-color: $background;
 	}
 
-	& headerbar widget > windowtitle {
-		padding: 0;
-		margin: 0 -20px;
-	}
-
 	.sidebar-pane {
 		background-color: $background;
 		color: $text;
@@ -252,6 +247,26 @@
 	}
 }
 
+#NautilusFileChooser gridview.view {
+	background-color: transparent;
+	margin: 10px 5px;
+	padding: 10px 5px;
+}
+
+#NautilusFileChooser columnview.view,
+row.activatable > cell {
+	background-color: transparent;
+	padding: 1px 10px;
+}
+
+#NautilusProgressIndicator popover label {
+	color: $text-secondary;
+}
+
+#NautilusProgressIndicator popover image {
+	color: $text-secondary;
+}
+
 /* Nautilus Progress Indicator */
 windowhandle box.vertical box.toolbar {
 	background-color: $background;
@@ -262,14 +277,6 @@ windowhandle box.toolbar menubutton button.toggle {
 	background-color: $background;
 	border: none;
 	outline: none;
-}
-
-#NautilusProgressIndicator popover label {
-	color: $text-secondary;
-}
-
-#NautilusProgressIndicator popover image {
-	color: $text-secondary;
 }
 
 window.dialog {
@@ -779,28 +786,27 @@ menubutton stack > box {
 	color: $text-secondary-disabled;
 }
 
-.tweak-titlebar-left > windowhandle > box {
-	padding: 0px;
-	margin: 0 50px;
-}
-
-.tweak-titlebar-left > windowhandle widget > box.start {
-	padding: 0px;
-	margin: 0 -45px;
-}
-
-.tweak-titlebar-left > windowhandle widget > box,
-windowtitle {
-	padding: 0px;
-	margin: 0 -40px 0 45px;
-}
-
 .tweak-titlebar-left {
 	@extend %sidebar_style;
 
 	box-shadow: inset 0 1px highlight($background);
 	border-top-left-radius: $window-radius;
 
+	& > windowhandle > box {
+		padding: 0px;
+		margin: 0 5px 0 15px;
+	}
+
+	& > windowhandle widget > box.start {
+		padding: 0px;
+		margin: 0 2px 0 0;
+	}
+
+	& > windowhandle widget > box,
+	windowtitle {
+		padding: 0px;
+		margin: 0 -3px 0 10px;
+	}
 	&:backdrop {
 		@extend %sidebar_style;
 

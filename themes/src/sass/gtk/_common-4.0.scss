@@ -1949,6 +1949,7 @@ headerbar {
 	.title {
 		/* padding: 0 $space-size * 2; */
 		padding: 0;
+		margin: 0 -20px;
 		font-weight: bold;
 	}
 
@@ -1980,7 +1981,7 @@ headerbar {
 	}
 
 	> windowhandle > box {
-		padding: 0 $space-size;
+		padding: 0 $space-size * 2;
 
 		&,
 		> box.start,
@@ -5137,7 +5138,8 @@ separator.sidebar {
  **********************/
 
 .navigation-sidebar {
-	padding: $space-size - 4 $space-size - 2; //only vertical padding. horizontal row size would clip
+	/* padding: $space-size - 4 $space-size - 2; //only vertical padding. horizontal row size would clip */
+	padding: 0 $space-size;
 	border-right: none;
 
 	&,
@@ -5158,7 +5160,8 @@ separator.sidebar {
 
 	> row {
 		min-height: $small-size;
-		padding: 0 $space-size 0 $space-size;
+		/* padding: 0 $space-size 0 $space-size; */
+		padding: 0 6px;
 		margin: 0;
 		border-radius: $modal-radius;
 
@@ -5208,18 +5211,6 @@ separator.sidebar {
 /****************
  * File chooser *
  ****************/
-
-#NautilusFileChooser gridview.view {
-	background-color: transparent;
-	margin: 10px 5px;
-	padding: 10px 5px;
-}
-
-#NautilusFileChooser columnview.view,
-row.activatable > cell {
-	background-color: transparent;
-	padding: 1px 10px;
-}
 
 filechooser {
 	paned {
@@ -5832,7 +5823,7 @@ window {
 	min-height: 16px;
 	min-width: 16px;
 	padding: 0;
-	margin: $space-size * 3 $space-size - 4px;
+	margin: $space-size * 3 $space-size - 6px;
 	/* margin: 0 $space-size - 4px; */
 
 	&.minimize,
@@ -5913,7 +5904,7 @@ window {
 	min-height: 22px;
 	min-width: 22px;
 	padding: 0;
-	margin: $space-size * 3 $space-size - 4px;
+	margin: $space-size * 3 $space-size - 6px;
 	/* margin: 0 $space-size - 4px; */
 
 	&.minimize,
