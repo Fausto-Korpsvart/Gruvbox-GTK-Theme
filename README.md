@@ -1,7 +1,7 @@
 <h1 align="center">Gruvbox GTK Theme</h1>
 
 <p align="center">
-  <img alt"Linux Logo" = src="https://img.shields.io/badge/OS-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=yelow"/>
+  <img alt"Linux Logo" src="https://img.shields.io/badge/OS-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=yelow"/>
   <img alt"CSS Log" src="https://img.shields.io/badge/Style-CSS-blue?style=for-the-badge&logo=css3&logoColor=blue"/>
   <img alt"GitHub Stars" src="https://img.shields.io/github/stars/Fausto-Korpsvart/Gruvbox-GTK-Theme?&style=for-the-badge&logoColor=red" />
   <img alt"GitHub Forks" src="https://img.shields.io/github/forks/Fausto-Korpsvart/Gruvbox-GTK-Theme?style=for-the-badge" />
@@ -9,11 +9,9 @@
   <img alt"GNU License" src='https://img.shields.io/github/license/Fausto-Korpsvart/Gruvbox-GTK-Theme?style=for-the-badge&logo=GNU&label=License&color=bd0000&logoColor=white'/>
 </p>
 
-> [!NOTE]
-> Description
 > A GTK theme based on the colours of [Sainnhe's](https://github.com/sainnhe) great theme: [Gruvbox Material for Neovim](https://github.com/sainnhe/gruvbox-material),
-> the [VinceLiuice's](https://github.com/vinceliuice) awesome: [Magnetic GTK theme](https://github.com/vinceliuice/Magnetic-gtk-theme) and the creativity of [Gusbemacbe's](https://github.com/gusbemacbe): [Suru Plus Icon Theme](https://github.com/gusbemacbe/suru-plus).<br>
-> Great to combine in your Gnome Desktop Environment and TWMs like: XmonadWM, AwesomeWM, BSPWM, etc...
+> the [VinceLiuice's](https://github.com/vinceliuice) awesome: [Magnetic GTK theme](https://github.com/vinceliuice/Magnetic-gtk-theme)
+> and the creativity of [Gusbemacbe's](https://github.com/gusbemacbe): [Suru Plus Icon Theme](https://github.com/gusbemacbe/suru-plus).<br>
 >
 > The theme is more focused on the Gnome Desktop, but supports Cinnamon, XFCE, Mate, etc. with generic styles.
 > It's great to combine in your TWMs like: XmonadWM, AwesomeWM, BSPWM, etc...
@@ -137,25 +135,25 @@ The `./install.sh` allows some specific options like:
 This is just to clarify doubts about the abbreviations of the Themes, as many found the names confusing.
 | Abbreviation example | Explanation of abbreviations |
 | -------------------- | ------------------------------------------------- |
-| Theme-Name-B-MB      | `Bordered` theme and window `macOS Buttons`       |
-| Theme-Name-B-LB      | `Bordered` theme and window `Legacy Buttons`      |
-| Theme-Name-B-GS      | `Floating` and `Bordered` theme for `Gnome Shell` |
-| Theme-Name-BL-MB     | `Borderless` Theme and window `macOS Buttons`     |
-| Theme-Name-BL-LB     | `Borderless` Theme and window `Legacy Buttons`    |
-| Theme-Name-BL-GS     | `Borderless` Theme decoration for `Gnome Shell`   |
+| Theme-Name-B-MB | `Bordered` theme and window `macOS Buttons` |
+| Theme-Name-B-LB | `Bordered` theme and window `Legacy Buttons` |
+| Theme-Name-B-GS | `Floating` and `Bordered` theme for `Gnome Shell` |
+| Theme-Name-BL-MB | `Borderless` Theme and window `macOS Buttons` |
+| Theme-Name-BL-LB | `Borderless` Theme and window `Legacy Buttons` |
+| Theme-Name-BL-GS | `Borderless` Theme decoration for `Gnome Shell` |
 
 ### LOOKING FOR OTHER THEMES WITH NEOVIM COLOUR SCHEMES?
 
-| Neovim Colorschemes for GTK | GitHub      | Pling     |
+| Neovim Colorschemes for GTK | GitHub | Pling |
 | --------------------------- | ----------- | --------- |
-| Catppuccin GTK Theme        | [Source](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme) | [Package](https://www.pling.com/p/1715554/) |
-| Everforest GTK Theme        | [Source](https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme) | [Package](https://www.pling.com/p/1695467/) |
-| Gruvbox GTK Theme           | [Source](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)    | [Package](https://www.pling.com/p/1681313/) |
-| Kanagawa GTK Theme          | [Source](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme)   | [Package](https://www.pling.com/p/1810560/) |
-| Material GTK Theme          | [Source](https://github.com/Fausto-Korpsvart/Material-GTK-Themes)  | [Package](https://www.pling.com/p/1706139/) |
-| Nightfox GTK Theme          | [Source](https://github.com/Fausto-Korpsvart/Nightfox-GTK-Theme)   | [Package](https://www.pling.com/p/1929101/) |
-| Rose Pine GTK Theme         | [Source](https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme)  | [Package](https://www.pling.com/p/1810530/) |
-| Tokyonight GTK Theme        | [Source](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme) | [Package](https://www.pling.com/p/1681315/) |
+| Catppuccin GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme) | [Package](https://www.pling.com/p/1715554/) |
+| Everforest GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme) | [Package](https://www.pling.com/p/1695467/) |
+| Gruvbox GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) | [Package](https://www.pling.com/p/1681313/) |
+| Kanagawa GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme) | [Package](https://www.pling.com/p/1810560/) |
+| Material GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Material-GTK-Themes) | [Package](https://www.pling.com/p/1706139/) |
+| Nightfox GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Nightfox-GTK-Theme) | [Package](https://www.pling.com/p/1929101/) |
+| Rose Pine GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme) | [Package](https://www.pling.com/p/1810530/) |
+| Tokyonight GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme) | [Package](https://www.pling.com/p/1681315/) |
 
 #### Acknowledgements to
 

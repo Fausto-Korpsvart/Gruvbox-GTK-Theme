@@ -1876,6 +1876,65 @@ $ws_indicator_height: 32px;
 $ws_dot_active: $ws_indicator_height / 3;
 $ws_dot_inactive: $ws_indicator_height / 6;
 
+%osd_base {
+	color: $text;
+	background-color: transparentize($background, 0.01);
+	border: 1px solid transparentize($divider, 0.01);
+	border-radius: $corner-radius;
+	text-align: center;
+	padding: $space-size * 4;
+}
+
+// media keys osd
+
+.media-keys-osd {
+	@extend %osd_base;
+	@extend %title_4;
+
+	margin-bottom: 1em;
+	border-radius: 9999px;
+	font-weight: bold;
+	spacing: $space-size * 2;
+	padding: $space-size * 2 $space-size * 4;
+	& > * {
+		spacing: $space-size * 2;
+	}
+
+	StIcon {
+		icon-size: 32px;
+	}
+
+	StLabel {
+		&:ltr {
+			margin-right: $space-size;
+		}
+		&:rtl {
+			margin-left: $space-size;
+		}
+	}
+
+	.level {
+		min-width: 160px;
+		-barlevel-height: $barlevel_height;
+		-barlevel-background-color: $base;
+		-barlevel-active-background-color: $text;
+		-barlevel-amplify-color: $warning;
+		-barlevel-amplify-separator-width: $space-size * 0.5;
+
+		&:ltr {
+			margin-right: $space-size;
+		}
+		&:rtl {
+			margin-left: $space-size;
+		}
+	}
+
+	.level-bar {
+		border-radius: $corner-radius;
+		background-color: $text;
+	}
+}
+
 .info-osd {
 	text-align: center;
 	font-weight: bold;
