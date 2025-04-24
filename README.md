@@ -9,18 +9,16 @@
   <img alt"GNU License" src='https://img.shields.io/github/license/Fausto-Korpsvart/Gruvbox-GTK-Theme?style=for-the-badge&logo=GNU&label=License&color=bd0000&logoColor=white'/>
 </p>
 
-> A GTK theme based on the colours of [Sainnhe's](https://github.com/sainnhe) great theme: [Gruvbox Material for Neovim](https://github.com/sainnhe/gruvbox-material),
-> the [VinceLiuice's](https://github.com/vinceliuice) awesome: [Magnetic GTK theme](https://github.com/vinceliuice/Magnetic-gtk-theme)
-> and the creativity of [Gusbemacbe's](https://github.com/gusbemacbe): [Suru Plus Icon Theme](https://github.com/gusbemacbe/suru-plus).<br>
->
-> The theme is more focused on the Gnome Desktop, but supports Cinnamon, XFCE, Mate, etc. with generic styles.
-> It's great to combine in your TWMs like: XmonadWM, AwesomeWM, BSPWM, etc...
->
-> You can check **Reddit:** [r/unixporn](https://www.reddit.com/r/unixporn/) to get some ideas.
+A GTK theme based on the colours of [Sainnhe's](https://github.com/sainnhe) great theme: [Gruvbox Material for Neovim](https://github.com/sainnhe/gruvbox-material) <br>
+the [VinceLiuice's](https://github.com/vinceliuice) awesome: [Magnetic GTK theme](https://github.com/vinceliuice/Magnetic-gtk-theme), and the creativity of [Gusbemacbe's](https://github.com/gusbemacbe): [Suru Plus Icon Theme](https://github.com/gusbemacbe/suru-plus).
 
 ![Gruvbox Dark](https://raw.githubusercontent.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/master/extra/screenshoots/Gruvbox-2.png)
 
-## INSTALLING THEMES
+> [!NOTE]
+> The theme is more focused on the Gnome Desktop, but supports Cinnamon, XFCE, Mate, etc. with generic styles.
+> It's great to combine in your TWMs like: XmonadWM, AwesomeWM, BSPWM, etc...
+
+## ⚙️ Requirements
 
 Before installing the themes, make sure to install the following necessary packages:
 `sassc` `murrine-engine` and `gnome-themes-extra` packages for the correct rendering of themes.
@@ -51,7 +49,7 @@ sudo pacman -S gtk-engine-murrine
 sudo apt install gtk2-engines-murrine
 ```
 
-The themes work on versions 40 to 44 of the GNOME D.E. just follow the steps below for installation:
+## 📁 Manual Installation
 
 - Download the [themes](https://www.pling.com/u/fkorpsvart) packs and extract them
 - Move the extracted files to the following paths:
@@ -59,13 +57,13 @@ The themes work on versions 40 to 44 of the GNOME D.E. just follow the steps bel
   - For GTK4: `~/.config/gtk-4.0` The files to move to this path can be found inside the theme directory in the `gtk-4.0` folder,
     copy only the `assets`, `gtk.css` and `gtk-dark.css` files or create a symlinks.
 
-### Applying Themes from zip files
+## 🔨 Applying the Theme
 
-- For GTK3, apply themes from **Gnome Tweaks**.
+- For **GTK3**, apply themes from **Gnome Tweaks** or **Refine**
 - For GTK4 applications it is only necessary to have moved the `assets`, `gtk.css` and `gtk-dark.css` files to the `~/.config/gtk-4.0` path,
   and if you notice that the theme has not been applied, just close and reopen the application.
 
-### Applying Themes to Flatpak Apps
+## 📦 Flatpak Compatibility
 
 - Override flatpak themes to `~/.themes`:
 
@@ -91,9 +89,10 @@ flatpak override --user --filesystem=xdg-config/gtk-4.0
 sudo flatpak override --filesystem=xdg-config/gtk-4.0
 ```
 
-**Alternative Flatpak Theming: [stylepak](https://github.com/refi64/stylepak)**
+> [!TIP]
+> 💡 Use [stylepak](https://github.com/refi64/stylepak) for easier Flatpak theming.
 
-## CLI INSTALLATION
+## 🛠 CLI Installation
 
 Run the following command in the terminal for a general installation
 
@@ -104,14 +103,17 @@ Run the following command in the terminal for a general installation
 The `./install.sh` allows some specific options like:
 
 ```sh
-./install.sh --tweaks moon mac outline float -t green -l
+./install.sh --tweaks medium mac outline float -t green -l
 ```
 
-> For more information, run: `./install.sh --help`
+> [!TIP]
+> 🧾 For more information, run: `./install.sh --help`
+
+### Options
 
 ```
 -d, --dest DIR          Specify destination directory (Default: ~/.themes)
--n, --name NAME         Specify theme name (Default: Everforest)
+-n, --name NAME         Specify theme name (Default: Gruvbox)
 -t, --theme VARIANT...  Specify theme accent color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
 -c, --color VARIANT...  Specify color variant(s) [light|dark] (Default: All variants)
 -s, --size VARIANT...   Specify size variant [standard|compact] (Default: standard variant)
@@ -130,39 +132,39 @@ The `./install.sh` allows some specific options like:
 -h, --help              Show help
 ```
 
-### CLARIFYING SOME DOUBTS
+## 🔠 Abbreviation Cheat Sheet
 
-This is just to clarify doubts about the abbreviations of the Themes, as many found the names confusing.
+This is just to clarify doubts about the abbreviations of the Themes
 | Abbreviation example | Explanation of abbreviations |
-| -------------------- | ------------------------------------------------- |
-| Theme-Name-B-MB | `Bordered` theme and window `macOS Buttons` |
-| Theme-Name-B-LB | `Bordered` theme and window `Legacy Buttons` |
-| Theme-Name-B-GS | `Floating` and `Bordered` theme for `Gnome Shell` |
+| -------------------- | ---------------------------- |
+| Theme-Name-B-MB | `Bordered` Theme and window `macOS Buttons` |
+| Theme-Name-B-LB | `Bordered` Theme and window `Legacy Buttons` |
+| Theme-Name-B-GS | `Floating` and `Bordered` Theme for `Gnome Shell` |
 | Theme-Name-BL-MB | `Borderless` Theme and window `macOS Buttons` |
 | Theme-Name-BL-LB | `Borderless` Theme and window `Legacy Buttons` |
 | Theme-Name-BL-GS | `Borderless` Theme decoration for `Gnome Shell` |
 
-### LOOKING FOR OTHER THEMES WITH NEOVIM COLOUR SCHEMES?
+## 🔗 More Neovim-Inspired GTK Themes
 
 | Neovim Colorschemes for GTK | GitHub | Pling |
-| --------------------------- | ----------- | --------- |
+| --------------------------- | ------ | ----- |
 | Catppuccin GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme) | [Package](https://www.pling.com/p/1715554/) |
 | Everforest GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme) | [Package](https://www.pling.com/p/1695467/) |
 | Gruvbox GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) | [Package](https://www.pling.com/p/1681313/) |
 | Kanagawa GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme) | [Package](https://www.pling.com/p/1810560/) |
 | Material GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Material-GTK-Themes) | [Package](https://www.pling.com/p/1706139/) |
 | Nightfox GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Nightfox-GTK-Theme) | [Package](https://www.pling.com/p/1929101/) |
-| Osaka GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Osaka-GTK-Theme) | [Package](https://www.pling.com) |
+| Osaka GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Osaka-GTK-Theme) | [Package](https://www.pling.com/p/2284009/) |
 | Rose Pine GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme) | [Package](https://www.pling.com/p/1810530/) |
 | Tokyonight GTK Theme | [Source](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme) | [Package](https://www.pling.com/p/1681315/) |
 
-#### Acknowledgements to
+## Acknowledgements to
 
 Thanks to [@telometto](https://github.com/telometto) for the alternative to the application of themes in `Flatpak.`<br>
 Thanks to [@f1yn](https://github.com/f1yn) for the solution to the active and inactive borders in the new version of `Cinnamon.`<br>
 Thanks to [@eeeXun](https://github.com/eeeXun) for the hint to solve the bug in `Mate Desktop` window control buttons.<br>
 Thanks to [@Icy-Thought](https://github.com/Icy-Thought),[@D3vil0p3r](https://github.com/D3vil0p3r) and to those who have packaged these themes for NIX and AUR.
 
-#### Support
+## Support
 
 [![PayPal Support](https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypalColor=white)](https://www.paypal.com/donate/?hosted_button_id=LKVTXNA36FTV4)
