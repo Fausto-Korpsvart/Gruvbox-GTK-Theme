@@ -20,7 +20,7 @@ Example: GNOME 45, KDE Plasma 6.0, XFCE 4.18
 ## Theme Variant
 
 Which Gruvbox variant are you using?  
-Example: Gruvbox-Dark, Gruvbox-Light, Gruvbox-Material, etc.
+Example: Gruvbox-Dark, Gruvbox-Light, etc.
 
 ## Steps to Reproduce
 
