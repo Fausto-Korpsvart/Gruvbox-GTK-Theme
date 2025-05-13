@@ -2,7 +2,7 @@
 @define-color bg_color #202020;
 @define-color window_bg @bg_color;
 @define-color window_border_color #f2e5bc;
-@define-color prefs_backgroud #a89984;
+@define-color prefs_background #a89984;
 
 /* Input */
 @define-color selected_bg_color #46403d;
@@ -75,5 +75,5 @@
   opacity: 0.9;
 }
 .prefs-btn:hover {
-  background-color: @prefs_backgroud;
+  background-color: @prefs_background;
 }
