@@ -1403,11 +1403,12 @@ searchbar > revealer > box {
 
 %titlebar-button {
 	color: $titlebar-text-secondary;
-	background-color: if(
-		$topbar == 'light',
-		rgba($grey-150, 0.6),
-		$titlebar-fill
-	);
+	/* background-color: if( */
+	/* 	$topbar == 'light', */
+	/* 	rgba($grey-150, 0.6), */
+	/* 	$titlebar-fill */
+	/* ); */
+	background-color: transparent;
 	border-radius: $corner-radius;
 
 	.linked > & {
@@ -2679,8 +2680,14 @@ notebook {
 /**************
  * Scrollbars *
  **************/
+$_scrollbar_bg_color: if(
+	$variant == 'light',
+	darken($background, 1%),
+	lighten($background, 1%)
+);
+
 scrollbar {
-	$_slider_min_length: 24px;
+	$_slider_min_length: 40px;
 
 	// disable steppers
 	@at-root * {
@@ -2688,39 +2695,57 @@ scrollbar {
 		-gtkscrollbar-has-forward-stepper: false;
 	}
 
-	transition: $transition;
-	background-color: $base;
+	background-color: transparent;
+	transition: 300ms $ease-out;
 
-	// scrollbar border
-	&.top {
-		border-bottom: 1px solid transparent;
+	&,
+	button {
+		border: none;
+		min-width: 0;
+		min-height: 0;
+		padding: 0;
+		border-radius: 0;
+		background-color: transparent;
 	}
-	&.bottom {
-		border-top: 1px solid transparent;
+
+	&.vertical button {
+		&.down {
+			-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+		}
+		&.up {
+			-gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+		}
 	}
-	&.left {
-		border-right: 1px solid transparent;
-	}
-	&.right {
-		border-left: 1px solid transparent;
+
+	&.horizontal button {
+		&.down {
+			-gtk-icon-source: -gtk-icontheme('pan-right-symbolic');
+		}
+		&.up {
+			-gtk-icon-source: -gtk-icontheme('pan-left-symbolic');
+		}
 	}
 
 	// slider
 	slider {
-		transition: background-color $duration $ease-out;
-		min-width: 8px;
-		min-height: 8px;
-		border: 4px solid transparent;
-		border-radius: $circular-radius;
+		min-width: $space-size;
+		min-height: $space-size;
+		margin: 0;
+		border: none;
+		border-radius: $space-size * 2;
 		background-clip: padding-box;
-		background-color: $text-disabled;
+		box-shadow: none;
+		outline: none;
+		transition: all 200ms linear;
+
+		background-color: color-mix(in srgb, currentColor 40%, transparent);
 
 		&:hover {
-			background-color: $text-secondary;
+			background-color: $text-secondary-disabled;
 		}
 
 		&:active {
-			background-color: $text;
+			background-color: $text-secondary;
 		}
 
 		&:disabled {
@@ -2730,118 +2755,60 @@ scrollbar {
 
 	&.fine-tune {
 		slider {
-			min-width: 4px;
-			min-height: 4px;
+			min-width: $space-size - 2px;
+			min-height: $space-size - 2px;
 		}
 
 		&.horizontal slider {
-			margin: 2px 0;
+			border-width: 5px 4px;
 		}
-
 		&.vertical slider {
-			margin: 0 2px;
+			border-width: 4px 5px;
 		}
 	}
 
 	&.overlay-indicator {
-		&:not(.fine-tune) slider {
-			transition-property: background-color, min-height, min-width;
+		trough {
+			background-color: $divider;
+			border-radius: $circular_radius;
+			margin: $space-size;
 		}
 
 		&:not(.dragging):not(.hovering) {
-			border-color: transparent;
-			background-color: transparent;
+			opacity: 0.5;
 
 			slider {
-				min-width: 4px;
-				min-height: 4px;
-				margin: 4px - 1px;
-				border: 1px solid rgba($base, 0.3);
+				margin: 0;
+				min-width: $space-size - 2px;
+				min-height: $space-size - 2px;
+				background-color: color-mix(
+					in srgb,
+					currentColor 40%,
+					transparent
+				);
+				border: none;
 			}
 
-			button {
-				min-width: 4px;
-				min-height: 4px;
-				margin: 4px - 1px;
-				border: 1px solid rgba($base, 0.3);
-				border-radius: $circular-radius;
-				background-color: $text-disabled;
-				background-clip: padding-box;
-				-gtk-icon-source: none;
-
-				&:disabled {
-					background-color: $text-secondary-disabled;
-				}
+			&.horizontal slider {
+				min-width: $_slider_min_length;
 			}
 
-			&.horizontal {
-				slider {
-					min-width: $_slider_min_length;
-				}
-
-				button {
-					min-width: 8px;
-				}
-			}
-
-			&.vertical {
-				slider {
-					min-height: $_slider_min_length;
-				}
-
-				button {
-					min-height: 8px;
-				}
+			&.vertical slider {
+				min-height: $_slider_min_length;
 			}
 		}
 
 		&.dragging,
 		&.hovering {
-			background-color: transparent;
+			opacity: 1;
 		}
 	}
 
 	&.horizontal slider {
 		min-width: $_slider_min_length;
 	}
-
 	&.vertical slider {
 		min-height: $_slider_min_length;
-	}
-
-	// button styling
-	button {
-		@extend %button-flat-simple;
-
-		min-width: 16px;
-		min-height: 16px;
-		padding: 0;
-		border-radius: 0;
-	}
-
-	// button icons
-	&.vertical {
-		button {
-			&.down {
-				-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-			}
-
-			&.up {
-				-gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
-			}
-		}
-	}
-
-	&.horizontal {
-		button {
-			&.down {
-				-gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
-			}
-
-			&.up {
-				-gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
-			}
-		}
 	}
 }
 
@@ -3731,8 +3698,8 @@ $list-row: if($variant == 'light', rgba($base, 0.4), $fill);
 	}
 
 	&:first-child {
-		border-radius: $corner-radius $corner-radius $space-size / 2 $space-size /
-			2;
+		border-radius: $corner-radius $corner-radius $space-size / 2
+			$space-size / 2;
 	}
 
 	&:last-child {
@@ -5102,12 +5069,13 @@ stackswitcher {
 		}
 
 		&:checked {
-			background-color: $indicator;
-			color: on($indicator);
+			/* background-color: $indicator; */
+			background-color: $primary;
+			color: on($primary);
 
 			&:hover {
 				box-shadow: none;
-				background-color: lighten($indicator, 10%);
+				background-color: lighten($primary, 10%);
 			}
 		}
 	}

@@ -6,6 +6,11 @@
 		background-color: $background;
 	}
 
+	& headerbar > widget > windowtitle {
+		padding: 0;
+		margin: 6px;
+	}
+
 	.sidebar-pane {
 		background-color: $background;
 		color: $text;
@@ -20,15 +25,15 @@
 		> scrolledwindow {
 			@extend %nautilus_sidebar_style;
 
-			> viewport > .navigation-sidebar {
-				@extend %sidebar_list;
-			}
+			/* > viewport > .navigation-sidebar { */
+			/* 	@extend %sidebar_list; */
+			/* } */
 		}
 
-		scrollbar {
-			@extend %sidebar_scrollbar;
-			@extend %round_scrollbar;
-		}
+		/* scrollbar { */
+		/* 	@extend %sidebar_scrollbar; */
+		/* 	@extend %round_scrollbar; */
+		/* } */
 	}
 
 	placesview {
@@ -794,19 +799,20 @@ menubutton stack > box {
 
 	& > windowhandle > box {
 		padding: 0px;
-		margin: 0 5px 0 15px;
+		margin: 0 10px 0 15px;
 	}
 
 	& > windowhandle widget > box.start {
 		padding: 0px;
-		margin: 0 2px 0 0;
+		margin: 0;
 	}
 
 	& > windowhandle widget > box,
 	windowtitle {
 		padding: 0px;
-		margin: 0 -3px 0 10px;
+		margin: 0 -10px 0 10px;
 	}
+
 	&:backdrop {
 		@extend %sidebar_style;
 
@@ -1105,7 +1111,8 @@ flowboxchild.card:not(.category-tile) {
 		padding: 1px; /* FIXME: work around https://gitlab.gnome.org/GNOME/gtk/-/issues/4324 */
 		color: #1c71d8;
 		background-color: #fdf8d7;
-		background-image: linear-gradient($border 1px, transparent 1px),
+		background-image:
+			linear-gradient($border 1px, transparent 1px),
 			linear-gradient(90deg, $border 1px, transparent 1px);
 		background-size:
 			10px 10px,
@@ -1118,14 +1125,16 @@ flowboxchild.card:not(.category-tile) {
 		&:hover {
 			color: #1c71d8;
 			background-color: lighten(#fdf8d7, 5%);
-			background-image: linear-gradient($border 1px, transparent 1px),
+			background-image:
+				linear-gradient($border 1px, transparent 1px),
 				linear-gradient(90deg, $border 1px, transparent 1px);
 		}
 
 		&:active {
 			color: #1c71d8;
 			background-color: darken(#fdf8d7, 5%);
-			background-image: linear-gradient($border 1px, transparent 1px),
+			background-image:
+				linear-gradient($border 1px, transparent 1px),
 				linear-gradient(90deg, $border 1px, transparent 1px);
 			background-size:
 				10px 10px,

@@ -1107,12 +1107,13 @@ splitbutton {
 		background: none;
 	}
 
-	> menubutton > button {
-		padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
-	}
+	/* > menubutton > button { */
+	/* 	padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2; */
+	/* } */
 
 	// Since the inner button doesn't have any style classes on it,
 	// we have to add them manually
+	> menubutton > button,
 	&.image-button > button {
 		min-width: 24px;
 		padding-left: $space-size;
@@ -1301,11 +1302,13 @@ button.color {
 }
 
 // .linked >                  element            child
-$deprecated_linked_widgets: ('combobox', '> box > button.combo'),
+$deprecated_linked_widgets:
+	('combobox', '> box > button.combo'),
 	('appchooserbutton', '> combobox > box > button.combo');
 
 // .linked >        element       child
-$_linked_widgets: ('%button', ''), ('button', ''), ('menubutton', '> button'),
+$_linked_widgets:
+	('%button', ''), ('button', ''), ('menubutton', '> button'),
 	('dropdown', '> button'), ('colorbutton', '> button'),
 	('fontbutton', '> button'), ('tabbutton', '> button'), ('%entry', ''),
 	('entry', '');
@@ -1807,7 +1810,11 @@ searchbar > revealer > box {
 
 %titlebar-button {
 	color: $titlebar-text-secondary;
-	/* background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill); */
+	/* background-color: if( */
+	/* 	$variant == 'light', */
+	/* 	rgba($base_alt, 0.6), */
+	/* 	$titlebar-fill */
+	/* ); */
 	background-color: transparent;
 	border-radius: $corner-radius;
 	border: none;
@@ -1832,7 +1839,7 @@ searchbar > revealer > box {
 	}
 
 	&:hover {
-		background-color: if($topbar == 'light', $base_alt, $titlebar-divider);
+		background-color: if($topbar == 'light', $grey-250, $titlebar-divider);
 	}
 
 	&:focus,
@@ -1947,15 +1954,14 @@ headerbar {
 	}
 
 	.title {
-		/* padding: 0 $space-size * 2; */
 		padding: 0;
-		margin: 0 -20px;
+		/* margin: 0 -$space-size * 3; */
+		margin: 0 -15px;
 		font-weight: bold;
 	}
 
 	.subtitle {
-		/* padding: 0 $space-size * 2; */
-		padding: 0;
+		padding: 0 $space-size * 2;
 		font-size: smaller;
 	}
 
@@ -1981,7 +1987,7 @@ headerbar {
 	}
 
 	> windowhandle > box {
-		padding: 0 $space-size * 2;
+		padding: 0 $space-size;
 
 		&,
 		> box.start,
@@ -2025,7 +2031,11 @@ headerbar {
 	}
 
 	splitbutton {
-		/* background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill); */
+		/* background-color: if( */
+		/* 	$variant == 'light', */
+		/* 	rgba($base_alt, 0.6), */
+		/* 	$titlebar-fill */
+		/* ); */
 		background-color: transparent;
 		border-radius: $corner-radius;
 
@@ -2174,7 +2184,7 @@ window.devel {
 		$c: $titlebar;
 		$gradient:
 			cross-fade(
-					10% - gtk-icontheme('system-run-symbolic'),
+					10% -gtk-icontheme('system-run-symbolic'),
 					image(transparent)
 				)
 				90% 0/256px 256px no-repeat,
@@ -2187,7 +2197,7 @@ window.devel {
 		@if $variant == 'dark' {
 			$gradient:
 				cross-fade(
-						10% - gtk-icontheme('system-run-symbolic'),
+						10% -gtk-icontheme('system-run-symbolic'),
 						image(transparent)
 					)
 					90%
@@ -2208,7 +2218,7 @@ window.devel {
 			background:
 				$titlebar
 					cross-fade(
-						10% - gtk-icontheme('system-run-symbolic'),
+						10% -gtk-icontheme('system-run-symbolic'),
 						image(transparent)
 					)
 					90% 0/256px 256px no-repeat,
@@ -3083,7 +3093,8 @@ tabbar {
 
 	.box {
 		min-height: $medium-size;
-		background-color: $fill;
+		/* background-color: $fill; */
+		background-color: transparent;
 		background-image: none;
 		padding: 0;
 		margin: $space-size / 2;
@@ -3198,7 +3209,8 @@ tabbar {
 			background-image: $tab_needs_attention_gradient;
 
 			&:hover {
-				background-image: image(gtkalpha(currentColor, 0.03)),
+				background-image:
+					image(gtkalpha(currentColor, 0.03)),
 					$tab_needs_attention_gradient;
 			}
 		}
@@ -3319,179 +3331,146 @@ tabbox:drop(active) {
  * Scrollbars *
  **************/
 scrollbar {
-	$_slider_min_length: 24px;
+	$_slider_min_length: 40px;
 
-	transition: $transition;
-	background-color: $base;
-	box-shadow: none;
+	background-color: transparent;
+	transition: 300ms $ease-out;
 	outline: none;
 
-	// scrollbar border
-	&.top {
-		border-bottom: 1px solid transparent;
+	&,
+	button {
+		border: none;
 	}
 
-	&.bottom {
-		border-top: 1px solid transparent;
+	&.vertical button {
+		&.down {
+			-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+		}
+		&.up {
+			-gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
+		}
 	}
 
-	&.left {
-		border-right: 1px solid transparent;
+	&.horizontal button {
+		&.down {
+			-gtk-icon-source: -gtk-icontheme('pan-right-symbolic');
+		}
+		&.up {
+			-gtk-icon-source: -gtk-icontheme('pan-left-symbolic');
+		}
 	}
 
-	&.right {
-		border-left: 1px solid transparent;
-	}
-
+	// slider
 	> range > trough {
-		outline: none;
 		background: none;
+		padding: 0;
+		margin: 0;
+		border: none;
+		outline: none;
+		transition: none;
 
 		> slider {
-			transition: background-color $duration $ease-out;
-			min-width: 8px;
-			min-height: 8px;
-			border: 4px solid transparent;
+			min-width: $space-size;
+			min-height: $space-size;
+			margin: 0;
+			border: none;
 			border-radius: $circular-radius;
 			background-clip: padding-box;
 			box-shadow: none;
 			outline: none;
-			background-color: if($variant == 'dark', $grey-800, $grey-200);
+			transition: all 200ms linear;
+
+			background-color: color-mix(in srgb, currentColor 40%, transparent);
 
 			&:hover {
-				background-color: if($variant == 'dark', $grey-750, $grey-200);
+				background-color: $text-secondary-disabled;
 			}
 
 			&:active {
-				background-color: if($variant == 'dark', $grey-750, $grey-200);
+				background-color: $text-secondary;
 			}
 
 			&:disabled {
-				background-color: if(
-					$variant == 'dark',
-					$background,
-					$grey-050
-				);
+				background-color: $text-secondary-disabled;
 			}
 		}
 	}
 
 	> range.fine-tune {
 		> trough > slider {
-			min-width: 4px;
-			min-height: 4px;
-		}
-
-		&.horizontal > trough > slider {
-			margin: 2px 0;
-		}
-
-		&.vertical > trough > slider {
-			margin: 0 2px;
+			min-width: $space-size - 2px;
+			min-height: $space-size - 2px;
 		}
 	}
 
 	&.overlay-indicator {
-		&:not(.fine-tune) > range > trough > slider {
-			transition-property: background-color, min-height, min-width;
+		background: none;
+		color: inherit;
+		box-shadow: none;
+		padding: 0;
+
+		> range > trough {
+			outline: none;
+			background-color: $divider;
+			border-radius: $circular_radius;
+			margin: $space-size;
+
+			> slider {
+				outline: none;
+			}
 		}
 
 		&:not(.dragging):not(.hovering) {
+			opacity: 0.5;
 			border-color: transparent;
 			background-color: transparent;
+			box-shadow: none;
 
-			> range > trough > slider {
-				min-width: 4px;
-				min-height: 4px;
-				margin: 2px;
+			> range > trough {
+				background-color: transparent;
 				border: none;
-			}
+				margin: $space-size;
 
-			button {
-				min-width: 4px;
-				min-height: 4px;
-				margin: 2px;
-				border: 1px solid rgba($base, 0.3);
-				border-radius: $circular-radius;
-				background-color: $text-disabled;
-				background-clip: padding-box;
-				-gtk-icon-source: none;
-
-				&:disabled {
-					background-color: $text-secondary-disabled;
+				> slider {
+					margin: 0;
+					min-width: $space-size - 2px;
+					min-height: $space-size - 2px;
+					background-color: color-mix(
+						in srgb,
+						$text 70%,
+						$background
+					);
+					border: none;
 				}
 			}
 
-			&.horizontal {
-				> range > trough > slider {
-					min-width: $_slider_min_length;
-				}
-
-				button {
-					min-width: 8px;
-				}
+			&.horizontal > range > trough > slider {
+				min-width: $_slider_min_length;
 			}
 
-			&.vertical {
-				> range > trough > slider {
-					min-height: $_slider_min_length;
-				}
-
-				button {
-					min-height: 8px;
-				}
+			&.vertical > range > trough > slider {
+				min-height: $_slider_min_length;
 			}
 		}
 
 		&.dragging,
 		&.hovering {
-			background-color: $background;
+			opacity: 1;
 		}
 	}
 
 	&.horizontal > range > trough > slider {
 		min-width: $_slider_min_length;
 	}
-
 	&.vertical > range > trough > slider {
 		min-height: $_slider_min_length;
 	}
-
-	// button styling
-	button {
-		@extend %button-flat-simple;
-
-		min-width: 16px;
-		min-height: 16px;
-		padding: 0;
-		border-radius: 0;
-	}
-
-	// button icons
-	&.vertical {
-		button {
-			&.down {
-				-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-			}
-
-			&.up {
-				-gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
-			}
-		}
-	}
-
-	&.horizontal {
-		button {
-			&.down {
-				-gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
-			}
-
-			&.up {
-				-gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
-			}
-		}
-	}
 }
+
+// treeview ~ scrollbar.vertical {
+//   border-top: 1px solid $borders_color;
+//   margin-top: -1px;
+// }
 
 /**********
  * Switch *
@@ -4283,8 +4262,8 @@ $list-row: if($variant == 'light', rgba($base, 0.6), $fill);
 	}
 
 	&:first-child {
-		border-radius: $corner-radius $corner-radius $space-size / 2 $space-size /
-			2;
+		border-radius: $corner-radius $corner-radius $space-size / 2
+			$space-size / 2;
 	}
 
 	&:last-child {
@@ -4325,8 +4304,8 @@ $list-row: if($variant == 'light', rgba($base, 0.6), $fill);
 	}
 
 	&:first-child {
-		border-radius: $corner-radius $corner-radius $space-size / 2 $space-size /
-			2;
+		border-radius: $corner-radius $corner-radius $space-size / 2
+			$space-size / 2;
 	}
 
 	&:last-child {
@@ -4970,11 +4949,6 @@ window.dialog.message {
 
 	box.dialog-vbox.vertical {
 		margin-top: $space-size;
-		border-spacing: $space-size * 4;
-
-		> box.vertical {
-			margin-bottom: $space-size;
-		}
 
 		> box > box > box > label.title {
 			font-weight: 800;
@@ -4996,23 +4970,31 @@ window.dialog.message {
 	}
 
 	.dialog-action-area {
-		// margin-top: $space-size;
-		border: none;
-		margin: 0;
-		padding: $space-size;
-		border-spacing: $space-size;
+		padding: $space-size * 3;
+		border-spacing: $space-size * 3;
 
 		> button {
-			border: none;
 			@extend %button-flat;
 			@extend %dialog_action_button;
+			background-color: $button;
+			border: 0 solid transparent;
+			/* outline: none; */
+			outline: 0 solid transparent;
+
+			&:not(:last-child):hover {
+				background-color: rgba($white, 0.1);
+			}
 
 			&.suggested-action:not(:disabled) {
-				color: $suggested;
+				background-color: darken($suggested, 8%);
+				color: on($suggested);
+				/* color: $suggested; */
 			}
 
 			&.destructive-action:not(:disabled) {
-				color: $destructive;
+				background-color: darken($destructive, 10%);
+				color: on($destructive);
+				/* color: $primary; */
 			}
 		}
 	}
@@ -5054,11 +5036,15 @@ window.messagedialog {
 			@extend %dialog_action_button;
 
 			&.suggested {
-				color: $primary;
+				background-color: darken($suggested, 8%);
+				color: on($suggested);
+				/* color: $primary; */
 			}
 
 			&.destructive {
-				color: $destructive;
+				background-color: darken($destructive, 10%);
+				color: on($destructive);
+				/* color: $destructive; */
 			}
 		}
 
@@ -5822,9 +5808,8 @@ window {
 %mac_window_button {
 	min-height: 16px;
 	min-width: 16px;
-	padding: ($medium-size - 16px) / 2 0;
-	margin-left: $space-size - 6px;
-	margin-right: $space-size - 6px;
+	padding: 0;
+	margin: ($large-size - 22px) / 2 $space-size / 6;
 
 	&.minimize,
 	&.maximize,
@@ -5844,6 +5829,7 @@ window {
 
 		&:hover,
 		&:active {
+			/* color: if($colorscheme != 'solarized', $white, rgba($black, 0.5)); */
 			color: rgba($white, 0.6);
 		}
 
@@ -5896,65 +5882,63 @@ window {
 %normal_window_button {
 	min-height: 22px;
 	min-width: 22px;
-	padding: ($medium-size - 22px) / 2 0;
-	margin-left: $space-size - 6px;
-	margin-right: $space-size - 6px;
+	padding: 0;
+	margin: ($large-size - 22px) / 2 $space-size / 2;
 
 	&.minimize,
 	&.maximize,
 	&.close {
 		color: $titlebar-text-secondary;
 
-		&,
-		&:hover,
-		&:active,
-		&:backdrop {
-			background: none;
-			box-shadow: none;
-		}
-
-		> image {
-			background-color: gtkalpha(currentColor, 0.1);
+		image {
+			padding: 0;
+			margin: 0;
+			background-color: transparent;
 		}
 
 		&:hover {
-			color: $titlebar-text;
-
-			> image {
-				background-color: gtkalpha(currentColor, 0.15);
-			}
+			box-shadow: none;
+			background-color: $titlebar-indicator;
+			color: on($titlebar-indicator);
 		}
 
 		&:active {
-			color: $titlebar-text;
-
-			> image {
-				background-color: gtkalpha(currentColor, 0.2);
-			}
+			color: on($titlebar-indicator);
+			background-color: $titlebar-indicator;
+			background-image: radial-gradient(
+				circle,
+				on($titlebar-indicator, divider) 10%,
+				transparent 0%
+			);
 		}
 
 		&:backdrop {
-			opacity: 0.65;
+			color: $titlebar-text-secondary-disabled;
+
+			&:hover {
+				color: on($titlebar-indicator);
+			}
 		}
 	}
 }
 
 $window-space: if($window_button == 'mac', $space-size * 1.5, $space-size);
 
-windowcontrols {
+headerbar windowcontrols {
 	border-spacing: $space-size;
+	padding: 0;
 
 	&:not(.empty) {
 		&.start:dir(ltr),
 		&.end:dir(rtl) {
-			margin-right: $space-size;
-			margin-left: $space-size;
+			margin-right: $window-space;
+			margin-left: $window-space;
 		}
 
 		&.start:dir(rtl),
 		&.end:dir(ltr) {
-			margin-left: $space-size;
-			margin-right: $space-size;
+			margin-left: $window-space;
+			margin-right: $window-space;
 		}
 	}
 
@@ -5990,9 +5974,9 @@ windowcontrols {
 	background-color: $primary;
 }
 
-.monospace {
-	font-family: monospace;
-}
+/* .monospace { */
+/* 	font-family: monospace; */
+/* } */
 
 /**********************
  * Touch Copy & Paste *
@@ -6067,12 +6051,13 @@ stackswitcher {
 		}
 
 		&:checked {
-			background-color: $indicator;
-			color: on($indicator);
+			/* background-color: $indicator; */
+			background-color: $primary;
+			color: on($primary);
 
 			&:hover {
 				box-shadow: none;
-				background-color: lighten($indicator, 10%);
+				background-color: lighten($primary, 10%);
 			}
 		}
 	}

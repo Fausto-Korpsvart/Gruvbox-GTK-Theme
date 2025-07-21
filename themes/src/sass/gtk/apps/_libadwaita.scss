@@ -1,3 +1,224 @@
+%nautilus_sidebar_style {
+	background-color: $background;
+	color: on($background);
+	border-radius: 0;
+	/* margin: 0 6px 0 0; */
+
+	.dim-label {
+		color: on($indicator, disabled);
+	}
+}
+
+%nautilus_content_style {
+	background-color: $fill;
+	border-radius: $corner-radius;
+	margin: 0 $space-size $space-size $space-size;
+}
+
+%content_style {
+	/* background-color: if($variant == 'light', rgba($white, 0.6), $fill);
+	border-radius: $corner-radius; */
+	margin: $space-size;
+}
+
+// Sidebar & Scrollbar
+%sidebar_style {
+	background-color: if($variant == 'light', $grey-150, $grey-850);
+
+	@if $colorscheme == 'medium' {
+		background-color: if($variant == 'light', $grey-150, $black);
+	} @else if $colorscheme == 'soft' {
+		background-color: if($variant == 'light', $grey-150, #282828);
+	}
+
+	color: on($background);
+	border-radius: 0;
+	margin: 0;
+
+	.dim-label {
+		color: on($indicator, disabled);
+	}
+}
+
+%sidebar_scrollbar {
+	> range > trough {
+		> slider {
+			background-color: color-mix(in srgb, currentColor 40%, transparent);
+
+			&:hover {
+				background-color: $text-secondary-disabled;
+			}
+
+			&:active {
+				background-color: $text-secondary;
+			}
+
+			&:disabled {
+				background-color: $text-secondary-disabled;
+			}
+		}
+	}
+
+	&.overlay-indicator {
+		&:not(.dragging):not(.hovering) {
+			button {
+				background-color: on($indicator, disabled);
+
+				&:disabled {
+					background-color: on($indicator, secondary-disabled);
+				}
+			}
+		}
+	}
+}
+
+%sidebar_list {
+	padding: 6px 0 6px 6px;
+	background: none;
+	color: $titlebar-text-secondary;
+
+	> separator {
+		background-color: $divider;
+		margin: 10px 15px;
+	}
+
+	> row {
+		color: on($indicator, secondary);
+		border-radius: $modal-radius;
+		color: $text;
+		padding: 6px 0;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $text;
+		}
+
+		&:selected {
+			/* background-color: if($variant == 'light', rgba($base, 0.4), $fill); */
+			background-color: $overlay-hover;
+			color: $primary;
+			font-weight: 500;
+			/* border-left: 3px solid $primary; */
+
+			&:hover,
+			&:focus {
+				/* background-color: rgba($base, 0.9); */
+				background-color: $overlay-hover;
+				color: $text;
+			}
+		}
+	}
+}
+
+%sidebar_entry {
+	background-color: if(
+		$variant == 'light',
+		on($indicator, secondary-fill),
+		on($indicator, fill)
+	);
+	color: on($indicator, secondary);
+	border-radius: $corner-radius - $space-size;
+
+	&:focus-within {
+		color: on($indicator);
+	}
+
+	&:drop(active),
+	&:hover:not(:focus-within) {
+		color: on($indicator);
+	}
+
+	&:disabled {
+		color: on($indicator, secondary-disabled);
+	}
+
+	image {
+		// icons inside the entry
+		color: on($indicator, secondary);
+
+		&:hover,
+		&:active {
+			color: on($indicator);
+		}
+
+		&:disabled {
+			color: on($indicator, secondary-disabled);
+		}
+	}
+}
+
+%round_scrollbar {
+	&.top {
+		border-bottom: none;
+	}
+	&.bottom {
+		border-top: none;
+	}
+	&.left {
+		border-right: none;
+	}
+	&.right {
+		border-left: none;
+	}
+
+	/* > range > trough { */
+	/* 	> slider { */
+	/* 		border: $corner-radius - 8px solid transparent; */
+	/* 		margin: 0 -8px 0 0; */
+	/* 	} */
+	/* } */
+
+	&.overlay-indicator {
+		&:not(.dragging):not(.hovering) {
+			border-color: transparent;
+			background-color: transparent;
+
+			/* > range > trough > slider { */
+			/* 	border: none; */
+			/* 	margin: $corner-radius - 8px - $space-size / 2; */
+			/* } */
+
+			button {
+				border: none;
+			}
+		}
+
+		&.dragging,
+		&.hovering {
+			background-color: transparent;
+		}
+	}
+}
+
+%round_undershoot {
+	&.undershoot-top {
+		@include undershoot(top, $br: $corner-radius);
+	}
+
+	&.undershoot-bottom {
+		@include undershoot(bottom, $br: $corner-radius);
+	}
+
+	&.undershoot-start {
+		&:dir(ltr) {
+			@include undershoot(left, $br: $corner-radius);
+		}
+		&:dir(rtl) {
+			@include undershoot(right, $br: $corner-radius);
+		}
+	}
+
+	&.undershoot-end {
+		&:dir(ltr) {
+			@include undershoot(right, $br: $corner-radius);
+		}
+		&:dir(rtl) {
+			@include undershoot(left, $br: $corner-radius);
+		}
+	}
+}
+
 // avatar
 avatar {
 	border-radius: $circular-radius;
@@ -511,231 +732,6 @@ leaflet,
 navigation-view,
 overlay-split-view {
 	@include transition-shadows($frame);
-}
-
-// Sidebar
-%sidebar_style {
-	background-color: if($variant == 'light', $grey-150, $grey-850);
-
-	@if $colorscheme == 'medium' {
-		background-color: if($variant == 'light', $grey-150, $black);
-	} @else if $colorscheme == 'soft' {
-		background-color: if($variant == 'light', $grey-150, #282828);
-	}
-
-	color: on($background);
-	border-radius: 0;
-	margin: 0;
-
-	.dim-label {
-		color: on($indicator, disabled);
-	}
-}
-
-%nautilus_sidebar_style {
-	background-color: $background;
-	color: on($background);
-	border-radius: 0;
-	margin: 0 6px 0 0;
-
-	.dim-label {
-		color: on($indicator, disabled);
-	}
-}
-
-%sidebar_scrollbar {
-	> range > trough {
-		margin: 0 -8px 0 0;
-		> slider {
-			background-color: if($variant == 'dark', $grey-800, $grey-200);
-
-			&:hover {
-				background-color: if($variant == 'dark', $grey-750, $grey-200);
-			}
-
-			&:active {
-				background-color: if($variant == 'dark', $grey-750, $grey-200);
-			}
-
-			&:disabled {
-				background-color: if(
-					$variant == 'dark',
-					$background,
-					$grey-050
-				);
-			}
-		}
-	}
-
-	&.overlay-indicator {
-		&:not(.dragging):not(.hovering) {
-			button {
-				background-color: on($indicator, disabled);
-
-				&:disabled {
-					background-color: on($indicator, secondary-disabled);
-				}
-			}
-		}
-	}
-}
-
-%content_style {
-	/* background-color: if($variant == 'light', rgba($white, 0.6), $fill);
-	border-radius: $corner-radius; */
-	margin: $space-size;
-}
-
-%nautilus_content_style {
-	background-color: $fill;
-	border-radius: $corner-radius;
-	margin: 0 $space-size $space-size $space-size;
-}
-
-%sidebar_list {
-	padding: 6px 0 6px 6px;
-	background: none;
-	color: $titlebar-text-secondary;
-
-	> separator {
-		background-color: $divider;
-		margin: 10px 15px;
-	}
-
-	> row {
-		color: on($indicator, secondary);
-		border-radius: $modal-radius;
-		color: $text;
-		padding: 6px 0;
-
-		&:hover,
-		&:active,
-		&:focus {
-			color: $text;
-		}
-
-		&:selected {
-			/* background-color: if($variant == 'light', rgba($base, 0.4), $fill); */
-			background-color: $overlay-hover;
-			color: $primary;
-			font-weight: 500;
-			/* border-left: 3px solid $primary; */
-
-			&:hover,
-			&:focus {
-				/* background-color: rgba($base, 0.9); */
-				background-color: $overlay-hover;
-				color: $text;
-			}
-		}
-	}
-}
-
-%sidebar_entry {
-	background-color: if(
-		$variant == 'light',
-		on($indicator, secondary-fill),
-		on($indicator, fill)
-	);
-	color: on($indicator, secondary);
-	border-radius: $corner-radius - $space-size;
-
-	&:focus-within {
-		color: on($indicator);
-	}
-
-	&:drop(active),
-	&:hover:not(:focus-within) {
-		color: on($indicator);
-	}
-
-	&:disabled {
-		color: on($indicator, secondary-disabled);
-	}
-
-	image {
-		// icons inside the entry
-		color: on($indicator, secondary);
-
-		&:hover,
-		&:active {
-			color: on($indicator);
-		}
-
-		&:disabled {
-			color: on($indicator, secondary-disabled);
-		}
-	}
-}
-
-%round_scrollbar {
-	&.top {
-		border-bottom: none;
-	}
-	&.bottom {
-		border-top: none;
-	}
-	&.left {
-		border-right: none;
-	}
-	&.right {
-		border-left: none;
-	}
-
-	> range > trough {
-		> slider {
-			border: $corner-radius - 8px solid transparent;
-		}
-	}
-
-	&.overlay-indicator {
-		&:not(.dragging):not(.hovering) {
-			border-color: transparent;
-			background-color: transparent;
-
-			> range > trough > slider {
-				border: none;
-				margin: $corner-radius - 8px - $space-size / 2;
-			}
-
-			button {
-				border: none;
-			}
-		}
-
-		&.dragging,
-		&.hovering {
-			background-color: transparent;
-		}
-	}
-}
-
-%round_undershoot {
-	&.undershoot-top {
-		@include undershoot(top, $br: $corner-radius);
-	}
-
-	&.undershoot-bottom {
-		@include undershoot(bottom, $br: $corner-radius);
-	}
-
-	&.undershoot-start {
-		&:dir(ltr) {
-			@include undershoot(left, $br: $corner-radius);
-		}
-		&:dir(rtl) {
-			@include undershoot(right, $br: $corner-radius);
-		}
-	}
-
-	&.undershoot-end {
-		&:dir(ltr) {
-			@include undershoot(right, $br: $corner-radius);
-		}
-		&:dir(rtl) {
-			@include undershoot(left, $br: $corner-radius);
-		}
-	}
 }
 
 .sidebar-pane {

@@ -70,11 +70,11 @@ OPTIONS:
   -u, --uninstall         Uninstall/Remove installed themes or links
 
   --tweaks                Specify versions for tweaks
-                          1. [medium|soft]	Medium|Soft| ColorSchemes version
-                          2. black      	Blackness color version
+						  1. [medium|soft]	Medium|Soft| ColorSchemes version
+						  2. black      	Blackness color version
 						  3. outline    	Windows with 2px outline style
-                          4. float      	Floating gnome-shell panel style
-                          5. macos:			Macos style windows button
+						  4. float      	Floating gnome-shell panel style
+						  5. macos 			macOS style windows button
 
   -h, --help              Show help
 EOF
