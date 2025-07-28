@@ -104,78 +104,94 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
  * Chromium *
  ************/
 window.background.chromium {
-	background-color: $chromium-tabs;
-
-	// FIXME: There is no way to change the color of the toolbar buttons
-	// toolbar button { color: $text-secondary; }
-
-	// toolbar's border-bottom refers to button's border
-	// FIXME: Chrome's button border ignores theme's alpha value :(
-	entry,
-	> button {
-		border: 1px solid $solid-border;
-	}
-
-	> button {
-		color: $primary;
-
-		&:disabled {
-			color: $text-secondary-disabled;
-		}
-	}
-
-	menubar,
-	headerbar {
-		color: $titlebar-text-secondary;
-	}
+	background-color: $background;
+	color: $text;
 
 	headerbar.titlebar {
 		padding: 0 $space-size * 2;
+		/* border-radius: $corner-radius $corner-radius 0 0; */
 
-		button:active {
-			background-color: $overlay-active;
-		} // Workaround for non-animatable buttons in headerbar
+		button.toggle {
+			border: none;
+			background-color: transparent;
+			background-image: none;
+
+			&:hover {
+				@include button(flat-hover);
+			}
+			&:checked,
+			&:active {
+				@include button(flat-active);
+			}
+		}
+
+		// from nav_button_provider_gtk3.cc (> 62.0.3202?)
+		button.titlebutton {
+			// title-buttons
+			// define global titlebutton class sizing
+			min-width: 16px;
+			min-height: 16px;
+			margin: 0; // unset margins
+			padding: 0;
+			background-size: 16px 16px;
+			color: transparent; // hide stock icons
+			border: none;
+		}
 	}
 
-	spinner {
-		color: $primary;
+	// FIXME: not for actual button widgets but for toolbar's separators
+	// crazy: src/+/master/chrome/browser/ui/libgtkui/gtk_ui.cc#891
+	button {
+		// for active-tab borders
+		border-width: 1px;
+		border-style: solid;
+		border-color: $solid-border;
+		background-color: $background;
+		color: $text;
 	}
 
-	// For text field
-	textview.view {
-		background-color: transparent;
+	entry.chromium {
+		&,
+		&:focus {
+			// overrides standard borders
+			border-image: none;
+			color: $text;
+		}
+
+		background-color: rgba($text, 0.06);
 	}
 
-	// For prominent button, starred icon, etc.
-	treeview.view.cell:selected:focus {
-		background-color: $primary;
-		color: on($primary);
+	// internal region of toolbar's entry widget
+	> textview.view,
+	textview {
+		background-color: rgba($text, 0.06);
+		color: $text;
 	}
 
-	// For table header
-	treeview.view button {
-		border: 1px solid $track;
-		background-color: $base; // FIXME: This should not be necessary
-		// color: $text-secondary;
+	> menubar {
+		background-color: $titlebar-fill;
 	}
 
 	menu {
 		background-color: if($variant == 'light', $grey-200, $grey-800);
-		border-color: if(
-			$variant == 'light',
-			darken($background, 20%),
-			lighten($background, 16%)
-		);
+		border-color: 1px solid
+			if(
+				$variant == 'light',
+				darken($background, 15%),
+				lighten($background, 15%)
+			);
+		border-radius: 0;
 
 		menuitem {
 			border-radius: 0;
 			background-color: if($variant == 'light', $grey-300, $fill);
+
+			&:hover {
+				background-color: $surface;
+				color: $primary;
+			}
 		}
 	}
-}
-
-tooltip.background.chromium {
-	background-color: rgba($tooltip, 1);
 }
 
 /***********

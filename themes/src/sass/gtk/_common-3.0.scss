@@ -1,40 +1,30 @@
 * {
-	// padding: 0;
 	background-clip: padding-box;
 
-	-gtktoolbutton-icon-spacing: 0;
+	-gtktoolbutton-icon-spacing: 4;
 	-gtktextview-error-underline-color: $error;
 
-	// The size for scrollbars. The slider is 2px smaller, but we keep it
-	// up so that the whole area is sensitive to button presses for the
-	// slider. The stepper button is larger in both directions, the slider
-	// only in the width
-
 	-gtkscrolledwindow-scrollbar-spacing: 0;
-
 	-gtktoolitemgroup-expander-size: 11;
 
-	-gtkwidget-text-handle-width: 24;
-	-gtkwidget-text-handle-height: 24;
+	-gtkwidget-text-handle-width: 20;
+	-gtkwidget-text-handle-height: 20;
 
-	-gtkdialog-button-spacing: $space-size / 1px;
-	-gtkdialog-action-area-border: $space-size / 1px;
+	-gtkdialog-button-spacing: 6;
+	-gtkdialog-action-area-border: 4;
+	-gtkdialog-content-area-border: 4;
 
 	// We use the outline properties to signal the focus properties
 	// to the adwaita engine: using real CSS properties is faster,
 	// and we don't use any outlines for now.
 
 	outline-style: solid;
-	outline-width: 2px;
-	outline-color: transparent;
+	outline-width: 0;
+	outline-color: gtkalpha(currentColor, 0.15);
 	outline-offset: -4px;
+
 	-gtk-outline-radius: $corner-radius;
-
 	-gtk-secondary-caret-color: $primary;
-
-	&:focus {
-		outline-color: $overlay-checked;
-	}
 }
 
 %selected_items {
@@ -180,7 +170,7 @@ textview {
 
 	text {
 		// background-color: $card;
-		background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+		background-color: if($variant == 'light', rgba($base, 0.4), $card);
 		selection {
 			&:focus,
 			& {
