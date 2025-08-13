@@ -75,5 +75,5 @@
   opacity: 0.9;
 }
 .prefs-btn:hover {
-  background-color: @prefs_backgroud;
+  background-color: @prefs_background;
 }
