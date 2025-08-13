@@ -1,201 +1,219 @@
 #! /usr/bin/env bash
 
-for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Blue' '-Grey'; do
+for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' 'Yellow'; do
     for color in '' '-Dark'; do
-        for type in '' '-Soft' '-Medium'; do
+        for type in '' '-Medium' '-Soft'; do
             if [[ "$color" == '' ]]; then
                 case "$theme" in
                     '')
-                        theme_color='#27a1b9'
-                        ;;
-                    -Purple)
-                        theme_color='#9d7cd8'
-                        ;;
-                    -Pink)
-                        theme_color='#ff007c'
-                        ;;
-                    -Red)
-                        theme_color='#f7768e'
-                        ;;
-                    -Orange)
-                        theme_color='#ff9e64'
-                        ;;
-                    -Yellow)
-                        theme_color='#e0af68'
-                        ;;
-                    -Green)
-                        theme_color='#9ece6a'
+                        theme_color='#45707a'
                         ;;
                     -Blue)
-                        theme_color='#7aa2f7'
+                        theme_color='#45707a'
+                        ;;
+                    -Green)
+                        theme_color='#6c782e'
                         ;;
                     -Grey)
-                        theme_color='#1a1b26'
+                        theme_color='#504945'
+                        ;;
+                    -Orange)
+                        theme_color='#c35e0a'
+                        ;;
+                    -Pink)
+                        theme_color='#b16286'
+                        ;;
+                    -Purple)
+                        theme_color='#ab62b1'
+                        ;;
+                    -Red)
+                        theme_color='#c14a4a'
+                        ;;
+                    -Teal)
+                        theme_color='#4c7a5d'
+                        ;;
+                    -Yellow)
+                        theme_color='#b47109'
                         ;;
                 esac
 
-                if [[ "$type" == '-Soft' ]]; then
-                    background_color='#c0caf5'
+                if [[ "$type" == '-Medium' ]]; then
+                    background_color='#fbf1c7'
 
                     case "$theme" in
                         '')
-                            theme_color='#29a4bd'
-                            ;;
-                        -Purple)
-                            theme_color='#9d7cd8'
-                            ;;
-                        -Pink)
-                            theme_color='#ff007c'
-                            ;;
-                        -Red)
-                            theme_color='#f7768e'
-                            ;;
-                        -Orange)
-                            theme_color='#ff9e64'
-                            ;;
-                        -Yellow)
-                            theme_color='#e0af68'
-                            ;;
-                        -Green)
-                            theme_color='#9ece6a'
+                            theme_color='#45707a'
                             ;;
                         -Blue)
-                            theme_color='#7aa2f7'
+                            theme_color='#45707a'
+                            ;;
+                        -Green)
+                            theme_color='#6c782e'
                             ;;
                         -Grey)
-                            theme_color='#24283b'
+                            theme_color='#504945'
+                            ;;
+                        -Orange)
+                            theme_color='#c35e0a'
+                            ;;
+                        -Pink)
+                            theme_color='#b16286'
+                            ;;
+                        -Purple)
+                            theme_color='#ab62b1'
+                            ;;
+                        -Red)
+                            theme_color='#c14a4a'
+                            ;;
+                        -Teal)
+                            theme_color='#4c7a5d'
+                            ;;
+                        -Yellow)
+                            theme_color='#b47109'
                             ;;
                     esac
                 fi
 
-                if [[ "$type" == '-Medium' ]]; then
-                    background_color='#c8d3f5'
+                if [[ "$type" == '-Soft' ]]; then
+                    background_color='#fbf1c7'
 
                     case "$theme" in
                         '')
-                            theme_color='#589ed7'
-                            ;;
-                        -Purple)
-                            theme_color='#c099ff'
-                            ;;
-                        -Pink)
-                            theme_color='#fca7ea'
-                            ;;
-                        -Red)
-                            theme_color='#ff757f'
-                            ;;
-                        -Orange)
-                            theme_color='#ff966c'
-                            ;;
-                        -Yellow)
-                            theme_color='#ffc777'
-                            ;;
-                        -Green)
-                            theme_color='#c3e88d'
+                            theme_color='#45707a'
                             ;;
                         -Blue)
-                            theme_color='#3e68d7'
+                            theme_color='#45707a'
+                            ;;
+                        -Green)
+                            theme_color='#6c782e'
                             ;;
                         -Grey)
-                            theme_color='#222436'
+                            theme_color='#504945'
+                            ;;
+                        -Orange)
+                            theme_color='#c35e0a'
+                            ;;
+                        -Pink)
+                            theme_color='#b16286'
+                            ;;
+                        -Purple)
+                            theme_color='#ab62b1'
+                            ;;
+                        -Red)
+                            theme_color='#c14a4a'
+                            ;;
+                        -Teal)
+                            theme_color='#4c7a5d'
+                            ;;
+                        -Yellow)
+                            theme_color='#b47109'
                             ;;
                     esac
                 fi
             else
                 case "$theme" in
                     '')
-                        theme_color='#006a83'
-                        ;;
-                    -Purple)
-                        theme_color='#7847bd'
-                        ;;
-                    -Pink)
-                        theme_color='#d20065'
-                        ;;
-                    -Red)
-                        theme_color='#f52a65'
-                        ;;
-                    -Orange)
-                        theme_color='#b15c00'
-                        ;;
-                    -Yellow)
-                        theme_color='#8c6c3e'
-                        ;;
-                    -Green)
-                        theme_color='#587539'
+                        theme_color='#7daea3'
                         ;;
                     -Blue)
-                        theme_color='#7aa2f7'
+                        theme_color='#7daea3'
+                        ;;
+                    -Green)
+                        theme_color='#a9b665'
                         ;;
                     -Grey)
-                        theme_color='#c0caf5'
+                        theme_color='#ebdbb2'
+                        ;;
+                    -Orange)
+                        theme_color='#e78a4e'
+                        ;;
+                    -Pink)
+                        theme_color='#d3869b'
+                        ;;
+                    -Purple)
+                        theme_color='#d386cd'
+                        ;;
+                    -Red)
+                        theme_color='#ea6962'
+                        ;;
+                    -Teal)
+                        theme_color='#89b482'
+                        ;;
+                    -Yellow)
+                        theme_color='#d8a657'
                         ;;
                 esac
 
-                if [[ "$type" == '-Soft' ]]; then
-                    background_color='#24283b'
+                if [[ "$type" == '-Medium' ]]; then
+                    background_color='#282828'
 
                     case "$theme" in
                         '')
-                            theme_color='#006a83'
-                            ;;
-                        -Purple)
-                            theme_color='#7847bd'
-                            ;;
-                        -Pink)
-                            theme_color='#d20065'
-                            ;;
-                        -Red)
-                            theme_color='#f52a65'
-                            ;;
-                        -Orange)
-                            theme_color='#b15c00'
-                            ;;
-                        -Yellow)
-                            theme_color='#8c6c3e'
-                            ;;
-                        -Green)
-                            theme_color='#587539'
+                            theme_color='#7daea3'
                             ;;
                         -Blue)
-                            theme_color='#2e7de9'
+                            theme_color='#7daea3'
+                            ;;
+                        -Green)
+                            theme_color='#a9b665'
                             ;;
                         -Grey)
-                            theme_color='#c0caf5'
+                            theme_color='#ebdbb2'
+                            ;;
+                        -Orange)
+                            theme_color='#e78a4e'
+                            ;;
+                        -Pink)
+                            theme_color='#d3869b'
+                            ;;
+                        -Purple)
+                            theme_color='#d386cd'
+                            ;;
+                        -Red)
+                            theme_color='#ea6962'
+                            ;;
+                        -Teal)
+                            theme_color='#89b482'
+                            ;;
+                        -Yellow)
+                            theme_color='#d8a657'
                             ;;
                     esac
                 fi
 
-                if [[ "$type" == '-Medium' ]]; then
-                    background_color='#222436'
+                if [[ "$type" == '-Soft' ]]; then
+                    background_color='#32302f'
 
                     case "$theme" in
                         '')
-                            theme_color='#006a83'
-                            ;;
-                        -Purple)
-                            theme_color='#7847bd'
-                            ;;
-                        -Pink)
-                            theme_color='#d20065'
-                            ;;
-                        -Red)
-                            theme_color='#f52a65'
-                            ;;
-                        -Orange)
-                            theme_color='#b15c00'
-                            ;;
-                        -Yellow)
-                            theme_color='#8c6c3e'
-                            ;;
-                        -Green)
-                            theme_color='#587539'
+                            theme_color='#7daea3'
                             ;;
                         -Blue)
-                            theme_color='#2e7de9'
+                            theme_color='#7daea3'
+                            ;;
+                        -Green)
+                            theme_color='#a9b665'
                             ;;
                         -Grey)
-                            theme_color='#c8d3f5'
+                            theme_color='#ebdbb2'
+                            ;;
+                        -Orange)
+                            theme_color='#e78a4e'
+                            ;;
+                        -Pink)
+                            theme_color='#d3869b'
+                            ;;
+                        -Purple)
+                            theme_color='#d386cd'
+                            ;;
+                        -Red)
+                            theme_color='#ea6962'
+                            ;;
+                        -Teal)
+                            theme_color='#89b482'
+                            ;;
+                        -Yellow)
+                            theme_color='#d8a657'
                             ;;
                     esac
                 fi
@@ -204,16 +222,16 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Blue' '-
             if [[ "$type" != '' ]]; then
                 cp -r "assets${color}.svg" "assets${theme}${color}${type}.svg"
                 if [[ "$color" == '' ]]; then
-                    sed -i "s/#27a1b9/${theme_color}/g" "assets${theme}${color}${type}.svg"
+                    sed -i "s/#7daea3/${theme_color}/g" "assets${theme}${color}${type}.svg"
                 else
-                    sed -i "s/#006a83/${theme_color}/g" "assets${theme}${color}${type}.svg"
+                    sed -i "s/#45707a/${theme_color}/g" "assets${theme}${color}${type}.svg"
                 fi
             elif [[ "$theme" != '' ]]; then
                 cp -r "assets${color}.svg" "assets${theme}${color}.svg"
                 if [[ "$color" == '' ]]; then
-                    sed -i "s/#27a1b9/${theme_color}/g" "assets${theme}${color}.svg"
+                    sed -i "s/#7daea3/${theme_color}/g" "assets${theme}${color}.svg"
                 else
-                    sed -i "s/#006a83/${theme_color}/g" "assets${theme}${color}.svg"
+                    sed -i "s/#45707a/${theme_color}/g" "assets${theme}${color}.svg"
                 fi
             fi
 

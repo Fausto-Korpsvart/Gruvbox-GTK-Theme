@@ -86,70 +86,6 @@
 		}
 	}
 
-	tabbar {
-		.box {
-			background-color: transparent;
-			box-shadow: none;
-			padding: 0;
-
-			&:backdrop {
-				background-color: transparent;
-				box-shadow: none;
-			}
-		}
-	}
-
-	tabbox {
-		&,
-		&:backdrop {
-			transition: none;
-			background-color: transparent;
-		}
-
-		> tabboxchild {
-			> tab {
-				color: $titlebar-text-secondary;
-
-				&:hover {
-					background-color: $titlebar-fill;
-					color: $titlebar-text;
-				}
-
-				&:disabled {
-					color: $titlebar-text-secondary-disabled;
-				}
-
-				&:checked,
-				&:selected {
-					background-color: if(
-						$variant == 'light',
-						rgba($base, 0.4),
-						$fill
-					);
-					color: $primary;
-					box-shadow: none;
-
-					&:disabled {
-						color: $titlebar-text-disabled;
-					}
-				}
-
-				button.tab-close-button {
-					color: $titlebar-text;
-
-					&:hover,
-					&:active {
-						color: $titlebar-text;
-					}
-
-					&:disabled {
-						color: $titlebar-text;
-					}
-				}
-			}
-		}
-	}
-
 	.floating-bar {
 		min-height: 32px;
 		padding: 0;
@@ -169,20 +105,14 @@
 	}
 
 	banner > revealer > widget {
+		background-color: rgba($base, 0.4);
 		color: on($base);
-		background-color: rgba($base, 0.5);
 		border-radius: $modal-radius;
 		margin: $modal-radius;
 
-		&:hover {
-			background-color: $base;
-			border-radius: $modal-radius;
-			margin: $modal-radius;
-		}
-
 		button {
-			color: on($base);
 			background-color: rgba($primary, 0.3);
+			color: on($primary);
 			&:hover {
 				background-color: rgba($primary, 0.6);
 			}

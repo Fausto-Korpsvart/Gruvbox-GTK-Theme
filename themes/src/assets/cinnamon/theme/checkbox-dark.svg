@@ -6,7 +6,7 @@
    viewBox="0 0 24 24"
    id="svg1516"
    sodipodi:docname="checkbox-dark.svg"
-   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -37,11 +37,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="4.9166667"
-     inkscape:cx="2.1355932"
-     inkscape:cy="9.0508474"
-     inkscape:window-width="1882"
-     inkscape:window-height="989"
+     inkscape:zoom="19.666667"
+     inkscape:cx="15.177966"
+     inkscape:cy="13.677966"
+     inkscape:window-width="1835"
+     inkscape:window-height="977"
      inkscape:window-x="102"
      inkscape:window-y="102"
      inkscape:window-maximized="0"
@@ -56,7 +56,7 @@
      rx="4"
      ry="4" />
   <rect
-     style="fill:#80aa9e;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+     style="fill:#7daea3;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
      id="rect616"
      width="20"
      height="20"
@@ -67,7 +67,7 @@
   <path
      id="rect340"
      d="m 18.36396,7.7576861 c -0.391736,-0.3917365 -1.022477,-0.3917368 -1.414214,0 L 10.585785,14.121648 7.0502516,10.586113 c -0.3917367,-0.391737 -1.0224771,-0.391736 -1.4142135,0 -0.3917365,0.391736 -0.3917368,1.022477 0,1.414214 l 4.2426409,4.242641 c 0.02448,0.02448 0.04973,0.04625 0.07596,0.06767 0.393511,0.321347 0.971002,0.299581 1.338255,-0.06767 l 7.071068,-7.0710684 c 0.391737,-0.3917367 0.391736,-1.0224771 0,-1.4142135 z"
-     style="fill:#1a1b26;fill-opacity:1" />
+     style="fill:#1d2021;fill-opacity:1" />
   <path
      id="rect885"
      style="opacity:0.1;fill:#ffffff;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"

@@ -1520,154 +1520,68 @@ spinbutton {
 	}
 }
 
-/**************
- * ComboBoxes *
- **************/
-// dropdown > popover.menu.background > contents { padding: 0; }
+/*************
+ * dropdowns *
+ *************/
 
-dropdown > button > box {
-	border-spacing: $space-size;
-}
+dropdown {
+	> button > box {
+		border-spacing: $space-size;
 
-dropdown,
-combobox {
+		> stack > row.activatable {
+			&:hover,
+			&:active {
+				background: none;
+			}
+		}
+	}
+
 	arrow {
 		-gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
 		min-height: 16px;
 		min-width: 16px;
 	}
 
-	// align menu labels with the button label
-	> popover.menu > contents modelbutton {
-		padding-left: 9px;
-		padding-right: 9px;
-	}
+	&:drop(active) {
+		// FIXME: untested
+		box-shadow: none;
 
-	button.combo cellview {
-		&:dir(ltr) {
-			margin-left: 8px - ($medium-size - 16px) / 2;
-		}
-		&:dir(rtl) {
-			margin-right: 8px - ($medium-size - 16px) / 2;
+		button.combo {
+			color: $drop_target_color;
+			box-shadow: inset 0 0 0 2px $drop_target_color;
 		}
 	}
 
-	// newstyle
-	popover {
-		margin-top: $space-size - 2px;
-		padding: 0;
+	popover.menu {
+		padding: $space-size 0 0;
 
-		listview {
-			margin: 0;
+		listview > row {
+			min-width: 0;
+			padding: $space-size;
 
-			> row {
-				padding: $space-size;
-
-				&:selected {
-					color: $text;
-					background-color: $overlay-selected;
-				}
+			&:selected {
+				color: $text;
+				background-color: $overlay-selected;
 			}
 		}
 
-		// drodowns with searchboxes on top
+		// dropdowns with searchboxes on top
 		.dropdown-searchbar {
 			padding: $space-size;
-		}
-	}
 
-	&.linked {
-		button:nth-child(2) {
-			&:dir(ltr) {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-			}
-			&:dir(rtl) {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
+			+ scrolledwindow:not(.undershoot-top) {
+				@include undershoot(top);
 			}
 		}
 	}
-
-	> .linked:not(.vertical) > entry:not(:only-child) {
-		border-radius: $corner-radius;
-
-		&:first-child {
-			margin-right: -$medium-size;
-			padding-right: $medium-size;
-		}
-
-		&:last-child {
-			margin-left: -$medium-size;
-			padding-left: $medium-size;
-		}
-	}
-
-	> .linked:not(.vertical) > button:not(:only-child) {
-		@extend %button-flat;
-		// @extend %small-button;
-
-		min-height: 16px;
-		min-width: 16px;
-		margin: ($medium-size - $small-size) / 2;
-		padding: ($small-size - 16px) / 2;
-		border-radius: $corner-radius;
-	}
 }
 
-// the combo is a composite widget so the way we do button linking doesn't
-// work, special case needed. See
-// https://bugzilla.gnome.org/show_bug.cgi?id=733979
+/**************
+ * ComboBoxes *
+ **************/
 
-.linked:not(.vertical) > combobox {
-	&:not(:first-child) > box > button.combo {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-	}
-
-	&:not(:last-child) > box > button.combo {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-}
-
-.linked.vertical > combobox {
-	&:not(:first-child) > box > button.combo {
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-	}
-
-	&:not(:last-child) > box > button.combo {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-}
-
-button.combo:only-child {
-	border-radius: $corner-radius;
-	font-weight: normal;
-
-	@include entry(normal);
-
-	&:focus {
-		@include button(flat-focus);
-	}
-
-	&:hover {
-		@include button(flat-hover);
-	}
-
-	&:active {
-		@include button(flat-active);
-	}
-
-	&:checked {
-		@include button(flat-checked);
-	}
-
-	&:disabled {
-		@include button(disabled);
-	}
+combobox {
+	@extend dropdown;
 }
 
 /************
@@ -5883,7 +5797,7 @@ window {
 	min-height: 22px;
 	min-width: 22px;
 	padding: 0;
-	margin: ($large-size - 22px) / 2 $space-size / 2;
+	margin: ($large-size - 22px) / 2 $space-size / 8;
 
 	&.minimize,
 	&.maximize,
@@ -5891,9 +5805,9 @@ window {
 		color: $titlebar-text-secondary;
 
 		image {
-			padding: 0;
+			padding: 2px;
 			margin: 0;
-			background-color: transparent;
+			background-color: gtkalpha(currentColor, 0.15);
 		}
 
 		&:hover {

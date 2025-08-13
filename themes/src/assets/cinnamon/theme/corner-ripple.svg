@@ -5,7 +5,7 @@
    version="1.1"
    id="svg1"
    sodipodi:docname="corner-ripple.svg"
-   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +23,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="7.5769231"
      inkscape:cx="52.197969"
-     inkscape:cy="52.197969"
-     inkscape:window-width="1920"
+     inkscape:cy="52.13198"
+     inkscape:window-width="1867"
      inkscape:window-height="1009"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -33,7 +33,7 @@
   <g
      transform="translate(0 -948.36)"
      id="g1"
-     style="fill:#266b79;fill-opacity:1">
+     style="fill:#45707a;fill-opacity:1">
     <circle
        id="corner-ripple"
        cx="52"
@@ -41,6 +41,6 @@
        r="48"
        fill="#009688"
        opacity=".25"
-       style="fill:#266b79;fill-opacity:1" />
+       style="fill:#45707a;fill-opacity:1" />
   </g>
 </svg>
