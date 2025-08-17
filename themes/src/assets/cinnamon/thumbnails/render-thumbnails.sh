@@ -5,7 +5,7 @@ OPTIPNG="/usr/bin/optipng"
 
 ./make-thumbnails.sh
 
-for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' 'Yellow'; do
+for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' '-Yellow'; do
     for type in '' '-Medium' '-Soft'; do
         SRC_FILE="thumbnail${theme}${type}.svg"
         for color in '' '-Light' '-Dark'; do
@@ -20,7 +20,7 @@ for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Te
     done
 done
 
-for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' 'Yellow'; do
+for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' '-Yellow'; do
     for type in '' '-Medium' '-Soft'; do
         if [[ ${theme} == '' && ${type} == '' ]]; then
             echo "keep thumbnail.svg"

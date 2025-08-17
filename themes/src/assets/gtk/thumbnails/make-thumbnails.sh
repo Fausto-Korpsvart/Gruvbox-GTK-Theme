@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' 'Yellow'; do
+for theme in '' '-Blue' '-Green' '-Grey' '-Orange' '-Pink' '-Purple' '-Red' '-Teal' '-Yellow'; do
     for type in '' '-Medium' '-Soft'; do
         case "$theme" in
             '')
