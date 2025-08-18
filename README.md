@@ -122,7 +122,7 @@ Run the following command in the terminal for a general installation
 
 -n, --name NAME         Specify theme name (Default: Gruvbox)
 
--t, --theme VARIANT...  Specify theme accent color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
+-t, --theme VARIANT...  Specify theme accent color variant(s) [default|green|grey|orange|pink|purple|red|teal|yellow|all] (Default: blue)
 
 -c, --color VARIANT...  Specify color variant(s) [light|dark] (Default: All variants)
 
