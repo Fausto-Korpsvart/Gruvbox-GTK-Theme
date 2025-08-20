@@ -4879,7 +4879,8 @@ decoration {
 	&.maximize,
 	&.close {
 		color: $titlebar-text-secondary;
-		background-color: gtkalpha(currentColor, 0.1);
+		/* background-color: gtkalpha(currentColor, 0.1); */
+		background: rgba($fill, 0.1);
 
 		&:hover {
 			color: $titlebar-text;
