@@ -174,12 +174,7 @@ window.background.chromium {
 
 	menu {
 		background-color: if($variant == 'light', $grey-200, $grey-800);
-		border-color: 1px solid
-			if(
-				$variant == 'light',
-				darken($background, 15%),
-				lighten($background, 15%)
-			);
+		border: 1px solid if($variant == 'light', $solid-border, $window-border);
 		border-radius: 0;
 
 		menuitem {

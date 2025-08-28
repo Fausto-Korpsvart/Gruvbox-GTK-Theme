@@ -24,16 +24,7 @@
 	placessidebar {
 		> scrolledwindow {
 			@extend %nautilus_sidebar_style;
-
-			/* > viewport > .navigation-sidebar { */
-			/* 	@extend %sidebar_list; */
-			/* } */
 		}
-
-		/* scrollbar { */
-		/* 	@extend %sidebar_scrollbar; */
-		/* 	@extend %round_scrollbar; */
-		/* } */
 	}
 
 	placesview {
@@ -46,24 +37,28 @@
 		background-color: transparent;
 	}
 
-	.nautilus-grid-view {
-		child.activatable {
-			@extend %row_activatable;
-		}
-	}
-
 	.nautilus-grid-view,
 	.nautilus-list-view {
-		/* @extend %content_style; */
 		@extend %nautilus_content_style;
 
 		.view {
 			background-color: transparent;
 		}
 
-		row.activatable > cell {
-			padding: 0px;
-			margin: 0px;
+		listview.view {
+			> row.activatable {
+				> cell {
+					padding: 0;
+
+					> widget#NautilusViewCell {
+						padding: $space-size / 2 $space-size * 1.5;
+					}
+				}
+
+				&:nth-child(odd):not(:disabled) {
+					background-image: image(gtkalpha(currentColor, 0.03));
+				}
+			}
 		}
 
 		scrolledwindow {
@@ -73,9 +68,7 @@
 				@extend %round_scrollbar;
 			}
 		}
-	}
 
-	.nautilus-grid-view {
 		child.activatable {
 			@extend %row_activatable;
 		}
@@ -726,22 +719,6 @@ menubutton stack > box {
 
 	box-shadow: inset 0 1px highlight($background);
 	border-top-left-radius: $window-radius;
-
-	& > windowhandle > box {
-		padding: 0px;
-		margin: 0 10px 0 15px;
-	}
-
-	& > windowhandle widget > box.start {
-		padding: 0px;
-		margin: 0;
-	}
-
-	& > windowhandle widget > box,
-	windowtitle {
-		padding: 0px;
-		margin: 0 -10px 0 10px;
-	}
 
 	&:backdrop {
 		@extend %sidebar_style;

@@ -3293,8 +3293,7 @@ scrollbar {
 			box-shadow: none;
 			outline: none;
 			transition: all 200ms linear;
-
-			background-color: color-mix(in srgb, currentColor 40%, transparent);
+			background-color: $text-disabled;
 
 			&:hover {
 				background-color: $text-secondary-disabled;
@@ -3349,11 +3348,6 @@ scrollbar {
 					margin: 0;
 					min-width: $space-size - 2px;
 					min-height: $space-size - 2px;
-					background-color: color-mix(
-						in srgb,
-						$text 70%,
-						$background
-					);
 					border: none;
 				}
 			}

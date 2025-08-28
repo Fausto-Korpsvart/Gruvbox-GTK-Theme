@@ -43,7 +43,7 @@
 %sidebar_scrollbar {
 	> range > trough {
 		> slider {
-			background-color: color-mix(in srgb, currentColor 40%, transparent);
+			background-color: $text-disabled;
 
 			&:hover {
 				background-color: $text-secondary-disabled;
@@ -341,6 +341,7 @@ viewswitcher {
 
 	&.wide {
 		button.toggle {
+			background-color: $titlebar-fill;
 			border-radius: $space-size / 2;
 
 			&:first-child {
