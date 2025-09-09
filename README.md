@@ -10,9 +10,9 @@
 </p>
 
 A GTK theme based on the colours of [Sainnhe's](https://github.com/sainnhe) great theme: [Gruvbox Material for Neovim](https://github.com/sainnhe/gruvbox-material) <br>
-the [VinceLiuice's](https://github.com/vinceliuice) awesome: [Magnetic GTK theme](https://github.com/vinceliuice/Magnetic-gtk-theme), and the creativity of [Gusbemacbe's](https://github.com/gusbemacbe): [Suru Plus Icon Theme](https://github.com/gusbemacbe/suru-plus).
+the [VinceLiuice's](https://github.com/vinceliuice) Awesome GTK Themes and the creativity of [Gusbemacbe's](https://github.com/gusbemacbe): [Suru Plus Icon Theme](https://github.com/gusbemacbe/suru-plus).
 
-![Gruvbox Dark](https://raw.githubusercontent.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/master/extra/screenshoots/Gruvbox-2.png)
+![Gruvbox](https://raw.githubusercontent.com/Fausto-Korpsvart/Gruvbox-GTK-Theme/master/extra/screenshoots/Gruvbox.png)
 
 > [!NOTE]
 > The theme is more focused on the Gnome Desktop, but supports Cinnamon, XFCE, Mate, etc. with generic styles.
