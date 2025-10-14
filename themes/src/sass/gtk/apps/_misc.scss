@@ -104,7 +104,7 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
  * Chromium *
  ************/
 window.background.chromium {
-	background-color: $background;
+	background-color: $base;
 	color: $text;
 
 	headerbar.titlebar {
@@ -134,7 +134,6 @@ window.background.chromium {
 			margin: 0; // unset margins
 			padding: 0;
 			background-size: 16px 16px;
-			color: transparent; // hide stock icons
 			border: none;
 		}
 	}
@@ -174,7 +173,7 @@ window.background.chromium {
 
 	menu {
 		background-color: if($variant == 'light', $grey-200, $grey-800);
-		border: 1px solid if($variant == 'light', $solid-border, $window-border);
+		/* border: 0px solid if($variant == 'light', $solid-border, $window-border); */
 		border-radius: 0;
 
 		menuitem {

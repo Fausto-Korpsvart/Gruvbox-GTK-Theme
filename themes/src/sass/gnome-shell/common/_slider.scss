@@ -2,7 +2,7 @@
 
 $slide_active_color: if(
 	$variant == 'dark' and $theme == 'grey',
-	rgba($white, 0.85),
+	$grey-250,
 	$primary
 );
 $slide_size: if($compact == 'false', 7px, 6px);

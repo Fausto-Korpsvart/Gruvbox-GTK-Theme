@@ -16,8 +16,8 @@
 }
 
 %content_style {
-	/* background-color: if($variant == 'light', rgba($white, 0.6), $fill);
-	border-radius: $corner-radius; */
+	// background-color: if($variant == 'light', rgba($white, 0.6), $fill);
+	// border-radius: $corner-radius;
 	margin: $space-size;
 }
 
@@ -91,21 +91,17 @@
 		&:hover,
 		&:active,
 		&:focus {
-			color: $text;
+			color: lighten($primary, 15%);
 		}
 
 		&:selected {
-			/* background-color: if($variant == 'light', rgba($base, 0.4), $fill); */
 			background-color: $overlay-hover;
 			color: $primary;
 			font-weight: 500;
-			/* border-left: 3px solid $primary; */
 
 			&:hover,
 			&:focus {
-				/* background-color: rgba($base, 0.9); */
-				background-color: $overlay-hover;
-				color: $text;
+				color: lighten($primary, 10%);
 			}
 		}
 	}
@@ -162,22 +158,10 @@
 		border-left: none;
 	}
 
-	/* > range > trough { */
-	/* 	> slider { */
-	/* 		border: $corner-radius - 8px solid transparent; */
-	/* 		margin: 0 -8px 0 0; */
-	/* 	} */
-	/* } */
-
 	&.overlay-indicator {
 		&:not(.dragging):not(.hovering) {
 			border-color: transparent;
 			background-color: transparent;
-
-			/* > range > trough > slider { */
-			/* 	border: none; */
-			/* 	margin: $corner-radius - 8px - $space-size / 2; */
-			/* } */
 
 			button {
 				border: none;
@@ -285,7 +269,7 @@ avatar {
 	@at-root %card,
 		& {
 		border-radius: $corner-radius;
-		border: none;
+		border: 1px solid $border;
 		background-clip: border-box;
 		color: $text-secondary;
 		box-shadow: none;
@@ -334,40 +318,32 @@ toast {
 	}
 }
 
-// viewswitcher
+// Viewswitcher
 viewswitcher {
-	margin: 2px;
-	border-spacing: $space-size / 2;
+	min-height: 0;
+	padding: $space-size / 2;
+	margin: $space-size 0;
+	border-radius: $modal-radius + $space-size / 2;
+	background-color: $fill;
+	border: none;
 
 	&.wide {
+		margin-top: $space-size;
+		margin-bottom: $space-size;
+
 		button.toggle {
-			background-color: $titlebar-fill;
-			border-radius: $space-size / 2;
-
-			&:first-child {
-				border-top-left-radius: $medium-size / 2;
-				border-bottom-left-radius: $medium-size / 2;
-			}
-
-			&:last-child {
-				border-top-right-radius: $medium-size / 2;
-				border-bottom-right-radius: $medium-size / 2;
-			}
+			margin: 0;
+			border-radius: $modal-radius;
 		}
 	}
 
-	&.narrow {
-		button.toggle {
-			border-radius: 0 0 $space-size / 2 $space-size / 2;
-			margin: 0;
+	&.narrow button.toggle {
+		border-radius: 0;
+		margin: 0;
 
-			&:first-child {
-				border-bottom-left-radius: $corner-radius;
-			}
-
-			&:last-child {
-				border-bottom-right-radius: $corner-radius;
-			}
+		&:focus-within,
+		&:focus {
+			box-shadow: none;
 		}
 	}
 
@@ -375,17 +351,12 @@ viewswitcher {
 		font-weight: bold;
 		padding: 0;
 
-		&:focus:not(:hover):not(:active) {
-			box-shadow: none;
-			outline: none;
-		}
-
 		> stack > box {
 			&.narrow {
 				font-size: 0.75rem;
-				padding-top: $space-size + 2px;
+				padding-top: $space-size;
 				padding-bottom: $space-size - 2px;
-				border-spacing: $space-size / 2;
+				border-spacing: $space-size - 2px;
 
 				> stack > label {
 					padding-left: $space-size;
@@ -618,30 +589,28 @@ preferencesgroup > box {
 	box > list.boxed-list-separate {
 		background-color: transparent;
 		border-radius: $corner-radius;
+		border: 1px solid $border;
+
 		& row {
-			color: $text;
+			color: $text-secondary;
 			background-color: if($variant == 'light', $base, $fill);
 			border-radius: $corner-radius $corner-radius 0 0;
 			margin-top: 0px;
-			margin-bottom: 2px;
+			margin-bottom: 0px;
 
 			&:first-child {
 				border-radius: $corner-radius $corner-radius 0 0;
+				box-shadow: 0 1px $border;
 			}
 
 			&:last-child {
 				border-radius: 0 0 $corner-radius $corner-radius;
-				margin-bottom: 0;
-			}
-
-			& + row {
-				margin-top: 2px;
 			}
 
 			&:hover,
 			&:focus {
-				color: $text-secondary;
-				background-color: if($variant == 'light', $base, $fill);
+				color: $text;
+				background-color: $overlay-active;
 			}
 		}
 	}
@@ -764,8 +733,8 @@ overlay-split-view {
 	&.end:dir(rtl) {
 		&,
 		banner > revealer > widget {
-			box-shadow: inset 0 1px highlight($base-alt);
-			border-right: none;
+			/* box-shadow: inset 0 1px highlight($base-alt); */
+			border-right: 1px solid $border;
 		}
 	}
 
@@ -799,7 +768,7 @@ overlay-split-view {
 	background-color: $background;
 	color: $text;
 	border-top-right-radius: $window-radius;
-	box-shadow: inset 0 1px highlight($background);
+	/* box-shadow: inset 0 1px highlight($background); */
 
 	headerbar {
 		&,

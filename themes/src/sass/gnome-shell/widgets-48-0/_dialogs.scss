@@ -6,7 +6,10 @@
 	border: none;
 	box-shadow: inset 0 0.5px highlight($popover);
 
-	@if $float == 'true' {
+	@if $float == 'false' {
+		border: 1px solid $window-border;
+		box-shadow: inset 0 0 0 1px highlight($popover);
+	} @else {
 		border: 2px solid $primary;
 	}
 }

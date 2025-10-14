@@ -110,20 +110,16 @@
 
 	.popup-menu & {
 		border-radius: $base_radius;
-		/* padding: $base_padding; */
-		/* margin: $base_margin; */
 		color: $text-disabled;
 		background-color: lighten($background, 4%);
-		box-shadow: 0 2px 2px 0 rgba(black, 0.04);
-		border: 1px solid rgba($divider, 0.04);
+		border: 1px solid $window-border;
+		box-shadow: inset 0 0 0 1px highlight($popover);
 		// bit of a hack here with border since we can't have double box-shadow
 
 		&:hover,
 		&:focus {
 			color: rgba($primary, 0.5);
 			background-color: lighten($background, 5%);
-			box-shadow: 0 2px 2px rgba(black, 0.05) !important;
-			border: 1px solid rgba($divider, 0.06);
 		}
 
 		&:active {
@@ -140,19 +136,12 @@
 	}
 
 	&:second-in-stack {
-		background-color: lighten($background, 4%);
-		box-shadow: 0 2px 2px 0 rgba(black, 0.04);
-		border: 1px solid rgba($divider, 0.03);
+		background-color: lighten($background, 6%);
 	}
 
 	&:lower-in-stack {
-		background-color: lighten($background, 4%);
-		box-shadow: none;
-		border-color: if(
-			$variant == 'light',
-			darken($primary, 10%),
-			transparent
-		); // a not ideal workaround for light theme
+		background-color: lighten($background, 8%);
+		border: 1px solid transparentize($divider, 0.2);
 	}
 
 	// message header

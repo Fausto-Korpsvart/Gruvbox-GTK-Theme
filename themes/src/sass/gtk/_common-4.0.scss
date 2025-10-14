@@ -6,6 +6,10 @@
 	color: $text;
 }
 
+#desktopwindow.background {
+	background-color: transparent;
+}
+
 dnd {
 	color: on($background);
 }
@@ -52,8 +56,7 @@ textview {
 	// FIXME: we need to override background-color to ensure text rendering
 
 	text {
-		// background-color: $card;
-		background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+		background-color: $base;
 		selection {
 			&:focus,
 			& {
@@ -326,6 +329,21 @@ entry {
 
 		// &.search { border-radius: $circular-radius; }
 
+		> text {
+			> placeholder {
+				color: $text-disabled;
+			}
+
+			> block-cursor {
+				color: $fill;
+				background-color: $text;
+			}
+
+			> selection {
+				@extend %selected_items_primary;
+			}
+		}
+
 		&.flat {
 			&:focus-within,
 			&:disabled,
@@ -340,7 +358,7 @@ entry {
 			}
 		}
 
-		image {
+		> image {
 			// icons inside the entry
 			color: $text-secondary;
 
@@ -362,18 +380,8 @@ entry {
 			}
 		}
 
-		undershoot {
-			&.left {
-				@include undershoot(left);
-			}
-
-			&.right {
-				@include undershoot(right);
-			}
-		}
-
-		> text > selection {
-			@extend %selected_items_primary;
+		&.password image.caps-lock-indicator {
+			opacity: 0.35;
 		}
 
 		// entry error and warning style
@@ -382,26 +390,36 @@ entry {
 		{
 			&.#{$e_type} {
 				@include entry(normal, $e_color);
+				outline: none;
 
 				&:focus-within {
 					@include entry(checked, $e_color);
+					outline: none;
 				}
 
 				&:drop(active),
 				&:hover:not(:focus-within) {
 					@include entry(hover, $e_color);
+					outline: none;
 				}
 
 				&:disabled {
 					@include entry(disabled, $e_color);
+					outline: none;
 				}
 
-				> text > selection {
-					background-color: rgba($e_color, 0.25);
-					color: $e_color;
+				> text {
+					> selection {
+						background-color: rgba($e_color, 0.25);
+						color: $e_color;
+					}
+
+					> cursor-handle > contents {
+						background-color: currentColor;
+					}
 				}
 
-				image {
+				> image {
 					color: rgba($e_color, 0.75);
 
 					&:hover,
@@ -422,6 +440,10 @@ entry {
 		margin: 0 -4px;
 		border-bottom: 2px solid $primary;
 		background-color: transparent;
+	}
+
+	.osd & > progress > trough > progress {
+		border-color: on($osd, fill);
 	}
 
 	button.image-button {
@@ -532,37 +554,6 @@ editablelabel > stack > text {
 	}
 	&:checked:disabled {
 		color: on(dark, disabled);
-	}
-}
-
-%button-on-indicator {
-	background-color: $base;
-	color: $text;
-
-	&:checked,
-	&:checked:hover {
-		background-color: on($indicator);
-		color: $indicator;
-	}
-}
-
-%flat-button-on-indicator {
-	color: on($indicator, secondary);
-
-	&:hover,
-	&:active,
-	&:focus:not(:hover):not(:active) &.keyboard-activating {
-		color: on($indicator);
-	}
-
-	&:checked,
-	&:checked:hover {
-		background-color: on($indicator);
-		color: $indicator;
-	}
-
-	&:disabled {
-		color: on($indicator, secondary-disabled);
 	}
 }
 
@@ -690,7 +681,7 @@ button {
 	min-height: 24px;
 	min-width: 16px;
 	padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
-	border-radius: $modal-radius;
+	border-radius: $corner-radius;
 	font-weight: 500;
 	@extend %button-basic;
 
@@ -876,12 +867,13 @@ button {
 
 	// big standalone buttons like in Documents pager
 	&.osd {
-		min-width: $small-size;
-		min-width: $small-size;
+		min-height: 24px;
+		min-width: 24px;
 		padding: ($medium-size - 24px) / 2;
 		box-shadow: none;
 		background-color: rgba(black, 0.35);
 		color: $white;
+		margin: 0;
 
 		> image {
 			padding: 0;
@@ -922,16 +914,28 @@ button {
 			color: on($b_color);
 			box-shadow: none;
 
-			&:hover {
-				background-color: mix(on($b_color), $b_color, 10%);
-			}
-
 			&:disabled {
 				@include button(disabled);
 			}
 
+			&:hover {
+				box-shadow:
+					inset 0 0 0 9999px transparent,
+					0 2px (4px * 0.6) -1px rgba(black, 0.1),
+					0 4px (5px * 0.6) 0 rgba(black, 0.07),
+					0 1px (10px * 0.6) 0 rgba(black, 0.06);
+			}
+
 			&:checked {
-				background-color: mix(on($b_color), $b_color, 30%);
+				background-color: mix(on($b_color), $b_color, percentage(0.3));
+			}
+
+			&:checked:hover {
+				box-shadow:
+					inset 0 0 0 9999px transparent,
+					0 3px 3px -3px rgba(black, 0.15),
+					0 2px 3px -1px rgba(black, 0.12),
+					0 2px 5px 0 rgba(black, 0.06);
 			}
 
 			&:focus {
@@ -1096,24 +1100,21 @@ splitbutton {
 	&,
 	& > separator {
 		transition: $transition;
-		transition-property: background-color;
+		transition-property: background;
 	}
 
 	> separator {
-		min-width: 0;
 		margin-top: $space-size;
 		margin-bottom: $space-size;
-		background-color: transparent;
 		background: none;
 	}
 
-	/* > menubutton > button { */
-	/* 	padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2; */
-	/* } */
+	> menubutton > button {
+		padding: ($medium-size - 24px) / 2 ($medium-size - 16px) / 2;
+	}
 
 	// Since the inner button doesn't have any style classes on it,
 	// we have to add them manually
-	> menubutton > button,
 	&.image-button > button {
 		min-width: 24px;
 		padding-left: $space-size;
@@ -1135,14 +1136,14 @@ splitbutton {
 	> menubutton > button:dir(rtl) {
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
-		margin-right: 0;
+		margin-right: -1px;
 	}
 
 	> button:dir(rtl),
 	> menubutton > button:dir(ltr) {
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
-		margin-left: 0;
+		margin-left: -1px;
 	}
 
 	@at-root %flat_split_button,
@@ -1244,16 +1245,6 @@ buttoncontent {
 	}
 }
 
-button.color {
-	min-height: $small-size;
-	min-width: $small-size;
-	padding: $space-size;
-
-	// colorswatch:only-child {
-	//   &, overlay { border-radius: 0; }
-	// }
-}
-
 %needs-attention {
 	animation: needs-attention $ripple-fade-in-duration $ease-out forwards;
 	background-repeat: no-repeat;
@@ -1301,52 +1292,14 @@ button.color {
 	}
 }
 
-// .linked >                  element            child
-$deprecated_linked_widgets:
-	('combobox', '> box > button.combo'),
-	('appchooserbutton', '> combobox > box > button.combo');
+button.color {
+	min-height: $small-size;
+	min-width: $small-size;
+	padding: $space-size;
 
-// .linked >        element       child
-$_linked_widgets:
-	('%button', ''), ('button', ''), ('menubutton', '> button'),
-	('dropdown', '> button'), ('colorbutton', '> button'),
-	('fontbutton', '> button'), ('tabbutton', '> button'), ('%entry', ''),
-	('entry', '');
-
-$_linked_widgets: join($_linked_widgets, $deprecated_linked_widgets);
-
-@each $widget, $child in $_linked_widgets {
-	.linked:not(.vertical) > {
-		#{$widget} {
-			&:dir(ltr):not(:first-child) #{$child},
-			&:dir(rtl):not(:last-child) #{$child} {
-				border-top-left-radius: $space-size / 2;
-				border-bottom-left-radius: $space-size / 2;
-				margin-left: 1px;
-			}
-
-			&:dir(ltr):not(:last-child) #{$child},
-			&:dir(rtl):not(:first-child) #{$child} {
-				border-top-right-radius: $space-size / 2;
-				border-bottom-right-radius: $space-size / 2;
-			}
-		}
-	}
-
-	.linked.vertical {
-		#{$widget} {
-			&:not(:first-child) #{$child} {
-				border-top-left-radius: $space-size / 2;
-				border-top-right-radius: $space-size / 2;
-				margin-top: 1px;
-			}
-
-			&:not(:last-child) #{$child} {
-				border-bottom-left-radius: $space-size / 2;
-				border-bottom-right-radius: $space-size / 2;
-			}
-		}
-	}
+	// colorswatch:only-child {
+	//   &, overlay { border-radius: 0; }
+	// }
 }
 
 %list_button,
@@ -1409,15 +1362,11 @@ button.link {
 	}
 }
 
-.link selection {
-	@extend %selected_items_color;
-}
-
 /*****************
  * GtkSpinButton *
  *****************/
 spinbutton {
-	border-radius: $corner-radius;
+	border-radius: $modal-radius;
 	padding: 0;
 	border-spacing: 0;
 	@include entry(normal);
@@ -1525,6 +1474,10 @@ spinbutton {
  *************/
 
 dropdown {
+	button.toggle {
+		border-radius: 0 $modal-radius $modal-radius 0;
+	}
+
 	> button > box {
 		border-spacing: $space-size;
 
@@ -1588,17 +1541,16 @@ combobox {
  * Toolbars *
  ************/
 .toolbar {
-	@extend %sidebar_style;
-
 	padding: $space-size;
+	/* background-color: $background; */
 	border-spacing: $space-size;
 
 	button {
 		@extend %button-flat;
 	}
 
-	.linked button:not(:hover):not(:active):not(:checked):not(:disabled) {
-		background-color: $fill;
+	.linked button {
+		@extend %button-basic;
 	}
 
 	// on OSD
@@ -1611,13 +1563,12 @@ combobox {
 		&.osd {
 		transition: $transition-shadow;
 		padding: $space-size;
-		border-radius: $corner-radius;
+		border-radius: $corner-radius + $space-size;
 		box-shadow:
-			$shadow-z5,
+			$shadow-z4,
 			inset 0 1px highlight($surface);
 		background-color: $surface;
 		color: $text;
-		border: none;
 
 		&:backdrop {
 			box-shadow:
@@ -1651,13 +1602,6 @@ combobox {
 	}
 	&.vertical > separator {
 		margin: 2px;
-	}
-
-	entry,
-	splitbutton,
-	button,
-	scalebutton {
-		border-radius: $modal-radius;
 	}
 
 	// add vertical margins to common widgets on toolbars to avoid them spanning
@@ -1706,9 +1650,12 @@ combobox {
 // searchbar
 searchbar > revealer > box {
 	padding: $space-size;
-	border-spacing: $space-size;
-	border: none;
-	background-color: transparent;
+	border-spacing: 0;
+	border-style: solid;
+	border-width: 0 0 1px;
+	border-color: $divider;
+	background-color: $background;
+	background-clip: border-box;
 	box-shadow: none;
 
 	entry,
@@ -1723,44 +1670,16 @@ searchbar > revealer > box {
  ***************/
 
 %titlebar-button {
+	@extend %button-flat;
 	color: $titlebar-text-secondary;
-	/* background-color: if( */
-	/* 	$variant == 'light', */
-	/* 	rgba($base_alt, 0.6), */
-	/* 	$titlebar-fill */
-	/* ); */
-	background-color: transparent;
-	border-radius: $corner-radius;
 	border: none;
-	outline: none;
 
-	.linked > & {
-		border-radius: 0;
-
-		&:first-child {
-			border-top-left-radius: $circular-radius;
-			border-bottom-left-radius: $circular-radius;
-		}
-
-		&:last-child {
-			border-top-right-radius: $circular-radius;
-			border-bottom-right-radius: $circular-radius;
-		}
-
-		&:only-child {
-			border-radius: $circular-radius;
-		}
-	}
-
-	&:hover {
-		background-color: if($topbar == 'light', $grey-250, $titlebar-divider);
-	}
-
-	&:focus,
 	&:hover,
-	&:active {
-		color: $titlebar-text;
-		outline: none;
+	&:focus:not(:hover):not(:active),
+	&:active,
+	&:checked {
+		color: on($titlebar-indicator);
+		background-color: $primary;
 	}
 
 	&:disabled {
@@ -1768,23 +1687,9 @@ searchbar > revealer > box {
 	}
 
 	&:checked {
-		// background-color: $titlebar-indicator;
-		background-color: $primary;
-		color: on($titlebar-indicator);
-		outline: none;
-
-		&:hover {
-			box-shadow: inset 0 0 0 1000px on($titlebar-indicator, fill);
-			color: on($titlebar-indicator);
-		}
-
-		&:focus {
-			color: on($titlebar-indicator);
-		}
-
 		&:disabled {
-			background-color: rgba($titlebar-indicator, 0.5);
-			color: on($titlebar-indicator, disabled);
+			background-color: transparent;
+			color: $titlebar-text-disabled;
 		}
 	}
 
@@ -1802,10 +1707,10 @@ searchbar > revealer > box {
 		}
 
 		&:checked {
-			color: on($titlebar-indicator, secondary);
+			color: $titlebar-text-secondary;
 
 			&:disabled {
-				color: on($titlebar-indicator, secondary-disabled);
+				color: $titlebar-text-secondary-disabled;
 			}
 		}
 	}
@@ -1813,15 +1718,30 @@ searchbar > revealer > box {
 
 %titlebar-entry {
 	background-color: $titlebar-fill;
-	color: $titlebar-text;
-	border-radius: $corner-radius;
+	color: $titlebar-text-secondary;
+
+	&:hover,
+	&:focus-within {
+		color: $titlebar-text;
+	}
 
 	&:disabled {
 		background-color: $titlebar-fill;
 		color: $titlebar-text-disabled;
 	}
 
-	image {
+	> text {
+		> placeholder {
+			color: $titlebar-text-disabled;
+		}
+
+		> block-cursor {
+			color: $titlebar-fill;
+			background-color: $titlebar-text;
+		}
+	}
+
+	> image {
 		color: $titlebar-text-secondary;
 
 		&:hover,
@@ -1852,8 +1772,9 @@ headerbar {
 	}
 
 	&:backdrop {
-		background-color: transparent;
+		background-color: $titlebar-backdrop;
 		color: $titlebar-text-secondary;
+		box-shadow: inset 0 1px highlight($titlebar);
 
 		&:disabled {
 			color: $titlebar-text-secondary-disabled;
@@ -1868,9 +1789,9 @@ headerbar {
 	}
 
 	.title {
-		padding: 0;
-		/* margin: 0 -$space-size * 3; */
-		margin: 0 -15px;
+		padding-left: $space-size;
+		padding-right: $space-size;
+		margin: 0 -13px;
 		font-weight: bold;
 	}
 
@@ -1913,6 +1834,7 @@ headerbar {
 	// add vertical margins to common widget on the headerbar to avoid them spanning the whole height
 	entry,
 	spinbutton,
+	splitbutton,
 	button,
 	menubutton,
 	stackswitcher,
@@ -1944,24 +1866,11 @@ headerbar {
 		}
 	}
 
-	splitbutton {
-		/* background-color: if( */
-		/* 	$variant == 'light', */
-		/* 	rgba($base_alt, 0.6), */
-		/* 	$titlebar-fill */
-		/* ); */
-		background-color: transparent;
-		border-radius: $corner-radius;
-
-		button:not(.suggested-action):not(.destructive-action) {
-			&:not(:hover):not(:active):not(:checked) {
-				background-color: transparent;
-			}
-		}
-
-		> separator {
-			background-color: transparent;
-		}
+	button.star {
+		min-height: 24px;
+		min-width: 24px;
+		padding: ($medium-size - 24px) / 2;
+		@extend %circular-button;
 	}
 
 	entry {
@@ -1978,22 +1887,18 @@ headerbar {
 		margin-bottom: 5px;
 	}
 
-	stackswitcher {
-		// reset
-		background-color: on($titlebar, fill);
+	@if $variant == 'light' and $topbar == 'dark' {
+		stackswitcher {
+			// reset
+			background-color: on($titlebar, fill);
 
-		&:checked {
-			background-color: $titlebar-indicator;
-			color: on($titlebar-indicator);
-
-			&:hover {
-				background-color: lighten($titlebar-indicator, 10%);
+			&.linked:not(.vertical)
+				> button:not(.suggested-action):not(.destructive-action) {
+				&:checked {
+					background-color: rgba(white, 0.15);
+					color: $titlebar-text;
+				}
 			}
-		}
-
-		&.linked:not(.vertical)
-			> button:not(.suggested-action):not(.destructive-action) {
-			border-radius: $circular-radius;
 		}
 	}
 
@@ -2032,7 +1937,8 @@ headerbar {
 	}
 
 	switch {
-		margin: ($large-size - $small-size) / 2 $space-size;
+		margin-top: ($large-size - 24px) / 2;
+		margin-bottom: ($large-size - 24px) / 2;
 	}
 
 	&.selection-mode {
@@ -2070,27 +1976,64 @@ headerbar {
 		min-height: $medium-size;
 		padding: 0;
 		margin: 0;
-		border-radius: $window-radius $window-radius 0 0;
-		box-shadow: inset 0 1px highlight($titlebar);
 		border: none;
 		outline: none;
+
+		windowcontrols {
+			> button {
+				min-width: 16px;
+				min-height: 16px;
+				margin: 0 $space-size - 2px;
+				padding: 0;
+
+				/* @if $window_button == 'mac' { */
+				/* 	min-width: 16px; */
+				/* 	min-height: 16px; */
+				/* 	margin: 0 $space-size - 2px; */
+				/* 	padding: 0; */
+				/* } @else { */
+				/* 	min-width: 22px; */
+				/* 	min-height: 22px; */
+				/* 	margin: 0 $space-size - 2px; */
+				/* 	padding: 0; */
+				/* } */
+			}
+
+			menubutton button {
+				min-height: 20px;
+				min-width: 20px;
+				margin: 0;
+				padding: $space-size - 2px;
+			}
+		}
 	}
 
-	.solid-csd &.default-decoration,
-	.maximized &.default-decoration {
-		border-radius: 0;
-		box-shadow: none; // just remove the highlight
+	.maximized &,
+	.fullscreen &,
+	.tiled &,
+	.tiled-top &,
+	.tiled-right &,
+	.tiled-bottom &,
+	.tiled-left & {
+		box-shadow: inset 0 -1px $border;
+
+		&.default-decoration {
+			box-shadow: none;
+		}
+	}
+
+	.solid-csd & {
+		&:dir(rtl),
+		&:dir(ltr) {
+			// specificity bump
+			border-radius: 0;
+			box-shadow: inset 0 -1px $border; // just remove the highlight
+		}
 	}
 }
 
-window > {
-	.titlebar:not(.flat) {
-		box-shadow: none;
-	}
-
-	.titlebar headerbar:not(.flat) {
-		box-shadow: none;
-	}
+.titlebar:not(headerbar) {
+	box-shadow: none;
 }
 
 window.devel {
@@ -2144,65 +2087,20 @@ window.devel {
 /************
  * Pathbars *
  ************/
-%pathbar_button,
-pathbar > button {
-	padding-left: ($medium-size - 24px) / 2;
-	padding-right: ($medium-size - 24px) / 2;
-	border-radius: $corner-radius;
-	background-color: $overlay-focus;
-	border: none;
-	box-shadow: none;
-
-	&:disabled {
-		background-color: $overlay-normal;
-	}
-
-	&:checked {
-		background-color: $overlay-checked;
-		color: $text;
-
-		&:hover {
-			background-color: $overlay-focus-hover;
-			color: $text;
-		}
-	}
-
-	label,
-	image {
-		margin-left: $space-size / 2;
-		margin-right: $space-size / 2;
-	}
-
-	&.slider-button {
-		padding-left: (24px - 16px) / 2;
-		padding-right: (24px - 16px) / 2;
-	}
-}
 
 .pathbar {
-	background-color: $fill;
-	color: $text-secondary;
-	border: none;
+	background-color: $overlay-focus;
 	border-radius: $corner-radius;
-	padding: 2px;
+	padding: 0;
 
-	headerbar & {
-		margin-top: $space-size;
-		margin-bottom: $space-size;
-		background-color: on($titlebar, fill);
-		color: $titlebar-text-secondary;
+	button {
+		margin: 0;
+		@extend %button-flat-simple;
 	}
 
-	> button {
-		margin-top: 0;
-		margin-bottom: 0;
-		min-height: 20px;
-		border-radius: $corner-radius - 2px;
-		border: none;
-		box-shadow: none;
-
-		&:last-child {
-			@include button(flat-checked);
+	headerbar & {
+		button {
+			margin: 0;
 		}
 	}
 }
@@ -2327,19 +2225,11 @@ treeview.view {
 			@extend %row_activatable;
 
 			padding: 2px 6px;
-			border-style: solid;
+			border-style: none solid solid none;
 			border-width: 0 1px 0 0;
 			border-color: transparent;
 			border-radius: 0;
 			background-clip: border-box;
-			border-image: linear-gradient(
-					to bottom,
-					transparent 20%,
-					$border 20%,
-					$border 80%,
-					transparent 80%
-				)
-				0 1 0 0 / 0 1px 0 0 stretch;
 
 			&:not(:focus):not(:hover):not(:active) {
 				color: $text-secondary;
@@ -2350,10 +2240,8 @@ treeview.view {
 				background-color: transparent;
 			}
 
-			&:last-child,
-			&:only-child {
-				border-right: none;
-				border-image: none;
+			&:last-child {
+				border-right-style: none;
 			}
 		}
 	}
@@ -2447,10 +2335,9 @@ popover.menu {
 			border: none;
 			outline: none;
 			transition: none;
-			border-radius: $menuitem-radius;
 
 			&:selected {
-				background-image: image($overlay-selected);
+				background: image($overlay-selected);
 			}
 		}
 	}
@@ -2461,7 +2348,6 @@ popover.menu {
 		button.circular.image-button.model {
 			@extend %small-button;
 			padding: $space-size;
-			border-radius: $menuitem-radius;
 
 			&:focus {
 				background-color: $overlay-selected;
@@ -2512,11 +2398,11 @@ popover {
 		border: none;
 
 		@if $outline == 'false' {
-			// box-shadow: none;
+			border: 1px solid highlight($surface);
+			background-clip: border-box;
 			box-shadow:
-				$shadow-z16,
-				inset 0 1px highlight($background),
-				0 0 36px transparent;
+				0 0 0 1px $window-border,
+				$shadow-z5;
 		} @else {
 			box-shadow:
 				$shadow-z16,
@@ -2527,11 +2413,11 @@ popover {
 
 	> arrow {
 		@if $outline == 'false' {
-			// box-shadow: none;
+			border: 1px solid highlight($surface);
+			background-clip: border-box;
 			box-shadow:
-				$shadow-z16,
-				inset 0 1px highlight($background),
-				0 0 36px transparent;
+				0 0 0 1px $window-border,
+				$shadow-z5;
 		} @else {
 			box-shadow:
 				$shadow-z16,
@@ -2686,47 +2572,43 @@ magnifier {
  *************/
 
 %tabs_tab {
-	transition:
-		$transition,
-		background-size 0ms,
-		background-image 0ms;
 	min-height: $small-size;
 	min-width: $small-size;
-	padding: $space-size / 2 $space-size * 2;
+	padding: $space-size / 2 $space-size;
 	border: none;
-	outline: none;
 	background-clip: padding-box;
-	color: if($variant == 'light', $black, $white);
 	font-weight: 500;
 	border-radius: $modal-radius;
+	@include button(flat-normal);
 
 	&:hover:not(:checked):not(:selected) {
-		background-color: $fill;
-		color: $primary;
+		@include button(flat-hover);
 		box-shadow: none;
+		background-color: if($variant == 'light', $grey-100, $fill);
+		color: $primary;
 	}
 
 	&:disabled {
-		color: on($indicator, secondary-disabled);
+		@include button(flat-disabled);
 	}
 
 	&:active {
+		@include button(flat-active);
 		background-color: $base;
 		color: $text;
 		box-shadow: none;
 	}
 
-	&:checked:not(:active),
-	&:selected:not(:active) {
+	&:checked {
 		transition:
 			$transition,
 			border-image $ripple-fade-in-duration $ease-out,
 			background-size 0ms,
 			background-image 0ms,
 			background-color 0ms;
-		background-color: $fill;
+		background-color: if($variant == 'light', $grey-100, $fill);
 		color: $primary;
-		box-shadow: none;
+		box-shadow: 0 1px 3px rgba(black, 0.1);
 
 		&:disabled {
 			color: $text-disabled;
@@ -2735,10 +2617,16 @@ magnifier {
 }
 
 notebook {
+	frame > paned > & > header,
+	&.frame > header {
+		background-color: $fill;
+	}
+
 	&,
 	&.frame {
-		background-color: if($variant == 'light', rgba(white, 0.6), $fill);
-		border-radius: $modal-radius;
+		background-color: $base;
+		background-color: if($variant == 'light', rgba($white, 0.6), $fill);
+		border-radius: $modal-radius + $space-size;
 	}
 
 	&.frame frame {
@@ -2756,11 +2644,6 @@ notebook {
 		}
 	}
 
-	frame > paned > & > header,
-	&.frame > header {
-		background-color: if($variant == 'light', rgba(white, 0.6), $fill);
-	}
-
 	> header {
 		border: none;
 		background-color: $fill;
@@ -2768,10 +2651,6 @@ notebook {
 		margin: $space-size / 2;
 		border-radius: $modal-radius + $space-size / 2;
 		// background-clip: border-box;
-
-		menubutton > button.flat {
-			@extend %flat-button-on-indicator;
-		}
 
 		&.top > tabs > arrow {
 			@extend %notebook_vert_arrows;
@@ -2867,16 +2746,9 @@ notebook {
 					}
 				}
 
-				button.small-button {
-					// close button
+				button.close-button {
 					min-width: $small-size;
 					min-height: $small-size;
-				}
-
-				&:not(:checked):not(:selected) {
-					button.small-button {
-						@extend %flat-button-on-indicator;
-					}
 				}
 			}
 		}
@@ -2954,7 +2826,7 @@ notebook {
 
 $tab_needs_attention_gradient: radial-gradient(
 	ellipse at bottom,
-	transparentize($white, 0.2),
+	transparentize(white, 0.2),
 	gtkalpha($primary, 0.4) 10%,
 	gtkalpha($primary, 0) 30%
 );
@@ -2978,7 +2850,7 @@ $tab_needs_attention_gradient: radial-gradient(
 
 $tab_needs_attention_gradient: radial-gradient(
 	ellipse at bottom,
-	transparentize($white, 0.2),
+	transparentize(white, 0.2),
 	gtkalpha($primary, 0.4) 10%,
 	gtkalpha($primary, 0) 30%
 );
@@ -3000,66 +2872,125 @@ $tab_needs_attention_gradient: radial-gradient(
 	);
 }
 
+%tabbar_tab {
+	min-height: $small-size;
+	min-width: $small-size;
+	padding: $space-size / 2 $space-size;
+	border: none;
+	background-clip: padding-box;
+	font-weight: 500;
+	border-radius: $modal-radius;
+	@include button(flat-normal);
+	color: $titlebar-text-secondary;
+
+	&:hover:not(:selected) {
+		@include button(flat-hover);
+		box-shadow: none;
+		background-color: if($variant == 'light', $grey-100, $fill);
+		color: $primary;
+	}
+
+	&:disabled {
+		@include button(flat-disabled);
+		color: $titlebar-text-secondary-disabled;
+	}
+
+	&:active {
+		@include button(flat-active);
+		box-shadow: none;
+		color: $titlebar-text;
+	}
+
+	&:selected:not(:active) {
+		transition:
+			$transition,
+			border-image $ripple-fade-in-duration $ease-out,
+			background-size 0ms,
+			background-image 0ms,
+			background-color 0ms;
+		background-color: if($variant == 'light', $grey-100, $fill);
+		color: $primary;
+		box-shadow: 0 1px 3px rgba(black, 0.1);
+
+		&:disabled {
+			color: $titlebar-text-disabled;
+		}
+	}
+}
+
 tabbar {
 	> revealer > box {
 		box-shadow: none;
 	}
 
 	.box {
-		min-height: $medium-size;
-		/* background-color: $fill; */
-		background-color: transparent;
+		background-color: $titlebar;
 		background-image: none;
 		padding: 0;
-		margin: $space-size / 2;
-		border-radius: $modal-radius + $space-size / 2;
+		margin: 0;
+		border-radius: 0;
+		min-height: $medium-size;
 		border: none;
-		box-shadow: none;
-	}
+		/* box-shadow: inset 0 -1px $border; */
 
-	scrolledwindow.pinned {
-		undershoot {
-			border: 0 solid $border;
-		}
+		&:backdrop {
+			background-color: $titlebar-backdrop;
+			transition: background-color $duration $ease-out;
 
-		&:dir(rtl) undershoot.left {
-			border-left-width: 1px;
-		}
-
-		&:dir(ltr) undershoot.right {
-			border-right-width: 1px;
-		}
-
-		tabbox {
-			padding: $space-size / 2 $space-size / 2 $space-size / 2 0;
-
-			> tabboxchild {
-				margin: 0;
-			}
-
-			> background {
-				&:dir(ltr) {
-					box-shadow: inset -1px 0 $border;
-				}
-
-				&:dir(rtl) {
-					box-shadow: inset 1px 0 $border;
-				}
+			> scrolledwindow,
+			> .start-action,
+			> .end-action {
+				filter: none;
+				transition: none;
 			}
 		}
 	}
 
-	scrolledwindow:not(.pinned) {
-		tabbox {
-			padding: $space-size / 2 0;
+	tabbox {
+		padding: 0;
+		margin: 0;
+		min-height: $medium-size;
 
-			> tabboxchild {
-				margin: 0 -2px;
+		> background {
+			background: none;
+		}
 
-				+ separator + tabboxchild {
-					margin-left: 0;
-				}
+		> separator {
+			margin: $space-size * 1.5 0;
+			transition: opacity 150ms ease-in-out;
+
+			&.hidden {
+				opacity: 0;
 			}
+		}
+
+		> tabboxchild {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	tab {
+		@extend %tabbar_tab;
+		padding: $space-size;
+		margin: $space-size 2px;
+
+		&.needs-attention {
+			background-image: $tab_needs_attention_gradient;
+
+			&:hover {
+				background-image:
+					image(gtkalpha(currentColor, 0.03)),
+					$tab_needs_attention_gradient;
+			}
+		}
+	}
+
+	tabbox.single-tab tab {
+		&,
+		&:hover,
+		&:active {
+			background: none;
 		}
 	}
 
@@ -3083,111 +3014,51 @@ tabbar {
 		@include need-attention-gradient('left');
 	}
 
-	tabbox {
-		background-color: transparent;
-		background-image: none;
-		padding: 0;
-		margin: 0;
-		border: none;
-		box-shadow: none;
-
-		> background {
-			background: none;
-		}
-
-		> separator {
-			margin: 9px 0;
-			min-width: 1px;
-			background-color: on($indicator, divider);
-			transition: opacity 150ms ease-in-out;
-
-			&.hidden {
-				opacity: 0;
-			}
-		}
-
-		> tabboxchild {
-			padding: 0;
-
-			> tab {
-				@extend %tabs_tab;
-				margin: 0;
-			}
-		}
-	}
-
-	tab {
-		@extend %tabs_tab;
-
-		&.needs-attention {
-			background-image: $tab_needs_attention_gradient;
-
-			&:hover {
-				background-image:
-					image(gtkalpha(currentColor, 0.03)),
-					$tab_needs_attention_gradient;
-			}
-		}
-	}
-
 	.start-action,
 	.end-action {
-		background-color: $fill;
-		background-clip: padding-box;
-		border-color: $border;
-		border-style: solid;
-		transition: background 150ms ease-in-out;
-
-		button {
-			border: none;
-			border-radius: 0;
-		}
+		padding: 6px 5px;
 	}
 
 	.start-action:dir(ltr),
 	.end-action:dir(rtl) {
-		border-right-width: 1px;
+		padding-right: 0;
 	}
 
 	.start-action:dir(rtl),
 	.end-action:dir(ltr) {
-		border-left-width: 1px;
+		padding-left: 0;
 	}
 
-	&:not(.inline) {
-		scrolledwindow.pinned {
-			undershoot {
-				border-color: $border;
-			}
-		}
+	&.inline {
+		@extend %tabbar-inline;
+	}
+}
 
-		undershoot {
-			&.left {
-				@include undershoot-gradient('right', $titlebar);
-			}
+%tabbar-inline .box {
+	background-color: transparent;
+	color: inherit;
+	box-shadow: none;
+	padding-bottom: 0;
 
-			&.right {
-				@include undershoot-gradient('left', $titlebar);
-			}
-		}
+	&:backdrop {
+		background-color: transparent;
+		transition: none;
 
-		.needs-attention-left undershoot.left {
-			@include need-attention-gradient('right');
+		> scrolledwindow,
+		> .start-action,
+		> .end-action {
+			filter: none;
+			transition: none;
 		}
+	}
+}
 
-		.needs-attention-right undershoot.right {
-			@include need-attention-gradient('left');
-		}
-
-		tabbox > background {
-			background-color: $titlebar;
-		}
-
-		.start-action,
-		.end-action {
-			background-color: gtkalpha($titlebar, 0.6);
-			border-color: $border;
-		}
+%tabbar-shrunk {
+	tabbox,
+	.start-action,
+	.end-action {
+		padding-top: $space-size / 2;
+		padding-bottom: $space-size / 2;
 	}
 }
 
@@ -3222,22 +3093,110 @@ dnd {
 			min-width: $small-size;
 			min-height: $small-size;
 			border-radius: $circular-radius;
+			color: $titlebar-text-secondary;
 
-			&.tab-close-button {
-				margin-right: -$space-size / 2;
+			&:hover,
+			&:active {
+				color: $titlebar-text;
+			}
+
+			&:disabled {
+				color: $titlebar-text-secondary-disabled;
 			}
 		}
 
-		&:not(:selected) {
-			button.image-button.tab-close-button {
-				@extend %flat-button-on-indicator;
-			}
+		indicator {
+			min-height: 2px;
+			border-radius: 2px;
+			background: gtkalpha($primary, 0.5);
+			transform: translateY(4px);
 		}
 	}
 }
 
+tabthumbnail {
+	border-radius: $corner-radius;
+
+	> box {
+		margin: $space-size;
+	}
+
+	&:drop(active) {
+		box-shadow: inset 0 0 0 2px gtkalpha($drop_target_color, 0.4);
+		background-color: gtkalpha($drop_target_color, 0.1);
+	}
+
+	transition: $transition-shadow;
+
+	.needs-attention {
+		&:dir(ltr) {
+			transform: translate(8px, -8px);
+		}
+		&:dir(rtl) {
+			transform: translate(-8px, -8px);
+		}
+
+		> widget {
+			background: $primary;
+			min-width: $space-size * 2;
+			min-height: $space-size * 2;
+			border-radius: $modal-radius;
+			margin: $space-size / 2;
+			box-shadow: 0 1px 2px gtkalpha($primary, 0.4);
+		}
+	}
+
+	.card {
+		background: none;
+		border: none;
+		box-shadow: none;
+		color: inherit;
+
+		picture {
+			outline: 1px solid $border;
+			outline-offset: -1px;
+			border-radius: $corner-radius;
+		}
+	}
+
+	&.pinned .card {
+		background-color: $fill;
+		color: $text;
+	}
+
+	.icon-title-box {
+		border-spacing: $space-size;
+	}
+
+	.tab-unpin-icon {
+		margin: $space-size;
+		min-width: 24px;
+		min-height: 24px;
+	}
+
+	button.circular {
+		margin: $space-size;
+		background-color: $fill;
+		min-width: 24px;
+		min-height: 24px;
+
+		&:hover {
+			background-color: $overlay-hover;
+		}
+
+		&:active {
+			background-color: $overlay-active;
+		}
+	}
+}
+
+taboverview > .overview .new-tab-button {
+	margin: 18px;
+}
+
 tabview:drop(active),
-tabbox:drop(active) {
+tabbox:drop(active),
+tabgrid:drop(active) {
 	box-shadow: none;
 }
 
@@ -3385,10 +3344,14 @@ scrollbar {
  **********/
 switch {
 	transition: all $duration $ease-out;
-	padding: $space-size / 2;
+	margin: $space-size 0;
+	padding: 0;
 	border: none;
-	border-radius: $small-size / 2;
+	border-radius: $circular-radius;
 	background-color: $text-disabled;
+	background-clip: border-box;
+	font-size: 0;
+	color: transparent;
 
 	&:checked {
 		background-color: $assets-color;
@@ -3399,15 +3362,16 @@ switch {
 	}
 
 	> slider {
-		transition: all $duration $ease-out;
-		min-width: $small-size - $space-size;
-		min-height: $small-size - $space-size;
+		transition: $transition-shadow;
+		min-width: $small-size - 6px;
+		min-height: $small-size - 6px;
+		margin: $space-size / 2;
 		border-radius: $circular-radius;
 		outline: none;
 		box-shadow:
 			0 0 0 0 transparent,
 			$shadow-z3;
-		background-color: $background;
+		background-color: $white;
 		border: none;
 	}
 
@@ -3415,8 +3379,7 @@ switch {
 	&:hover slider,
 	&:focus:hover slider {
 		box-shadow:
-			0 0 0 6px
-				if($variant == 'light', rgba($black, 0.6), rgba($white, 0.6)),
+			0 0 0 6px $divider,
 			0 3px 3px -2px transparent,
 			0 2px 3px -1px transparent,
 			0 1px 4px 0 transparent;
@@ -4040,7 +4003,8 @@ actionbar {
 		padding: $space-size;
 		border-spacing: $space-size;
 		box-shadow: none;
-		background-color: $base;
+		/* background-color: $base; */
+		background-color: if($variant == 'light', rgba($white, 0.4), $fill);
 		background-clip: border-box;
 		border: none;
 		color: $text;
@@ -4148,81 +4112,38 @@ separator {
 /*********
  * Lists *
  *********/
-
-$list-row: if($variant == 'light', rgba($base, 0.6), $fill);
+$list-row: if($variant == 'light', $grey-100, $fill);
 
 %circular_list {
-	border-radius: $corner-radius;
+	border-radius: $corner-radius + 1px;
 	box-shadow: none;
-	border: none;
-	background-color: transparent;
+	border: 1px solid $border;
+	background-color: if($variant == 'light', rgba($base, 0.4), $fill);
 }
 
 %circular_row {
-	border-radius: $space-size / 2;
-
-	&:not(:hover):not(:active):not(:selected) {
-		background-color: $list-row;
-	}
-
-	&:not(:first-child) {
-		margin-top: $space-size / 2;
-	}
+	border-radius: 0;
 
 	&:first-child {
-		border-radius: $corner-radius $corner-radius $space-size / 2
-			$space-size / 2;
+		border-top-left-radius: $corner-radius;
+		border-top-right-radius: $corner-radius;
 	}
 
 	&:last-child {
-		border-radius: $space-size / 2 $space-size / 2 $corner-radius
-			$corner-radius;
+		border-bottom-left-radius: $corner-radius;
+		border-bottom-right-radius: $corner-radius;
 	}
 
 	&:only-child {
 		border-radius: $corner-radius;
+	}
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $border;
 	}
 
 	&:focus {
 		box-shadow: none;
-	}
-}
-
-%boxed_list_row {
-	border: none;
-	border-radius: $space-size / 2;
-	background-color: $list-row;
-
-	&:hover,
-	&.has-open-popup,
-	&:focus {
-		background-color: $list-row;
-	}
-
-	&:active {
-		background-color: if(
-			$variant == 'light',
-			$overlay-normal,
-			$overlay-active
-		);
-	}
-
-	&:not(:first-child) {
-		margin-top: $space-size / 2;
-	}
-
-	&:first-child {
-		border-radius: $corner-radius $corner-radius $space-size / 2
-			$space-size / 2;
-	}
-
-	&:last-child {
-		border-radius: $space-size / 2 $space-size / 2 $corner-radius
-			$corner-radius;
-	}
-
-	&:only-child {
-		border-radius: $corner-radius;
 	}
 }
 
@@ -4253,10 +4174,6 @@ list {
 	&.separators:not(.horizontal) > row:not(.separator):not(:last-child) {
 		border-bottom: 1px solid $border;
 	}
-
-	leaflet scrolledwindow & {
-		background-color: transparent;
-	}
 }
 
 list.frame {
@@ -4269,11 +4186,12 @@ listview.view {
 
 	popover.menu & {
 		padding: 0;
+		border-radius: $corner-radius;
 
 		> row {
 			margin-left: 0;
 			margin-right: 0;
-			border-radius: $menuitem-radius;
+			border-radius: $corner-radius;
 		}
 	}
 }
@@ -4281,27 +4199,6 @@ listview.view {
 row {
 	color: $text-secondary;
 	background-clip: padding-box;
-
-	label.subtitle {
-		font-size: smaller;
-		@extend .dim-label;
-	}
-
-	> box.header {
-		margin-left: $space-size * 2;
-		margin-right: $space-size * 2;
-		min-height: $large-size;
-
-		> .icon:disabled {
-			filter: opacity(0.35);
-		}
-
-		> box.title {
-			margin-top: $space-size;
-			margin-bottom: $space-size;
-			border-spacing: $space-size / 2;
-		}
-	}
 
 	@at-root %row_activatable,
 		&.activatable {
@@ -4321,7 +4218,6 @@ row {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 1000% 1000%;
-		outline: none;
 
 		&:focus {
 			color: $text;
@@ -4379,7 +4275,7 @@ row {
 
 	&:selected {
 		background-color: $overlay-selected;
-		color: inherit; // for overlays
+		color: $text;
 		box-shadow: none;
 
 		&:hover {
@@ -4396,21 +4292,13 @@ row {
 			}
 		}
 
-		image,
-		label {
-			color: $text;
-		}
-
 		button image,
 		button label {
 			color: inherit;
 		}
 
 		&:disabled {
-			image,
-			label {
-				color: $text-disabled;
-			}
+			color: $text-disabled;
 		}
 	}
 }
@@ -4456,16 +4344,10 @@ row {
 
 			// Specificity bump for header bar
 			&,
-			> .title {
-				padding: 0;
-				font-weight: bold;
-				color: $text;
-			}
-
+			> .title,
 			> .subtitle {
-				padding: 2px 0;
-				font-weight: normal;
-				color: $text-secondary;
+				padding: 0;
+				font-weight: inherit;
 			}
 		}
 
@@ -4484,10 +4366,38 @@ row {
 			}
 		}
 	}
+
+	&.property > box.header > box.title > {
+		.title {
+			@extend .caption;
+			@extend .dim-label;
+		}
+
+		.subtitle {
+			font-size: inherit;
+			opacity: 1;
+		}
+	}
 }
 
 // AdwEntryRow
 row.entry {
+	&:not(:selected).activatable.focused:hover,
+	&:not(:selected).activatable.focused:active {
+		background-color: transparent;
+	}
+
+	&:disabled {
+		text {
+			opacity: 0.45;
+		}
+
+		.dim-label,
+		.subtitle {
+			opacity: 1;
+		}
+	}
+
 	.edit-icon,
 	.indicator {
 		min-width: 24px;
@@ -4510,6 +4420,67 @@ row.entry {
 			font-family: monospace;
 		}
 	}
+}
+
+row.spin {
+	&:not(:selected).activatable.focused:hover,
+	&:not(:selected).activatable.focused:active {
+		background-color: transparent;
+	}
+
+	spinbutton {
+		background: none;
+		border-spacing: $space-size;
+		box-shadow: none;
+
+		&,
+		&:focus {
+			outline: none;
+		}
+
+		> button.image-button.up:not(.flat):not(.raised):not(
+				.suggested-action
+			):not(.destructive-action):not(.opaque):last-child,
+		> button.image-button.down:not(.flat):not(.raised):not(
+				.suggested-action
+			):not(.destructive-action):not(.opaque) {
+			&,
+			&:dir(ltr):last-child,
+			&:dir(rtl):first-child {
+				@extend %button-basic;
+				@extend %circular-button;
+				min-width: 30px;
+				min-height: 30px;
+				margin: 10px 2px;
+				border: none;
+			}
+		}
+	}
+
+	&:disabled spinbutton {
+		> button.image-button.up:not(.flat):not(.raised):not(
+				.suggested-action
+			):not(.destructive-action):not(.opaque):last-child,
+		> button.image-button.down:not(.flat):not(.raised):not(
+				.suggested-action
+			):not(.destructive-action):not(.opaque) {
+			&,
+			&:dir(ltr):last-child,
+			&:dir(rtl):first-child {
+				&:disabled {
+					filter: none;
+				}
+			}
+		}
+	}
+}
+
+row.entry,
+row.spin {
+	&:not(:selected).activatable.focused:hover,
+	&:not(:selected).activatable.focused:active {
+		background-color: transparent;
+	}
 
 	@each $e_type, $e_color in (error, $error), (warning, $warning),
 		(success, $success)
@@ -4525,6 +4496,16 @@ row.entry {
 				> cursor-handle > contents {
 					background-color: currentColor;
 				}
+			}
+
+			.dim-label,
+			.subtitle {
+				opacity: 1;
+			}
+
+			.suggested-action {
+				background-color: $e_color;
+				color: on($e_color);
 			}
 		}
 	}
@@ -4551,6 +4532,14 @@ row.combo {
 
 	popover > contents {
 		min-width: 120px;
+
+		.combo-searchbar {
+			margin: 6px;
+
+			+ scrolledwindow {
+				@include undershoot(top, $border);
+			}
+		}
 	}
 }
 
@@ -4562,6 +4551,24 @@ row.combo {
 
 	&:dir(rtl) {
 		margin-right: $margin;
+	}
+}
+
+%boxed_list_row {
+	border-bottom: 1px solid $border;
+
+	&:not(:selected).activatable {
+		&:hover {
+			background-color: $overlay-hover;
+		}
+
+		&:active {
+			background-color: $overlay-active;
+		}
+
+		&.has-open-popup {
+			background-color: gtkalpha(currentColor, 0.03);
+		}
 	}
 }
 
@@ -4578,16 +4585,10 @@ row.expander {
 
 	list.nested {
 		color: inherit;
-		background-color: transparent;
 	}
 
 	list.nested > row {
-		// @extend %boxed_list_row;
-		background-color: transparent;
-		border: none;
-		background-image: none;
-		transition: none;
-		animation: none;
+		@extend %boxed_list_row;
 	}
 
 	// AdwExpanderRow arrow rotation
@@ -4632,17 +4633,36 @@ list.boxed-list {
 	@extend %circular_list;
 
 	> row {
-		@extend %boxed_list_row;
-
 		// Regular rows and expander header rows background
+		&,
 		&.expander row.header {
-			background-color: transparent;
-			border: none;
-			box-shadow: none;
+			@extend %boxed_list_row;
 		}
 
 		&.expander {
 			border: none;
+		}
+
+		// Rounded top
+		&:first-child {
+			&,
+			&.expander row.header {
+				border-top-left-radius: $corner-radius;
+				border-top-right-radius: $corner-radius;
+			}
+		}
+
+		// Rounded bottom
+		&:last-child {
+			&,
+			&.expander:not(:checked),
+			&.expander:not(:checked) row.header,
+			&.expander:checked list.nested,
+			&.expander:checked list.nested > row:last-child {
+				border-bottom-left-radius: $corner-radius;
+				border-bottom-right-radius: $corner-radius;
+				border-bottom-width: 0;
+			}
 		}
 	}
 }
@@ -4852,7 +4872,7 @@ calendar {
 window.dialog.message {
 	// Message Dialog styling
 	&.background {
-		background-color: $surface;
+		background-color: $black;
 	}
 
 	box.dialog-vbox.vertical {
@@ -4867,8 +4887,8 @@ window.dialog.message {
 	.titlebar {
 		min-height: $small-size;
 		border-style: none;
-		box-shadow: inset 0 1px highlight($surface);
-		background-color: $surface;
+		/* box-shadow: inset 0 1px highlight($surface); */
+		background-color: $black;
 		color: $text;
 
 		&:backdrop {
@@ -4886,7 +4906,6 @@ window.dialog.message {
 			@extend %dialog_action_button;
 			background-color: $button;
 			border: 0 solid transparent;
-			/* outline: none; */
 			outline: 0 solid transparent;
 
 			&:not(:last-child):hover {
@@ -4896,13 +4915,11 @@ window.dialog.message {
 			&.suggested-action:not(:disabled) {
 				background-color: darken($suggested, 8%);
 				color: on($suggested);
-				/* color: $suggested; */
 			}
 
 			&.destructive-action:not(:disabled) {
 				background-color: darken($destructive, 10%);
 				color: on($destructive);
-				/* color: $primary; */
 			}
 		}
 	}
@@ -4967,47 +4984,64 @@ window.messagedialog {
  * Sidebar *
  ***********/
 .sidebar {
-	border: none;
+	border-style: none;
+	background-color: $base-alt;
 
 	listview.view,
 	list {
 		background-color: transparent;
 		color: inherit;
 	}
+
+	// paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 }
 
 stacksidebar {
+	&.sidebar {
+		&:dir(ltr),
+		&.left,
+		&.left:dir(rtl) {
+			box-shadow: inset -1px 0 $border;
+		}
+
+		&:dir(rtl),
+		&.right,
+		&.right:dir(ltr) {
+			box-shadow: inset 1px 0 $border;
+		}
+	}
+
 	+ separator.vertical,
 	separator.horizontal {
 		@extend %hide_separators;
 	}
 
+	.sidebar-pane &.sidebar,
 	leaflet.unfolded > box > &.sidebar {
-		border: none;
+		box-shadow: none;
 	}
 
 	list {
 		padding: $space-size;
-		background-color: transparent; // This should not be necessary, but the parent stacksidebar ignores background-color.
+		background-color: $base-alt; // This should not be necessary, but the parent stacksidebar ignores background-color.
 	}
 
 	row {
 		min-height: $small-size;
 		padding: $space-size;
-		border-radius: $corner-radius - $space-size;
+		border-radius: $corner-radius;
 
 		&:selected {
 			font-weight: 500;
-			background-color: if($variant == 'light', rgba($base, 0.4), $fill);
 		}
 
 		+ row {
-			margin-top: $space-size / 2;
+			margin-top: 4px;
 		}
 
 		> label {
-			padding-left: $space-size;
-			padding-right: $space-size;
+			padding-left: 6px;
+			padding-right: 6px;
 			color: inherit;
 		}
 
@@ -5023,7 +5057,7 @@ separator.sidebar {
 
 	&.selection-mode,
 	.selection-mode & {
-		background-color: rgba($white, 0.12);
+		background-color: rgba(white, 0.12);
 	}
 }
 
@@ -5032,8 +5066,7 @@ separator.sidebar {
  **********************/
 
 .navigation-sidebar {
-	/* padding: $space-size - 4 $space-size - 2; //only vertical padding. horizontal row size would clip */
-	padding: 0 $space-size;
+	padding: $space-size - 4 $space-size - 2; //only vertical padding. horizontal row size would clip
 	border-right: none;
 
 	&,
@@ -5062,6 +5095,7 @@ separator.sidebar {
 		&:hover,
 		&:focus-visible:focus-within {
 			background-color: $overlay-hover;
+			color: $primary;
 		}
 
 		&:active {
@@ -5120,6 +5154,7 @@ filechooser {
 			columnview.view,
 			gridview.view {
 				background-color: transparent;
+				color: on($background);
 			}
 
 			scrolledwindow scrollbar {
@@ -5209,7 +5244,7 @@ placessidebar {
 			button.sidebar-button {
 				@extend %button-flat-simple;
 				@extend %small-button;
-				@extend %button-on-indicator;
+				/* @extend %button-on-indicator; */
 			}
 
 			&.sidebar-placeholder-row {
@@ -5361,10 +5396,8 @@ infobar {
 	&.question {
 		& > revealer > box,
 		&:backdrop > revealer > box {
-			background-color: transparent;
-			color: $text;
-			border-radius: $modal-radius;
-			border: none;
+			background-color: $primary;
+			color: on($primary);
 
 			button {
 				&,
@@ -5373,17 +5406,21 @@ infobar {
 				&:active,
 				&:checked,
 				&.text-button:not(:disabled) {
-					color: $text;
+					color: on($primary);
 				}
 			}
 
 			*:link {
-				color: $text;
+				color: on($primary);
 			}
 		}
 
 		&:hover > revealer > box {
-			background-color: if($variant == 'light', rgba($base, 0.4), $fill);
+			background-color: if(
+				$variant == 'light',
+				lighten($primary, 5%),
+				darken($primary, 5%)
+			);
 		}
 	}
 
@@ -5461,7 +5498,7 @@ tooltip {
 		// see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
 		background-color: $tooltip;
 		color: on($tooltip);
-		box-shadow: $shadow-z3;
+		box-shadow: $shadow-z5;
 		border-radius: $corner-radius;
 		margin: 2px 6px 8px 6px;
 	}
@@ -5640,20 +5677,21 @@ window {
 
 	&.csd {
 		border-radius: $window-radius;
-		outline: none;
 		margin: 0;
 		transition: none;
 
-		@if $outline == 'false' {
-			box-shadow:
-				$shadow-z16,
-				inset 0 1px highlight($background),
-				0 0 36px transparent;
-		} @else {
+		@if $outline == 'true' {
 			box-shadow:
 				$shadow-z16,
 				0 0 0 2px $primary,
 				0 0 36px transparent;
+		} @else {
+			outline-offset: -1px;
+			outline: 1px solid highlight($background);
+			box-shadow:
+				$shadow-z16,
+				0 0 36px transparent,
+				0 0 0 1px $window-border;
 		}
 
 		&:backdrop {
@@ -5663,16 +5701,16 @@ window {
 			// or the jumping will happen during the transition.
 			transition: $transition-shadow;
 
-			@if $outline == 'false' {
+			@if $outline == 'true' {
 				box-shadow:
-					$shadow-z4,
-					inset 0 1px highlight($background),
+					$shadow-z16,
+					0 0 0 2px $primary,
 					0 0 36px transparent;
 			} @else {
 				box-shadow:
 					$shadow-z4,
-					0 0 0 2px if($variant == 'light', $grey-450, $grey-750),
-					0 0 36px transparent;
+					0 0 36px transparent,
+					0 0 0 1px $window-border;
 			}
 		}
 
@@ -5706,8 +5744,10 @@ window {
 		}
 	}
 
+	// server-side decorations as used by mutter
 	&.ssd {
-		box-shadow: inset 0 1px highlight($background);
+		// just doing borders, wm draws actual shadows
+		box-shadow: 0 0 0 1px $border;
 	}
 }
 
@@ -5716,22 +5756,22 @@ window {
 %mac_window_button {
 	min-height: 16px;
 	min-width: 16px;
-	padding: 0;
+	padding: ($medium-size - 16px) / 2 0;
+	margin-left: $space-size / 2 - 3px;
+	margin-right: $space-size / 2 - 3px;
 
 	&.minimize,
 	&.maximize,
 	&.close {
 		color: transparent;
+		background: none;
 
-		image {
-			padding: 0;
-		}
-
-		&:hover {
+		&:hover,
+		&:active {
 			box-shadow: none;
 		}
 
-		&:active {
+		&:active > image {
 			box-shadow: inset 0 0 0 9999px
 				rgba(black, if($topbar == 'dark', 0.25, 0.12));
 		}
@@ -5742,7 +5782,9 @@ window {
 		}
 
 		&:backdrop {
-			background-color: $titlebar-track;
+			> image {
+				background-color: $titlebar-track;
+			}
 
 			&:hover,
 			&:active {
@@ -5753,69 +5795,103 @@ window {
 
 	&.minimize {
 		// Window minimize button
-		background-color: $titlebutton-min;
+		> image {
+			background-color: $titlebutton-min;
+		}
 
-		&:active {
+		&:active > image {
 			background-color: mix($titlebar-text, $titlebutton-min, 25%);
 		}
 	}
 
 	&.maximize {
 		// Window maximize button
-		background-color: $titlebutton-max;
+		> image {
+			background-color: $titlebutton-max;
+		}
 
-		&:active {
+		&:active > image {
 			background-color: mix($titlebar-text, $titlebutton-max, 25%);
 		}
 	}
 
 	&.close {
 		// Window close button
-		background-color: $titlebutton-close;
+		> image {
+			background-color: $titlebutton-close;
+		}
 
-		&:active {
+		&:active > image {
 			background-color: mix($titlebar-text, $titlebutton-close, 25%);
 		}
 	}
 }
 
 %normal_window_button {
-	min-height: 22px;
-	min-width: 22px;
-	padding: 0;
+	min-height: 16px;
+	min-width: 16px;
+	padding: ($medium-size - 16px) / 2 0;
+	margin-left: $space-size / 2 - 3px;
+	margin-right: $space-size / 2 - 3px;
+
+	/* min-height: 22px; */
+	/* min-width: 22px; */
+	/* padding: ($medium-size - 22px) / 2 0; */
+	/* margin-left: $space-size - 7px; */
+	/* margin-right: $space-size - 7px; */
 
 	&.minimize,
 	&.maximize,
 	&.close {
 		color: $titlebar-text-secondary;
-		background-color: gtkalpha(currentColor, 0.1);
 
-		image {
-			padding: 0;
+		&,
+		&:hover,
+		&:active,
+		&:backdrop {
 			background: none;
 			box-shadow: none;
 		}
 
+		> image {
+			padding: 1px;
+			background-color: gtkalpha(currentColor, 0.1);
+		}
+
 		&:hover {
 			color: $titlebar-text;
-			background-color: gtkalpha(currentColor, 0.15);
-			box-shadow:
-				0 1px 3px rgba(black, 0.1),
-				inset 0 1px highlight($titlebar);
+
+			> image {
+				background-color: gtkalpha(currentColor, 0.15);
+			}
 		}
 
 		&:active {
 			color: $titlebar-text;
-			background-color: gtkalpha(currentColor, 0.2);
+
+			> image {
+				background-color: gtkalpha(currentColor, 0.2);
+			}
 		}
 
 		&:backdrop {
-			opacity: 0.65;
+			color: transparent;
+			> image {
+				background-color: $base;
+			}
+
+			&:hover {
+				color: $titlebar-text;
+				> image {
+					background-color: $titlebar-track;
+				}
+			}
 		}
 	}
 }
 
-$window-space: if($window_button == 'mac', $space-size, $space-size - 2px);
+/* $window-space: if($window_button == 'mac', $space-size * 1.5, $space-size); */
+$window-space: $space-size * 1.5;
 
 windowcontrols {
 	border-spacing: $space-size;
@@ -5823,38 +5899,29 @@ windowcontrols {
 	&:not(.empty) {
 		&.start:dir(ltr),
 		&.end:dir(rtl) {
-			margin-right: $window-space;
-			margin-left: $window-space;
+			margin-right: $space-size;
+			margin-left: $space-size;
 		}
 
 		&.start:dir(rtl),
 		&.end:dir(ltr) {
-			margin-left: $window-space;
-			margin-right: $window-space;
+			margin-left: $space-size;
+			margin-right: $space-size;
 		}
 	}
 
-	button:not(.suggested-action):not(.destructive-action) {
+	> button:not(.suggested-action):not(.destructive-action) {
 		@extend %circular-button;
 
 		@if $window_button == 'mac' {
 			@extend %mac_window_button;
-			margin: ($large-size - 16px) / 2 $space-size - 6px;
 		} @else {
 			@extend %normal_window_button;
-			margin: ($large-size - 22px) / 2 $space-size - 6px;
 		}
-	}
-}
 
-headerbar.default-decoration windowcontrols {
-	button:not(.suggested-action):not(.destructive-action) {
-		@if $window_button == 'mac' {
-			@extend %mac_window_button;
-			margin: ($medium-size - 16px) / 2 $space-size - 2px;
-		} @else {
-			@extend %normal_window_button;
-			margin: ($medium-size - 22px) / 2 $space-size - 2px;
+		> image {
+			border-radius: 100%;
+			padding: 0;
 		}
 	}
 }
@@ -5875,9 +5942,7 @@ headerbar.default-decoration windowcontrols {
 	background-color: $primary;
 }
 
-/* .monospace { */
-/* 	font-family: monospace; */
-/* } */
+// .monospace { font-family: monospace; }
 
 /**********************
  * Touch Copy & Paste *
@@ -5928,38 +5993,52 @@ shortcut > .keycap {
 	caret-color: $primary;
 }
 
+/****************
+ * Stackswitcher *
+ ****************/
 stackswitcher {
 	min-height: 0;
-	padding: 0;
-	border-radius: $corner-radius + $space-size / 2;
+	padding: $space-size / 2;
+	// margin: $space-size 0;
+	border-radius: $modal-radius + $space-size / 2;
 	background-color: $fill;
 	border: none;
 
-	&.linked > button:not(.suggested-action):not(.destructive-action) {
-		margin: 0;
-		border-radius: $circular-radius;
+	&.linked:not(.vertical)
+		> button:not(.suggested-action):not(.destructive-action) {
+		margin: 0 2px;
+		background-color: transparent;
+		border-radius: $modal-radius;
+		padding: ($medium-size - 24px - $space-size) / 2 ($medium-size - 16px) /
+			2;
 
 		&.text-button {
 			min-width: 100px;
-		}
-
-		&:not(:hover):not(:active):not(:checked) {
-			background-color: transparent;
 		}
 
 		&:focus:not(:hover):not(:checked) {
 			box-shadow: none;
 		}
 
-		&:checked {
-			/* background-color: $indicator; */
+		&:hover {
 			background-color: $primary;
 			color: on($primary);
+		}
 
-			&:hover {
-				box-shadow: none;
-				background-color: lighten($primary, 10%);
-			}
+		&:active {
+			@include button(active);
+		}
+
+		&:checked {
+			transition:
+				$transition,
+				border-image $ripple-fade-in-duration $ease-out,
+				background-size 0ms,
+				background-image 0ms,
+				background-color 0ms;
+			background-color: $primary;
+			color: on($primary);
+			box-shadow: 0 1px 3px rgba(black, 0.1);
 		}
 	}
 
@@ -6006,7 +6085,7 @@ popover.emoji-picker {
 .emoji-searchbar {
 	padding: $space-size;
 	border-spacing: $space-size;
-	/* border-bottom: 1px solid $divider; */
+	border-bottom: 1px solid $divider;
 	background: none;
 
 	entry {
@@ -6018,23 +6097,16 @@ popover.emoji-picker {
 }
 
 .emoji-toolbar {
-	padding: $space-size / 2;
-	border-spacing: 0;
+	padding: 0;
+	border-spacing: $space-size / 2;
+	border-top: 1px solid $divider;
 	background: none;
-
-	> flowboxchild {
-		padding: $space-size / 2;
-
-		> button {
-			padding: $space-size;
-		}
-	}
 }
 
 button.emoji-section {
 	margin: 0;
 	padding: $space-size;
-	border-radius: $menuitem-radius;
+	border-radius: $corner-radius;
 
 	&:checked {
 		color: $primary;
@@ -6045,7 +6117,7 @@ popover.emoji-picker emoji {
 	font-size: x-large;
 	padding: $space-size;
 	transition: $transition;
-	border-radius: $modal-radius;
+	border-radius: $corner-radius;
 
 	&:focus,
 	&:hover {

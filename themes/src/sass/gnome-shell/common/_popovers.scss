@@ -17,23 +17,21 @@
 	min-width: if($compact == 'true', 10em, 12em);
 	color: $text-secondary !important;
 	padding: 0;
-	font-weight: normal;
-	border-radius: $modal_radius;
-	box-shadow: none;
-	margin: $base_padding $base_padding 8px;
-	@include fontsize($font_size - 1);
+	border-radius: $base_radius + $base_padding * 3;
+	box-shadow: 0 3px 5px -2px rgba(black, if($variant == 'light', 0.1, 0.18));
+	margin: $base_padding 6px 8px;
+	// @include fontsize($font_size - 1);
 
 	.popup-menu-content {
 		padding: $base_padding;
-		// background-color: $popover;
 		background-color: if($variant == 'light', rgba($white, 0.9), $black);
 		border-radius: $base_radius;
-		margin: 0 2px;
-		box-shadow: 0 6px 15px -6px rgba(black, 0.25);
-		border: none;
-		font-weight: normal;
+		margin: 0;
 
-		@if $float == 'true' {
+		@if $float == 'false' {
+			border: 1px solid $window-border;
+			box-shadow: inset 0 0 0 1px highlight($popover);
+		} @else {
 			border: 2px solid $primary;
 		}
 	}
@@ -43,13 +41,11 @@
 		color: $text-secondary !important;
 		text-shadow: none;
 		border-radius: $base_radius;
-		margin: 0 2px;
+		margin: 0;
 		transition-duration: 100ms;
-		font-weight: normal;
 		background-color: transparent;
 
 		&:checked {
-			font-weight: normal;
 			border: none;
 			box-shadow: none;
 			color: $text !important;
@@ -76,14 +72,14 @@
 		&:focus,
 		&:hover,
 		&.selected {
-			color: $primary !important;
+			color: $text !important;
 			background-color: $divider !important;
 			transition-duration: 0;
 		}
 
 		&:active,
 		&.selected:active {
-			color: $primary !important;
+			color: $text !important;
 			background-color: $track !important;
 		}
 
@@ -144,12 +140,15 @@
 	icon-size: $base_icon_size;
 }
 
-.popup-ornamented-menu-item {
+// container for radio and check boxes
+.popup-menu-ornament {
+	width: 1.2em;
+
 	&:ltr {
-		padding-left: $base_padding;
+		text-align: right;
 	}
 	&:rtl {
-		padding-right: $base_padding;
+		text-align: left;
 	}
 }
 
@@ -184,7 +183,6 @@
 		// "Open Windows" label
 		> StLabel {
 			@extend %caption_heading;
-
 			&:ltr {
 				margin-right: $base_margin * 2;
 			}

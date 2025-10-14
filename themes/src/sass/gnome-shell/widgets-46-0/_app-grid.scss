@@ -18,7 +18,7 @@ $app_folder_size: 720px;
 .overview-tile {
 	color: on($osd, secondary);
 	border-radius: $base_radius * 2.5;
-	padding: 15px;
+	padding: 6px;
 	border: none;
 	transition-duration: 100ms;
 	text-align: center;
@@ -28,7 +28,7 @@ $app_folder_size: 720px;
 	&:focus,
 	&:selected {
 		color: on($osd);
-		background-color: rgba($primary, 0.3);
+		background-color: on($osd, divider);
 		border-image: none;
 		background-image: none;
 	}
@@ -36,14 +36,14 @@ $app_folder_size: 720px;
 	&:active,
 	&:checked {
 		color: on($osd);
-		background-color: rgba($primary, 0.6);
+		background-color: on($osd, track);
 		box-shadow: none;
 	}
 }
 
 // App Folders
 .app-folder {
-	background-color: rgba($primary, 0.3);
+	background-color: on($osd, divider);
 	border-radius: $base_radius * 2.5;
 	color: on($osd, secondary);
 
@@ -53,7 +53,7 @@ $app_folder_size: 720px;
 	}
 
 	&:hover {
-		background-color: rgba($primary, 0.6);
+		background-color: overlay($osd, active);
 		color: on($osd);
 	}
 
@@ -88,9 +88,9 @@ $app_folder_size: 720px;
 	height: $app_folder_size;
 	border-radius: $menu_radius * 3;
 	padding: $base_padding * 2;
-	box-shadow: none;
-	border: none;
 	background-color: $osd;
+	border: 1px solid black;
+	box-shadow: inset 0 0 0 1px highlight($osd);
 
 	.folder-name-container {
 		padding: $base_padding * 4 $base_padding * 6;
@@ -129,6 +129,7 @@ $app_folder_size: 720px;
 		&:hover {
 			background-color: overlay($osd, hover);
 		}
+
 		&:checked,
 		&:active {
 			background-color: $inverse-indicator;

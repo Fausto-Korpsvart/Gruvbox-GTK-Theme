@@ -6,18 +6,34 @@
 		background-color: $background;
 	}
 
-	& headerbar > widget > windowtitle {
-		padding: 0;
-		margin: 6px;
-	}
-
-	.sidebar-pane {
+	.sidebar-pane,
+	.content-pane {
 		background-color: $background;
 		color: $text;
 
 		&:backdrop {
 			background-color: $background;
 			transition: none;
+		}
+	}
+
+	.sidebar-pane {
+		&:dir(ltr),
+		&.end:dir(rtl) {
+			&,
+			banner > revealer > widget {
+				box-shadow: none;
+				border-right: none;
+			}
+		}
+
+		&:dir(rtl),
+		&.end:dir(ltr) {
+			&,
+			banner > revealer > widget {
+				box-shadow: none;
+				border-left: none;
+			}
 		}
 	}
 
@@ -143,7 +159,7 @@
 }
 
 #NautilusPathBar {
-	background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill);
+	background-color: if($variant == 'light', $grey-100, $titlebar-fill);
 	border-radius: $corner-radius;
 	margin: $space-size 0;
 }
@@ -717,14 +733,8 @@ menubutton stack > box {
 .tweak-titlebar-left {
 	@extend %sidebar_style;
 
-	box-shadow: inset 0 1px highlight($background);
-	border-top-left-radius: $window-radius;
-
 	&:backdrop {
 		@extend %sidebar_style;
-
-		box-shadow: inset 0 1px highlight($background);
-		border-top-left-radius: $window-radius;
 	}
 }
 
@@ -1971,4 +1981,28 @@ notebook scrolledwindow treeview.treeview-spacing {
 }
 .account-switcher-row label.dim-label {
 	color: $text-secondary;
+}
+
+//
+// Chrome
+//
+window.background.chromium {
+	background-color: $list-row;
+
+	headerbar.header-bar.titlebar {
+		padding: 0 $space-size * 2;
+		background-color: $titlebar;
+		color: $titlebar-text;
+		border-radius: $window-radius $window-radius 0 0;
+		box-shadow: inset 0 1px 0 rgba($white, 0.1);
+
+		&:backdrop {
+			background-color: $titlebar-backdrop;
+			color: $titlebar-text-disabled;
+		}
+
+		button.titlebutton {
+			margin: 0 $space-size / 2 - 3px;
+		}
+	}
 }
