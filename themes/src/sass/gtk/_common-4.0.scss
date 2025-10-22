@@ -4872,7 +4872,8 @@ calendar {
 window.dialog.message {
 	// Message Dialog styling
 	&.background {
-		background-color: $black;
+		// background-color: $surface;
+		background-color: if($variant == 'light', $surface, $black);
 	}
 
 	box.dialog-vbox.vertical {
@@ -4888,7 +4889,8 @@ window.dialog.message {
 		min-height: $small-size;
 		border-style: none;
 		/* box-shadow: inset 0 1px highlight($surface); */
-		background-color: $black;
+		// background-color: $surface;
+		background-color: if($variant == 'light', $surface, $black);
 		color: $text;
 
 		&:backdrop {
@@ -5778,7 +5780,8 @@ window {
 
 		&:hover,
 		&:active {
-			color: rgba($white, 0.6);
+			color: $black;
+			font-weight: bold;
 		}
 
 		&:backdrop {

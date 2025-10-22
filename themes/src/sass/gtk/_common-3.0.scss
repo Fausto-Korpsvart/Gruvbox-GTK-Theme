@@ -3848,14 +3848,16 @@ calendar {
 messagedialog {
 	// Message Dialog styling
 	&.background {
-		background-color: $black;
+		// background-color: $surface;
+		background-color: if($variant == 'light', $surface, $black);
 
 		.titlebar {
 			min-height: $window-radius;
 
 			&,
 			&:backdrop {
-				background-color: $black;
+				// background-color: $surface;
+				background-color: if($variant == 'light', $surface, $black);
 			}
 		}
 
@@ -4760,7 +4762,8 @@ decoration {
 
 		&:hover,
 		&:active {
-			color: rgba($white, 0.6);
+			color: $black;
+			font-weight: bold;
 		}
 
 		&:backdrop {

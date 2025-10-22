@@ -2,52 +2,6 @@
 // Globals
 //
 
-/* General Typography */
-%large_title {
-	font-weight: 300;
-	@include fontsize(24pt);
-}
-
-%title_1 {
-	font-weight: 800;
-	@include fontsize(20pt);
-}
-
-%title_2 {
-	font-weight: 800;
-	@include fontsize(15pt);
-}
-
-%title_3 {
-	font-weight: 700;
-	@include fontsize(15pt);
-}
-
-%title_4 {
-	font-weight: 700;
-	@include fontsize(13pt);
-}
-
-%heading {
-	font-weight: 700;
-	@include fontsize(11pt);
-}
-
-%caption_heading {
-	font-weight: 700;
-	@include fontsize(9pt);
-}
-
-%caption {
-	font-weight: 400;
-	@include fontsize(9pt);
-}
-
-%smaller {
-	font-weight: 400;
-	@include fontsize(8pt);
-}
-
 $asset_path: assets;
 $font-size: 10;
 $panel_bg: rgba($panel-solid, 0.75);
@@ -77,7 +31,6 @@ stage {
 	padding: 5px 32px;
 	transition-duration: 100ms;
 	border-radius: $corner-radius;
-
 	@include button(normal);
 
 	&:focus {
@@ -87,7 +40,6 @@ stage {
 	&:hover {
 		@include button(hover);
 		border-radius: $corner-radius;
-		color: $primary;
 	}
 	&:hover:focus {
 		@include button(focus-hover);
@@ -155,7 +107,6 @@ stage {
 	selected-color: on($primary);
 	transition-duration: 300ms;
 	border-radius: $corner-radius;
-
 	@include entry(normal);
 
 	&:focus,
@@ -363,7 +314,7 @@ StScrollBar {
 // Tooltip
 //
 #Tooltip {
-	border-radius: $circular-radius;
+	border-radius: $window-radius;
 	padding: $space-size $space-size * 2;
 	background-color: $tooltip;
 	color: on($tooltip);
@@ -379,6 +330,7 @@ StScrollBar {
 //
 
 $sub_menu_bg: mix($text, $popover, 10%);
+$menu_item_radius: $corner-radius;
 
 .menu,
 .popup-menu,
@@ -390,16 +342,16 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	margin: $space-size;
 	box-shadow: none;
 
-	/* @if $outline == 'true' {
-        border: 2px solid $primary;
-    } */
+	@if $outline == 'false' and $variant == 'dark' {
+		border: 1px solid $window-border;
+	}
 
 	&-arrow {
 		icon-size: 16px;
 	}
 
 	.popup-sub-menu {
-		border-radius: $menuitem-radius;
+		border-radius: $menu_item_radius;
 		background-gradient-direction: none;
 		box-shadow: none;
 		background-color: $sub_menu_bg;
@@ -425,8 +377,8 @@ $sub_menu_bg: mix($text, $popover, 10%);
 		background-color: $popover;
 		box-shadow: 0 5px 12px rgba(black, 0.35);
 
-		@if $outline == 'true' {
-			border: 2px solid $primary;
+		@if $outline == 'false' and $variant == 'dark' {
+			border: 1px solid highlight($popover);
 			background-clip: border-box;
 		}
 	}
@@ -434,7 +386,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	.popup-menu-item {
 		padding: $space-size $space-size * 2;
 		spacing: $space-size * 2;
-		border-radius: $menuitem-radius;
+		border-radius: $menu_item_radius;
 
 		&:hover,
 		&:active {
@@ -477,12 +429,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 
 .popup-combo-menu {
 	@extend %menu;
-
 	padding: $space-size;
-
-	@if $outline == 'true' {
-		border: 2px solid $primary;
-	}
 }
 
 // .popup-image-menu-item {}
@@ -687,7 +634,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 .expo-workspaces-name-entry,
 .expo-workspaces-name-entry#selected {
 	height: 15px;
-	border-radius: $menuitem-radius;
+	border-radius: $corner-radius;
 	font-size: 9pt;
 	padding: 5px 8px;
 	-cinnamon-caption-spacing: 4px;
@@ -707,12 +654,12 @@ $sub_menu_bg: mix($text, $popover, 10%);
 .expo-workspace-thumbnail-frame {
 	border: 4px solid rgba(255, 255, 255, 0);
 	background-color: rgba(255, 255, 255, 0);
-	border-radius: 0;
+	border-radius: $corner-radius;
 
 	&#active {
 		border: 4px solid $primary;
 		background-color: black;
-		border-radius: 0;
+		border-radius: $corner-radius;
 	}
 }
 
@@ -932,7 +879,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	text-align: center;
 	font-size: 14px;
 	color: $text;
-	border-radius: $menuitem-radius;
+	border-radius: $corner-radius;
 }
 
 .calendar-day-base {
@@ -1012,7 +959,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	padding: $space-size + 2px;
 	min-width: 350px;
 	border: none;
-	border-radius: $menuitem-radius;
+	border-radius: $corner-radius;
 	background-gradient-direction: vertical;
 	background-gradient-start: $fill;
 	background-gradient-end: $fill;
@@ -1022,7 +969,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 .calendar-events-no-events-button {
 	margin: $space-size 0;
 	padding: $space-size;
-	border-radius: $menuitem-radius;
+	border-radius: $corner-radius;
 
 	&:hover {
 		background-gradient-direction: vertical;
@@ -1065,12 +1012,11 @@ $sub_menu_bg: mix($text, $popover, 10%);
 
 .calendar-event-button {
 	margin: $space-size 0 $space-size 0;
-	border-radius: $menuitem-radius;
+	border-radius: $corner-radius;
+	background-color: $fill;
 
 	&:hover {
-		background-gradient-direction: vertical;
-		background-gradient-start: $fill;
-		background-gradient-end: $fill;
+		background-color: $divider;
 		box-shadow: none;
 	}
 }
@@ -1114,7 +1060,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 }
 
 .calendar-event-countdown:soon {
-	color: $white;
+	color: white;
 }
 
 .calendar-event-countdown:imminent {
@@ -1141,8 +1087,8 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	spacing-columns: $space-size * 1.5;
 	margin-from-right-edge-of-screen: $space-size * 3;
 	width: 28em;
-	color: $text;
-	background-color: rgba($base, 0.8);
+	color: on($base);
+	background-color: $base;
 	box-shadow: 0 5px 12px rgba(black, 0.35);
 	margin: 7px 12px 17px 12px;
 
@@ -1160,12 +1106,12 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	.popup-menu & {
 		border: none;
 		border-radius: $corner-radius;
-		background-color: rgba($text, 0.05);
+		background-color: $fill;
 		box-shadow: none;
 		margin: 0;
 
 		&:hover {
-			background-color: rgba($text, 0.1);
+			background-color: $divider;
 			box-shadow: 0 3px 8px rgba(black, 0.15);
 		}
 
@@ -1187,7 +1133,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 
 	&.multi-line-notification {
 		padding-bottom: $space-size * 2;
-		color: $text;
+		color: on($tooltip);
 	}
 
 	&-scrollview {
@@ -1217,7 +1163,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 .notification {
 	&-with-image {
 		min-height: 159px;
-		color: $text;
+		color: on($tooltip);
 	}
 
 	&-button,
@@ -1333,22 +1279,17 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	background-color: rgba(0, 0, 0, 0.4);
 }
 .flashspot {
-	background-color: $white;
+	background-color: white;
 }
 
-.dialog,
 .modal-dialog {
-	color: on($background);
-	background-color: rgba($background, 0.95);
-	padding: $space-size;
+	color: on($tooltip);
+	background-color: rgba(darken($tooltip, 3%), 0.95);
+	padding: 0 5px 6px 5px;
 	border-radius: $corner-radius;
 	box-shadow:
 		0 3px 8px rgba(black, 0.75),
 		0 5px 18px rgba(black, 0.55);
-	/* border: 1px solid $divider; */
-	@if $outline == 'true' {
-		border: 2px solid $primary;
-	}
 
 	> StBoxLayout:first-child {
 		padding: 20px 10px 10px 10px;
@@ -1367,57 +1308,6 @@ $sub_menu_bg: mix($text, $popover, 10%);
 			height: 30px;
 
 			@extend %osd_button;
-		}
-	}
-
-	.dialog-content-box {
-		margin-top: $space-size;
-		margin-bottom: $space-size;
-		spacing: $space-size;
-		max-width: 18em;
-	}
-
-	.dialog-button {
-		@extend %button;
-
-		&:default {
-			@extend %flat_button;
-			&:hover {
-				background-color: lighten($error, 8%) !important;
-				color: on($error) !important;
-			}
-		}
-		&:destructive-action {
-			@extend %flat_button;
-			background-color: $error;
-			color: on($error);
-		}
-	}
-
-	.confirm-dialog-title {
-		@extend %title_2;
-		text-align: center;
-	}
-
-	// End session dialog
-
-	.end-session-dialog {
-		min-width: 40em;
-
-		.dialog-content-box {
-			spacing: 0;
-		}
-
-		.dialog-list {
-			spacing: 0;
-
-			.dialog-list-title {
-				color: $warning;
-				background-color: tranparentize($warning, 0.9);
-				padding: $space-size * 1.5;
-				border-radius: $corner-radius;
-				margin: $space-size 0;
-			}
 		}
 	}
 }
@@ -1478,61 +1368,6 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	}
 }
 
-// password or authentication dialog
-
-.prompt-dialog {
-	width: 26em;
-
-	.dialog-content-box {
-		spacing: $space-size * 4;
-		margin-bottom: $space-size * 3;
-	}
-
-	&-password-entry {
-		@extend %entry;
-		width: 20em;
-	}
-
-	&-password-layout {
-		spacing: $space-size * 2;
-	}
-
-	&-error-label,
-	&-info-label,
-	&-null-label {
-		text-align: center;
-		@extend %caption;
-	}
-
-	&-error-label {
-		color: $error;
-	}
-}
-
-// polkit dialog
-
-.polkit-dialog {
-	&-user-layout {
-		text-align: center;
-		spacing: 2px;
-	}
-
-	&-user-combo {
-		@extend %flat_button;
-		@extend %heading;
-
-		border-radius: $modal-radius;
-		padding: $space-size $space-size * 6;
-
-		// special case the :insensitive button sinc we want
-		// the label to be the normal color when there are
-		// not multiple users
-		&:insensitive {
-			color: $text;
-		}
-	}
-}
-
 /* CinnamonMountOperation Dialogs */
 .cinnamon-mount-operation-icon {
 	icon-size: 48px;
@@ -1581,7 +1416,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 		color: #ccc;
 
 		&:hover {
-			color: $white;
+			color: white;
 		}
 
 		&:ltr {
@@ -1685,15 +1520,16 @@ $sub_menu_bg: mix($text, $popover, 10%);
 		transition-duration: 300;
 		background-color: rgba($text, 0.05);
 		border: none;
-		border-radius: $menuitem-radius;
+		border-radius: $corner-radius;
 	}
 
 	&-favorites-button {
 		padding: $space-size * 1.5;
 		border: none;
-		border-radius: $menuitem-radius / 2;
+		border-radius: $corner-radius;
 
 		&:hover {
+			border-radius: $corner-radius;
 			background-color: rgba($text, 0.1);
 		}
 	}
@@ -1721,7 +1557,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 
 	&-application-button {
 		padding: $space-size;
-		border-radius: $menuitem-radius;
+		border-radius: $corner-radius;
 		border: none;
 
 		// This style is used in menu application buttons for applications which were newly installed
@@ -1732,7 +1568,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 		&-selected {
 			@include button(hover);
 			padding: $space-size;
-			border-radius: $menuitem-radius;
+			border-radius: $corner-radius;
 			border: none;
 
 			&:highlighted {
@@ -1751,7 +1587,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	StScrollView.menu-application-button {
 		// extracted submenu container
 		padding: $space-size / 2 0;
-		border-radius: $menuitem-radius;
+		border-radius: $corner-radius;
 		background-color: $sub_menu_bg;
 		color: on($sub_menu_bg);
 
@@ -1759,7 +1595,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 			padding: 0;
 			spacing: 0;
 			margin: 0 $space-size / 2;
-			border-radius: $menuitem-radius;
+			border-radius: $corner-radius;
 			color: on($sub_menu_bg);
 
 			&:ltr {
@@ -1792,7 +1628,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 
 	&-category-button {
 		padding: $space-size;
-		border-radius: $menuitem-radius;
+		border-radius: $corner-radius;
 
 		&-selected {
 			padding: $space-size;
@@ -1801,7 +1637,7 @@ $sub_menu_bg: mix($text, $popover, 10%);
 		&-hover,
 		&-selected {
 			@include button(flat-hover);
-			border-radius: $menuitem-radius;
+			border-radius: $corner-radius;
 		}
 
 		&-greyed {
@@ -1853,7 +1689,6 @@ $sub_menu_bg: mix($text, $popover, 10%);
 	height: 15px;
 	font-weight: normal;
 	caret-color: $text;
-	border-radius: $menuitem-radius;
 
 	@extend %entry;
 }
@@ -1869,72 +1704,6 @@ $sub_menu_bg: mix($text, $popover, 10%);
 //
 // OSD
 //
-
-$barlevel_height: 6px;
-
-$ws_indicator_height: 32px;
-$ws_dot_active: $ws_indicator_height / 3;
-$ws_dot_inactive: $ws_indicator_height / 6;
-
-%osd_base {
-	color: $text;
-	background-color: transparentize($background, 0.01);
-	border: 1px solid transparentize($divider, 0.01);
-	border-radius: $corner-radius;
-	text-align: center;
-	padding: $space-size * 4;
-}
-
-// media keys osd
-
-.media-keys-osd {
-	@extend %osd_base;
-	@extend %title_4;
-
-	margin-bottom: 1em;
-	border-radius: 9999px;
-	font-weight: bold;
-	spacing: $space-size * 2;
-	padding: $space-size * 2 $space-size * 4;
-	& > * {
-		spacing: $space-size * 2;
-	}
-
-	StIcon {
-		icon-size: 32px;
-	}
-
-	StLabel {
-		&:ltr {
-			margin-right: $space-size;
-		}
-		&:rtl {
-			margin-left: $space-size;
-		}
-	}
-
-	.level {
-		min-width: 160px;
-		-barlevel-height: $barlevel_height;
-		-barlevel-background-color: $base;
-		-barlevel-active-background-color: $text;
-		-barlevel-amplify-color: $warning;
-		-barlevel-amplify-separator-width: $space-size * 0.5;
-
-		&:ltr {
-			margin-right: $space-size;
-		}
-		&:rtl {
-			margin-left: $space-size;
-		}
-	}
-
-	.level-bar {
-		border-radius: $corner-radius;
-		background-color: $text;
-	}
-}
-
 .info-osd {
 	text-align: center;
 	font-weight: bold;
@@ -1971,42 +1740,6 @@ $ws_dot_inactive: $ws_indicator_height / 6;
 	.level-bar {
 		border-radius: $corner-radius;
 		background-color: $primary;
-	}
-}
-
-.workspace-switch-osd {
-	@extend %title_4;
-	color: $primary;
-	background-color: transparentize($background, 0.01);
-	/* border: 1px solid transparentize($divider, 0.01); */
-	@if $outline == 'true' {
-		border: 2px solid $primary;
-	}
-	border-radius: $modal-radius;
-	text-align: center;
-	padding: $space-size * 4;
-
-	min-width: 140px;
-	margin-bottom: 1em;
-	border-radius: 9999px;
-	font-weight: bold;
-	padding: $space-size * 2 $space-size * 6 0 $space-size * 6;
-
-	&-indicator-box {
-		spacing: $space-size * 2;
-	}
-
-	&-indicator {
-		background-color: transparentize($text, 0.5);
-		padding: $ws_dot_inactive / 2;
-		margin: ($ws_indicator_height - $ws_dot_inactive) / 2;
-		border-radius: $ws_indicator_height;
-
-		&:active {
-			background-color: $primary;
-			padding: $ws_dot_active / 2;
-			margin: ($ws_indicator_height - $ws_dot_active) / 2;
-		}
 	}
 }
 
@@ -2177,13 +1910,13 @@ $ws_dot_inactive: $ws_indicator_height / 6;
 		background-clip: border-box;
 		box-shadow: 0 5px 12px rgba(black, 0.35);
 
-		@if $outline == 'true' {
-			border: 2px solid $primary;
+		@if $outline == 'false' and $variant == 'dark' {
+			border: 1px solid $window-border;
 		}
 
 		.item-box {
 			padding: $space-size;
-			border-radius: $menuitem-radius;
+			border-radius: $corner-radius;
 			spacing: $space-size;
 			margin: 1px;
 
@@ -2210,7 +1943,7 @@ $ws_dot_inactive: $ws_indicator_height / 6;
 		z-index: 120;
 		text-shadow: none;
 		color: on($primary);
-		padding: 0;
+		padding: 0 1px;
 	}
 
 	&-button-label {

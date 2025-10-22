@@ -25,7 +25,7 @@ $notification_banner_width: 34em;
 	&:hover,
 	&:active,
 	&:focus {
-    color: $primary;
+		color: $primary;
 		background-color: lighten($menu, 5%);
 		border: 1px solid $window-border;
 		box-shadow: inset 0 0 0 1px highlight($popover);
@@ -37,8 +37,8 @@ $notification_banner_width: 34em;
 }
 
 .notification-button {
-	min-height: $base_padding;
-	padding: $base_padding * 2 0;
+	min-height: $item_size + $base_padding * 2;
+	padding: 0 $base_padding * 3;
 	margin: 0;
 	background-color: transparent;
 	color: $text-secondary;

@@ -1,4 +1,6 @@
 *-temp.scss
+themes/src/sass/*-temp.scss
+themes/src/sass/gnome-shell/*-temp.scss
 themes/src/main/gtk-3.0/gtk.css
 themes/src/main/gtk-3.0/gtk-Light.css
 themes/src/main/gtk-3.0/gtk-Dark.css
