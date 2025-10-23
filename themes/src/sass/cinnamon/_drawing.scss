@@ -78,7 +78,7 @@
 		background-color: $fill;
 	} @else if $t==flat {
 		color: $text-secondary;
-		background-color: transparent;
+		background-color: $fill;
 	} @else if $t==flat-hover {
 		color: $text;
 		background-color: $divider;
@@ -87,7 +87,7 @@
 		background-color: $track;
 	} @else if $t==flat-insensitive {
 		color: $text-secondary-disabled;
-		background-color: transparent;
+		background-color: $fill;
 	} @else if $t==osd {
 		color: on(black, secondary);
 		background-color: on(black, fill);

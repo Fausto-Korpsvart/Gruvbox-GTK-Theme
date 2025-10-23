@@ -2,6 +2,52 @@
 // Globals
 //
 
+/* General Typography */
+%large_title {
+	font-weight: 300;
+	@include fontsize(24pt);
+}
+
+%title_1 {
+	font-weight: 800;
+	@include fontsize(20pt);
+}
+
+%title_2 {
+	font-weight: 800;
+	@include fontsize(15pt);
+}
+
+%title_3 {
+	font-weight: 700;
+	@include fontsize(15pt);
+}
+
+%title_4 {
+	font-weight: 700;
+	@include fontsize(13pt);
+}
+
+%heading {
+	font-weight: 700;
+	@include fontsize(11pt);
+}
+
+%caption_heading {
+	font-weight: 700;
+	@include fontsize(9pt);
+}
+
+%caption {
+	font-weight: 400;
+	@include fontsize(9pt);
+}
+
+%smaller {
+	font-weight: 400;
+	@include fontsize(8pt);
+}
+
 $asset_path: assets;
 $font-size: 10;
 $panel_bg: rgba($panel-solid, 0.75);
@@ -31,6 +77,7 @@ stage {
 	padding: 5px 32px;
 	transition-duration: 100ms;
 	border-radius: $corner-radius;
+
 	@include button(normal);
 
 	&:focus {
@@ -40,6 +87,7 @@ stage {
 	&:hover {
 		@include button(hover);
 		border-radius: $corner-radius;
+		color: $primary;
 	}
 	&:hover:focus {
 		@include button(focus-hover);
@@ -71,6 +119,7 @@ stage {
 	&:insensitive {
 		@include button(flat-insensitive);
 		border-radius: $corner-radius;
+		color: $error;
 	}
 }
 
@@ -107,6 +156,7 @@ stage {
 	selected-color: on($primary);
 	transition-duration: 300ms;
 	border-radius: $corner-radius;
+
 	@include entry(normal);
 
 	&:focus,
@@ -314,7 +364,7 @@ StScrollBar {
 // Tooltip
 //
 #Tooltip {
-	border-radius: $window-radius;
+	border-radius: $circular-radius;
 	padding: $space-size $space-size * 2;
 	background-color: $tooltip;
 	color: on($tooltip);
@@ -330,7 +380,6 @@ StScrollBar {
 //
 
 $sub_menu_bg: mix($text, $popover, 10%);
-$menu_item_radius: $corner-radius;
 
 .menu,
 .popup-menu,
@@ -344,6 +393,8 @@ $menu_item_radius: $corner-radius;
 
 	@if $outline == 'false' and $variant == 'dark' {
 		border: 1px solid $window-border;
+	} @else {
+		border: none;
 	}
 
 	&-arrow {
@@ -351,7 +402,7 @@ $menu_item_radius: $corner-radius;
 	}
 
 	.popup-sub-menu {
-		border-radius: $menu_item_radius;
+		border-radius: $menuitem-radius;
 		background-gradient-direction: none;
 		box-shadow: none;
 		background-color: $sub_menu_bg;
@@ -375,18 +426,19 @@ $menu_item_radius: $corner-radius;
 		padding: $space-size;
 		border-radius: $menu-radius;
 		background-color: $popover;
-		box-shadow: 0 5px 12px rgba(black, 0.35);
 
 		@if $outline == 'false' and $variant == 'dark' {
 			border: 1px solid highlight($popover);
 			background-clip: border-box;
+		} @else {
+			border: 2px solid $primary;
 		}
 	}
 
 	.popup-menu-item {
 		padding: $space-size $space-size * 2;
 		spacing: $space-size * 2;
-		border-radius: $menu_item_radius;
+		border-radius: $menuitem-radius;
 
 		&:hover,
 		&:active {
@@ -429,7 +481,15 @@ $menu_item_radius: $corner-radius;
 
 .popup-combo-menu {
 	@extend %menu;
+
 	padding: $space-size;
+
+	@if $outline == 'false' and $variant == 'dark' {
+		border: 1px solid highlight($popover);
+		background-clip: border-box;
+	} @else {
+		border: 2px solid $primary;
+	}
 }
 
 // .popup-image-menu-item {}
@@ -634,7 +694,7 @@ $menu_item_radius: $corner-radius;
 .expo-workspaces-name-entry,
 .expo-workspaces-name-entry#selected {
 	height: 15px;
-	border-radius: $corner-radius;
+	border-radius: $menuitem-radius;
 	font-size: 9pt;
 	padding: 5px 8px;
 	-cinnamon-caption-spacing: 4px;
@@ -654,12 +714,12 @@ $menu_item_radius: $corner-radius;
 .expo-workspace-thumbnail-frame {
 	border: 4px solid rgba(255, 255, 255, 0);
 	background-color: rgba(255, 255, 255, 0);
-	border-radius: $corner-radius;
+	border-radius: 0;
 
 	&#active {
 		border: 4px solid $primary;
 		background-color: black;
-		border-radius: $corner-radius;
+		border-radius: 0;
 	}
 }
 
@@ -879,7 +939,7 @@ $menu_item_radius: $corner-radius;
 	text-align: center;
 	font-size: 14px;
 	color: $text;
-	border-radius: $corner-radius;
+	border-radius: $menuitem-radius;
 }
 
 .calendar-day-base {
@@ -959,7 +1019,7 @@ $menu_item_radius: $corner-radius;
 	padding: $space-size + 2px;
 	min-width: 350px;
 	border: none;
-	border-radius: $corner-radius;
+	border-radius: $menuitem-radius;
 	background-gradient-direction: vertical;
 	background-gradient-start: $fill;
 	background-gradient-end: $fill;
@@ -969,7 +1029,7 @@ $menu_item_radius: $corner-radius;
 .calendar-events-no-events-button {
 	margin: $space-size 0;
 	padding: $space-size;
-	border-radius: $corner-radius;
+	border-radius: $menuitem-radius;
 
 	&:hover {
 		background-gradient-direction: vertical;
@@ -1012,11 +1072,12 @@ $menu_item_radius: $corner-radius;
 
 .calendar-event-button {
 	margin: $space-size 0 $space-size 0;
-	border-radius: $corner-radius;
-	background-color: $fill;
+	border-radius: $menuitem-radius;
 
 	&:hover {
-		background-color: $divider;
+		background-gradient-direction: vertical;
+		background-gradient-start: $fill;
+		background-gradient-end: $fill;
 		box-shadow: none;
 	}
 }
@@ -1060,7 +1121,7 @@ $menu_item_radius: $corner-radius;
 }
 
 .calendar-event-countdown:soon {
-	color: white;
+	color: $white;
 }
 
 .calendar-event-countdown:imminent {
@@ -1087,10 +1148,17 @@ $menu_item_radius: $corner-radius;
 	spacing-columns: $space-size * 1.5;
 	margin-from-right-edge-of-screen: $space-size * 3;
 	width: 28em;
-	color: on($base);
+	color: $text;
 	background-color: $base;
 	box-shadow: 0 5px 12px rgba(black, 0.35);
 	margin: 7px 12px 17px 12px;
+
+	@if $outline == 'false' and $variant == 'dark' {
+		border: 1px solid highlight($popover);
+		background-clip: border-box;
+	} @else {
+		border: 2px solid $primary;
+	}
 
 	.notification-button,
 	.notification-icon-button {
@@ -1106,12 +1174,12 @@ $menu_item_radius: $corner-radius;
 	.popup-menu & {
 		border: none;
 		border-radius: $corner-radius;
-		background-color: $fill;
+		background-color: $base;
 		box-shadow: none;
 		margin: 0;
 
 		&:hover {
-			background-color: $divider;
+			background-color: $surface;
 			box-shadow: 0 3px 8px rgba(black, 0.15);
 		}
 
@@ -1133,7 +1201,7 @@ $menu_item_radius: $corner-radius;
 
 	&.multi-line-notification {
 		padding-bottom: $space-size * 2;
-		color: on($tooltip);
+		color: $text;
 	}
 
 	&-scrollview {
@@ -1163,7 +1231,7 @@ $menu_item_radius: $corner-radius;
 .notification {
 	&-with-image {
 		min-height: 159px;
-		color: on($tooltip);
+		color: $text;
 	}
 
 	&-button,
@@ -1279,17 +1347,22 @@ $menu_item_radius: $corner-radius;
 	background-color: rgba(0, 0, 0, 0.4);
 }
 .flashspot {
-	background-color: white;
+	background-color: $white;
 }
 
+.dialog,
 .modal-dialog {
-	color: on($tooltip);
-	background-color: rgba(darken($tooltip, 3%), 0.95);
-	padding: 0 5px 6px 5px;
+	color: on($background);
+	background-color: rgba($background, 0.95);
+	padding: $space-size;
 	border-radius: $corner-radius;
-	box-shadow:
-		0 3px 8px rgba(black, 0.75),
-		0 5px 18px rgba(black, 0.55);
+
+	@if $outline == 'false' and $variant == 'dark' {
+		border: 1px solid highlight($popover);
+		background-clip: border-box;
+	} @else {
+		border: 2px solid $primary;
+	}
 
 	> StBoxLayout:first-child {
 		padding: 20px 10px 10px 10px;
@@ -1308,6 +1381,57 @@ $menu_item_radius: $corner-radius;
 			height: 30px;
 
 			@extend %osd_button;
+		}
+	}
+
+	.dialog-content-box {
+		margin-top: $space-size;
+		margin-bottom: $space-size;
+		spacing: $space-size;
+		max-width: 18em;
+	}
+
+	.dialog-button {
+		@extend %button;
+
+		&:default {
+			@extend %flat_button;
+			&:hover {
+				background-color: lighten($error, 8%) !important;
+				color: on($error) !important;
+			}
+		}
+		&:destructive-action {
+			@extend %flat_button;
+			background-color: $error;
+			color: on($error);
+		}
+	}
+
+	.confirm-dialog-title {
+		@extend %title_2;
+		text-align: center;
+	}
+
+	// End session dialog
+
+	.end-session-dialog {
+		min-width: 40em;
+
+		.dialog-content-box {
+			spacing: 0;
+		}
+
+		.dialog-list {
+			spacing: 0;
+
+			.dialog-list-title {
+				color: $warning;
+				background-color: tranparentize($warning, 0.9);
+				padding: $space-size * 1.5;
+				border-radius: $corner-radius;
+				margin: $space-size 0;
+			}
 		}
 	}
 }
@@ -1368,6 +1492,68 @@ $menu_item_radius: $corner-radius;
 	}
 }
 
+// password or authentication dialog
+
+.prompt-dialog {
+	@if $outline == 'false' and $variant == 'dark' {
+		border: 1px solid highlight($popover);
+		background-clip: border-box;
+	} @else {
+		border: 2px solid $primary;
+	}
+
+	width: 26em;
+
+	.dialog-content-box {
+		spacing: $space-size * 4;
+		margin-bottom: $space-size * 3;
+	}
+
+	&-password-entry {
+		@extend %entry;
+		width: 20em;
+	}
+
+	&-password-layout {
+		spacing: $space-size * 2;
+	}
+
+	&-error-label,
+	&-info-label,
+	&-null-label {
+		text-align: center;
+		@extend %caption;
+	}
+
+	&-error-label {
+		color: $error;
+	}
+}
+
+// polkit dialog
+
+.polkit-dialog {
+	&-user-layout {
+		text-align: center;
+		spacing: 2px;
+	}
+
+	&-user-combo {
+		@extend %flat_button;
+		@extend %heading;
+
+		border-radius: $modal-radius;
+		padding: $space-size $space-size * 6;
+
+		// special case the :insensitive button sinc we want
+		// the label to be the normal color when there are
+		// not multiple users
+		&:insensitive {
+			color: $text;
+		}
+	}
+}
+
 /* CinnamonMountOperation Dialogs */
 .cinnamon-mount-operation-icon {
 	icon-size: 48px;
@@ -1416,7 +1602,7 @@ $menu_item_radius: $corner-radius;
 		color: #ccc;
 
 		&:hover {
-			color: white;
+			color: $white;
 		}
 
 		&:ltr {
@@ -1520,16 +1706,15 @@ $menu_item_radius: $corner-radius;
 		transition-duration: 300;
 		background-color: rgba($text, 0.05);
 		border: none;
-		border-radius: $corner-radius;
+		border-radius: $menuitem-radius;
 	}
 
 	&-favorites-button {
 		padding: $space-size * 1.5;
 		border: none;
-		border-radius: $corner-radius;
+		border-radius: $menuitem-radius / 2;
 
 		&:hover {
-			border-radius: $corner-radius;
 			background-color: rgba($text, 0.1);
 		}
 	}
@@ -1557,7 +1742,7 @@ $menu_item_radius: $corner-radius;
 
 	&-application-button {
 		padding: $space-size;
-		border-radius: $corner-radius;
+		border-radius: $menuitem-radius;
 		border: none;
 
 		// This style is used in menu application buttons for applications which were newly installed
@@ -1568,7 +1753,7 @@ $menu_item_radius: $corner-radius;
 		&-selected {
 			@include button(hover);
 			padding: $space-size;
-			border-radius: $corner-radius;
+			border-radius: $menuitem-radius;
 			border: none;
 
 			&:highlighted {
@@ -1587,7 +1772,7 @@ $menu_item_radius: $corner-radius;
 	StScrollView.menu-application-button {
 		// extracted submenu container
 		padding: $space-size / 2 0;
-		border-radius: $corner-radius;
+		border-radius: $menuitem-radius;
 		background-color: $sub_menu_bg;
 		color: on($sub_menu_bg);
 
@@ -1595,7 +1780,7 @@ $menu_item_radius: $corner-radius;
 			padding: 0;
 			spacing: 0;
 			margin: 0 $space-size / 2;
-			border-radius: $corner-radius;
+			border-radius: $menuitem-radius;
 			color: on($sub_menu_bg);
 
 			&:ltr {
@@ -1628,7 +1813,7 @@ $menu_item_radius: $corner-radius;
 
 	&-category-button {
 		padding: $space-size;
-		border-radius: $corner-radius;
+		border-radius: $menuitem-radius;
 
 		&-selected {
 			padding: $space-size;
@@ -1637,7 +1822,7 @@ $menu_item_radius: $corner-radius;
 		&-hover,
 		&-selected {
 			@include button(flat-hover);
-			border-radius: $corner-radius;
+			border-radius: $menuitem-radius;
 		}
 
 		&-greyed {
@@ -1689,6 +1874,7 @@ $menu_item_radius: $corner-radius;
 	height: 15px;
 	font-weight: normal;
 	caret-color: $text;
+	border-radius: $menuitem-radius;
 
 	@extend %entry;
 }
@@ -1704,6 +1890,72 @@ $menu_item_radius: $corner-radius;
 //
 // OSD
 //
+
+$barlevel_height: 6px;
+
+$ws_indicator_height: 32px;
+$ws_dot_active: $ws_indicator_height / 3;
+$ws_dot_inactive: $ws_indicator_height / 6;
+
+%osd_base {
+	color: $text;
+	background-color: transparentize($background, 0.01);
+	border: 1px solid transparentize($divider, 0.01);
+	border-radius: $corner-radius;
+	text-align: center;
+	padding: $space-size * 4;
+}
+
+// media keys osd
+
+.media-keys-osd {
+	@extend %osd_base;
+	@extend %title_4;
+
+	margin-bottom: 1em;
+	border-radius: 9999px;
+	font-weight: bold;
+	spacing: $space-size * 2;
+	padding: $space-size * 2 $space-size * 4;
+	& > * {
+		spacing: $space-size * 2;
+	}
+
+	StIcon {
+		icon-size: 32px;
+	}
+
+	StLabel {
+		&:ltr {
+			margin-right: $space-size;
+		}
+		&:rtl {
+			margin-left: $space-size;
+		}
+	}
+
+	.level {
+		min-width: 160px;
+		-barlevel-height: $barlevel_height;
+		-barlevel-background-color: $base;
+		-barlevel-active-background-color: $text;
+		-barlevel-amplify-color: $warning;
+		-barlevel-amplify-separator-width: $space-size * 0.5;
+
+		&:ltr {
+			margin-right: $space-size;
+		}
+		&:rtl {
+			margin-left: $space-size;
+		}
+	}
+
+	.level-bar {
+		border-radius: $corner-radius;
+		background-color: $text;
+	}
+}
+
 .info-osd {
 	text-align: center;
 	font-weight: bold;
@@ -1740,6 +1992,47 @@ $menu_item_radius: $corner-radius;
 	.level-bar {
 		border-radius: $corner-radius;
 		background-color: $primary;
+	}
+}
+
+.workspace-switch-osd {
+	@extend %title_4;
+	color: $primary;
+	background-color: transparentize($background, 0.01);
+	/* border: 1px solid transparentize($divider, 0.01); */
+
+	@if $outline == 'false' and $variant == 'dark' {
+		border: 1px solid highlight($popover);
+		background-clip: border-box;
+	} @else {
+		border: 2px solid $primary;
+	}
+
+	border-radius: $modal-radius;
+	text-align: center;
+	padding: $space-size * 4;
+
+	min-width: 140px;
+	margin-bottom: 1em;
+	border-radius: 9999px;
+	font-weight: bold;
+	padding: $space-size * 2 $space-size * 6 0 $space-size * 6;
+
+	&-indicator-box {
+		spacing: $space-size * 2;
+	}
+
+	&-indicator {
+		background-color: transparentize($text, 0.5);
+		padding: $ws_dot_inactive / 2;
+		margin: ($ws_indicator_height - $ws_dot_inactive) / 2;
+		border-radius: $ws_indicator_height;
+
+		&:active {
+			background-color: $primary;
+			padding: $ws_dot_active / 2;
+			margin: ($ws_indicator_height - $ws_dot_active) / 2;
+		}
 	}
 }
 
@@ -1911,12 +2204,15 @@ $menu_item_radius: $corner-radius;
 		box-shadow: 0 5px 12px rgba(black, 0.35);
 
 		@if $outline == 'false' and $variant == 'dark' {
-			border: 1px solid $window-border;
+			border: 1px solid highlight($popover);
+			background-clip: border-box;
+		} @else {
+			border: 2px solid $primary;
 		}
 
 		.item-box {
 			padding: $space-size;
-			border-radius: $corner-radius;
+			border-radius: $menuitem-radius;
 			spacing: $space-size;
 			margin: 1px;
 
@@ -1943,7 +2239,7 @@ $menu_item_radius: $corner-radius;
 		z-index: 120;
 		text-shadow: none;
 		color: on($primary);
-		padding: 0 1px;
+		padding: 0;
 	}
 
 	&-button-label {
