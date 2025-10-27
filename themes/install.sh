@@ -67,6 +67,9 @@ OPTIONS:
 
   -l, --libadwaita        Link installed gtk-4.0 theme to config folder for all libadwaita app use this theme
 
+  -ul, --unlink-libadwaita
+                          Unlink (remove) the gtk-4.0 config folder links for libadwaita 
+
   -r, --remove,
   -u, --uninstall         Uninstall/Remove installed themes or links
 
@@ -215,6 +218,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         -l | --libadwaita)
             libadwaita="true"
+            shift
+            ;;
+        -ul | --unlink-libadwaita)
+            unlink_libadwaita="true"
             shift
             ;;
         -c | --color)
@@ -618,6 +625,10 @@ if [[ "$uninstall" == 'true' ]]; then
     else
         echo && uninstall_theme && uninstall_link
     fi
+elif [[ "$unlink_libadwaita" == 'true' ]]; then
+    echo -e "\nUnlinking libadwaita (removing ${HOME}/.config/gtk-4.0 links)..."
+    uninstall_link
+    echo -e "Done. Libadwaita apps will now use the default theme."
 else
     install_package && tweaks_temp && gnome_shell_version && install_theme
     if [[ "$libadwaita" == 'true' ]]; then
